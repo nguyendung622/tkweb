@@ -1,0 +1,807 @@
+/* ═══════════════════════════════════════════
+   DBlogStudio — Thiết kế web cho nhà báo
+   style.css · Global Stylesheet
+   Giảng viên: Nguyễn Dũng · HUSC
+═══════════════════════════════════════════ */
+
+:root {
+  --ink:     #2a1520;
+  --paper:   #fdf4f7;
+  --accent:  #f06fa8;
+  --gold:    #f7a94a;
+  --muted:   #b08898;
+  --rule:    #fbcfca;
+  --success: #3a9e6a;
+}
+
+/* ── SPLASH SCREEN ── */
+#splash {
+  position: fixed; inset: 0;
+  background: var(--ink);
+  display: flex;
+  align-items: center; justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#splash.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash-inner {
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 0;
+  animation: splashFadeIn 0.7s ease forwards;
+}
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.splash-site-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 900;
+  color: var(--paper);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.splash-site-name span { color: var(--accent); font-style: italic; }
+.splash-divider {
+  width: 40px; height: 2px;
+  background: var(--accent);
+  margin: 28px auto;
+  border-radius: 2px;
+}
+.splash-profile {
+  display: flex; align-items: center; gap: 20px;
+}
+.splash-avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+  background: var(--muted);
+  display: flex; align-items: center; justify-content: center;
+}
+.splash-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+}
+.splash-avatar span {
+  color: var(--paper); font-size: 1.2rem;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+}
+.splash-info { text-align: left; }
+.splash-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--paper);
+}
+.splash-title {
+  font-size: 0.78rem; color: var(--accent);
+  margin-top: 3px; font-weight: 400;
+}
+.splash-org {
+  font-size: 0.75rem; color: var(--muted);
+  margin-top: 2px;
+}
+.splash-bar-wrap {
+  margin-top: 40px;
+  width: 200px; height: 2px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.splash-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  width: 0%;
+  animation: splashProgress 9.5s cubic-bezier(0.4,0,0.6,1) forwards;
+}
+@keyframes splashProgress {
+  0%   { width: 0%; }
+  85%  { width: 90%; }
+  100% { width: 100%; }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* GRAIN OVERLAY */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 1000; opacity: 0.5;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 2px solid var(--ink);
+  position: sticky; top: 0;
+  background: var(--paper);
+  z-index: 500;
+  overflow: visible;  /* không clip dropdown */
+}
+
+.masthead-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 48px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.tagline-strip, .issue-info {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.masthead-title {
+  text-align: center;
+  padding: 16px 48px 12px;
+}
+
+.masthead-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+.masthead-title h1 span { color: var(--accent); font-style: italic; }
+
+.subtitle-bar {
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.subtitle-bar::before, .subtitle-bar::after {
+  content: ''; flex: 1; max-width: 100px; height: 1px; background: var(--muted);
+}
+
+/* ── NAV ── */
+nav {
+  display: flex; align-items: center; justify-content: center;
+  border-top: 1px solid var(--ink);
+  padding: 0 48px;
+  overflow: visible;  /* quan trọng: cho phép dropdown thoát ra ngoài */
+  position: relative;
+  z-index: 200;
+}
+nav a {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-right: 1px solid var(--rule);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer;
+}
+nav a:first-child { border-left: 1px solid var(--rule); }
+nav a:hover { background: var(--ink); color: var(--paper); }
+nav a.active { background: var(--accent); color: white; }
+
+/* ── NAV DROPDOWN ── */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  border-right: 1px solid var(--rule);
+}
+
+.nav-dropdown-trigger {
+  display: flex; align-items: center; gap: 6px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500; font-size: 11px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.active { background: var(--accent); color: white; }
+.nav-dropdown-trigger.active .dropdown-arrow { stroke: white; }
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.nav-dropdown-trigger[aria-expanded="true"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  border-top: 3px solid var(--accent);
+  z-index: 1000;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.12);
+  max-height: 420px;
+  overflow-y: auto;
+}
+.dropdown-menu.open { display: block; }
+
+.dropdown-item {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--rule);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.12s;
+}
+.dropdown-item:last-of-type { border-bottom: none; }
+.dropdown-item:hover { background: #fde8ef; }
+.dropdown-item.current { background: #fde8ef; }
+.dropdown-item.current .dropdown-num { color: var(--accent); }
+
+.dropdown-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted);
+  flex-shrink: 0; padding-top: 2px;
+}
+.dropdown-title {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500; font-size: 12px;
+  line-height: 1.4;
+}
+
+.dropdown-footer {
+  padding: 10px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+  border-top: 2px solid var(--rule);
+  transition: background 0.12s;
+}
+.dropdown-footer:hover { background: #fde8ef; }
+
+/* ── HERO ── */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 48px 40px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 60px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--accent); max-width: 60px; }
+
+.hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero h2 em { font-style: italic; color: var(--accent); }
+
+.hero-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2a1520;
+  margin-bottom: 32px;
+}
+
+.hero-stats {
+  display: flex; gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 32px;
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--ink); color: var(--paper);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500; font-size: 12px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  border: 2px solid var(--ink);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 2px solid var(--ink); color: var(--ink);
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500; font-size: 11px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-secondary:hover { background: var(--ink); color: var(--paper); }
+.btn-secondary:disabled, .btn-secondary[disabled] {
+  opacity: 0.35; cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── SIDEBAR / FEATURED LESSON ── */
+.hero-sidebar {
+  border-left: 1px solid var(--rule);
+  padding-left: 40px;
+}
+.featured-lesson {
+  background: var(--ink); color: var(--paper);
+  padding: 28px; position: relative; overflow: hidden;
+}
+.featured-lesson::before {
+  content: '"';
+  position: absolute; top: -20px; right: 16px;
+  font-family: 'Playfair Display', serif;
+  font-size: 120px; color: var(--accent); opacity: 0.3; line-height: 1;
+}
+.lesson-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.lesson-badge::before { content: '★'; }
+.featured-lesson h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 700; line-height: 1.3; margin-bottom: 12px;
+}
+.featured-lesson p {
+  font-size: 0.85rem; line-height: 1.7; color: #c8c3ba; margin-bottom: 20px;
+}
+.lesson-meta {
+  display: flex; align-items: center; gap: 16px;
+  padding-top: 16px; border-top: 1px solid #2a2925;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted);
+}
+.lesson-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 500; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; padding: 10px 18px; margin-top: 16px;
+  transition: background 0.2s; cursor: pointer;
+}
+.lesson-link:hover { background: #d4558a; }
+
+/* ── SYLLABUS ── */
+.syllabus-section {
+  max-width: 1200px; margin: 0 auto; padding: 60px 48px;
+}
+.section-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 40px; padding-bottom: 16px;
+  border-bottom: 2px solid var(--ink);
+}
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 900;
+}
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+.lesson-card {
+  padding: 28px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  position: relative; transition: background 0.2s;
+  text-decoration: none; color: inherit; display: block; cursor: pointer;
+}
+.lesson-card.disabled { cursor: default; opacity: 0.5; }
+.lesson-card:not(.disabled):hover { background: #fde8ef; }
+.lesson-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; font-weight: 900; color: var(--rule);
+  line-height: 1; margin-bottom: 12px; transition: color 0.2s;
+}
+.lesson-card:not(.disabled):hover .lesson-num { color: var(--accent); }
+.lesson-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700; line-height: 1.3; margin-bottom: 8px;
+}
+.lesson-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
+.lesson-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 8px; border: 1px solid var(--rule); color: var(--muted);
+}
+.status-badge {
+  position: absolute; top: 20px; right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px;
+}
+.status-badge.live { background: var(--success); color: white; }
+.status-badge.soon { background: var(--rule); color: var(--muted); }
+
+/* ── QUOTE STRIP ── */
+.quote-strip {
+  background: var(--ink); color: var(--paper);
+  padding: 48px; text-align: center;
+}
+.quote-strip blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-style: italic; line-height: 1.5;
+  max-width: 680px; margin: 0 auto 16px;
+}
+.quote-strip cite {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);
+}
+
+/* ── ABOUT ── */
+.about-strip {
+  max-width: 1200px; margin: 0 auto;
+  padding: 60px 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  border-top: 1px solid var(--rule);
+}
+.about-strip h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 700; margin-bottom: 16px;
+}
+.about-strip p { font-size: 0.9rem; line-height: 1.8; color: #2a1520; margin-bottom: 10px; }
+.about-strip a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+.about-strip a:hover { color: var(--ink); border-color: var(--ink); }
+.tools-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.tool-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.1em;
+  padding: 6px 14px; border: 1px solid var(--ink);
+  transition: background 0.15s, color 0.15s;
+}
+.tool-chip:hover { background: var(--ink); color: var(--paper); cursor: default; }
+
+/* ── INSTRUCTOR CARD ── */
+.instructor-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--ink); color: var(--paper);
+  padding: 24px; margin-bottom: 20px;
+}
+.instructor-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 900; color: white;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.instructor-avatar img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+}
+.instructor-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem; font-weight: 700; margin-bottom: 4px;
+}
+.instructor-info p {
+  font-size: 0.8rem; line-height: 1.6; color: #c8c3ba; margin: 0;
+}
+.instructor-info a { color: var(--gold); border-bottom: 1px solid var(--gold); }
+
+/* ── LESSON PAGE ── */
+.page { display: none; }
+.page.visible { display: block; }
+
+.lesson-header {
+  background: var(--ink); color: var(--paper);
+  padding: 80px 48px 60px; position: relative; overflow: hidden;
+}
+.lesson-header::before {
+  content: attr(data-num);
+  position: absolute; right: 40px; top: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 200px; font-weight: 900;
+  color: white; opacity: 0.04; line-height: 1;
+}
+.breadcrumb {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 8px;
+}
+.breadcrumb a { color: var(--gold); text-decoration: none; cursor: pointer; }
+.breadcrumb a:hover { text-decoration: underline; }
+.lesson-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900; line-height: 1.1; max-width: 700px; margin-bottom: 20px;
+}
+.lesson-header h1 em { color: var(--gold); font-style: italic; }
+.meta-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.meta-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); display: flex; align-items: center; gap: 6px;
+}
+.meta-item strong { color: var(--paper); }
+
+/* ── LESSON BODY ── */
+.lesson-body {
+  max-width: 840px; margin: 0 auto; padding: 64px 48px;
+}
+.lesson-body h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem; font-weight: 700;
+  margin: 48px 0 16px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.lesson-body h2:first-child { margin-top: 0; }
+.lesson-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 700; margin: 32px 0 12px; color: var(--accent);
+}
+.lesson-body p { font-size: 1rem; line-height: 1.85; color: #2a1520; margin-bottom: 16px; }
+.lesson-body ul, .lesson-body ol { padding-left: 24px; margin-bottom: 20px; }
+.lesson-body li { font-size: 0.95rem; line-height: 1.8; color: #2a1520; margin-bottom: 6px; }
+.lesson-body li::marker { color: var(--accent); }
+.lesson-body a { color: var(--accent); }
+
+.callout {
+  background: #fde8ef; border-left: 4px solid var(--accent);
+  padding: 20px 24px; margin: 28px 0; font-size: 0.9rem; line-height: 1.7;
+}
+.callout strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--accent); display: block; margin-bottom: 8px;
+}
+
+.step-block {
+  background: white; border: 1px solid var(--rule);
+  padding: 24px 28px; margin: 16px 0; position: relative;
+}
+.step-block .step-num {
+  position: absolute; top: -1px; left: -1px;
+  background: var(--ink); color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px;
+}
+.step-block h4 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 600; font-size: 0.95rem; margin: 20px 0 8px;
+}
+.step-block p { font-size: 0.9rem; margin-bottom: 8px; }
+.step-block ul { padding-left: 20px; margin: 8px 0; }
+.step-block li { font-size: 0.88rem; margin-bottom: 4px; }
+
+.tip-box {
+  background: #2a1520; color: var(--paper);
+  padding: 20px 24px; margin: 28px 0;
+  display: flex; gap: 16px;
+}
+.tip-icon { font-size: 1.2rem; flex-shrink: 0; }
+.tip-box p { color: #c8c3ba !important; font-size: 0.88rem !important; margin: 0 !important; }
+.tip-box strong { color: var(--gold); }
+
+/* ── STUDENTS PAGE ── */
+.students-section {
+  max-width: 1000px; margin: 0 auto; padding: 60px 48px;
+}
+.students-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-bottom: 28px; flex-wrap: wrap;
+}
+.students-search {
+  flex: 1; min-width: 200px; max-width: 360px;
+  padding: 10px 16px;
+  border: 1px solid var(--ink); background: var(--paper);
+  font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px;
+  color: var(--ink); outline: none;
+}
+.students-search:focus { border-color: var(--accent); }
+.students-select {
+  padding: 10px 12px;
+  border: 1px solid var(--ink); background: var(--paper);
+  font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px;
+  color: var(--ink); outline: none; cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232a1520' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 32px;
+}
+.students-select:focus { border-color: var(--accent); }
+.students-select:disabled { opacity: 0.4; cursor: not-allowed; }
+.students-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted);
+}
+.students-table {
+  width: 100%; border-collapse: collapse;
+  border: 1px solid var(--rule);
+}
+.students-table th {
+  background: var(--ink); color: var(--paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 12px 16px; text-align: left; font-weight: 500;
+}
+.students-table td {
+  padding: 12px 16px; border-bottom: 1px solid var(--rule);
+  font-size: 0.88rem; color: var(--ink); vertical-align: middle;
+}
+.students-table tr:last-child td { border-bottom: none; }
+.students-table tr:hover td { background: #fde8ef; }
+.students-table .stt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--muted); width: 48px; text-align: center;
+}
+.students-table .class-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em;
+  padding: 2px 8px; border: 1px solid var(--rule); color: var(--muted);
+  white-space: nowrap;
+}
+.students-table .link-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: white;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none; padding: 6px 14px;
+  transition: background 0.15s; white-space: nowrap;
+}
+.students-table .link-btn:hover { background: #d4558a; }
+.students-pagination {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-top: 20px; flex-wrap: wrap;
+}
+.students-pagination-info {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.08em; color: var(--muted);
+}
+.students-pagination-pages {
+  display: flex; gap: 4px; flex-wrap: wrap;
+}
+.pg-btn {
+  min-width: 34px; height: 34px; padding: 0 8px;
+  border: 1px solid var(--rule); background: var(--paper);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  color: var(--ink); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.pg-btn:hover:not(:disabled) { background: var(--accent); color: white; border-color: var(--accent); }
+.pg-btn.active { background: var(--accent); color: white; border-color: var(--accent); font-weight: 700; }
+.pg-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pg-ellipsis {
+  height: 34px; padding: 0 4px;
+  display: flex; align-items: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted);
+}
+
+.students-empty {
+  text-align: center; padding: 60px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── LESSON NAV ── */
+.lesson-nav-bar {
+  max-width: 840px; margin: 0 auto 64px;
+  padding: 24px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 2px solid var(--ink);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink); color: var(--paper);
+  padding: 32px 48px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+footer .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 900; letter-spacing: -0.02em;
+}
+footer .logo span { color: var(--accent); font-style: italic; }
+footer .footer-center { text-align: center; }
+footer .footer-center p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.08em; color: #7a7268; line-height: 1.8;
+}
+footer .footer-center a { color: var(--gold); text-decoration: none; }
+footer .footer-center a:hover { text-decoration: underline; }
+footer .links { display: flex; gap: 20px; }
+footer .links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #7a7268; text-decoration: none; transition: color 0.15s;
+}
+footer .links a:hover { color: var(--paper); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.masthead { animation: fadeUp 0.4s ease forwards; }
+#home-page { animation: fadeUp 0.5s 0.1s ease both; }
+.page.visible { animation: fadeUp 0.4s ease both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-sidebar { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 40px; }
+  .about-strip { grid-template-columns: 1fr; gap: 40px; }
+  .lessons-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .masthead-top, .hero, .syllabus-section, .about-strip, .lesson-body, footer {
+    padding-left: 20px; padding-right: 20px;
+  }
+  .lessons-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+  .lesson-nav-bar { padding: 20px; flex-direction: column; gap: 12px; }
+}
