@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng thuật ngữ — Thiết kế Web cho Nhà báo</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+  <style>
+    .glossary-section { margin: 2rem 0 1rem; }
+    .glossary-section h3 {
+      font-family: var(--font-ui);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    dl { margin: 0; }
+    .glossary-term {
+      margin-bottom: 1.1rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .glossary-term:last-child { border-bottom: none; }
+    .glossary-term dt {
+      font-family: var(--font-ui);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      line-height: 1.4;
+    }
+    .glossary-term dd {
+      margin-left: 0;
+      color: #333;
+      line-height: 1.75;
+    }
+    .en {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 400;
+      margin-left: 0.4rem;
+    }
+    .glossary-intro {
+      background: var(--box-note);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="../chapters/01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="../chapters/02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="../chapters/03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="../chapters/04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="../chapters/05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="../chapters/06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="../chapters/07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="../chapters/08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="../chapters/09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="../chapters/10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="../chapters/11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="../chapters/12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="glossary.html" class="active">Bảng thuật ngữ</a></li>
+      <li><a href="references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Phụ lục A</div>
+      <h1>Bảng thuật ngữ</h1>
+      <div class="chapter-meta">
+        <span>📖 Tiếng Việt – Tiếng Anh</span>
+        <span>🔤 Xếp theo thứ tự bảng chữ cái</span>
+      </div>
+    </div>
+
+    <p class="glossary-intro">
+      Bảng thuật ngữ này tổng hợp các khái niệm kỹ thuật số xuất hiện trong giáo trình, được giải thích bằng ngôn ngữ thực tế dành cho sinh viên báo chí — không cần nền tảng lập trình. Thuật ngữ được sắp xếp theo thứ tự bảng chữ cái tiếng Việt. Tên tiếng Anh được giữ nguyên để thuận tiện khi tra cứu tài liệu quốc tế.
+    </p>
+
+
+    <!-- A -->
+    <div class="glossary-section">
+      <h3>A</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Thuật toán</strong> <span class="en">(Algorithm)</span></dt>
+          <dd>Tập hợp các quy tắc mà nền tảng (Facebook, Google, TikTok...) sử dụng để quyết định nội dung nào được hiển thị cho ai và theo thứ tự nào. Nhà báo cần hiểu thuật toán để tối ưu hóa khả năng tiếp cận bài viết. Thuật toán thay đổi thường xuyên — không có công thức vĩnh viễn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Văn bản thay thế ảnh</strong> <span class="en">(Alt text / Alternative text)</span></dt>
+          <dd>Đoạn văn bản ngắn mô tả nội dung của một hình ảnh, được thêm vào thẻ <code>&lt;img&gt;</code> trong HTML. Phục vụ hai mục đích: giúp người khiếm thị dùng phần mềm đọc màn hình hiểu nội dung ảnh, và giúp công cụ tìm kiếm lập chỉ mục ảnh. Ví dụ alt text tốt: "Phóng viên phỏng vấn ngư dân tại cảng cá Cà Mau, 2024".</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Văn bản neo</strong> <span class="en">(Anchor text)</span></dt>
+          <dd>Phần văn bản hiển thị của một siêu liên kết (hyperlink) mà người dùng thấy và nhấp vào. Anchor text tốt mô tả rõ nơi link dẫn tới, thay vì dùng "nhấp vào đây" chung chung. Anchor text có ảnh hưởng đến SEO và trải nghiệm người dùng.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Giao diện lập trình ứng dụng</strong> <span class="en">(API — Application Programming Interface)</span></dt>
+          <dd>Cầu nối kỹ thuật cho phép các hệ thống phần mềm khác nhau giao tiếp với nhau. Ví dụ thực tế cho nhà báo: dùng API của Twitter/X để tải hàng loạt tweet để phân tích, hoặc dùng API của Google Maps để nhúng bản đồ tương tác vào bài viết mà không cần lập trình phức tạp.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Phân tích dữ liệu web</strong> <span class="en">(Analytics)</span></dt>
+          <dd>Quá trình thu thập, đo lường và diễn giải dữ liệu về hành vi người dùng trên website nhằm đưa ra quyết định cải thiện nội dung và chiến lược. Công cụ phổ biến nhất là Google Analytics. Trong báo chí, analytics giúp tòa soạn hiểu bài nào được đọc, độc giả đến từ đâu và họ ở lại bao lâu.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- B -->
+    <div class="glossary-section">
+      <h3>B</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Liên kết ngược</strong> <span class="en">(Backlink)</span></dt>
+          <dd>Liên kết từ một trang web khác trỏ về trang của bạn. Backlink từ các trang uy tín (trang tin lớn, tổ chức học thuật, chính phủ) là tín hiệu mạnh để Google đánh giá độ tin cậy của trang. Trong SEO, xây dựng backlink chất lượng là chiến lược dài hạn quan trọng.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Băng thông</strong> <span class="en">(Bandwidth)</span></dt>
+          <dd>Lượng dữ liệu có thể truyền giữa máy chủ hosting và người dùng trong một khoảng thời gian nhất định. Băng thông thấp gây ra tình trạng trang tải chậm khi có nhiều người truy cập cùng lúc — vấn đề đặc biệt nghiêm trọng khi một bài viral thu hút hàng nghìn lượt xem đồng thời.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Trình soạn thảo khối</strong> <span class="en">(Block editor)</span></dt>
+          <dd>Giao diện soạn thảo nội dung dựa trên các "khối" (blocks) có thể di chuyển và tùy chỉnh độc lập — ví dụ: khối văn bản, khối hình ảnh, khối video, khối trích dẫn. Gutenberg (trình soạn thảo mặc định của WordPress từ 2018) là block editor phổ biến nhất hiện nay.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Tỷ lệ thoát</strong> <span class="en">(Bounce rate)</span></dt>
+          <dd>Trong Universal Analytics (phiên bản cũ của Google Analytics): tỷ lệ phiên truy cập mà người dùng chỉ xem một trang rồi rời đi mà không có thêm hành động nào. Tỷ lệ thoát cao không nhất thiết là xấu — một trang tra cứu từ điển có bounce rate 90% vẫn phục vụ tốt người dùng. Trong GA4 (phiên bản mới), khái niệm này được thay thế bằng Engagement rate.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Thương hiệu</strong> <span class="en">(Brand)</span></dt>
+          <dd>Toàn bộ nhận diện của một tờ báo hay nhà báo cá nhân: tên, logo, màu sắc, phong cách viết, giọng điệu giao tiếp và giá trị cốt lõi. Thương hiệu mạnh tạo sự nhận diện tức thì và lòng trung thành của độc giả. Với nhà báo cá nhân, thương hiệu cá nhân (personal brand) ngày càng quan trọng trong thời đại mạng xã hội.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- C -->
+    <div class="glossary-section">
+      <h3>C</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Bộ nhớ đệm</strong> <span class="en">(Cache)</span></dt>
+          <dd>Bản sao tạm thời của dữ liệu trang web được lưu trên máy chủ hoặc trình duyệt để tăng tốc độ tải. Khi bạn thay đổi nội dung trang nhưng vẫn thấy phiên bản cũ, cần xóa cache (Clear cache) để trình duyệt tải lại phiên bản mới nhất. Plugin caching như WP Super Cache hay W3 Total Cache thường được dùng trên WordPress.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Hệ thống quản lý nội dung</strong> <span class="en">(CMS — Content Management System)</span></dt>
+          <dd>Phần mềm cho phép tạo, chỉnh sửa và quản lý nội dung web mà không cần viết code trực tiếp. WordPress, Drupal và Joomla là các CMS mã nguồn mở phổ biến nhất. Với nhà báo, CMS là công cụ làm việc hàng ngày — giống như Microsoft Word nhưng kết quả hiển thị trực tiếp trên internet.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Lịch nội dung</strong> <span class="en">(Content calendar)</span></dt>
+          <dd>Kế hoạch xuất bản nội dung theo thời gian, thường dạng bảng hoặc lịch, liệt kê chủ đề, định dạng, ngày đăng, kênh phân phối và người phụ trách cho từng nội dung. Content calendar giúp tòa soạn duy trì nhịp xuất bản đều đặn, phân công công việc rõ ràng và chuẩn bị trước cho các sự kiện quan trọng.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Chuyển đổi</strong> <span class="en">(Conversion)</span></dt>
+          <dd>Hành động mong muốn mà người dùng thực hiện trên trang web: đăng ký nhận newsletter, chia sẻ bài, điền form liên hệ, hoặc trở thành thuê bao trả phí. Tỷ lệ chuyển đổi (Conversion rate) = số người thực hiện hành động / tổng số người truy cập. Tối ưu hóa conversion là mục tiêu quan trọng của UX design.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Cookie</strong> <span class="en">(Cookie)</span></dt>
+          <dd>Tệp dữ liệu nhỏ mà website lưu trên thiết bị người dùng để ghi nhớ thông tin: trạng thái đăng nhập, tùy chọn cá nhân, hành vi duyệt web. Cookie là cơ sở để analytics theo dõi người dùng qua nhiều phiên. Quy định GDPR của EU yêu cầu website phải xin phép người dùng trước khi đặt cookie theo dõi.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Bản quyền</strong> <span class="en">(Copyright)</span></dt>
+          <dd>Quyền pháp lý bảo vệ tác phẩm sáng tạo (văn bản, ảnh, video, nhạc) khỏi bị sao chép hoặc sử dụng trái phép mà không có sự đồng ý của tác giả. Nhà báo cần hiểu: không phải ảnh nào trên internet cũng tự do sử dụng. Nguồn ảnh an toàn: tự chụp, ảnh Creative Commons, hoặc ảnh từ kho miễn phí như Unsplash và Pexels.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Lời kêu gọi hành động</strong> <span class="en">(CTA — Call to Action)</span></dt>
+          <dd>Yếu tố thiết kế (nút bấm, link, hình ảnh) khuyến khích người dùng thực hiện một hành động cụ thể: "Đăng ký nhận bản tin", "Chia sẻ bài viết", "Đọc thêm". CTA hiệu quả phải nổi bật về thiết kế, rõ ràng về lợi ích và đặt đúng vị trí trên trang.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Thu thập dữ liệu web</strong> <span class="en">(Crawling)</span></dt>
+          <dd>Quá trình Google Bot và các bot của công cụ tìm kiếm tự động duyệt qua internet, đọc nội dung trang web và lập bản đồ các liên kết giữa các trang. Trang không được crawl sẽ không được lập chỉ mục (index) và không xuất hiện trong kết quả tìm kiếm. Google Search Console cho phép theo dõi tình trạng crawling của trang bạn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Ngôn ngữ trình bày tầng</strong> <span class="en">(CSS — Cascading Style Sheets)</span></dt>
+          <dd>Ngôn ngữ lập trình dùng để định nghĩa giao diện trực quan của trang web: màu sắc, font chữ, kích thước, khoảng cách, bố cục. CSS không phải HTML (cấu trúc nội dung) mà là "lớp trang trí" bên trên. Nhà báo không cần thành thạo CSS nhưng hiểu cơ bản giúp tùy chỉnh theme và sửa lỗi hiển thị nhỏ.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- D -->
+    <div class="glossary-section">
+      <h3>D</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Bảng điều khiển</strong> <span class="en">(Dashboard)</span></dt>
+          <dd>Giao diện tổng quan hiển thị các chỉ số quan trọng nhất của hệ thống, thường dưới dạng biểu đồ, số liệu và bảng. Dashboard của Google Analytics là trang đầu tiên bạn thấy sau khi đăng nhập — nơi tóm tắt sức khỏe tổng thể của trang web: số người dùng, phiên, engagement.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Báo chí dữ liệu</strong> <span class="en">(Data journalism)</span></dt>
+          <dd>Hướng tiếp cận báo chí sử dụng dữ liệu (số liệu thống kê, cơ sở dữ liệu, dữ liệu mở) làm nền tảng cho câu chuyện. Nhà báo dữ liệu biết thu thập, phân tích và trực quan hóa dữ liệu để tìm ra pattern, xu hướng hoặc bất thường mà báo chí truyền thống bỏ qua. Đây là kỹ năng ngày càng được tòa soạn lớn đánh giá cao.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Tên miền</strong> <span class="en">(Domain)</span></dt>
+          <dd>Địa chỉ web dưới dạng tên có thể đọc được, ví dụ: <em>vnexpress.net</em> hay <em>baochinhphu.vn</em>. Tên miền được mua từ nhà đăng ký (registrar) như Namecheap, GoDaddy hoặc các nhà cung cấp trong nước. Phần đuôi (.com, .net, .vn, .org) gọi là TLD (Top-Level Domain). Tên miền tốt: ngắn, dễ nhớ, dễ đánh máy và phản ánh nội dung trang.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- E -->
+    <div class="glossary-section">
+      <h3>E</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Kinh nghiệm – Chuyên môn – Uy tín – Tin cậy</strong> <span class="en">(E-E-A-T — Experience, Expertise, Authoritativeness, Trustworthiness)</span></dt>
+          <dd>Bộ tiêu chí Google dùng để đánh giá chất lượng và độ tin cậy của nội dung web, đặc biệt quan trọng với nội dung liên quan đến sức khỏe, tài chính và tin tức. Với trang báo chí: thể hiện tác giả là ai (có byline rõ ràng), chuyên môn của họ, liên kết đến nguồn tin uy tín, và có trang About minh bạch.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Nhúng nội dung</strong> <span class="en">(Embedding)</span></dt>
+          <dd>Chèn nội dung từ nền tảng khác vào trang web của mình bằng cách dùng mã nhúng (embed code). Ví dụ: nhúng video YouTube, tweet, biểu đồ Datawrapper, hoặc bản đồ Google Maps vào bài báo. Nội dung nhúng được tải từ server của nền tảng gốc, không chiếm dung lượng hosting của bạn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Tương tác</strong> <span class="en">(Engagement)</span></dt>
+          <dd>Mức độ độc giả chủ động tương tác với nội dung: đọc, cuộn trang, nhấp vào link, để lại bình luận, chia sẻ. Trong GA4, "engaged session" là phiên mà người dùng ở lại ít nhất 10 giây, xem ít nhất 2 trang, hoặc thực hiện một conversion event. Engagement cao là chỉ số quan trọng hơn lượt xem đơn thuần.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- F -->
+    <div class="glossary-section">
+      <h3>F</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Biểu tượng trang</strong> <span class="en">(Favicon)</span></dt>
+          <dd>Hình ảnh nhỏ (thường 16×16 hoặc 32×32 pixel) hiển thị trên tab trình duyệt bên cạnh tiêu đề trang. Favicon là chi tiết nhỏ nhưng quan trọng cho nhận diện thương hiệu — độc giả dùng nhiều tab cùng lúc nhận ra trang của bạn qua favicon. Nên dùng logo đơn giản hoặc chữ cái đầu của tên trang.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Phông chữ</strong> <span class="en">(Font / Typeface)</span></dt>
+          <dd>Thiết kế của bộ ký tự bao gồm chữ cái, số và ký hiệu. Font ảnh hưởng lớn đến tính dễ đọc và phong cách thương hiệu. Phân loại cơ bản: Serif (có chân, ví dụ: Georgia — phù hợp cho nội dung dài), Sans-serif (không chân, ví dụ: Inter — phù hợp cho UI và màn hình nhỏ), Monospace (ký tự đều nhau, phù hợp cho code). Google Fonts cung cấp hàng trăm font miễn phí.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- G -->
+    <div class="glossary-section">
+      <h3>G</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Google Analytics</strong> <span class="en">(Google Analytics / GA4)</span></dt>
+          <dd>Nền tảng phân tích web miễn phí của Google, là công cụ phổ biến nhất thế giới để theo dõi lưu lượng truy cập và hành vi người dùng. GA4 (Google Analytics 4) là phiên bản hiện tại từ 2023, thay thế Universal Analytics. GA4 dùng mô hình dữ liệu theo sự kiện (event-based), tích hợp máy học và hỗ trợ theo dõi xuyên thiết bị.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Google Search Console</strong> <span class="en">(Google Search Console / GSC)</span></dt>
+          <dd>Công cụ miễn phí của Google giúp quản trị viên web theo dõi hiệu suất trang trong kết quả tìm kiếm: từ khóa nào đưa người đọc đến, trang nào được lập chỉ mục, lỗi crawl, và đánh giá Core Web Vitals. GSC là công cụ thiết yếu bổ trợ cho GA4 — GA4 đo hành vi trong trang, GSC đo hiệu suất tìm kiếm bên ngoài.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Gutenberg</strong> <span class="en">(Gutenberg)</span></dt>
+          <dd>Trình soạn thảo nội dung dạng block editor của WordPress, ra mắt năm 2018 và trở thành trình soạn thảo mặc định từ WordPress 5.0. Tên được đặt theo Johannes Gutenberg — người phát minh máy in. Gutenberg thay thế editor cổ điển (Classic Editor) với giao diện trực quan hơn, cho phép tạo bố cục trang phức tạp mà không cần code.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- H -->
+    <div class="glossary-section">
+      <h3>H</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Hashtag</strong> <span class="en">(Hashtag)</span></dt>
+          <dd>Từ hoặc cụm từ không dấu cách, bắt đầu bằng ký hiệu #, dùng để phân loại và tìm kiếm nội dung trên mạng xã hội. Ví dụ: #baochi, #tintuc, #MoiTruong. Hashtag phù hợp giúp bài đăng tiếp cận người dùng chưa follow bạn nhưng đang quan tâm đến chủ đề đó. Không nên dùng quá nhiều hashtag — 2–5 hashtag liên quan là đủ.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Tiêu đề trang</strong> <span class="en">(Header / Heading)</span></dt>
+          <dd>Hai khái niệm cần phân biệt: (1) <em>Header</em> là phần đầu trang web chứa logo, menu điều hướng chính; (2) <em>Heading</em> là thẻ HTML (H1 đến H6) đánh dấu cấp độ tiêu đề trong bài. H1 là tiêu đề chính (mỗi trang chỉ nên có một H1), H2 là tiêu đề mục lớn, H3 là tiêu đề mục nhỏ. Sử dụng heading đúng thứ bậc quan trọng cho cả SEO lẫn accessibility.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Bản đồ nhiệt</strong> <span class="en">(Heatmap)</span></dt>
+          <dd>Biểu diễn trực quan dữ liệu trên trang web, dùng màu sắc (nóng – lạnh) để cho thấy nơi người dùng tập trung chú ý: click vào đâu, di chuột đến đâu, cuộn trang đến mức nào. Công cụ phổ biến: Hotjar, Microsoft Clarity (miễn phí). Heatmap giúp nhà báo hiểu phần nào của bài được đọc kỹ và phần nào bị bỏ qua.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Lưu trữ web</strong> <span class="en">(Hosting / Web hosting)</span></dt>
+          <dd>Dịch vụ cung cấp máy chủ để lưu trữ tệp trang web và phục vụ chúng cho người dùng internet. Các loại hosting phổ biến: Shared hosting (nhiều trang chung máy chủ — rẻ nhưng chậm hơn), VPS (máy chủ ảo riêng), Dedicated server (máy chủ vật lý riêng). Với blogger và trang tin nhỏ, shared hosting từ các nhà cung cấp như SiteGround, Hostinger là đủ dùng.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Siêu liên kết</strong> <span class="en">(Hyperlink / Link)</span></dt>
+          <dd>Yếu tố cho phép người dùng nhấp để chuyển sang trang web, tài liệu hoặc vị trí khác. Hyperlink là nền tảng của World Wide Web. Trong báo chí, link nội bộ (internal link) kết nối các bài trong cùng trang; link ngoại (external link) trỏ đến nguồn tham khảo bên ngoài — thể hiện sự minh bạch và hỗ trợ SEO.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Ngôn ngữ đánh dấu siêu văn bản</strong> <span class="en">(HTML — HyperText Markup Language)</span></dt>
+          <dd>Ngôn ngữ chuẩn để tạo cấu trúc nội dung trang web, dùng các thẻ (tags) như <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;a&gt;</code>. HTML không phải ngôn ngữ lập trình mà là ngôn ngữ đánh dấu — nó mô tả cấu trúc và ý nghĩa của nội dung, không phải logic xử lý. Nhà báo biết HTML cơ bản có thể sửa lỗi hiển thị và chèn nội dung đặc biệt vào bài.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- I -->
+    <div class="glossary-section">
+      <h3>I</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Lập chỉ mục</strong> <span class="en">(Index / Indexing)</span></dt>
+          <dd>Quá trình Google Bot đọc và lưu trữ nội dung trang web vào cơ sở dữ liệu khổng lồ của Google (gọi là Index). Chỉ những trang đã được lập chỉ mục mới xuất hiện trong kết quả tìm kiếm. Thẻ HTML <code>&lt;meta name="robots" content="noindex"&gt;</code> sẽ ngăn trang bị lập chỉ mục — hữu ích cho trang thử nghiệm, trang cá nhân hoặc trang có nội dung trùng lặp.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Đồ họa thông tin</strong> <span class="en">(Infographic)</span></dt>
+          <dd>Hình thức trực quan hóa thông tin phức tạp bằng kết hợp đồ họa, biểu đồ và văn bản ngắn để truyền đạt thông điệp nhanh và dễ hiểu. Trong báo chí, infographic hiệu quả khi cần giải thích quy trình phức tạp, so sánh số liệu hoặc trình bày dữ liệu địa lý. Công cụ tạo infographic: Canva, Piktochart, Adobe Express.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Instagram</strong> <span class="en">(Instagram)</span></dt>
+          <dd>Mạng xã hội tập trung vào nội dung hình ảnh và video, thuộc Meta (cùng công ty với Facebook). Instagram hiệu quả với báo chí ảnh, phóng sự ảnh và nội dung hậu trường (behind-the-scenes). Tính năng Stories (tạm thời 24 giờ) và Reels (video ngắn) là hai định dạng quan trọng nhất hiện nay.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- J -->
+    <div class="glossary-section">
+      <h3>J</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>JavaScript</strong> <span class="en">(JavaScript)</span></dt>
+          <dd>Ngôn ngữ lập trình chạy trong trình duyệt, tạo ra các tính năng tương tác trên trang web: menu dropdown, form tự động kiểm tra, biểu đồ động, bản đồ tương tác. Hầu hết các plugin WordPress và widget hiện đại đều dùng JavaScript. Quá nhiều JavaScript có thể làm chậm trang — một trong những nguyên nhân phổ biến khiến trang tin tức tải chậm trên mobile.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- K -->
+    <div class="glossary-section">
+      <h3>K</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Từ khóa</strong> <span class="en">(Keyword)</span></dt>
+          <dd>Từ hoặc cụm từ mà người dùng gõ vào ô tìm kiếm trên Google. Trong SEO, xác định đúng từ khóa mục tiêu là bước đầu tiên: từ khóa ngắn (như "báo chí") có lượng tìm kiếm cao nhưng cạnh tranh lớn; từ khóa dài (long-tail keyword, như "cách viết bài báo investigative journalism") ít cạnh tranh hơn và thường chuyển đổi tốt hơn vì người tìm có ý định rõ ràng hơn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Chỉ số hiệu suất chính</strong> <span class="en">(KPI — Key Performance Indicator)</span></dt>
+          <dd>Con số cụ thể, đo lường được, dùng để đánh giá mức độ đạt được mục tiêu đề ra. Ví dụ KPI cho trang tin: "tăng Monthly Active Users lên 20% trong quý này", "đạt thời gian đọc trung bình 2,5 phút cho các bài phân tích". KPI tốt phải SMART: Specific (cụ thể), Measurable (đo được), Achievable (khả thi), Relevant (liên quan), Time-bound (có thời hạn).</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- L -->
+    <div class="glossary-section">
+      <h3>L</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Trang đích</strong> <span class="en">(Landing page)</span></dt>
+          <dd>Trang web được thiết kế đặc biệt để tiếp nhận lưu lượng từ một nguồn cụ thể (quảng cáo, email, mạng xã hội) và hướng người dùng thực hiện một hành động duy nhất: đăng ký, mua hàng, tải tài liệu. Khác với trang chủ thông thường, landing page tập trung hoàn toàn vào một mục tiêu, loại bỏ mọi yếu tố phân tâm.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Nam châm thu hút</strong> <span class="en">(Lead magnet)</span></dt>
+          <dd>Nội dung miễn phí có giá trị (ebook, checklist, webinar, bản tin độc quyền) được cung cấp để đổi lấy email đăng ký của người dùng. Chiến lược phổ biến trong email marketing: "Đăng ký nhận bản tin hàng tuần để được tặng hướng dẫn X trang về Y".</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- M -->
+    <div class="glossary-section">
+      <h3>M</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Siêu dữ liệu</strong> <span class="en">(Metadata)</span></dt>
+          <dd>Dữ liệu mô tả dữ liệu khác. Trên web, metadata bao gồm: title tag (tiêu đề trang cho công cụ tìm kiếm), meta description (mô tả ngắn xuất hiện dưới tiêu đề trong kết quả Google), Open Graph tags (kiểm soát cách bài chia sẻ trên mạng xã hội). Metadata không hiển thị trực tiếp cho người dùng nhưng ảnh hưởng lớn đến SEO và tỷ lệ nhấp.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Ưu tiên thiết bị di động</strong> <span class="en">(Mobile-first)</span></dt>
+          <dd>Triết lý thiết kế bắt đầu từ màn hình nhỏ nhất (điện thoại) rồi mở rộng ra màn hình lớn hơn — ngược với cách truyền thống (thiết kế cho desktop rồi thu nhỏ). Mobile-first ngày càng quan trọng khi hơn 60% lưu lượng web toàn cầu đến từ thiết bị di động. Google cũng dùng phiên bản mobile của trang để lập chỉ mục (Mobile-first indexing).</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- N -->
+    <div class="glossary-section">
+      <h3>N</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Bản tin điện tử</strong> <span class="en">(Newsletter)</span></dt>
+          <dd>Email định kỳ gửi cho danh sách độc giả đã đăng ký, chứa nội dung tuyển chọn, bình luận hoặc tin tức độc quyền. Newsletter là kênh phân phối nội dung duy nhất mà nhà báo kiểm soát hoàn toàn — không phụ thuộc vào thuật toán mạng xã hội. Công cụ phổ biến: Mailchimp, Substack, Beehiiv.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- O -->
+    <div class="glossary-section">
+      <h3>O</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Tỷ lệ mở email</strong> <span class="en">(Open rate)</span></dt>
+          <dd>Phần trăm người nhận email đã mở email. Chỉ số quan trọng nhất đánh giá hiệu quả chiến dịch email marketing / newsletter. Open rate trung bình ngành truyền thông là 22–25%. Tiêu đề email hấp dẫn, danh sách "sạch" (subscriber thật sự quan tâm) và giờ gửi phù hợp là ba yếu tố chính ảnh hưởng đến open rate.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Lưu lượng tự nhiên</strong> <span class="en">(Organic traffic)</span></dt>
+          <dd>Người dùng truy cập trang web qua kết quả tìm kiếm không phải quảng cáo (kết quả "tự nhiên" hay "unpaid"). Organic traffic được coi là chất lượng cao vì người dùng chủ động tìm kiếm nội dung liên quan. SEO tốt là đầu tư dài hạn để tăng organic traffic bền vững, không phụ thuộc vào ngân sách quảng cáo.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- P -->
+    <div class="glossary-section">
+      <h3>P</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Tốc độ tải trang</strong> <span class="en">(Page speed)</span></dt>
+          <dd>Thời gian cần thiết để trang web tải đầy đủ trên trình duyệt. Tốc độ tải ảnh hưởng trực tiếp đến trải nghiệm người dùng và xếp hạng SEO. Google khuyến nghị: dưới 2 giây cho LCP (Largest Contentful Paint). Công cụ kiểm tra: PageSpeed Insights (pagespeed.web.dev). Nguyên nhân phổ biến khiến trang chậm: ảnh chưa tối ưu, quá nhiều plugin, hosting yếu.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Đường dẫn tĩnh</strong> <span class="en">(Permalink)</span></dt>
+          <dd>URL cố định và vĩnh viễn của một bài viết hoặc trang. Permalink tốt: ngắn gọn, chứa từ khóa chính, không chứa số ID vô nghĩa. Ví dụ permalink tốt: <code>example.com/seo-cho-nha-bao</code>; permalink xấu: <code>example.com/?p=1234</code>. Trong WordPress, có thể cài đặt cấu trúc permalink tại Settings → Permalinks.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Plugin</strong> <span class="en">(Plugin)</span></dt>
+          <dd>Phần mềm bổ sung cài vào CMS (đặc biệt WordPress) để thêm tính năng mà hệ thống gốc không có: SEO, backup, bảo mật, form liên hệ, gallery ảnh, cache. WordPress có hơn 60.000 plugin miễn phí trong kho chính thức. Lưu ý: nhiều plugin quá sẽ làm chậm trang — chỉ cài những plugin thực sự cần thiết.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Podcast</strong> <span class="en">(Podcast)</span></dt>
+          <dd>Chương trình âm thanh dạng loạt tập (series), phát hành định kỳ, người dùng có thể đăng ký và nghe theo yêu cầu. Podcast báo chí ngày càng phổ biến như một kênh phân phối nội dung: phù hợp với người dùng nghe trong lúc di chuyển, tập thể dục. Nền tảng phổ biến: Spotify, Apple Podcasts, Anchor.fm.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- R -->
+    <div class="glossary-section">
+      <h3>R</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Thiết kế đáp ứng</strong> <span class="en">(Responsive design)</span></dt>
+          <dd>Phương pháp thiết kế web trong đó giao diện tự động điều chỉnh bố cục và kích thước theo kích thước màn hình của thiết bị (máy tính, tablet, điện thoại). Responsive design là tiêu chuẩn bắt buộc hiện nay — không còn là tùy chọn. Hầu hết các theme WordPress và template Google Sites hiện đại đều responsive theo mặc định.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Nguồn cấp dữ liệu</strong> <span class="en">(RSS — Really Simple Syndication)</span></dt>
+          <dd>Định dạng dữ liệu chuẩn cho phép người dùng đăng ký nhận cập nhật tự động từ trang web qua ứng dụng đọc RSS (RSS reader). Dù ít phổ biến hơn so với thập niên 2000–2010, RSS vẫn được nhiều nhà báo và độc giả chuyên nghiệp sử dụng để theo dõi nhiều nguồn tin cùng lúc không qua mạng xã hội.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- S -->
+    <div class="glossary-section">
+      <h3>S</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Đánh dấu schema</strong> <span class="en">(Schema markup)</span></dt>
+          <dd>Mã dữ liệu có cấu trúc (structured data) thêm vào HTML giúp công cụ tìm kiếm hiểu rõ hơn nội dung trang — đây là bài báo hay công thức nấu ăn, đây là người hay tổ chức. Schema markup có thể giúp trang xuất hiện với "rich snippets" trong kết quả Google: rating sao, ảnh thu nhỏ, breadcrumb — tăng CTR đáng kể.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Chụp màn hình</strong> <span class="en">(Screenshot)</span></dt>
+          <dd>Hình ảnh chụp lại nội dung hiển thị trên màn hình tại một thời điểm. Trong báo chí số, screenshot dùng để lưu bằng chứng nội dung trực tuyến (tweet, post bị xóa, nội dung gây tranh cãi). Lưu ý pháp lý: screenshot không thay thế phiên bản lưu trữ chính thức; cần ghi rõ ngày giờ và URL nguồn khi sử dụng làm bằng chứng báo chí.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Tối ưu hóa công cụ tìm kiếm</strong> <span class="en">(SEO — Search Engine Optimization)</span></dt>
+          <dd>Tập hợp các kỹ thuật cải thiện khả năng xuất hiện và xếp hạng của trang web trong kết quả tìm kiếm tự nhiên. SEO On-page: tối ưu nội dung, tiêu đề, URL, heading, tốc độ trang. SEO Off-page: xây dựng backlink từ trang uy tín. SEO Technical: cấu trúc website, sitemap, tốc độ tải. Với báo chí, SEO là kỹ năng thiết yếu để bài viết tiếp cận độc giả qua tìm kiếm.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Kể chuyện cuộn trang</strong> <span class="en">(Scrollytelling)</span></dt>
+          <dd>Kỹ thuật kể chuyện tương tác trong đó nội dung (văn bản, hình ảnh, animation, bản đồ) được kích hoạt hoặc thay đổi theo hành động cuộn trang của người đọc. Scrollytelling phổ biến trong các bài đặc biệt (longform) của tờ báo lớn như New York Times, Guardian. Công cụ đơn giản hơn: Flourish.studio, Shorthand.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Phiên</strong> <span class="en">(Session)</span></dt>
+          <dd>Một lượt truy cập liên tục của người dùng vào trang web. Phiên kết thúc sau 30 phút không hoạt động hoặc khi sang nửa đêm (00:00). Số phiên khác với số người dùng — một người có thể tạo nhiều phiên trong ngày. Trong GA4, "engaged session" là phiên có chất lượng cao thực sự.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Sơ đồ trang web</strong> <span class="en">(Sitemap)</span></dt>
+          <dd>Tệp XML liệt kê tất cả URL quan trọng của trang web, giúp Google Bot crawl và lập chỉ mục hiệu quả hơn. Với WordPress, plugin Yoast SEO hoặc Rank Math tự động tạo sitemap. Sau khi có sitemap, gửi URL của nó vào Google Search Console → Sitemaps để Google cập nhật nhanh hơn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Mạng xã hội</strong> <span class="en">(Social media)</span></dt>
+          <dd>Các nền tảng trực tuyến cho phép người dùng tạo, chia sẻ và tương tác với nội dung: Facebook, Instagram, TikTok, Twitter/X, YouTube, LinkedIn, Pinterest. Với nhà báo, mạng xã hội vừa là kênh phân phối nội dung, vừa là nguồn tin (cần xác minh kỹ), vừa là công cụ kết nối cộng đồng độc giả.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Chứng chỉ bảo mật SSL</strong> <span class="en">(SSL — Secure Sockets Layer / HTTPS)</span></dt>
+          <dd>Giao thức mã hóa kết nối giữa trình duyệt người dùng và máy chủ web, thể hiện bằng biểu tượng khóa và "https://" trước URL. SSL là tiêu chuẩn bắt buộc: trang không có SSL bị Chrome đánh dấu "Not Secure" và bị Google phạt trong xếp hạng. Hầu hết nhà cung cấp hosting hiện đại bao gồm SSL miễn phí qua Let's Encrypt.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Người đăng ký</strong> <span class="en">(Subscriber)</span></dt>
+          <dd>Người dùng đã chủ động đăng ký nhận nội dung từ bạn — qua newsletter, kênh YouTube, podcast, hoặc tài khoản mạng xã hội. Subscriber là nhóm độc giả trung thành và giá trị nhất: họ chủ động muốn nghe từ bạn, không phụ thuộc vào thuật toán. Xây dựng danh sách subscriber là chiến lược bền vững hơn là chạy theo follower.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- T -->
+    <div class="glossary-section">
+      <h3>T</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Mẫu trang</strong> <span class="en">(Template)</span></dt>
+          <dd>Bố cục trang web được thiết kế sẵn, người dùng chỉ cần thay nội dung mà không cần thiết kế từ đầu. Template khác với Theme: template là bố cục cho một loại trang cụ thể (trang chủ, trang bài viết, trang About), trong khi theme là toàn bộ gói thiết kế áp dụng cho cả trang web.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Giao diện</strong> <span class="en">(Theme)</span></dt>
+          <dd>Gói thiết kế tổng thể áp dụng cho toàn bộ trang WordPress, bao gồm: layout, màu sắc, font chữ, style của các yếu tố (button, form, table). Theme kiểm soát "vẻ ngoài" của trang; plugin kiểm soát "tính năng". Kho theme WordPress có hàng nghìn theme miễn phí và trả phí. Với báo chí, nên ưu tiên theme tối ưu tốc độ, dễ đọc và responsive tốt.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Ảnh thu nhỏ</strong> <span class="en">(Thumbnail)</span></dt>
+          <dd>Ảnh đại diện nhỏ hiển thị cho bài viết trong danh sách bài, kết quả tìm kiếm, và khi chia sẻ trên mạng xã hội. Thumbnail hấp dẫn tăng đáng kể tỷ lệ nhấp vào bài. Kích thước chuẩn cho Open Graph (thumbnail khi chia sẻ mạng xã hội): 1200×630 pixel. Canva có nhiều template thumbnail sẵn.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>Lưu lượng truy cập</strong> <span class="en">(Traffic)</span></dt>
+          <dd>Số lượng người dùng và phiên truy cập vào trang web trong một khoảng thời gian. Traffic được phân chia theo nguồn (organic, social, direct, referral, email, paid), theo thiết bị (desktop, mobile, tablet) và theo địa lý. Phân tích cơ cấu traffic giúp biết kênh nào mang lại độc giả nhiều nhất và chất lượng nhất.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- U -->
+    <div class="glossary-section">
+      <h3>U</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Trải nghiệm người dùng</strong> <span class="en">(UX — User Experience)</span></dt>
+          <dd>Tổng thể cảm nhận và phản ứng của người dùng khi tương tác với sản phẩm hoặc dịch vụ. UX tốt: người dùng tìm được thứ cần nhanh chóng, không bị nhầm lẫn, cảm thấy thoải mái và muốn quay lại. UX xấu: menu phức tạp, trang tải chậm, nút bấm khó tìm, chữ quá nhỏ. UX và thiết kế đẹp là hai thứ khác nhau — trang đẹp nhưng khó dùng thì UX vẫn kém.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- V -->
+    <div class="glossary-section">
+      <h3>V</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Lan truyền</strong> <span class="en">(Virality / Viral)</span></dt>
+          <dd>Hiện tượng nội dung được chia sẻ rộng rãi và nhanh chóng trên mạng xã hội, tương tự như virus lây lan. Nội dung viral thường khai thác cảm xúc mạnh (ngạc nhiên, vui, tức giận, xúc động) hoặc có yếu tố bất ngờ và chia sẻ giá trị rõ ràng. Không thể đảm bảo nội dung viral nhưng có thể tăng xác suất bằng cách hiểu tâm lý chia sẻ của độc giả mục tiêu.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- W -->
+    <div class="glossary-section">
+      <h3>W</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>Widget</strong> <span class="en">(Widget)</span></dt>
+          <dd>Thành phần giao diện nhỏ, độc lập, có thể đặt ở các vị trí khác nhau trên trang web (sidebar, footer, header): widget hiển thị bài mới nhất, widget mạng xã hội, widget tìm kiếm, widget danh sách chuyên mục. Trong WordPress, quản lý widget tại Appearance → Widgets hoặc thông qua Customizer.</dd>
+        </div>
+
+        <div class="glossary-term">
+          <dt><strong>WordPress</strong> <span class="en">(WordPress)</span></dt>
+          <dd>Hệ thống quản lý nội dung (CMS) mã nguồn mở phổ biến nhất thế giới, chiếm hơn 43% tổng số trang web trên internet. Có hai phiên bản: WordPress.com (dịch vụ có hosting, dễ dùng nhưng hạn chế tùy chỉnh) và WordPress.org (mã nguồn tự cài trên hosting riêng, linh hoạt hoàn toàn). Hầu hết tòa soạn báo lớn dùng WordPress.org.</dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <!-- X -->
+    <div class="glossary-section">
+      <h3>X</h3>
+      <dl>
+
+        <div class="glossary-term">
+          <dt><strong>XML</strong> <span class="en">(XML — eXtensible Markup Language)</span></dt>
+          <dd>Định dạng văn bản có cấu trúc để lưu trữ và trao đổi dữ liệu, dùng các thẻ tương tự HTML. Trong ngữ cảnh WordPress, XML được dùng trong: sitemap (sitemap.xml giúp Google crawl trang), RSS feed (cung cấp nội dung cho RSS readers), và xuất/nhập nội dung giữa các trang WordPress (file .xml).</dd>
+        </div>
+
+      </dl>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="../chapters/12-du-an.html">← Chương 12: Dự án cuối khóa</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="references.html">Tài liệu tham khảo →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

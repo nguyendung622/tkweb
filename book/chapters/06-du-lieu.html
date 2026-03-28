@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 6 — Báo chí dữ liệu &amp; Trực quan hóa</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html" class="active">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 6</div>
+      <h1>Báo chí dữ liệu &amp; Trực quan hóa</h1>
+      <div class="chapter-meta">
+        <span>⏱ 135 phút</span>
+        <span>📊 Trung cấp</span>
+        <span>🛠 Datawrapper · Flourish · Google Sheets</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Định nghĩa báo chí dữ liệu và vai trò của nó trong tòa soạn hiện đại</li>
+        <li>Làm sạch và phân tích tập dữ liệu cơ bản bằng Google Sheets</li>
+        <li>Tạo biểu đồ và bản đồ tương tác với Datawrapper</li>
+        <li>Xây dựng câu chuyện dữ liệu có tính tường thuật với Flourish</li>
+        <li>Nhúng biểu đồ vào bài báo trên Google Sites hoặc WordPress</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.1 BÁO CHÍ DỮ LIỆU LÀ GÌ?
+    ════════════════════════════════════ -->
+    <h2>6.1 Báo chí dữ liệu là gì?</h2>
+
+    <p>
+      Báo chí dữ liệu (data journalism) là phương thức làm báo sử dụng dữ liệu có cấu trúc — số liệu thống kê, cơ sở dữ liệu, hồ sơ công khai — như nguyên liệu chính để tìm kiếm và kể câu chuyện. Thay vì chỉ trích dẫn một vài con số trong bài viết truyền thống, nhà báo dữ liệu phân tích toàn bộ tập dữ liệu, tìm ra các mẫu hình (patterns), xu hướng, ngoại lệ, và biến chúng thành câu chuyện có ý nghĩa với công chúng.
+    </p>
+
+    <p>
+      Điều làm cho báo chí dữ liệu khác biệt không phải là con số — mọi bài báo đều có thể chứa con số — mà là phương pháp. Nhà báo dữ liệu đặt câu hỏi cho dữ liệu giống như một điều tra viên đặt câu hỏi cho nhân chứng: tìm kiếm mâu thuẫn, bất thường, và sự thật ẩn sau những con số khô khan.
+    </p>
+
+    <h3>Định nghĩa và lịch sử phát triển</h3>
+
+    <p>
+      Mầm mống của báo chí dữ liệu xuất hiện từ thế kỷ 19, khi nhà thống kê người Anh William Playfair phát minh ra biểu đồ đường và biểu đồ cột để trực quan hóa dữ liệu kinh tế. John Snow — trong vụ dịch tả London năm 1854 — đã vẽ bản đồ các ca tử vong để chứng minh nguồn gốc từ giếng nước Broad Street, một ví dụ điển hình của cách dữ liệu địa lý có thể "kể" một câu chuyện cứu sống hàng nghìn người.
+    </p>
+
+    <p>
+      Tuy nhiên, báo chí dữ liệu hiện đại chỉ thực sự bùng nổ từ những năm 2000, khi ba yếu tố hội tụ: lượng dữ liệu số khổng lồ từ chính phủ và doanh nghiệp, phần mềm phân tích ngày càng tiếp cận được, và Internet tạo ra nền tảng để phân phối nội dung tương tác. Dự án Panama Papers (2016) — khi Hiệp hội Phóng viên Điều tra Quốc tế (ICIJ) phối hợp hơn 400 nhà báo từ 80 quốc gia phân tích 11,5 triệu tài liệu — đã trở thành biểu tượng của khả năng báo chí dữ liệu ở quy mô toàn cầu.
+    </p>
+
+    <h3>Ví dụ báo chí dữ liệu nổi tiếng</h3>
+
+    <p>
+      <strong>The Guardian — Snowfall Equivalent:</strong> Tờ Guardian (Anh) đi đầu trong báo chí dữ liệu với nhiều dự án mang tính mốc, từ trực quan hóa chi tiết ngân sách quốc gia đến phân tích dữ liệu tội phạm theo từng quận ở London. Phong cách trực quan hóa tương tác của Guardian đã trở thành chuẩn mực mà nhiều tòa soạn học theo.
+    </p>
+
+    <p>
+      <strong>The New York Times:</strong> Phòng đồ họa của NYT (NYT Graphics) là một trong những nhóm báo chí dữ liệu lớn và có ảnh hưởng nhất thế giới. Các tác phẩm của họ trong đại dịch COVID-19 — theo dõi số ca nhiễm, tỷ lệ tiêm chủng, và áp lực lên hệ thống y tế bằng bản đồ và biểu đồ cập nhật hàng ngày — trở thành nguồn tham khảo cho cả chính phủ và công chúng.
+    </p>
+
+    <p>
+      <strong>VietnamPlus:</strong> Trong bối cảnh Việt Nam, VietnamPlus (thông tấn xã Việt Nam) là một trong những tòa soạn tiên phong ứng dụng báo chí dữ liệu với các longform và infographic tương tác về các chủ đề kinh tế-xã hội. Nhiều tòa soạn tư nhân như VnExpress, Tuổi Trẻ Online cũng dần đầu tư vào mảng này.
+    </p>
+
+    <h3>Quy trình làm báo chí dữ liệu</h3>
+
+    <p>Quy trình chuẩn gồm năm bước, không nhất thiết tuyến tính — đôi khi bạn sẽ phải quay lại bước trước:</p>
+
+    <ol>
+      <li><strong>Thu thập (Collect):</strong> Tìm và tải về dữ liệu từ các nguồn chính thống, yêu cầu dữ liệu theo Luật Tiếp cận thông tin, hoặc thu thập bằng scraping.</li>
+      <li><strong>Làm sạch (Clean):</strong> Xử lý dữ liệu bị thiếu, không nhất quán, sai định dạng. Đây thường là bước tốn thời gian nhất (60–80% tổng thời gian).</li>
+      <li><strong>Phân tích (Analyze):</strong> Tìm câu trả lời cho câu hỏi báo chí bằng cách lọc, sắp xếp, so sánh, tính toán tỷ lệ, tìm tương quan.</li>
+      <li><strong>Trực quan hóa (Visualize):</strong> Chuyển dữ liệu thành biểu đồ, bản đồ, hoặc hình thức trực quan phù hợp với câu chuyện.</li>
+      <li><strong>Kể chuyện (Narrate):</strong> Đặt biểu đồ vào bối cảnh, giải thích ý nghĩa, kết nối với con người thật — để dữ liệu trở thành câu chuyện, không chỉ là số.</li>
+    </ol>
+
+    <div class="box note">
+      <div class="box-title">Câu chuyện là trung tâm, dữ liệu là bằng chứng</div>
+      <p>Sai lầm phổ biến của người mới học báo chí dữ liệu là tạo ra nhiều biểu đồ đẹp mắt nhưng không có điểm trọng tâm tường thuật. Hãy bắt đầu bằng câu hỏi báo chí (<em>"Tỉnh nào có tỷ lệ học sinh bỏ học cao nhất và vì sao?"</em>) trước khi mở bảng tính. Dữ liệu là bằng chứng; câu chuyện về con người mới là trung tâm.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.2 NGUỒN DỮ LIỆU CHO NHÀ BÁO VIỆT NAM
+    ════════════════════════════════════ -->
+    <h2>6.2 Nguồn dữ liệu cho nhà báo Việt Nam</h2>
+
+    <p>
+      Một trong những rào cản lớn nhất với báo chí dữ liệu ở Việt Nam là tìm được dữ liệu đáng tin cậy và có thể truy cập công khai. Mặc dù Luật Tiếp cận thông tin (2016) đã tạo cơ sở pháp lý cho quyền yêu cầu thông tin từ cơ quan nhà nước, thực tế triển khai vẫn còn nhiều hạn chế. Tuy nhiên, ngày càng có nhiều nguồn dữ liệu mở đáng giá.
+    </p>
+
+    <h3>Tổng cục Thống kê (gso.gov.vn)</h3>
+
+    <p>
+      Đây là nguồn dữ liệu chính thống và toàn diện nhất về kinh tế-xã hội Việt Nam. Tổng cục Thống kê cung cấp: số liệu GDP, lạm phát, xuất nhập khẩu theo quý; dữ liệu dân số, lao động, việc làm; kết quả các cuộc Tổng điều tra dân số, nông nghiệp, kinh tế; và Niên giám thống kê hàng năm. Dữ liệu thường có dạng file Excel hoặc PDF, đôi khi cần làm sạch đáng kể trước khi dùng.
+    </p>
+
+    <h3>Cổng dữ liệu mở data.gov.vn</h3>
+
+    <p>
+      Cổng dữ liệu mở quốc gia (data.gov.vn) được xây dựng theo mô hình open data, cung cấp dữ liệu từ nhiều bộ ngành dưới định dạng máy có thể đọc được (CSV, JSON, API). Chất lượng và độ cập nhật còn chưa đồng đều giữa các cơ quan, nhưng đây vẫn là điểm khởi đầu quan trọng cho nhiều dự án báo chí dữ liệu trong nước.
+    </p>
+
+    <h3>Nguồn dữ liệu quốc tế</h3>
+
+    <p>
+      <strong>World Bank Open Data</strong> (data.worldbank.org) — Hơn 8.000 chỉ số phát triển kinh tế-xã hội cho 200+ quốc gia, cập nhật thường xuyên. Đặc biệt hữu ích khi cần so sánh Việt Nam với các nước trong khu vực hoặc toàn cầu. Dữ liệu tải về miễn phí dưới dạng CSV.
+    </p>
+
+    <p>
+      <strong>WHO Global Health Observatory</strong> (who.int/data/gho) — Dữ liệu y tế toàn cầu bao gồm tỷ lệ tử vong, gánh nặng bệnh tật, hệ thống y tế. Có API và tải về CSV/Excel.
+    </p>
+
+    <p>
+      <strong>UN Data</strong> (data.un.org) — Tổng hợp dữ liệu từ nhiều tổ chức Liên Hợp Quốc: UNICEF, UNDP, FAO, ILO. Bao phủ rộng từ giáo dục, môi trường đến nhân quyền.
+    </p>
+
+    <table>
+      <caption>Bảng 6.1 — Các nguồn dữ liệu chính cho nhà báo Việt Nam</caption>
+      <thead>
+        <tr>
+          <th>Nguồn</th>
+          <th>URL</th>
+          <th>Chủ đề</th>
+          <th>Định dạng</th>
+          <th>Cập nhật</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tổng cục Thống kê</td>
+          <td>gso.gov.vn</td>
+          <td>Kinh tế, dân số, xã hội VN</td>
+          <td>Excel, PDF</td>
+          <td>Hàng quý/năm</td>
+        </tr>
+        <tr>
+          <td>Cổng dữ liệu mở quốc gia</td>
+          <td>data.gov.vn</td>
+          <td>Đa ngành bộ</td>
+          <td>CSV, JSON, API</td>
+          <td>Không đồng đều</td>
+        </tr>
+        <tr>
+          <td>Bộ Y tế</td>
+          <td>moh.gov.vn</td>
+          <td>Y tế, dịch bệnh</td>
+          <td>PDF, Excel</td>
+          <td>Theo sự kiện</td>
+        </tr>
+        <tr>
+          <td>World Bank Open Data</td>
+          <td>data.worldbank.org</td>
+          <td>Phát triển kinh tế toàn cầu</td>
+          <td>CSV, API</td>
+          <td>Hàng năm</td>
+        </tr>
+        <tr>
+          <td>WHO GHO</td>
+          <td>who.int/data/gho</td>
+          <td>Y tế toàn cầu</td>
+          <td>CSV, API</td>
+          <td>Hàng năm</td>
+        </tr>
+        <tr>
+          <td>UN Data</td>
+          <td>data.un.org</td>
+          <td>Đa lĩnh vực quốc tế</td>
+          <td>CSV, Excel</td>
+          <td>Hàng năm</td>
+        </tr>
+        <tr>
+          <td>Our World in Data</td>
+          <td>ourworldindata.org</td>
+          <td>Xu hướng toàn cầu dài hạn</td>
+          <td>CSV, biểu đồ nhúng</td>
+          <td>Thường xuyên</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Kỹ thuật scraping không cần code: Import HTML trong Google Sheets</h3>
+
+    <p>
+      Đôi khi dữ liệu bạn cần nằm trong một bảng trên trang web nhưng không có file tải về. Google Sheets có hàm <code>IMPORTHTML</code> cho phép bạn "kéo" dữ liệu bảng trực tiếp từ URL mà không cần viết bất kỳ đoạn code nào.
+    </p>
+
+    <p>
+      Cú pháp: <code>=IMPORTHTML("URL", "table", số_thứ_tự_bảng)</code>
+    </p>
+
+    <p>
+      Ví dụ: Để lấy bảng dữ liệu đầu tiên từ trang Wikipedia về GDP các tỉnh Việt Nam:<br>
+      <code>=IMPORTHTML("https://vi.wikipedia.org/wiki/Các_tỉnh_Việt_Nam", "table", 1)</code>
+    </p>
+
+    <p>
+      Hàm này cập nhật tự động khi trang nguồn thay đổi, phù hợp để theo dõi các trang dữ liệu cập nhật thường xuyên. Lưu ý: nếu muốn dữ liệu tĩnh (không thay đổi), hãy copy và paste dưới dạng "Values only" sau khi import.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">Đạo đức và pháp lý khi scraping</div>
+      <p>Trước khi scraping bất kỳ website nào, hãy đọc file <code>robots.txt</code> của site đó (thêm /robots.txt vào sau tên miền) và điều khoản sử dụng. Nhiều trang cấm scraping tự động. Chỉ scraping dữ liệu công khai, không lấy thông tin cá nhân. Kiểm tra xem dữ liệu có bản quyền không trước khi xuất bản.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.3 LÀM SẠCH DỮ LIỆU VỚI GOOGLE SHEETS
+    ════════════════════════════════════ -->
+    <h2>6.3 Làm sạch dữ liệu với Google Sheets</h2>
+
+    <p>
+      Câu nói nổi tiếng trong cộng đồng khoa học dữ liệu: "Garbage in, garbage out" — dữ liệu bẩn dẫn đến phân tích sai và biểu đồ gây hiểu nhầm. Làm sạch dữ liệu (data cleaning) là kỹ năng nền tảng mà mọi nhà báo dữ liệu cần thành thạo, dù không phải lập trình viên.
+    </p>
+
+    <h3>Các lỗi dữ liệu thường gặp</h3>
+
+    <ul>
+      <li><strong>Khoảng trắng thừa:</strong> Dữ liệu nhập tay thường có khoảng trắng trước/sau tên ("  Hà Nội " thay vì "Hà Nội"), khiến các hàm tìm kiếm và so sánh cho kết quả sai.</li>
+      <li><strong>Định dạng không nhất quán:</strong> Cùng một đơn vị nhưng dùng nhiều cách viết ("Tp.HCM", "TP HCM", "Hồ Chí Minh"), số điện thoại lúc có dấu gạch lúc không, ngày tháng lúc dùng dd/mm/yyyy lúc dùng mm-dd-yyyy.</li>
+      <li><strong>Giá trị thiếu (missing values):</strong> Ô trống hoặc điền ký hiệu thay thế ("N/A", "-", "?") mà hàm số học không hiểu.</li>
+      <li><strong>Số được lưu dưới dạng văn bản:</strong> Cột số liệu thống kê bị căn lề trái (thường là dấu hiệu Google Sheets nhận nhầm là chữ), khiến phép tính SUM, AVERAGE cho kết quả 0.</li>
+      <li><strong>Dữ liệu trùng lặp:</strong> Cùng một bản ghi xuất hiện nhiều lần do quá trình gộp dữ liệu từ nhiều nguồn.</li>
+    </ul>
+
+    <h3>Các hàm Google Sheets thiết yếu</h3>
+
+    <p>
+      <strong>TRIM</strong> — Xóa khoảng trắng thừa ở đầu, cuối và khoảng trắng kép ở giữa chuỗi văn bản.<br>
+      <code>=TRIM(A2)</code> — Trả về "Hà Nội" từ "  Hà Nội  "
+    </p>
+
+    <p>
+      <strong>CLEAN</strong> — Xóa các ký tự không in được (non-printable characters) thường xuất hiện khi copy-paste từ PDF hoặc hệ thống cũ.<br>
+      <code>=CLEAN(A2)</code> — Thường dùng kết hợp với TRIM: <code>=TRIM(CLEAN(A2))</code>
+    </p>
+
+    <p>
+      <strong>VLOOKUP</strong> — Tìm kiếm một giá trị trong cột đầu tiên của một phạm vi và trả về giá trị tương ứng từ cột khác. Cực kỳ hữu ích khi cần gộp dữ liệu từ hai bảng khác nhau theo một khóa chung (ví dụ: mã tỉnh).<br>
+      <code>=VLOOKUP(A2, 'Bảng_Dân_số'!A:C, 2, FALSE)</code> — Tìm mã tỉnh ở A2 trong bảng Dân_số và trả về cột thứ 2 (tên tỉnh).
+    </p>
+
+    <p>
+      <strong>COUNTIF</strong> — Đếm số ô thỏa mãn một điều kiện. Dùng để kiểm tra dữ liệu trùng lặp, đếm số bản ghi theo danh mục.<br>
+      <code>=COUNTIF(B:B, B2)</code> — Nếu kết quả &gt; 1, dòng B2 bị trùng lặp.
+    </p>
+
+    <p>
+      <strong>SUMIF</strong> — Tính tổng các ô thỏa mãn điều kiện. Dùng để tổng hợp dữ liệu theo nhóm.<br>
+      <code>=SUMIF(C:C, "Hà Nội", D:D)</code> — Tính tổng cột D cho tất cả hàng có cột C là "Hà Nội".
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">Mẹo làm sạch nhanh</div>
+      <p>Trước khi phân tích, luôn tạo một cột kiểm tra trùng lặp bằng COUNTIF. Dùng menu <strong>Data → Remove duplicates</strong> của Google Sheets để xóa hàng trùng tự động. Đóng băng hàng tiêu đề (View → Freeze → 1 row) để dễ cuộn dữ liệu dài. Và quan trọng nhất: <em>không bao giờ chỉnh sửa trực tiếp file dữ liệu gốc</em> — luôn tạo bản sao trước.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.4 TRỰC QUAN HÓA VỚI DATAWRAPPER
+    ════════════════════════════════════ -->
+    <h2>6.4 Trực quan hóa với Datawrapper</h2>
+
+    <p>
+      Datawrapper (datawrapper.de) là công cụ trực quan hóa dữ liệu được thiết kế đặc biệt cho nhà báo. Ra đời năm 2012, ban đầu là dự án nội bộ của một tòa soạn Đức, hiện được hàng nghìn tổ chức báo chí trên thế giới sử dụng, từ Reuters, The Economist đến các tờ báo địa phương. Giao diện trực quan, không yêu cầu kỹ năng lập trình, và bản miễn phí đủ dùng cho hầu hết nhu cầu cơ bản.
+    </p>
+
+    <h3>Giới thiệu giao diện Datawrapper</h3>
+
+    <p>
+      Datawrapper tổ chức quy trình tạo biểu đồ thành 4 bước tuyến tính, hiển thị ở thanh trên cùng: (1) Upload data, (2) Check &amp; Describe, (3) Visualize, (4) Publish &amp; Embed. Mỗi bước có giao diện rõ ràng và hướng dẫn bên trong, giúp người mới học nhanh chóng.
+    </p>
+
+    <h3>Chọn đúng loại biểu đồ</h3>
+
+    <p>
+      Sai lầm phổ biến là chọn biểu đồ "trông đẹp" thay vì chọn loại phù hợp với bản chất dữ liệu và câu chuyện cần kể. Mỗi loại biểu đồ được thiết kế để trả lời một loại câu hỏi cụ thể.
+    </p>
+
+    <table>
+      <caption>Bảng 6.2 — Hướng dẫn chọn loại biểu đồ</caption>
+      <thead>
+        <tr>
+          <th>Câu hỏi cần trả lời</th>
+          <th>Loại biểu đồ phù hợp</th>
+          <th>Ví dụ ứng dụng báo chí</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>So sánh các danh mục</td>
+          <td>Biểu đồ cột (Bar chart)</td>
+          <td>Ngân sách y tế của 10 tỉnh năm 2024</td>
+        </tr>
+        <tr>
+          <td>Xu hướng theo thời gian</td>
+          <td>Biểu đồ đường (Line chart)</td>
+          <td>Tỷ lệ thất nghiệp 2015–2024</td>
+        </tr>
+        <tr>
+          <td>Cấu phần của một tổng thể</td>
+          <td>Biểu đồ tròn / Donut chart</td>
+          <td>Cơ cấu xuất khẩu Việt Nam theo ngành</td>
+        </tr>
+        <tr>
+          <td>Phân phối địa lý</td>
+          <td>Bản đồ choropleth</td>
+          <td>Mật độ dân số theo tỉnh/thành</td>
+        </tr>
+        <tr>
+          <td>Tương quan giữa hai biến</td>
+          <td>Biểu đồ tán xạ (Scatter plot)</td>
+          <td>Mối quan hệ GDP và tuổi thọ bình quân</td>
+        </tr>
+        <tr>
+          <td>Nhiều chuỗi thời gian cùng lúc</td>
+          <td>Biểu đồ đường nhiều lớp</td>
+          <td>Giá điện, xăng, gas qua các năm</td>
+        </tr>
+        <tr>
+          <td>Thứ hạng thay đổi theo thời gian</td>
+          <td>Biểu đồ đua cột (Bar chart race)</td>
+          <td>Top 10 tỉnh thu hút FDI 2010–2024</td>
+        </tr>
+        <tr>
+          <td>Dữ liệu điểm địa lý</td>
+          <td>Bản đồ điểm (Dot map)</td>
+          <td>Vị trí các vụ tai nạn giao thông nghiêm trọng</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Step-by-step: Tạo biểu đồ đường trên Datawrapper</h3>
+
+    <ol class="steps">
+      <li>Đăng nhập vào datawrapper.de. Nhấn <strong>New Chart</strong> (nút màu xanh, góc trên phải).</li>
+      <li><strong>Bước 1 — Upload Data:</strong> Dán dữ liệu trực tiếp (copy từ Google Sheets) vào ô nhập liệu, hoặc tải file CSV lên. Datawrapper tự nhận dạng hàng tiêu đề và kiểu dữ liệu. Nhấn <strong>Proceed</strong>.</li>
+      <li><strong>Bước 2 — Check &amp; Describe:</strong> Kiểm tra xem Datawrapper nhận đúng cột nào là dữ liệu, cột nào là nhãn. Đặt tên cho cột nếu cần. Nhấn <strong>Proceed</strong>.</li>
+      <li><strong>Bước 3 — Visualize:</strong> Datawrapper tự đề xuất loại biểu đồ phù hợp. Chọn <strong>Line Chart</strong> trong panel trái. Xem preview cập nhật tức thì ở màn hình giữa.</li>
+      <li>Trong tab <strong>Refine</strong>: chỉnh màu sắc từng đường, điểm dữ liệu, độ dày đường kẻ. Trong tab <strong>Annotate</strong>: thêm tiêu đề biểu đồ (đây là tiêu đề câu chuyện, không phải tên biến), chú thích nguồn dữ liệu (bắt buộc theo đạo đức báo chí), và chú thích cụ thể cho điểm dữ liệu quan trọng.</li>
+      <li>Nhấn <strong>Proceed</strong>, rồi <strong>Publish</strong>. Datawrapper cung cấp embed code để nhúng vào bài báo.</li>
+    </ol>
+
+    <h3>Step-by-step: Tạo bản đồ choropleth</h3>
+
+    <ol class="steps">
+      <li>Nhấn <strong>New Map</strong> (thay vì New Chart). Chọn <strong>Choropleth map</strong>.</li>
+      <li>Chọn bản đồ địa lý phù hợp. Datawrapper có sẵn bản đồ Việt Nam theo tỉnh (tìm "Vietnam provinces" trong ô tìm kiếm). Nhấn <strong>Proceed</strong>.</li>
+      <li>Upload dữ liệu: cột đầu tiên phải là tên tỉnh (hoặc mã ISO tỉnh — chính xác hơn), cột thứ hai là giá trị số cần thể hiện. Datawrapper tự động ghép nối tên tỉnh với đơn vị địa lý trên bản đồ.</li>
+      <li>Trong phần <strong>Visualize</strong>: chọn thang màu (gradient) phù hợp — thang đơn sắc (một màu từ nhạt đến đậm) phù hợp cho dữ liệu một chiều; thang phân kỳ (hai màu từ trung điểm) phù hợp khi có giá trị âm và dương.</li>
+      <li>Kiểm tra tooltip (pop-up khi rê chuột vào tỉnh): đảm bảo hiển thị tên tỉnh và giá trị đầy đủ.</li>
+      <li>Thêm tiêu đề, nguồn dữ liệu, và xuất bản.</li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">Nguyên tắc màu sắc trong trực quan hóa</div>
+      <p>Chọn bảng màu từ ColorBrewer (colorbrewer2.org) — được thiết kế đặc biệt cho bản đồ và biểu đồ, đảm bảo dễ phân biệt kể cả với người mù màu. Tránh dùng đỏ/xanh lá cùng lúc (8% nam giới bị mù màu đỏ-xanh). Datawrapper đã tích hợp các bảng màu ColorBrewer trong giao diện.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.5 TRỰC QUAN HÓA NÂNG CAO VỚI FLOURISH
+    ════════════════════════════════════ -->
+    <h2>6.5 Trực quan hóa nâng cao với Flourish</h2>
+
+    <p>
+      Flourish (flourish.studio) là nền tảng trực quan hóa dữ liệu và kể chuyện tương tác. Ra đời năm 2018 và được Financial Times mua lại năm 2023, Flourish mạnh hơn Datawrapper ở khả năng kể chuyện có tính tường thuật — tức là không chỉ hiển thị dữ liệu mà dẫn dắt người đọc qua một câu chuyện có cấu trúc. Bản miễn phí cho phép publish công khai và nhúng vào các trang web.
+    </p>
+
+    <h3>Bar Chart Race</h3>
+
+    <p>
+      Bar chart race (biểu đồ đua cột) là hình thức trực quan hóa biến dữ liệu theo thời gian thành animation, nơi các cột "đua" nhau qua các mốc thời gian. Mặc dù đây là hình thức trực quan hóa gây tranh cãi trong cộng đồng chuyên gia (vì có thể che khuất chi tiết dữ liệu), nó cực kỳ hiệu quả để thể hiện sự thay đổi thứ hạng và thu hút sự chú ý của người đọc.
+    </p>
+
+    <p>
+      Flourish có template Bar Chart Race sẵn có. Bạn chỉ cần chuẩn bị dữ liệu dạng: hàng = thực thể (quốc gia, tỉnh, công ty), cột = giá trị theo từng mốc thời gian. Flourish tự động tạo animation.
+    </p>
+
+    <h3>Story Maps</h3>
+
+    <p>
+      Story Maps là bản đồ có tính tường thuật, nơi người đọc "đi" qua các địa điểm kèm theo nội dung giải thích. Flourish cung cấp template Projection map với khả năng thêm text, hình ảnh, và video cho từng điểm trên bản đồ. Phù hợp với các bài báo về hành trình, sự kiện địa lý (như theo dõi đường đi của cơn bão, con đường của người di cư, hay lịch trình của một nhân vật).
+    </p>
+
+    <h3>Scrollytelling</h3>
+
+    <p>
+      Scrollytelling ("scroll" + "storytelling") là kỹ thuật kể chuyện nơi nội dung — biểu đồ, bản đồ, hình ảnh — thay đổi khi người đọc cuộn trang. Thay vì hiển thị toàn bộ biểu đồ ngay lập tức, scrollytelling dẫn dắt người đọc từng bước: đầu tiên thấy dữ liệu của năm 2010, cuộn xuống thấy thêm 2015, tiếp tục thấy 2020, và biểu đồ "kể chuyện" theo nhịp đọc của người dùng.
+    </p>
+
+    <h3>Step-by-step: Tạo một story đơn giản với Flourish</h3>
+
+    <ol class="steps">
+      <li>Truy cập flourish.studio và đăng ký tài khoản miễn phí. Nhấn <strong>New story</strong>.</li>
+      <li>Flourish sẽ tạo một story trống với thanh điều hướng slide ở phía dưới (tương tự PowerPoint). Mỗi slide là một "cảnh" trong câu chuyện.</li>
+      <li>Nhấn <strong>New slide → Visualization</strong>. Chọn template phù hợp với dữ liệu của bạn, ví dụ <strong>Bar chart race</strong> hoặc <strong>Line chart race</strong>.</li>
+      <li>Trong phần Data của slide, nhấn <strong>Import your data</strong> và dán dữ liệu từ Google Sheets (định dạng: hàng là thực thể, cột là các mốc thời gian).</li>
+      <li>Tùy chỉnh màu sắc, nhãn, tốc độ animation trong tab <strong>Preview &amp; settings</strong>.</li>
+      <li>Thêm slide văn bản (Text slide) trước và sau biểu đồ để đặt bối cảnh và rút ra kết luận — đây là phần "storytelling" trong scrollytelling.</li>
+      <li>Nhấn <strong>Export &amp; publish → Publish</strong>. Flourish cung cấp đường link và embed code.</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">Gợi ý thực hành</div>
+      <p>Tải dữ liệu GDP các tỉnh Việt Nam 5 năm gần nhất từ Tổng cục Thống kê. Làm sạch bằng Google Sheets (TRIM, chuẩn hóa tên tỉnh). Tạo một bar chart race trên Flourish thể hiện Top 10 tỉnh có GDP cao nhất qua các năm. Thêm 2 text slide: một đặt câu hỏi mở đầu, một kết luận về xu hướng thấy được.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         6.6 NHÚNG BIỂU ĐỒ VÀO BÀI BÁO
+    ════════════════════════════════════ -->
+    <h2>6.6 Nhúng biểu đồ vào bài báo</h2>
+
+    <p>
+      Sau khi tạo xong biểu đồ trên Datawrapper hoặc Flourish, bước cuối cùng là tích hợp nó vào bài báo. Cả hai công cụ đều cung cấp embed code — một đoạn HTML ngắn mà bạn dán vào CMS để biểu đồ hiển thị trực tiếp trong bài, có khả năng tương tác đầy đủ (tooltip, animation, v.v.).
+    </p>
+
+    <h3>Nhúng vào WordPress</h3>
+
+    <ol class="steps">
+      <li>Trên Datawrapper hoặc Flourish, sau khi publish, tìm nút <strong>Get embed code</strong> hoặc <strong>Export &amp; publish</strong>. Sao chép đoạn code dạng <code>&lt;iframe src="..."&gt;</code> hoặc đoạn responsive embed script.</li>
+      <li>Trong WordPress Block Editor (Gutenberg), thêm một block mới bằng cách nhấn <strong>(+)</strong>.</li>
+      <li>Tìm và chọn block <strong>Custom HTML</strong>.</li>
+      <li>Dán embed code vào block HTML. Nhấn Preview để kiểm tra biểu đồ hiển thị đúng không.</li>
+      <li>Xuất bản bài. Kiểm tra trên mobile: hầu hết embed code từ Datawrapper và Flourish đều responsive, tự điều chỉnh kích thước theo màn hình.</li>
+    </ol>
+
+    <h3>Nhúng vào Google Sites</h3>
+
+    <ol class="steps">
+      <li>Mở trang Google Sites cần chỉnh sửa. Click vào vị trí muốn đặt biểu đồ.</li>
+      <li>Trong thanh công cụ bên phải, chọn <strong>Embed</strong> (biểu tượng &lt;&gt;).</li>
+      <li>Chuyển sang tab <strong>Embed code</strong>, dán đoạn iframe hoặc embed script vào ô nhập liệu.</li>
+      <li>Nhấn <strong>Next</strong> rồi <strong>Insert</strong>. Google Sites sẽ hiển thị preview của biểu đồ ngay trong editor.</li>
+      <li>Kéo thả để điều chỉnh kích thước khung nhúng theo ý muốn. Nhấn <strong>Publish</strong> để cập nhật trang.</li>
+    </ol>
+
+    <div class="box note">
+      <div class="box-title">Lưu ý về biểu đồ tĩnh vs tương tác</div>
+      <p>Biểu đồ nhúng qua iframe (tương tác) yêu cầu người đọc có kết nối internet và trình duyệt hỗ trợ JavaScript. Với bài báo quan trọng, nên luôn có phiên bản hình ảnh tĩnh (export PNG/SVG từ Datawrapper) kèm theo, dùng làm ảnh dự phòng khi biểu đồ tương tác không tải được. Datawrapper cho phép export PNG chất lượng cao từ menu "Export PNG".</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         CÂU HỎI ÔN TẬP
+    ════════════════════════════════════ -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Mô tả quy trình năm bước của báo chí dữ liệu và giải thích tại sao bước "làm sạch dữ liệu" thường chiếm phần lớn thời gian. Cho một ví dụ cụ thể về lỗi dữ liệu có thể dẫn đến kết luận sai trong bài báo.</li>
+        <li>Một nhà báo muốn viết bài về sự thay đổi cơ cấu dân số Việt Nam từ 2000 đến 2024, thể hiện cả xu hướng theo thời gian và phân bố địa lý. Họ nên dùng loại biểu đồ nào cho mỗi góc độ? Tại sao? Nguồn dữ liệu phù hợp là gì?</li>
+        <li>Phân biệt Datawrapper và Flourish về điểm mạnh và trường hợp sử dụng phù hợp nhất. Khi nào bạn chọn Datawrapper, khi nào chọn Flourish?</li>
+        <li>Ngoài tính thẩm mỹ, một biểu đồ tốt trong báo chí dữ liệu cần đáp ứng những tiêu chí đạo đức và chuyên môn nào? Liệt kê ít nhất năm tiêu chí và giải thích vì sao mỗi tiêu chí quan trọng.</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG CHƯƠNG -->
+    <div class="chapter-nav-bar">
+      <a href="05-seo.html">&larr; Chương 5: SEO cho nhà báo</a>
+      <a href="07-mang-xa-hoi.html">Chương 7: Mạng xã hội &amp; Phân phối &rarr;</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

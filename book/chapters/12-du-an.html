@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 12 — Dự án cuối khóa</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html" class="active">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 12</div>
+      <h1>Dự án cuối khóa</h1>
+      <div class="chapter-meta">
+        <span>⏱ 135 phút</span>
+        <span>🎓 Tổng hợp</span>
+        <span>🛠 Tất cả công cụ đã học</span>
+      </div>
+    </div>
+
+    <!-- YÊU CẦU DỰ ÁN (thay cho learning objectives) -->
+    <div class="learning-objectives">
+      <h4>Yêu cầu dự án cuối khóa:</h4>
+      <ul>
+        <li>Xây dựng một trang web tin tức hoặc portfolio báo chí hoàn chỉnh, có thể truy cập công khai trên internet</li>
+        <li>Tích hợp tối thiểu 5 kỹ năng đã học: thiết kế, UX, SEO, multimedia, analytics</li>
+        <li>Thể hiện tư duy biên tập số qua cấu trúc nội dung, định dạng bài và chiến lược phân phối</li>
+        <li>Trình bày dự án trong 5 phút và giải thích các quyết định thiết kế trước lớp</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         12.1 TỔNG QUAN DỰ ÁN CUỐI KHÓA
+    ════════════════════════════════════ -->
+    <h2>12.1 Tổng quan dự án cuối khóa</h2>
+
+    <p>
+      Dự án cuối khóa là cơ hội để bạn tổng hợp toàn bộ kiến thức và kỹ năng đã học trong 11 chương trước — không phải theo từng mảnh rời, mà trong một sản phẩm báo chí số hoàn chỉnh, có thể truy cập thực sự trên internet. Đây không phải bài kiểm tra lý thuyết; đây là portfolio đầu tiên của bạn với tư cách nhà báo số.
+    </p>
+
+    <p>
+      Mục tiêu cuối cùng: khi kết thúc khóa học, bạn có một URL thực sự có thể gửi cho biên tập viên, nhà tuyển dụng hay đối tác. Trang web đó phải thể hiện rằng bạn không chỉ hiểu lý thuyết mà còn biết đưa kiến thức vào thực tế báo chí.
+    </p>
+
+    <h3>Mục tiêu dự án</h3>
+
+    <p>
+      Dự án hướng đến ba mục tiêu song song: <strong>kỹ thuật</strong> (biết dùng công cụ), <strong>biên tập</strong> (biết tổ chức và trình bày nội dung) và <strong>chiến lược</strong> (biết tại sao mình đưa ra từng quyết định). Một trang web đẹp nhưng không có nội dung chất lượng không đạt. Một trang có nội dung tốt nhưng UX hỏng cũng không đạt. Sự hài hòa giữa cả ba mới là thước đo thực sự.
+    </p>
+
+    <h3>Yêu cầu bắt buộc và yêu cầu tùy chọn</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hạng mục</th>
+          <th>Yêu cầu bắt buộc</th>
+          <th>Yêu cầu tùy chọn (điểm thưởng)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nền tảng</td>
+          <td>Google Sites hoặc WordPress</td>
+          <td>Tên miền tùy chỉnh (ví dụ: tenban.com)</td>
+        </tr>
+        <tr>
+          <td>Số trang</td>
+          <td>Tối thiểu 5 trang</td>
+          <td>Trang chuyên đề hoặc series bài</td>
+        </tr>
+        <tr>
+          <td>Bài viết</td>
+          <td>Tối thiểu 3 bài viết đầy đủ</td>
+          <td>Thêm 2+ bài, hoặc có bài điều tra/phân tích dài</td>
+        </tr>
+        <tr>
+          <td>Multimedia</td>
+          <td>Ít nhất 1 video nhúng và ảnh chất lượng cao</td>
+          <td>Podcast, slideshow, infographic tương tác</td>
+        </tr>
+        <tr>
+          <td>Dữ liệu</td>
+          <td>Ít nhất 1 biểu đồ dữ liệu</td>
+          <td>Bản đồ tương tác, scrollytelling</td>
+        </tr>
+        <tr>
+          <td>SEO</td>
+          <td>Tiêu đề, meta description, URL chuẩn cho mọi trang</td>
+          <td>Schema markup, Open Graph tags</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Kết nối Google Analytics 4</td>
+          <td>Báo cáo GA4 kèm theo bài trình bày</td>
+        </tr>
+        <tr>
+          <td>Thiết kế</td>
+          <td>Nhất quán màu sắc, font và layout</td>
+          <td>Dark mode, logo tự thiết kế trên Canva</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <div class="box-title">📌 Quan trọng: Nội dung phải gốc</div>
+      <p>Toàn bộ bài viết trong dự án phải là nội dung gốc của bạn — không sao chép, không dịch máy mà không biên tập. Ảnh phải là ảnh tự chụp hoặc có bản quyền rõ ràng (Creative Commons, Unsplash, Pexels). Vi phạm bản quyền sẽ dẫn đến trừ điểm nghiêm trọng.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         12.2 LỰA CHỌN CHỦ ĐỀ VÀ LẬP KẾ HOẠCH
+    ════════════════════════════════════ -->
+    <h2>12.2 Lựa chọn chủ đề và lập kế hoạch</h2>
+
+    <p>
+      Chủ đề tốt là chủ đề bạn có thể viết ít nhất 5–10 bài với góc độ khác nhau, và có đủ nguồn thông tin, nhân vật, số liệu để làm phong phú nội dung. Đừng chọn chủ đề quá rộng (như "thời sự") hay quá hẹp (như "một sự kiện duy nhất").
+    </p>
+
+    <h3>Gợi ý chủ đề theo định hướng</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Định hướng</th>
+          <th>Ví dụ chủ đề cụ thể</th>
+          <th>Phù hợp với ai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Portfolio cá nhân</strong></td>
+          <td>Trang giới thiệu phóng viên + tuyển tập tác phẩm tốt nhất</td>
+          <td>Muốn dùng làm CV kỹ thuật số</td>
+        </tr>
+        <tr>
+          <td><strong>Trang chuyên đề môi trường</strong></td>
+          <td>Biến đổi khí hậu tại địa phương, ô nhiễm nguồn nước, rừng ngập mặn</td>
+          <td>Quan tâm báo chí điều tra</td>
+        </tr>
+        <tr>
+          <td><strong>Trang văn hóa địa phương</strong></td>
+          <td>Làng nghề truyền thống, ẩm thực vùng miền, lễ hội dân gian</td>
+          <td>Yêu thích phóng sự, ảnh báo chí</td>
+        </tr>
+        <tr>
+          <td><strong>Trang kinh tế khởi nghiệp</strong></td>
+          <td>Startup Việt Nam, kinh tế số, thị trường lao động trẻ</td>
+          <td>Hướng đến báo chí kinh tế</td>
+        </tr>
+        <tr>
+          <td><strong>Trang tin địa phương</strong></td>
+          <td>Tin tức một quận/huyện: quy hoạch, giáo dục, y tế, văn hóa</td>
+          <td>Muốn thử nghiệm mô hình báo địa phương</td>
+        </tr>
+        <tr>
+          <td><strong>Trang khoa học phổ thông</strong></td>
+          <td>Giải thích khoa học cho công chúng: sức khỏe, công nghệ, vũ trụ</td>
+          <td>Thích viết giải thích (explainer journalism)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bản kế hoạch nội dung (Content Plan Template)</h3>
+
+    <p>
+      Trước khi bắt tay vào làm, hãy điền đầy đủ bảng kế hoạch nội dung sau và nộp cho giảng viên phê duyệt trong tuần đầu tiên:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hạng mục</th>
+          <th>Nội dung cần điền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Tên trang</strong></td>
+          <td>Tên thương hiệu/tên trang web</td>
+        </tr>
+        <tr>
+          <td><strong>Tagline</strong></td>
+          <td>Một câu mô tả ngắn gọn trang làm gì, cho ai</td>
+        </tr>
+        <tr>
+          <td><strong>Đối tượng độc giả mục tiêu</strong></td>
+          <td>Mô tả cụ thể: độ tuổi, nghề nghiệp, quan tâm</td>
+        </tr>
+        <tr>
+          <td><strong>Cấu trúc trang (sitemap)</strong></td>
+          <td>Liệt kê tất cả các trang: tên và nội dung chính</td>
+        </tr>
+        <tr>
+          <td><strong>Danh sách bài viết</strong></td>
+          <td>Tiêu đề dự kiến của ít nhất 5 bài</td>
+        </tr>
+        <tr>
+          <td><strong>Nền tảng sử dụng</strong></td>
+          <td>Google Sites hay WordPress? Lý do chọn?</td>
+        </tr>
+        <tr>
+          <td><strong>Palette màu sắc</strong></td>
+          <td>2–3 màu chính (mã hex nếu có)</td>
+        </tr>
+        <tr>
+          <td><strong>Font chữ</strong></td>
+          <td>Font tiêu đề và font nội dung</td>
+        </tr>
+        <tr>
+          <td><strong>Nguồn thông tin</strong></td>
+          <td>Sẽ lấy thông tin từ đâu? Ai là nguồn tin?</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Wireframe đơn giản trước khi làm</h3>
+
+    <p>
+      Wireframe là bản phác thảo bố cục trang trước khi thiết kế thật sự. Nó giống như bản vẽ kiến trúc trước khi xây nhà — giúp bạn suy nghĩ về cấu trúc mà không bị phân tâm bởi màu sắc và chi tiết thẩm mỹ.
+    </p>
+
+    <p>
+      Wireframe không cần đẹp — chỉ cần rõ ràng. Bạn có thể vẽ tay trên giấy, dùng PowerPoint/Google Slides, hoặc công cụ miễn phí như <strong>Figma</strong> (figma.com) hay <strong>Excalidraw</strong> (excalidraw.com). Mỗi trang chính cần có một wireframe riêng thể hiện: vị trí logo, menu, nội dung chính, sidebar (nếu có), footer.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Wireframe = Tiết kiệm thời gian</div>
+      <p>Sinh viên thường bỏ qua bước wireframe và bắt tay làm thẳng trên nền tảng. Kết quả: mất nhiều giờ chỉnh sửa bố cục sau khi đã đưa nội dung lên. Kinh nghiệm thực tế từ các UX designer: 30 phút làm wireframe tiết kiệm 3 giờ chỉnh sửa sau này.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         12.3 YÊU CẦU KỸ THUẬT
+    ════════════════════════════════════ -->
+    <h2>12.3 Yêu cầu kỹ thuật</h2>
+
+    <h3>Nền tảng</h3>
+
+    <p>
+      Chọn một trong hai nền tảng đã học. Căn cứ lựa chọn nên dựa trên mục tiêu dài hạn: Google Sites phù hợp nếu bạn cần nhanh và đơn giản; WordPress phù hợp nếu bạn muốn kiểm soát nhiều hơn và muốn học kỹ năng có giá trị thị trường cao hơn.
+    </p>
+
+    <h3>Cấu trúc trang tối thiểu</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Trang</th>
+          <th>Nội dung yêu cầu</th>
+          <th>Bắt buộc?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Trang chủ (Home)</strong></td>
+          <td>Giới thiệu trang, nổi bật bài mới nhất, điều hướng rõ ràng</td>
+          <td>Bắt buộc</td>
+        </tr>
+        <tr>
+          <td><strong>Giới thiệu (About)</strong></td>
+          <td>Thông tin tác giả/tòa soạn, sứ mệnh, liên hệ</td>
+          <td>Bắt buộc</td>
+        </tr>
+        <tr>
+          <td><strong>Bài viết/Portfolio</strong></td>
+          <td>Danh sách hoặc lưới bài viết, có thể lọc theo chủ đề</td>
+          <td>Bắt buộc</td>
+        </tr>
+        <tr>
+          <td><strong>Liên hệ (Contact)</strong></td>
+          <td>Form liên hệ, email, mạng xã hội</td>
+          <td>Bắt buộc</td>
+        </tr>
+        <tr>
+          <td><strong>Trang thứ 5 (tùy chọn)</strong></td>
+          <td>Chủ đề đặc biệt, bộ ảnh, timeline, bản đồ, podcast...</td>
+          <td>Bắt buộc (1 trong số này)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Yêu cầu nội dung chi tiết</h3>
+
+    <p>Ba bài viết bắt buộc phải đáp ứng tiêu chuẩn báo chí thực sự:</p>
+
+    <ul>
+      <li>Mỗi bài tối thiểu <strong>600 từ</strong> — đủ dài để có chiều sâu, không phải chỉ tin ngắn</li>
+      <li>Có ít nhất <strong>2 nguồn tin được dẫn nguồn rõ ràng</strong> (trích dẫn trực tiếp hoặc gián tiếp)</li>
+      <li>Có <strong>ảnh minh họa phù hợp</strong> với bản quyền rõ ràng và chú thích ảnh đầy đủ</li>
+      <li>Có <strong>tiêu đề, chapeau (mào đầu)</strong> và cấu trúc bài rõ ràng</li>
+      <li>Không có lỗi chính tả, ngữ pháp nghiêm trọng</li>
+    </ul>
+
+    <h3>Yêu cầu SEO cho mọi trang</h3>
+
+    <ol class="steps">
+      <li><strong>Tiêu đề trang (Title tag)</strong>: mỗi trang có tiêu đề riêng, chứa từ khóa chính, dưới 60 ký tự</li>
+      <li><strong>Meta description</strong>: mô tả ngắn 150–160 ký tự, hấp dẫn, khuyến khích nhấp</li>
+      <li><strong>URL chuẩn</strong>: ngắn gọn, có từ khóa, không có ký tự đặc biệt, dấu cách thay bằng dấu gạch ngang</li>
+      <li><strong>Heading hierarchy</strong>: sử dụng H1 → H2 → H3 đúng thứ tự, không nhảy cấp</li>
+      <li><strong>Alt text cho ảnh</strong>: mô tả ngắn gọn nội dung ảnh bằng tiếng Việt</li>
+      <li><strong>Internal links</strong>: mỗi bài liên kết đến ít nhất 1 bài khác trong trang</li>
+    </ol>
+
+    <h3>Tích hợp Google Analytics 4</h3>
+
+    <p>
+      Kết nối GA4 trước khi hoàn thành trang để có dữ liệu thực tế khi trình bày. Khi nộp bài, cung cấp ảnh chụp màn hình báo cáo GA4 thể hiện trang đã được truy cập (Realtime hoặc báo cáo 7 ngày).
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Cài Analytics trước khi chia sẻ trang</div>
+      <p>Sai lầm phổ biến: sinh viên chia sẻ link trang trước khi cài GA4, bỏ lỡ toàn bộ traffic ban đầu. Hãy cài GA4 ngay sau khi tạo xong cấu trúc trang, ngay cả khi chưa có nội dung đầy đủ. Dữ liệu sớm là dữ liệu có giá trị.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         12.4 QUY TRÌNH THỰC HIỆN
+    ════════════════════════════════════ -->
+    <h2>12.4 Quy trình thực hiện theo tuần</h2>
+
+    <p>
+      Dự án kéo dài 5 tuần. Mỗi tuần có mục tiêu cụ thể và sản phẩm cần hoàn thành. Giảng viên sẽ kiểm tra tiến độ vào cuối mỗi tuần — đây không phải là áp lực hình thức mà là để giúp bạn không bị trượt deadline cuối cùng.
+    </p>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Tuần 1: Lên kế hoạch và thiết lập nền tảng</div>
+      <p><strong>Mục tiêu:</strong> Có bản kế hoạch nội dung được phê duyệt, wireframe ít nhất 3 trang chính, và tài khoản nền tảng đã tạo.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Chọn chủ đề và viết bản kế hoạch nội dung (content plan) theo template ở mục 12.2</li>
+      <li>Nghiên cứu 3–5 trang web cùng thể loại để lấy cảm hứng về layout và cách tổ chức nội dung</li>
+      <li>Vẽ wireframe cho trang chủ, trang About và trang bài viết</li>
+      <li>Tạo tài khoản Google Analytics 4 và tạo property cho dự án</li>
+      <li>Tạo tài khoản nền tảng (Google Sites hoặc WordPress) và cài đặt ban đầu</li>
+      <li><strong>Nộp:</strong> Content plan + wireframe qua email/LMS trước cuối tuần</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Tuần 2: Xây dựng cấu trúc và thiết kế giao diện</div>
+      <p><strong>Mục tiêu:</strong> Trang web có đầy đủ 5 trang với bố cục hoàn chỉnh, màu sắc và font thống nhất, menu điều hướng hoạt động.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Tạo tất cả các trang trong nền tảng với cấu trúc cơ bản (header, menu, footer)</li>
+      <li>Chọn và áp dụng theme/bảng màu nhất quán cho toàn trang</li>
+      <li>Thiết kế logo đơn giản trên Canva (tên trang + tagline)</li>
+      <li>Kết nối GA4 vào trang web ngay trong tuần này</li>
+      <li>Điền nội dung placeholder vào các trang để kiểm tra layout</li>
+      <li>Kiểm tra trang trên điện thoại — đảm bảo responsive hoàn toàn</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Tuần 3: Viết và đăng nội dung</div>
+      <p><strong>Mục tiêu:</strong> Hoàn thành ít nhất 3 bài viết đầy đủ và đăng lên trang. Trang About và Contact hoàn thiện.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Viết bài viết đầu tiên — dài nhất, tốt nhất, thể hiện rõ nhất phong cách của bạn</li>
+      <li>Chèn ảnh (có chú thích và alt text), video nhúng, và ít nhất một biểu đồ dữ liệu</li>
+      <li>Viết tiếp bài thứ hai và thứ ba — có thể ngắn hơn nhưng phải đủ chất lượng</li>
+      <li>Hoàn thiện trang About: ảnh chân dung, bio ngắn, sứ mệnh trang</li>
+      <li>Hoàn thiện trang Contact: form liên hệ, email, link mạng xã hội</li>
+      <li>Thêm internal links giữa các bài viết</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Tuần 4: Tối ưu SEO, tích hợp đầy đủ và kiểm tra</div>
+      <p><strong>Mục tiêu:</strong> Mọi trang có SEO đầy đủ. Google Search Console kết nối. Trang vượt qua checklist kỹ thuật.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Kiểm tra và tối ưu title tag, meta description cho từng trang (dùng Yoast SEO nếu WordPress)</li>
+      <li>Kiểm tra URL của tất cả trang — sửa những URL quá dài hoặc có ký tự lạ</li>
+      <li>Kết nối Google Search Console → submit sitemap XML</li>
+      <li>Chạy kiểm tra tốc độ trên <strong>PageSpeed Insights</strong> (pagespeed.web.dev) — mục tiêu đạt ít nhất 60/100 trên mobile</li>
+      <li>Kiểm tra tất cả link nội bộ không bị hỏng (dùng Dead Link Checker hoặc kiểm tra thủ công)</li>
+      <li>Chia sẻ link với ít nhất 3 người để thu thập phản hồi về UX</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Tuần 5: Hoàn thiện và nộp bài</div>
+      <p><strong>Mục tiêu:</strong> Trang hoàn chỉnh 100%, tài liệu nộp đầy đủ, bài trình bày được chuẩn bị.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Chạy qua toàn bộ checklist tự kiểm tra ở mục 12.6 — đánh dấu từng mục</li>
+      <li>Sửa các vấn đề còn lại dựa trên phản hồi từ tuần 4</li>
+      <li>Chụp màn hình GA4 báo cáo Realtime hoặc báo cáo 7 ngày làm bằng chứng analytics</li>
+      <li>Chuẩn bị bài trình bày 5 phút: URL trang, screenshot các trang chính, quyết định thiết kế quan trọng</li>
+      <li>Nộp URL + tài liệu qua hệ thống học tập trước deadline</li>
+      <li>Trình bày trước lớp và nhận phản hồi từ giảng viên và bạn cùng lớp</li>
+    </ol>
+
+
+    <!-- ════════════════════════════════════
+         12.5 RUBRIC CHẤM ĐIỂM
+    ════════════════════════════════════ -->
+    <h2>12.5 Tiêu chí chấm điểm (Rubric chi tiết)</h2>
+
+    <p>Tổng điểm: <strong>100 điểm</strong>, phân bổ theo bốn tiêu chí chính:</p>
+
+    <h3>Tiêu chí 1: Nội dung — 30 điểm</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mức độ</th>
+          <th>Điểm</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Xuất sắc</strong></td>
+          <td>27–30</td>
+          <td>Tất cả bài viết đạt chất lượng báo chí cao: thông tin chính xác, có nguồn dẫn rõ ràng, văn phong chuyên nghiệp, kể chuyện hấp dẫn. Có bài điều tra hoặc phân tích sâu nổi bật.</td>
+        </tr>
+        <tr>
+          <td><strong>Tốt</strong></td>
+          <td>21–26</td>
+          <td>Bài viết đủ chất lượng, có nguồn, ít lỗi. Nội dung thông tin nhưng chưa thật sự hấp dẫn về mặt kể chuyện.</td>
+        </tr>
+        <tr>
+          <td><strong>Đạt</strong></td>
+          <td>15–20</td>
+          <td>Đủ số lượng bài nhưng chất lượng không đều. Một số bài thiếu nguồn hoặc quá ngắn.</td>
+        </tr>
+        <tr>
+          <td><strong>Cần cải thiện</strong></td>
+          <td>0–14</td>
+          <td>Không đủ số lượng bài, hoặc nội dung thiếu tính báo chí, hoặc có bằng chứng sao chép.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tiêu chí 2: Thiết kế — 25 điểm</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mức độ</th>
+          <th>Điểm</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Xuất sắc</strong></td>
+          <td>23–25</td>
+          <td>Giao diện chuyên nghiệp, nhất quán thương hiệu hoàn toàn. UX trực quan, người dùng tìm được nội dung dễ dàng. Tốt trên cả desktop lẫn mobile. Có bản sắc thiết kế riêng.</td>
+        </tr>
+        <tr>
+          <td><strong>Tốt</strong></td>
+          <td>17–22</td>
+          <td>Thiết kế gọn gàng, nhất quán phần lớn. Navigation hoạt động tốt. Mobile responsive nhưng có vài điểm chưa hoàn hảo.</td>
+        </tr>
+        <tr>
+          <td><strong>Đạt</strong></td>
+          <td>13–16</td>
+          <td>Thiết kế chấp nhận được nhưng không nhất quán. Có vấn đề về màu sắc hoặc font. Mobile cơ bản.</td>
+        </tr>
+        <tr>
+          <td><strong>Cần cải thiện</strong></td>
+          <td>0–12</td>
+          <td>Giao diện lộn xộn, khó điều hướng, không responsive trên mobile.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tiêu chí 3: Kỹ thuật — 25 điểm</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mức độ</th>
+          <th>Điểm</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Xuất sắc</strong></td>
+          <td>23–25</td>
+          <td>SEO hoàn hảo cho mọi trang. GA4 kết nối và có dữ liệu. Tốc độ PageSpeed trên 70. Multimedia tích hợp trơn tru. Không có link hỏng.</td>
+        </tr>
+        <tr>
+          <td><strong>Tốt</strong></td>
+          <td>17–22</td>
+          <td>SEO tốt cho phần lớn trang. GA4 hoạt động. Multimedia có nhưng chưa tối ưu. PageSpeed trên 50.</td>
+        </tr>
+        <tr>
+          <td><strong>Đạt</strong></td>
+          <td>13–16</td>
+          <td>SEO cơ bản. GA4 cài nhưng chưa xác minh. Multimedia hạn chế. Một vài link hỏng.</td>
+        </tr>
+        <tr>
+          <td><strong>Cần cải thiện</strong></td>
+          <td>0–12</td>
+          <td>SEO thiếu sót nghiêm trọng. Không có GA4. Tốc độ tải chậm. Nhiều lỗi kỹ thuật.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tiêu chí 4: Sáng tạo — 20 điểm</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mức độ</th>
+          <th>Điểm</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Xuất sắc</strong></td>
+          <td>18–20</td>
+          <td>Dự án có điểm nhấn độc đáo rõ ràng — về chủ đề, định dạng hoặc cách kể chuyện. Thể hiện tư duy báo chí số đột phá, vượt xa yêu cầu cơ bản.</td>
+        </tr>
+        <tr>
+          <td><strong>Tốt</strong></td>
+          <td>14–17</td>
+          <td>Có ít nhất một yếu tố sáng tạo nổi bật: định dạng mới lạ, góc tiếp cận độc đáo, multimedia ấn tượng.</td>
+        </tr>
+        <tr>
+          <td><strong>Đạt</strong></td>
+          <td>10–13</td>
+          <td>Dự án đáp ứng yêu cầu nhưng không có yếu tố nổi bật so với bình quân.</td>
+        </tr>
+        <tr>
+          <td><strong>Cần cải thiện</strong></td>
+          <td>0–9</td>
+          <td>Dự án thiếu cá tính, sao chép template quá rõ, không thể hiện tư duy sáng tạo.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <div class="box-title">📌 Điểm thưởng</div>
+      <p>Tên miền tùy chỉnh: +3 điểm. Bài trình bày xuất sắc có demo live và phân tích dữ liệu GA4: +2 điểm. Tổng điểm tối đa có thể đạt: 105 điểm (vượt quá 100 sẽ được tính là 100).</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         12.6 HƯỚNG DẪN NỘP BÀI VÀ TRÌNH BÀY
+    ════════════════════════════════════ -->
+    <h2>12.6 Hướng dẫn nộp bài và trình bày</h2>
+
+    <h3>Nộp bài</h3>
+
+    <p>
+      Nộp qua hệ thống quản lý học tập (LMS) của trường trước thời hạn giảng viên quy định. Hồ sơ nộp bao gồm:
+    </p>
+
+    <ol class="steps">
+      <li><strong>URL trang web</strong>: đường link công khai, hoạt động được không cần đăng nhập</li>
+      <li><strong>Tài liệu kèm theo</strong> (1 file PDF hoặc Google Docs): content plan cuối cùng, wireframe, ảnh chụp màn hình GA4</li>
+      <li><strong>Bản tự đánh giá</strong>: điền rubric với mức điểm tự đánh giá và giải thích lý do (1–2 câu mỗi tiêu chí)</li>
+    </ol>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Đảm bảo trang có thể truy cập công khai</div>
+      <p>Trước khi nộp, mở trang trong cửa sổ ẩn danh (Incognito) trên trình duyệt để xác nhận không ai cần đăng nhập mới xem được. Nếu dùng WordPress với plugin bảo mật, đảm bảo đã tắt chế độ "Coming Soon" hay "Maintenance Mode".</p>
+    </div>
+
+    <h3>Bài trình bày 5 phút</h3>
+
+    <p>
+      Mỗi sinh viên có đúng 5 phút để trình bày dự án trước lớp. Cấu trúc gợi ý:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Phần</th>
+          <th>Thời gian</th>
+          <th>Nội dung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Giới thiệu trang</strong></td>
+          <td>1 phút</td>
+          <td>Tên trang, chủ đề, đối tượng độc giả mục tiêu, lý do chọn chủ đề này</td>
+        </tr>
+        <tr>
+          <td><strong>Demo live</strong></td>
+          <td>2 phút</td>
+          <td>Dẫn qua các trang chính, cho xem 1 bài viết đầy đủ, highlight tính năng nổi bật</td>
+        </tr>
+        <tr>
+          <td><strong>Quyết định thiết kế</strong></td>
+          <td>1 phút</td>
+          <td>Giải thích 2–3 quyết định: tại sao chọn màu này, font này, cấu trúc này?</td>
+        </tr>
+        <tr>
+          <td><strong>Dữ liệu và học được gì</strong></td>
+          <td>1 phút</td>
+          <td>Chia sẻ dữ liệu GA4 (dù ít), điều bất ngờ nhất trong quá trình làm, muốn cải thiện gì nếu có thêm thời gian</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Mẹo trình bày hiệu quả</div>
+      <p>Mở sẵn trang web trên trình duyệt trước khi đến lượt. Luyện tập ít nhất 2–3 lần để đảm bảo kịp 5 phút. Đừng đọc slide — hãy nói và demo trực tiếp. Bật chế độ zoom (Ctrl/Cmd + +) nếu phòng học màn hình nhỏ. Câu mở đầu mạnh nhất: "Trang này giải quyết vấn đề gì cho ai?"</p>
+    </div>
+
+
+    <!-- CHECKLIST TỰ KIỂM TRA -->
+    <div class="review-questions">
+      <h3>Checklist tự kiểm tra trước khi nộp bài</h3>
+      <p>Đánh dấu tất cả 15 mục dưới đây trước khi nộp. Nếu còn mục nào chưa đánh dấu, hãy hoàn thiện trước deadline.</p>
+      <ol>
+        <li>Trang web có thể truy cập công khai (kiểm tra bằng cửa sổ ẩn danh)</li>
+        <li>Có đủ 5 trang: Home, About, Bài viết/Portfolio, Contact và 1 trang tùy chọn</li>
+        <li>Có ít nhất 3 bài viết đầy đủ, mỗi bài trên 600 từ</li>
+        <li>Tất cả bài viết có nguồn tin được dẫn rõ ràng</li>
+        <li>Ảnh có chú thích và alt text; nguồn gốc ảnh hợp lệ (tự chụp hoặc Creative Commons)</li>
+        <li>Có ít nhất 1 video nhúng và 1 biểu đồ dữ liệu</li>
+        <li>Mọi trang có title tag và meta description riêng biệt</li>
+        <li>URL của mọi trang ngắn gọn, dùng dấu gạch ngang, không có ký tự đặc biệt</li>
+        <li>Heading hierarchy đúng (H1 → H2 → H3) trên mọi trang</li>
+        <li>Menu điều hướng hoạt động, không có link hỏng</li>
+        <li>Trang hiển thị tốt trên màn hình điện thoại (kiểm tra trên thiết bị thật)</li>
+        <li>Google Analytics 4 đã kết nối và thu thập dữ liệu (có ảnh chụp màn hình làm bằng chứng)</li>
+        <li>Không có lỗi chính tả hoặc lỗi ngữ pháp nghiêm trọng (đọc lại toàn bộ ít nhất một lần)</li>
+        <li>Tài liệu kèm theo (content plan, wireframe, ảnh GA4) đã chuẩn bị đầy đủ</li>
+        <li>Đã luyện tập bài trình bày 5 phút ít nhất 2 lần và kịp thời gian</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="11-analytics.html">← Chương 11: Phân tích &amp; Đo lường</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="../appendix/glossary.html">Phụ lục: Bảng thuật ngữ →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 5 — SEO cho nhà báo</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html" class="active">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 5</div>
+      <h1>SEO cho nhà báo</h1>
+      <div class="chapter-meta">
+        <span>⏱ 90 phút</span>
+        <span>📊 Lý thuyết &amp; Thực hành</span>
+        <span>🛠 Google Search Console · Yoast SEO · Ubersuggest</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Giải thích cách công cụ tìm kiếm hoạt động và tại sao SEO quan trọng với báo chí</li>
+        <li>Áp dụng các kỹ thuật on-page SEO vào bài báo cụ thể</li>
+        <li>Sử dụng công cụ nghiên cứu từ khóa để tìm chủ đề có nhu cầu tìm kiếm cao</li>
+        <li>Thiết lập và đọc dữ liệu từ Google Search Console</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         5.1 TẠI SAO BÀI BÁO CẦN ĐƯỢC TÌM THẤY
+    ════════════════════════════════════ -->
+    <h2>5.1 Tại sao bài báo cần được tìm thấy trên Google?</h2>
+
+    <p>
+      Viết được một bài báo hay mới chỉ là nửa công việc. Nửa còn lại — quan trọng không kém — là đảm bảo bài báo đó đến tay đúng người đọc. Trong môi trường kỹ thuật số, điều đó có nghĩa là bài báo phải xuất hiện khi độc giả gõ một truy vấn liên quan vào Google.
+    </p>
+
+    <p>
+      SEO (Search Engine Optimization — Tối ưu hóa công cụ tìm kiếm) là tập hợp các kỹ thuật giúp nội dung của bạn được xếp hạng cao hơn trên trang kết quả tìm kiếm (SERP). Đây không phải trò chơi "đánh lừa" thuật toán, mà là nghệ thuật viết nội dung có giá trị thật sự và trình bày nó theo cách mà máy tìm kiếm có thể hiểu và đánh giá đúng.
+    </p>
+
+    <h3>Traffic từ tìm kiếm so với mạng xã hội</h3>
+
+    <p>
+      Nhiều tòa soạn Việt Nam từng đặt cược toàn bộ chiến lược phân phối vào Facebook. Kết quả của những lần thay đổi thuật toán vào các năm 2018 và 2021 là bài học đắt giá: lượt truy cập từ Facebook của nhiều trang báo sụt giảm đến 50–70% chỉ trong vài tuần. Ngược lại, traffic đến từ tìm kiếm tự nhiên (organic search) bền vững hơn nhiều — một bài báo được xếp hạng cao trên Google có thể tiếp tục thu hút độc giả trong nhiều tháng, thậm chí nhiều năm sau khi xuất bản.
+    </p>
+
+    <p>
+      Theo nghiên cứu của Parsely (2023) phân tích dữ liệu từ hơn 2.500 trang báo toàn cầu, tìm kiếm tự nhiên chiếm trung bình 34% tổng lượng truy cập, trong khi mạng xã hội chỉ còn 18% — và xu hướng này tiếp tục nghiêng về phía tìm kiếm. Đây không phải lý do để bỏ qua mạng xã hội, nhưng là lý do để đầu tư nghiêm túc vào SEO song song.
+    </p>
+
+    <h3>Google Discover và tin tức</h3>
+
+    <p>
+      Google Discover là tính năng xuất hiện trên trang chủ ứng dụng Google và trình duyệt Chrome Mobile, hiển thị nội dung được cá nhân hóa dựa trên lịch sử tìm kiếm và sở thích của từng người dùng. Khác với tìm kiếm truyền thống — nơi người dùng chủ động đặt câu hỏi — Discover chủ động "đẩy" nội dung đến người dùng trước khi họ tìm.
+    </p>
+
+    <p>
+      Đối với các tòa soạn báo, Discover có thể là nguồn traffic khổng lồ và hoàn toàn miễn phí. Tuy nhiên, nội dung muốn xuất hiện trên Discover cần đáp ứng các yêu cầu riêng: hình ảnh chất lượng cao (tối thiểu 1.200 pixel chiều rộng), tiêu đề hấp dẫn nhưng không giật gân, và quan trọng nhất — nội dung phải đủ sâu và đáng tin cậy.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">Lưu ý</div>
+      <p>Google Discover không phải là kênh bạn có thể "tối ưu" trực tiếp theo nghĩa truyền thống của SEO. Cách tốt nhất để xuất hiện trên Discover là liên tục sản xuất nội dung chất lượng cao, có tính thời sự, và đảm bảo website của bạn đáp ứng các tiêu chí kỹ thuật cơ bản (tốc độ tải trang, Core Web Vitals).</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         5.2 CÁCH CÔNG CỤ TÌM KIẾM HOẠT ĐỘNG
+    ════════════════════════════════════ -->
+    <h2>5.2 Cách công cụ tìm kiếm hoạt động</h2>
+
+    <p>
+      Để tối ưu nội dung cho tìm kiếm, bạn cần hiểu cơ bản về cách Google "đọc" và đánh giá các trang web. Toàn bộ quá trình có thể chia thành ba giai đoạn: crawling, indexing và ranking.
+    </p>
+
+    <h3>Crawling — Bước thu thập dữ liệu</h3>
+
+    <p>
+      Google sử dụng các chương trình tự động gọi là "spider" hoặc "bot" (phổ biến nhất là Googlebot) để liên tục duyệt web. Các bot này theo dõi các liên kết từ trang này sang trang khác, đọc nội dung HTML và ghi lại những gì chúng tìm thấy. Quá trình này gọi là crawling (thu thập dữ liệu).
+    </p>
+
+    <p>
+      Một trang mới có thể mất vài ngày đến vài tuần trước khi được Googlebot ghé thăm lần đầu. Để đẩy nhanh quá trình này, bạn có thể gửi URL trực tiếp lên Google Search Console (sẽ thực hành ở mục 5.6) hoặc đảm bảo trang mới được liên kết từ các trang đã có trong chỉ mục.
+    </p>
+
+    <h3>Indexing — Bước lập chỉ mục</h3>
+
+    <p>
+      Sau khi thu thập, Google phân tích nội dung của từng trang và lưu vào cơ sở dữ liệu khổng lồ gọi là chỉ mục (index). Tại đây, Google hiểu trang nói về chủ đề gì, mức độ chi tiết như thế nào, ngôn ngữ nào, và liên quan đến những trang nào khác. Đây là lý do tại sao cấu trúc nội dung rõ ràng — dùng heading, đoạn văn ngắn, ngôn ngữ tự nhiên — lại quan trọng cho SEO.
+    </p>
+
+    <p>
+      Không phải trang nào cũng được lập chỉ mục. Google có thể từ chối index một trang nếu nó bị chặn bởi file robots.txt, có thẻ <code>noindex</code>, nội dung trùng lặp, hoặc chất lượng quá thấp.
+    </p>
+
+    <h3>Ranking — Bước xếp hạng</h3>
+
+    <p>
+      Khi người dùng tìm kiếm, Google không chỉ lấy ra danh sách các trang liên quan mà còn xếp hạng chúng theo độ phù hợp và chất lượng. Thuật toán xếp hạng của Google sử dụng hơn 200 tín hiệu (signals), bao gồm: mức độ liên quan của từ khóa, chất lượng và số lượng liên kết từ các trang khác (backlinks), tốc độ tải trang, mức độ tương tác của người dùng (bounce rate, thời gian đọc), và nhiều yếu tố khác.
+    </p>
+
+    <h3>E-E-A-T: Khung đánh giá chất lượng của Google</h3>
+
+    <p>
+      Với nội dung báo chí — đặc biệt là các bài thuộc nhóm "Your Money or Your Life" (sức khỏe, tài chính, pháp lý, tin tức quan trọng) — Google áp dụng bộ tiêu chí đánh giá gọi là E-E-A-T:
+    </p>
+
+    <ul>
+      <li><strong>Experience (Kinh nghiệm thực tế):</strong> Tác giả có kinh nghiệm trực tiếp với chủ đề không? Một phóng viên điều tra thực địa có giá trị khác với người chỉ tổng hợp thông tin trên mạng.</li>
+      <li><strong>Expertise (Chuyên môn):</strong> Tác giả có am hiểu sâu về lĩnh vực không? Bằng chứng có thể là bằng cấp, kinh nghiệm nghề nghiệp, hay tác phẩm đã được công nhận.</li>
+      <li><strong>Authoritativeness (Uy tín):</strong> Tòa soạn và tác giả có được cộng đồng tin tưởng không? Các trang báo uy tín thường có nhiều backlink từ các nguồn đáng tin cậy khác.</li>
+      <li><strong>Trustworthiness (Độ đáng tin cậy):</strong> Thông tin có chính xác, minh bạch về nguồn gốc, và website có an toàn không (HTTPS)?</li>
+    </ul>
+
+    <div class="box tip">
+      <div class="box-title">Mẹo nghề</div>
+      <p>Để cải thiện E-E-A-T, hãy đảm bảo mỗi bài báo có: tên tác giả đầy đủ kèm trang hồ sơ (author bio), ngày xuất bản và ngày cập nhật, liên kết đến nguồn trích dẫn, và tên tòa soạn với thông tin liên hệ rõ ràng. Những điều này vừa tốt cho độc giả, vừa là tín hiệu E-E-A-T mạnh với Google.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         5.3 NGHIÊN CỨU TỪ KHÓA
+    ════════════════════════════════════ -->
+    <h2>5.3 Nghiên cứu từ khóa cho nhà báo</h2>
+
+    <p>
+      Nghiên cứu từ khóa (keyword research) là quá trình tìm hiểu những gì độc giả tiềm năng đang gõ vào ô tìm kiếm để tìm thông tin liên quan đến chủ đề bạn định viết. Đây là bước thường bị bỏ qua nhưng lại có tác động lớn nhất đến khả năng tiếp cận của bài báo.
+    </p>
+
+    <h3>Từ khóa ngắn và từ khóa dài (long-tail)</h3>
+
+    <p>
+      <strong>Từ khóa ngắn</strong> (short-tail hay head keywords) là các cụm từ 1–2 chữ, ví dụ: "bão", "lạm phát", "vaccine". Những từ khóa này có lượng tìm kiếm rất lớn nhưng cũng cạnh tranh cực kỳ cao và thường mơ hồ về ý định. Một trang báo mới khó có thể xếp hạng cao cho từ khóa "vaccine" vì phải cạnh tranh với WHO, Bộ Y tế, và hàng trăm báo lớn khác.
+    </p>
+
+    <p>
+      <strong>Từ khóa dài</strong> (long-tail keywords) là các cụm từ 3 chữ trở lên, cụ thể hơn, ví dụ: "tác dụng phụ vaccine cúm mùa 2024" hoặc "lạm phát ảnh hưởng giá xăng tháng 3". Lượng tìm kiếm thấp hơn, nhưng độ cạnh tranh cũng thấp hơn và khả năng chuyển đổi (người đọc thực sự tìm thấy nội dung họ cần) cao hơn nhiều. Với báo chí, đây thường là lựa chọn chiến lược khôn ngoan hơn.
+    </p>
+
+    <h3>Công cụ nghiên cứu từ khóa</h3>
+
+    <p>
+      <strong>Google Trends</strong> (trends.google.com) — Miễn phí, hiển thị xu hướng tìm kiếm theo thời gian và địa lý. Đặc biệt hữu ích với nhà báo vì bạn có thể thấy một chủ đề đang "nóng" lên hay nguội đi, từ đó quyết định thời điểm xuất bản. Ví dụ: tìm "vỡ nợ" trên Google Trends để thấy các đợt quan tâm của công chúng trùng với các sự kiện thực tế.
+    </p>
+
+    <p>
+      <strong>Ubersuggest</strong> (app.neilpatel.com/ubersuggest) — Cung cấp bản miễn phí đủ dùng cho phóng viên. Nhập một từ khóa, Ubersuggest trả về: lượng tìm kiếm trung bình mỗi tháng, chỉ số cạnh tranh (SEO difficulty), giá thầu quảng cáo (chỉ số gián tiếp cho thấy từ khóa có giá trị thương mại), và hàng chục gợi ý từ khóa liên quan. Đây là điểm khởi đầu tốt cho bước nghiên cứu từ khóa.
+    </p>
+
+    <p>
+      <strong>Google Keyword Planner</strong> (ads.google.com/home/tools/keyword-planner) — Công cụ miễn phí của Google, ban đầu thiết kế cho quảng cáo nhưng rất hữu ích với SEO. Cần có tài khoản Google Ads (tạo miễn phí, không cần chạy quảng cáo). Ưu điểm: dữ liệu trực tiếp từ Google, phân tách lượng tìm kiếm theo tháng và theo vùng địa lý Việt Nam.
+    </p>
+
+    <p>
+      <strong>Tính năng autocomplete của Google</strong> — Đừng bỏ qua: khi bạn gõ vào ô tìm kiếm và Google gợi ý các cụm từ hoàn chỉnh, đó chính là dữ liệu thực tế về những gì người dùng đang tìm. Tương tự, phần "Mọi người cũng tìm kiếm" (People Also Ask) ở giữa trang kết quả và phần tìm kiếm liên quan ở cuối trang là nguồn ý tưởng từ khóa hoàn toàn miễn phí.
+    </p>
+
+    <h3>Ý định tìm kiếm (Search Intent)</h3>
+
+    <p>
+      Hiểu ý định tìm kiếm là bước quan trọng nhất trong nghiên cứu từ khóa. Cùng một từ khóa, người dùng khác nhau có thể có nhu cầu hoàn toàn khác nhau. Google ngày càng giỏi nhận biết ý định và ưu tiên loại nội dung phù hợp nhất.
+    </p>
+
+    <table>
+      <caption>Bảng 5.1 — Các loại ý định tìm kiếm</caption>
+      <thead>
+        <tr>
+          <th>Loại ý định</th>
+          <th>Đặc điểm</th>
+          <th>Ví dụ truy vấn</th>
+          <th>Loại nội dung phù hợp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Informational</strong> (Thông tin)</td>
+          <td>Người dùng muốn tìm hiểu về một chủ đề</td>
+          <td>"bão là gì", "lịch sử chiến tranh Việt Nam"</td>
+          <td>Bài giải thích, bài phân tích chuyên sâu, infographic</td>
+        </tr>
+        <tr>
+          <td><strong>Navigational</strong> (Điều hướng)</td>
+          <td>Người dùng muốn đến một trang cụ thể</td>
+          <td>"VnExpress", "Tuổi Trẻ Online đăng ký"</td>
+          <td>Trang chủ, trang đăng nhập, trang về chúng tôi</td>
+        </tr>
+        <tr>
+          <td><strong>Transactional</strong> (Giao dịch)</td>
+          <td>Người dùng muốn thực hiện một hành động</td>
+          <td>"mua báo điện tử", "đăng ký nhận bản tin"</td>
+          <td>Trang đăng ký, trang sản phẩm, landing page</td>
+        </tr>
+        <tr>
+          <td><strong>Commercial Investigation</strong> (So sánh)</td>
+          <td>Người dùng đang cân nhắc lựa chọn</td>
+          <td>"so sánh điện thoại 2024", "dịch vụ streaming nào tốt"</td>
+          <td>Bài so sánh, review, bảng xếp hạng</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Với báo chí, hầu hết nội dung phục vụ ý định <em>informational</em>. Điều quan trọng là nội dung bạn tạo ra phải thực sự trả lời câu hỏi mà người tìm kiếm đặt ra — không phải chỉ chứa từ khóa đó ở mọi chỗ.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">Cảnh báo</div>
+      <p>Nhồi nhét từ khóa (keyword stuffing) — lặp đi lặp lại từ khóa một cách gượng gạo trong bài viết — từng là kỹ thuật SEO phổ biến những năm 2000, nhưng ngày nay Google phạt rất nặng hành vi này. Thuật toán Panda (2011) và các bản cập nhật sau đó được thiết kế chính xác để phát hiện nội dung kém chất lượng và giả tạo. Hãy viết cho người đọc trước, tối ưu cho máy tìm kiếm sau.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         5.4 TỐI ƯU ON-PAGE SEO
+    ════════════════════════════════════ -->
+    <h2>5.4 Tối ưu On-page SEO</h2>
+
+    <p>
+      On-page SEO là tất cả những gì bạn có thể làm trực tiếp trên trang của mình để cải thiện thứ hạng tìm kiếm — trái với off-page SEO (xây dựng backlink từ các trang khác). Với nhà báo, on-page SEO là khu vực bạn kiểm soát hoàn toàn và có thể áp dụng ngay lập tức.
+    </p>
+
+    <h3>Tiêu đề bài báo (Title Tag)</h3>
+
+    <p>
+      Title tag là đoạn văn bản xuất hiện trên tab trình duyệt và là dòng tiêu đề lớn, màu xanh trên trang kết quả tìm kiếm Google. Đây là yếu tố on-page SEO quan trọng nhất vì nó vừa ảnh hưởng đến xếp hạng, vừa ảnh hưởng trực tiếp đến tỷ lệ click của người dùng (CTR).
+    </p>
+
+    <p>
+      <strong>Công thức viết tiêu đề SEO hiệu quả:</strong>
+    </p>
+    <ul>
+      <li>Đặt từ khóa chính ở đầu tiêu đề (hoặc gần đầu) — Google ưu tiên từ ở vị trí đầu</li>
+      <li>Độ dài tối ưu: 50–60 ký tự (khoảng 6–9 từ tiếng Việt) để không bị cắt bớt trên SERP</li>
+      <li>Mỗi trang cần một tiêu đề duy nhất — không sao chép tiêu đề giữa các bài</li>
+      <li>Tránh click-bait thuần túy: tiêu đề phải mô tả chính xác nội dung bài</li>
+      <li>Có thể thêm năm hoặc địa điểm nếu liên quan để tăng tính thời sự</li>
+    </ul>
+
+    <p>
+      <em>Ví dụ so sánh:</em><br>
+      Tiêu đề kém: "Những điều bạn cần biết về tình hình kinh tế"<br>
+      Tiêu đề tốt: "Lạm phát Việt Nam 2024: Giá hàng hóa tăng vì sao?"
+    </p>
+
+    <h3>Meta Description</h3>
+
+    <p>
+      Meta description là đoạn mô tả ngắn (khoảng 150–160 ký tự) xuất hiện bên dưới tiêu đề trên trang kết quả Google. Nó không trực tiếp ảnh hưởng đến xếp hạng, nhưng ảnh hưởng lớn đến CTR — một meta description hấp dẫn, rõ ràng có thể tăng tỷ lệ click đáng kể dù bài xếp hạng thứ 3 hay thứ 5.
+    </p>
+
+    <p>
+      Meta description nên: tóm tắt nội dung chính của bài, chứa từ khóa mục tiêu (Google sẽ in đậm chúng), có yếu tố kêu gọi hành động nhẹ ("Đọc phân tích đầy đủ", "Tìm hiểu thêm"), và tránh trùng lặp với meta description của các bài khác.
+    </p>
+
+    <h3>URL Slug</h3>
+
+    <p>
+      URL slug là phần địa chỉ web sau tên miền, ví dụ: <code>thoibao.vn/kinh-te/<strong>lam-phat-viet-nam-2024</strong></code>. URL tốt cho SEO cần ngắn gọn, chứa từ khóa chính, dùng dấu gạch ngang để phân cách các từ, và viết thường hoàn toàn. Tránh dùng số ngẫu nhiên, ngày tháng (vì bài sẽ trông "cũ" sau này), hay ký tự đặc biệt.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">Lưu ý với URL tiếng Việt</div>
+      <p>Nên dùng URL không dấu cho tiếng Việt (slug được chuyển tự động bởi WordPress hoặc CMS). URL không dấu dễ đọc, dễ chia sẻ, và tránh các vấn đề mã hóa ký tự (URL encoding) khiến đường link trông rối mắt. Ví dụ: thay vì <code>/bão-miền-bắc</code>, dùng <code>/bao-mien-bac</code>.</p>
+    </div>
+
+    <h3>Cấu trúc heading (H1, H2, H3)</h3>
+
+    <p>
+      Heading (tiêu đề cấp) là cách bạn phân cấp nội dung trong bài. Về mặt SEO, chúng giúp Google hiểu cấu trúc và chủ đề của bài. Về mặt người đọc, chúng giúp bài dễ đọc lướt và dễ điều hướng.
+    </p>
+    <ul>
+      <li><strong>H1:</strong> Tiêu đề chính của bài — mỗi trang chỉ nên có một H1, thường là tiêu đề bài báo. Chứa từ khóa chính.</li>
+      <li><strong>H2:</strong> Các phần lớn trong bài. Mỗi H2 nên bao quát một ý chính riêng biệt và có thể chứa từ khóa biến thể.</li>
+      <li><strong>H3:</strong> Tiêu đề phụ trong mỗi phần H2. Dùng khi cần chia nhỏ một phần dài.</li>
+    </ul>
+
+    <p>Không dùng heading chỉ vì muốn chữ to và đậm — hãy dùng chúng để tạo cấu trúc logic thực sự cho bài. Không được bỏ qua H2 để dùng thẳng H3.</p>
+
+    <h3>Alt text cho hình ảnh</h3>
+
+    <p>
+      Alt text (văn bản thay thế) là mô tả của một hình ảnh dành cho: (1) người dùng khiếm thị dùng screen reader, (2) trình duyệt khi hình ảnh không tải được, và (3) công cụ tìm kiếm để "đọc" hình ảnh. Một alt text tốt mô tả cụ thể nội dung ảnh và tự nhiên tích hợp từ khóa nếu phù hợp.
+    </p>
+
+    <p>
+      <em>Ví dụ:</em><br>
+      Alt text kém: "image001.jpg" hoặc "ảnh"<br>
+      Alt text tốt: "Người dân xếp hàng mua gạo tại siêu thị TP.HCM trong đợt giá gạo tăng tháng 8/2024"
+    </p>
+
+    <h3>Internal Linking — Liên kết nội bộ</h3>
+
+    <p>
+      Internal linking là việc đặt các liên kết trong bài báo trỏ đến các bài báo khác trên cùng website. Đây là kỹ thuật SEO vừa dễ làm vừa hiệu quả cao nhưng thường bị bỏ qua. Lợi ích bao gồm: giữ người đọc ở lại website lâu hơn (giảm bounce rate), giúp Googlebot khám phá thêm các trang trên site, và phân phối "link juice" (sức mạnh SEO) từ bài được nhiều người đọc sang các bài khác.
+    </p>
+
+    <p>
+      Nguyên tắc: liên kết đến bài liên quan thực sự, dùng anchor text (văn bản hiển thị của link) mô tả chính xác nội dung đích thay vì dùng "xem tại đây" hay "click vào đây". Mỗi bài nên có ít nhất 2–3 internal links đến các bài cùng chủ đề.
+    </p>
+
+    <table>
+      <caption>Bảng 5.2 — Checklist SEO cho mỗi bài báo</caption>
+      <thead>
+        <tr>
+          <th>Yếu tố</th>
+          <th>Tiêu chí đạt chuẩn</th>
+          <th>Công cụ kiểm tra</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Title tag</td>
+          <td>Có từ khóa chính, 50–60 ký tự, duy nhất</td>
+          <td>Yoast SEO, Google SERP Simulator</td>
+        </tr>
+        <tr>
+          <td>Meta description</td>
+          <td>150–160 ký tự, có từ khóa, hấp dẫn</td>
+          <td>Yoast SEO</td>
+        </tr>
+        <tr>
+          <td>URL slug</td>
+          <td>Ngắn, có từ khóa, không dấu, dùng "-"</td>
+          <td>WordPress permalink settings</td>
+        </tr>
+        <tr>
+          <td>H1</td>
+          <td>Duy nhất, có từ khóa chính, là tiêu đề bài</td>
+          <td>Browser DevTools, Yoast</td>
+        </tr>
+        <tr>
+          <td>H2/H3</td>
+          <td>Cấu trúc logic, có từ khóa liên quan</td>
+          <td>Screaming Frog (miễn phí đến 500 trang)</td>
+        </tr>
+        <tr>
+          <td>Hình ảnh</td>
+          <td>Alt text đầy đủ, file ảnh đặt tên có nghĩa</td>
+          <td>Yoast SEO, kiểm tra thủ công</td>
+        </tr>
+        <tr>
+          <td>Internal links</td>
+          <td>Ít nhất 2–3 link đến bài liên quan</td>
+          <td>Kiểm tra thủ công</td>
+        </tr>
+        <tr>
+          <td>Độ dài nội dung</td>
+          <td>Tối thiểu 400 từ cho tin ngắn, 800+ từ cho bài phân tích</td>
+          <td>WordPress word count, Yoast</td>
+        </tr>
+        <tr>
+          <td>Tốc độ trang</td>
+          <td>Điểm PageSpeed ≥ 70 (mobile)</td>
+          <td>PageSpeed Insights (pagespeed.web.dev)</td>
+        </tr>
+        <tr>
+          <td>HTTPS</td>
+          <td>Toàn bộ trang dùng kết nối bảo mật</td>
+          <td>Kiểm tra thanh địa chỉ trình duyệt</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
+         5.5 GOOGLE NEWS VÀ GOOGLE DISCOVER
+    ════════════════════════════════════ -->
+    <h2>5.5 Google News và Google Discover</h2>
+
+    <p>
+      Google News (news.google.com) là dịch vụ tổng hợp tin tức của Google, hiển thị bài báo từ hàng nghìn tòa soạn trên toàn thế giới. Xuất hiện trên Google News có thể mang lại lượng traffic đáng kể, đặc biệt với các tin tức thời sự. Tuy nhiên, Google không xét duyệt từng bài — thay vào đó, họ đánh giá toàn bộ tòa soạn/website.
+    </p>
+
+    <h3>Yêu cầu để được index trên Google News</h3>
+
+    <p>Để nội dung của bạn xuất hiện trên Google News, website cần đáp ứng các tiêu chí sau:</p>
+    <ul>
+      <li><strong>Minh bạch về tổ chức:</strong> Có trang "Về chúng tôi" (About) rõ ràng với thông tin tòa soạn, địa chỉ, và đội ngũ biên tập.</li>
+      <li><strong>Minh bạch về tác giả:</strong> Mỗi bài báo phải có tên tác giả thực và có thể trỏ đến trang hồ sơ tác giả.</li>
+      <li><strong>Nội dung gốc:</strong> Website phải chủ yếu xuất bản nội dung báo chí gốc, không phải tổng hợp hay sao chép từ nguồn khác.</li>
+      <li><strong>Cập nhật thường xuyên:</strong> Google ưu tiên các tòa soạn xuất bản liên tục, không phải website đăng vài bài rồi bỏ.</li>
+      <li><strong>Không vi phạm chính sách Google News:</strong> Không có nội dung gây hiểu nhầm, thông tin sai lệch, hay vi phạm bản quyền.</li>
+    </ul>
+
+    <h3>Schema Markup cho báo chí</h3>
+
+    <p>
+      Schema markup là đoạn code nhỏ thêm vào HTML của trang để cung cấp cho Google thông tin có cấu trúc về nội dung. Với bài báo, Google khuyến nghị dùng schema loại <code>NewsArticle</code> hoặc <code>Article</code>. Schema markup giúp Google hiểu rõ hơn về bài viết và có thể kích hoạt các "rich result" đặc biệt trên trang tìm kiếm như: hình ảnh lớn trong kết quả, nhãn thời gian, hoặc xuất hiện trong mục Top Stories.
+    </p>
+
+    <p>
+      Trong WordPress, plugin Yoast SEO (phiên bản miễn phí) tự động tạo schema markup NewsArticle cho các bài đăng. Bạn không cần viết code thủ công — chỉ cần điền đầy đủ thông tin trong phần cài đặt Yoast.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">Kiểm tra schema markup</div>
+      <p>Dùng công cụ Rich Results Test của Google (search.google.com/test/rich-results) để kiểm tra xem schema markup trên trang của bạn có hợp lệ không. Dán URL bài báo vào và công cụ sẽ cho biết Google "đọc" được những thông tin cấu trúc nào từ trang đó.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         5.6 THỰC HÀNH: TỐI ƯU BÀI BÁO
+    ════════════════════════════════════ -->
+    <h2>5.6 Thực hành: Tối ưu một bài báo thực tế</h2>
+
+    <p>
+      Trong phần thực hành này, chúng ta sẽ đi qua toàn bộ quy trình tối ưu SEO cho một bài báo trên WordPress bằng plugin Yoast SEO. Hãy chọn một bài báo bạn đã viết (hoặc sẽ viết) và thực hiện theo các bước sau.
+    </p>
+
+    <h3>Bước 1: Cài đặt Google Search Console</h3>
+
+    <p>
+      Trước khi tối ưu bất cứ điều gì, bạn cần có dữ liệu. Google Search Console (search.google.com/search-console) là công cụ miễn phí của Google cho phép bạn theo dõi hiệu suất tìm kiếm của website, xem Google có đang crawl và index trang của bạn không, và phát hiện các lỗi kỹ thuật.
+    </p>
+
+    <ol class="steps">
+      <li>Truy cập search.google.com/search-console và đăng nhập bằng tài khoản Google.</li>
+      <li>Chọn <strong>Add Property</strong> và nhập URL đầy đủ của website (bao gồm https://).</li>
+      <li>Xác minh quyền sở hữu: với WordPress + Yoast SEO, chọn phương thức HTML tag, sao chép đoạn meta tag, dán vào ô "Google Verification HTML" trong Yoast SEO → General → Webmaster Tools, rồi lưu. Quay lại Search Console và nhấn Verify.</li>
+      <li>Đợi 24–48 giờ để Search Console bắt đầu thu thập dữ liệu lần đầu.</li>
+      <li>Gửi sitemap: trong thanh bên trái, chọn <strong>Sitemaps</strong>, nhập <code>sitemap_index.xml</code> (Yoast tự tạo file này) và nhấn Submit.</li>
+    </ol>
+
+    <h3>Bước 2: Nghiên cứu từ khóa cho bài viết</h3>
+
+    <ol class="steps">
+      <li>Xác định chủ đề chính của bài báo. Ví dụ: bạn định viết về tình trạng ô nhiễm không khí ở Hà Nội.</li>
+      <li>Mở Ubersuggest, nhập "ô nhiễm không khí Hà Nội", chọn ngôn ngữ Tiếng Việt / quốc gia Việt Nam.</li>
+      <li>Ghi lại 3–5 từ khóa có lượng tìm kiếm cao nhất và độ cạnh tranh vừa phải (SEO Difficulty dưới 40 là lý tưởng cho trang mới).</li>
+      <li>Kiểm tra Google Trends để xem từ khóa đang tăng hay giảm xu hướng.</li>
+      <li>Chọn một từ khóa chính và 2–3 từ khóa phụ (synonyms hoặc biến thể liên quan).</li>
+    </ol>
+
+    <h3>Bước 3: Tối ưu bài báo với Yoast SEO</h3>
+
+    <ol class="steps">
+      <li>Tạo hoặc mở bài viết trong WordPress. Cuộn xuống dưới phần soạn thảo để thấy hộp Yoast SEO.</li>
+      <li>Trong trường <strong>Focus keyphrase</strong>, nhập từ khóa chính bạn đã chọn ở bước 2. Yoast sẽ lập tức phân tích và hiển thị danh sách các vấn đề cần khắc phục.</li>
+      <li>Nhấn vào tab <strong>Edit snippet</strong> để chỉnh sửa tiêu đề SEO (title tag) và meta description. Đảm bảo thanh đo lường chuyển sang màu xanh.</li>
+      <li>Nhìn vào phần <strong>SEO analysis</strong>: giải quyết lần lượt các mục đang hiển thị dấu đỏ hoặc cam (ví dụ: "Keyphrase not found in the first paragraph" → thêm từ khóa vào đoạn văn mở đầu).</li>
+      <li>Kiểm tra phần <strong>Readability analysis</strong>: Yoast đánh giá độ dễ đọc của bài (độ dài câu, đoạn văn, dùng headings, v.v.).</li>
+      <li>Đặt URL slug phù hợp trong phần <strong>Permalink</strong> ngay trên tiêu đề bài.</li>
+      <li>Thêm alt text cho tất cả hình ảnh bằng cách click vào ảnh và điền vào trường "Alt text" trong panel bên phải.</li>
+      <li>Đọc lại bài, thêm 2–3 internal links đến các bài báo liên quan.</li>
+      <li>Xuất bản bài và dùng chức năng URL inspection trong Search Console để yêu cầu Google index ngay.</li>
+    </ol>
+
+    <h3>Bước 4: Đọc dữ liệu Search Console sau 7–14 ngày</h3>
+
+    <ol class="steps">
+      <li>Mở Google Search Console, vào mục <strong>Performance → Search results</strong>.</li>
+      <li>Xem 4 chỉ số chính: Total clicks (số lượt nhấp vào trang từ Google), Total impressions (số lần trang xuất hiện trong kết quả tìm kiếm), Average CTR (tỷ lệ click/impression), và Average position (thứ hạng trung bình).</li>
+      <li>Kéo xuống bảng <strong>Queries</strong> để xem người dùng đã tìm từ khóa gì để đến bài của bạn — đây thường là kho ý tưởng cho các bài báo tiếp theo.</li>
+      <li>Vào tab <strong>Pages</strong> để so sánh hiệu suất giữa các bài và tìm bài nào đang được xếp hạng tốt nhất.</li>
+    </ol>
+
+    <div class="box practice">
+      <div class="box-title">Bài tập thực hành</div>
+      <p>Chọn một bài báo đã xuất bản (hoặc viết bài mới từ 400 từ trở lên). Thực hiện đầy đủ Checklist SEO trong Bảng 5.2, sử dụng Yoast SEO để đạt ít nhất 7/10 điểm xanh trong phần SEO analysis. Chụp ảnh màn hình Yoast trước và sau khi tối ưu, nộp kèm bài báo đã hoàn chỉnh.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         CÂU HỎI ÔN TẬP
+    ════════════════════════════════════ -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Phân biệt ba giai đoạn crawling, indexing và ranking. Nếu một bài báo không xuất hiện trong kết quả Google dù đã xuất bản được một tuần, nguyên nhân có thể từ giai đoạn nào và bạn sẽ kiểm tra như thế nào?</li>
+        <li>Giải thích E-E-A-T và nêu ba biện pháp cụ thể mà một tòa soạn báo địa phương có thể áp dụng để cải thiện điểm E-E-A-T trong mắt Google.</li>
+        <li>So sánh ưu và nhược điểm của từ khóa ngắn và từ khóa dài (long-tail) trong chiến lược SEO cho báo chí. Với một bài báo điều tra về nợ xấu ngân hàng, bạn sẽ nhắm vào loại từ khóa nào và tại sao?</li>
+        <li>Tại sao internal linking quan trọng cả với người đọc lẫn với SEO? Mô tả cách bạn sẽ xây dựng mạng lưới internal links cho một chuyên mục "Kinh tế" với 50 bài báo đã xuất bản.</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG CHƯƠNG -->
+    <div class="chapter-nav-bar">
+      <a href="04-wordpress.html">&larr; Chương 4: WordPress cơ bản</a>
+      <a href="06-du-lieu.html">Chương 6: Báo chí dữ liệu &rarr;</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

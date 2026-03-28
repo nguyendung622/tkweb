@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 4 — WordPress cơ bản</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html" class="active">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 4</div>
+      <h1>WordPress cơ bản</h1>
+      <div class="chapter-meta">
+        <span>⏱ 120 phút</span>
+        <span>📊 Cơ bản – Trung cấp</span>
+        <span>🛠 WordPress.com / Gutenberg</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Giải thích kiến trúc WordPress: bài viết, trang, theme và plugin</li>
+        <li>Tạo và xuất bản bài báo hoàn chỉnh bằng trình soạn thảo Gutenberg</li>
+        <li>Cấu hình các cài đặt cơ bản của trang: menu điều hướng, widget và cấu trúc URL</li>
+        <li>Phân biệt rõ WordPress.com và WordPress.org — biết nên chọn cái nào trong từng tình huống</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         4.1 WORDPRESS VÀ HỆ SINH THÁI CMS
+    ════════════════════════════════════ -->
+    <h2>4.1 WordPress và hệ sinh thái CMS báo chí</h2>
+
+    <p>
+      Nếu bạn đọc tin tức trực tuyến — và chắc chắn bạn có — thì khả năng cao bạn đã đọc nội dung được đăng bằng WordPress mà không hề hay biết. Tính đến năm 2024, WordPress chiếm hơn <strong>43% toàn bộ các website trên internet</strong>. Con số đó bao gồm từ blog cá nhân, trang tin tức địa phương, cho đến các tờ báo lớn như The New York Times (một phần), TechCrunch, The Guardian và hàng nghìn tờ báo khác trên toàn thế giới.
+    </p>
+
+    <p>
+      Ở Việt Nam, WordPress là nền tảng CMS (<em>Content Management System — Hệ thống quản lý nội dung</em>) được sử dụng rộng rãi nhất cho các trang tin tức quy mô vừa và nhỏ, blog báo chí cá nhân và trang dự án truyền thông phi lợi nhuận. Nhiều cựu sinh viên báo chí sau khi ra trường đã dùng WordPress để xây dựng tạp chí độc lập, bản tin chuyên ngành hoặc podcast website.
+    </p>
+
+    <p>
+      CMS là phần mềm cho phép nhiều người cùng tạo, chỉnh sửa và quản lý nội dung số mà không cần hiểu biết về lập trình. WordPress không phải CMS duy nhất — có Drupal, Joomla, Ghost, Squarespace — nhưng WordPress là CMS phổ biến nhất và có cộng đồng hỗ trợ rộng lớn nhất, điều quan trọng đặc biệt khi bạn gặp sự cố lúc deadline đang đến gần.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 WordPress trong làng báo Việt Nam</div>
+      <p>Nhiều ấn phẩm báo chí độc lập tiếng Việt như <em>Luật Khoa Tạp Chí</em>, <em>The Interpreter Vietnam</em>, và các bản tin chuyên ngành pháp luật, kinh tế xây dựng trên WordPress. Ngay cả các tòa soạn lớn cũng dùng WordPress cho các tiểu blog, trang chiến dịch hoặc microsites bên cạnh hệ thống CMS nội bộ chính.</p>
+    </div>
+
+    <h3>WordPress.com và WordPress.org — Hai thế giới khác nhau</h3>
+
+    <p>
+      Đây là điểm gây nhầm lẫn nhất khi mới tiếp cận WordPress. Mặc dù cùng tên và dùng chung phần mềm gốc, <strong>WordPress.com</strong> và <strong>WordPress.org</strong> là hai sản phẩm hoàn toàn khác nhau với triết lý hoàn toàn khác nhau.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tiêu chí</th>
+          <th>WordPress.com</th>
+          <th>WordPress.org (self-hosted)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bản chất</strong></td>
+          <td>Dịch vụ lưu trữ có sẵn (hosted service)</td>
+          <td>Phần mềm tải về, tự cài trên server riêng</td>
+        </tr>
+        <tr>
+          <td><strong>Chi phí</strong></td>
+          <td>Free (hạn chế) đến $45+/tháng (Business)</td>
+          <td>Phần mềm miễn phí; trả tiền hosting $3–20/tháng</td>
+        </tr>
+        <tr>
+          <td><strong>Tên miền</strong></td>
+          <td>Miễn phí: <em>tenblog.wordpress.com</em>; tên miền riêng từ gói trả phí</td>
+          <td>Bạn tự mua tên miền riêng (~$10–15/năm)</td>
+        </tr>
+        <tr>
+          <td><strong>Cài plugin</strong></td>
+          <td>Chỉ gói Business ($45/tháng) trở lên</td>
+          <td>Không giới hạn — hơn 60.000 plugin miễn phí</td>
+        </tr>
+        <tr>
+          <td><strong>Chỉnh theme</strong></td>
+          <td>Hạn chế; một số theme cao cấp cần trả phí</td>
+          <td>Toàn quyền chỉnh sửa CSS, PHP, theme code</td>
+        </tr>
+        <tr>
+          <td><strong>Quảng cáo</strong></td>
+          <td>WordPress hiển thị quảng cáo trên gói Free</td>
+          <td>Hoàn toàn kiểm soát — không quảng cáo ngoài ý muốn</td>
+        </tr>
+        <tr>
+          <td><strong>Bảo trì / cập nhật</strong></td>
+          <td>Tự động — không cần lo lắng</td>
+          <td>Tự chịu trách nhiệm cập nhật WordPress, theme, plugin</td>
+        </tr>
+        <tr>
+          <td><strong>Sao lưu (Backup)</strong></td>
+          <td>Tự động (gói trả phí)</td>
+          <td>Cần plugin riêng (UpdraftPlus, Jetpack)</td>
+        </tr>
+        <tr>
+          <td><strong>Phù hợp với</strong></td>
+          <td>Người mới, blog cá nhân, trang dự án nhỏ</td>
+          <td>Tòa soạn, trang tin tức nghiêm túc, khi cần tùy biến cao</td>
+        </tr>
+        <tr>
+          <td><strong>Kỹ thuật cần có</strong></td>
+          <td>Không cần biết code</td>
+          <td>Hiểu cơ bản về FTP, hosting, domain DNS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Nên chọn cái nào?</div>
+      <p>Đối với mục tiêu học tập trong khóa học này, hãy dùng <strong>WordPress.com (gói Free)</strong> — không cần thẻ tín dụng, không cần mua hosting, có thể bắt đầu ngay trong 5 phút. Khi bạn muốn xây dựng một trang tin thật sự, khi đó hãy chuyển sang WordPress.org với hosting riêng.</p>
+    </div>
+
+    <h3>Khi nào nên dùng WordPress thay vì Google Sites?</h3>
+
+    <p>
+      Chương 1 đã giới thiệu Google Sites — công cụ đơn giản và hoàn toàn miễn phí. Vậy tại sao lại cần học thêm WordPress? Sự lựa chọn phụ thuộc vào quy mô, mục đích và yêu cầu kỹ thuật của dự án:
+    </p>
+
+    <ul>
+      <li><strong>Chọn Google Sites</strong> khi: tạo portfolio cá nhân, trang giới thiệu dự án nhỏ, trang nội bộ tòa soạn — khi tốc độ triển khai và đơn giản là ưu tiên hàng đầu.</li>
+      <li><strong>Chọn WordPress</strong> khi: cần quản lý nhiều bài viết theo thời gian, cần phân quyền nhiều tác giả, cần SEO nâng cao, cần tích hợp newsletter, bình luận, quảng cáo, hoặc cần giao diện thực sự giống một tờ báo chuyên nghiệp.</li>
+    </ul>
+
+
+    <!-- ════════════════════════════════════
+         4.2 KIẾN TRÚC WORDPRESS
+    ════════════════════════════════════ -->
+    <h2>4.2 Kiến trúc WordPress</h2>
+
+    <p>
+      Trước khi bắt đầu viết bài, hãy hiểu rõ các "viên gạch" cấu thành một website WordPress. Nắm vững kiến trúc này sẽ giúp bạn đưa ra quyết định đúng đắn về cách tổ chức nội dung và tránh những nhầm lẫn phổ biến.
+    </p>
+
+    <h3>Posts (Bài đăng) và Pages (Trang) — Khác nhau như thế nào</h3>
+
+    <p>
+      Đây là câu hỏi phổ biến nhất của người mới dùng WordPress, và đây cũng là điểm phân biệt quan trọng nhất trong kiến trúc nội dung.
+    </p>
+
+    <p>
+      <strong>Posts</strong> (Bài đăng) là nội dung có tính thời sự — chúng có ngày đăng, có tác giả, thuộc về một chuyên mục (category), được gắn thẻ (tag) và hiển thị theo thứ tự thời gian trên trang chủ. Đây là định dạng dành cho bài báo, tin tức, bài phân tích, bài bình luận — tất cả những nội dung bạn viết theo dòng thời gian.
+    </p>
+
+    <p>
+      <strong>Pages</strong> (Trang) là nội dung tĩnh, không có tính thời sự — chúng không thuộc category nào, không hiển thị trong dòng thời gian. Đây là định dạng cho trang "Giới thiệu", "Liên hệ", "Quảng cáo", "Điều khoản sử dụng" — những nội dung hiếm khi thay đổi và không phải là bài báo.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Quy tắc thực tế</div>
+      <p>Khi phân vân không biết nên tạo Post hay Page: hỏi bản thân "Nội dung này có xuất hiện trong trang chủ theo thứ tự thời gian không?" Nếu có — đó là Post. Nếu không (như trang About Us, Contact) — đó là Page.</p>
+    </div>
+
+    <h3>Categories (Chuyên mục) và Tags (Thẻ)</h3>
+
+    <p>
+      Categories là hệ thống phân loại bài viết theo chủ đề lớn — tương tự như chuyên mục trong tờ báo truyền thống: Chính trị, Kinh tế, Xã hội, Văn hóa, Thể thao. Một bài viết bắt buộc thuộc ít nhất một category. Categories có thể có phân cấp (cha–con): ví dụ category "Kinh tế" có thể có category con "Bất động sản", "Chứng khoán", "Ngân hàng".
+    </p>
+
+    <p>
+      Tags là các từ khóa mô tả cụ thể hơn về nội dung bài viết — không có phân cấp, không bắt buộc. Một bài viết có thể có nhiều tag tùy ý. Ví dụ một bài về vụ sáp nhập ngân hàng có thể gắn tags: <em>ngân hàng</em>, <em>M&amp;A</em>, <em>Ngân hàng Nhà nước</em>, <em>2025</em>. Tags giúp liên kết các bài viết cùng chủ đề dù thuộc các category khác nhau.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Lỗi phổ biến trong quản lý category</div>
+      <p>Nhiều tòa soạn mới dùng WordPress mắc lỗi tạo quá nhiều category (30–40 chuyên mục) hoặc đặt tên category trùng lặp với tag. Một cấu trúc category tốt thường có 5–10 chuyên mục chính, rõ ràng, không chồng lấp. Category quá nhiều làm loãng cấu trúc SEO và gây bối rối cho độc giả.</p>
+    </div>
+
+    <h3>Themes — Giao diện của website</h3>
+
+    <p>
+      Theme là bộ mã nguồn quyết định giao diện và bố cục của toàn bộ website WordPress. Thay đổi theme sẽ thay đổi hoàn toàn diện mạo website mà không làm mất nội dung — đây là một trong những điểm mạnh lớn nhất của WordPress.
+    </p>
+
+    <p>
+      WordPress có hơn 11.000 theme miễn phí trong thư mục chính thức tại wordpress.org/themes, cùng hàng nghìn theme thương mại từ các nhà cung cấp như ThemeForest, Elegant Themes, StudioPress. Với báo chí, các theme phổ biến nhất là <strong>Newspaper</strong> (ThemeForest, ~$59), <strong>Jannah</strong>, <strong>Publisher</strong> — các theme được thiết kế riêng cho news portal với layout nhiều cột, breaking news ticker, infinite scroll.
+    </p>
+
+    <h3>Plugins — Mở rộng chức năng</h3>
+
+    <p>
+      Plugin là các tiện ích mở rộng cài thêm vào WordPress để bổ sung tính năng mà core WordPress không có sẵn. Có plugin cho mọi nhu cầu: tối ưu SEO (Yoast SEO, RankMath), chống spam (Akismet), tăng tốc trang (WP Super Cache, W3 Total Cache), bảo mật (Wordfence), form liên hệ (Contact Form 7), newsletter (Mailchimp for WP), paywall và thu phí độc giả.
+    </p>
+
+    <p>
+      Một website WordPress tốt thường có 10–20 plugin được chọn lọc cẩn thận. Cài quá nhiều plugin (50+) sẽ làm chậm trang và tăng nguy cơ bảo mật. Mỗi plugin là một điểm tiếp xúc tiềm năng cho tin tặc nếu không được cập nhật thường xuyên.
+    </p>
+
+    <h3>Dashboard — Tổng quan giao diện quản trị</h3>
+
+    <p>
+      Dashboard (bảng điều khiển) là giao diện quản trị WordPress, truy cập qua địa chỉ <code>yoursite.com/wp-admin</code>. Thanh menu bên trái là trung tâm điều hành của website. Các mục quan trọng nhất:
+    </p>
+
+    <ul>
+      <li><strong>Posts</strong> — quản lý tất cả bài viết, categories và tags</li>
+      <li><strong>Media</strong> — thư viện ảnh, video và file đính kèm</li>
+      <li><strong>Pages</strong> — quản lý các trang tĩnh</li>
+      <li><strong>Comments</strong> — kiểm duyệt bình luận độc giả</li>
+      <li><strong>Appearance</strong> — chọn theme, tùy chỉnh menus, widgets, theme editor</li>
+      <li><strong>Plugins</strong> — cài đặt, kích hoạt, cập nhật và xóa plugin</li>
+      <li><strong>Users</strong> — quản lý tài khoản tác giả, biên tập viên, quản trị viên</li>
+      <li><strong>Settings</strong> — cài đặt chung: tên trang, ngôn ngữ, múi giờ, permalink</li>
+    </ul>
+
+
+    <!-- ════════════════════════════════════
+         4.3 GUTENBERG BLOCK EDITOR
+    ════════════════════════════════════ -->
+    <h2>4.3 Gutenberg Block Editor</h2>
+
+    <p>
+      Trước năm 2018, WordPress dùng trình soạn thảo cổ điển (Classic Editor) — về cơ bản là một hộp văn bản lớn với thanh công cụ định dạng đơn giản, giống Microsoft Word. Gutenberg — ra mắt cùng WordPress 5.0 vào tháng 12/2018 — đã thay đổi hoàn toàn trải nghiệm soạn thảo.
+    </p>
+
+    <p>
+      Gutenberg xây dựng nội dung theo mô hình <strong>block</strong>: mỗi đoạn văn, mỗi ảnh, mỗi video, mỗi bảng biểu đều là một block độc lập. Bạn có thể kéo thả để sắp xếp lại, điều chỉnh từng block riêng lẻ và tái sử dụng các block đã tạo. Triết lý này gần với cách các tòa soạn báo hiện đại nghĩ về bài viết: không phải là một khối văn bản đơn thuần mà là một tập hợp các đơn vị nội dung đa dạng.
+    </p>
+
+    <h3>Block là gì và cách hoạt động</h3>
+
+    <p>
+      Mỗi block trong Gutenberg là một đơn vị nội dung độc lập với cài đặt riêng. Khi bạn nhấn Enter sau một đoạn văn, WordPress tạo ra một block mới. Khi bạn nhấn <strong>/</strong> (dấu gạch chéo) trong block mới, một menu tìm kiếm block hiện ra — gõ tên block bạn cần: <em>image</em>, <em>video</em>, <em>table</em>, <em>quote</em>... và nhấn Enter để chèn vào.
+    </p>
+
+    <p>
+      Mỗi block có hai loại cài đặt: thanh công cụ nổi ngay trên block (các thao tác nhanh như in đậm, căn chỉnh, thêm link) và thanh cài đặt chi tiết ở cột bên phải (màu nền, padding, typography, class CSS tùy chỉnh).
+    </p>
+
+    <h3>Các block thường dùng trong báo chí</h3>
+
+    <p>
+      <strong>Paragraph</strong> — Block mặc định, dùng cho văn bản thông thường. Hỗ trợ in đậm, nghiêng, gạch chân, màu chữ, màu nền. Có thể chọn cỡ chữ và khoảng cách dòng.
+    </p>
+
+    <p>
+      <strong>Heading</strong> — Các tiêu đề từ H1 đến H6. Trong báo chí online, H1 là tiêu đề bài (thường do theme tự render từ title field, không thêm trong body), H2 là tiêu đề phần chính, H3 là tiêu đề phụ. Việc sử dụng đúng thứ bậc heading cực kỳ quan trọng cho SEO và accessibility.
+    </p>
+
+    <p>
+      <strong>Image</strong> — Chèn ảnh từ máy tính hoặc Media Library. Hỗ trợ caption, alt text (cực quan trọng cho SEO và accessibility), link ảnh, căn chỉnh, và kích thước. Luôn điền alt text mô tả nội dung ảnh — đây là thực hành báo chí tốt và yêu cầu kỹ thuật cho người khuyết tật thị giác.
+    </p>
+
+    <p>
+      <strong>Gallery</strong> — Trình bày nhiều ảnh theo dạng lưới. Phù hợp cho phóng sự ảnh, bộ ảnh sự kiện. Có thể chọn số cột và kiểu hiển thị.
+    </p>
+
+    <p>
+      <strong>Quote</strong> — Block trích dẫn với định dạng đặc biệt (thường có đường kẻ bên trái hoặc chữ lớn hơn). Dùng cho quote của nhân vật trong bài, trích dẫn văn bản quan trọng. Có thể thêm tên người được trích dẫn bên dưới.
+    </p>
+
+    <p>
+      <strong>Pullquote</strong> — Trích dẫn nổi bật, được thiết kế để nổi bật giữa bài viết dài — tương tự "lede" trích dẫn trong báo in. Hiệu quả trong việc phá vỡ sự đơn điệu của văn bản dài.
+    </p>
+
+    <p>
+      <strong>Table</strong> — Tạo bảng trực tiếp trong bài viết. Hỗ trợ thêm/xóa hàng và cột, định dạng header, cài đặt căn chỉnh từng ô. Phù hợp cho so sánh dữ liệu, bảng chỉ số kinh tế, kết quả bầu cử.
+    </p>
+
+    <p>
+      <strong>Embed</strong> — Nhúng nội dung từ hơn 30 nền tảng khác nhau chỉ bằng cách dán URL: YouTube, Twitter/X, Facebook, Instagram, TikTok, Google Maps, Spotify, SoundCloud. Gutenberg tự động nhận diện URL và render preview đúng cách.
+    </p>
+
+    <p>
+      <strong>List</strong> — Danh sách có thứ tự (ordered) hoặc không thứ tự (unordered). Hỗ trợ danh sách lồng nhau (nested list).
+    </p>
+
+    <p>
+      <strong>Separator</strong> — Đường kẻ ngang phân cách các phần của bài viết. Thường dùng để tách các phần lớn trong bài báo dài.
+    </p>
+
+    <p>
+      <strong>HTML</strong> — Block cho phép nhập HTML tùy chỉnh trực tiếp. Dùng khi cần nhúng widget từ bên thứ ba hoặc tạo layout đặc biệt không có block sẵn.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Pattern — Bố cục thiết kế sẵn</div>
+      <p>Ngoài các block đơn lẻ, Gutenberg có tính năng <strong>Patterns</strong> — các bố cục thiết kế sẵn kết hợp nhiều block, ví dụ "hero section với ảnh và tiêu đề lớn", "grid 3 cột bài viết nổi bật", "section giới thiệu tác giả". Truy cập Patterns qua nút <strong>+</strong> ở góc trên trái editor → tab <strong>Patterns</strong>.</p>
+    </div>
+
+    <h3>Reusable Blocks — Tái sử dụng nội dung lặp lại</h3>
+
+    <p>
+      Reusable Blocks (Block tái sử dụng) cho phép bạn lưu một block hoặc một nhóm block thành template để dùng lại trong nhiều bài viết. Ví dụ điển hình trong báo chí: block "hộp thông tin tác giả" ở cuối bài, block "banner đăng ký nhận tin" giữa bài, block "cảnh báo nội dung nhạy cảm".
+    </p>
+
+    <p>
+      Để tạo Reusable Block: chọn block hoặc nhóm block cần lưu → nhấn biểu tượng ba chấm (⋯) → chọn <strong>Create Reusable block</strong> → đặt tên. Sau đó, trong bất kỳ bài viết nào, gõ <strong>/</strong> và tìm tên block vừa tạo để chèn vào.
+    </p>
+
+    <p>
+      Lưu ý quan trọng: khi chỉnh sửa một Reusable Block, thay đổi sẽ tự động áp dụng lên <em>tất cả</em> bài viết đang dùng block đó. Đây là tính năng mạnh mẽ (cập nhật thông tin liên hệ một lần, hiệu lực trên toàn trang) nhưng cũng cần cẩn thận nếu bạn chỉ muốn thay đổi ở một bài cụ thể — trong trường hợp đó, cần "detach" block khỏi bản gốc trước.
+    </p>
+
+
+    <!-- ════════════════════════════════════
+         4.4 THỰC HÀNH: VIẾT VÀ ĐĂNG BÀI BÁO
+    ════════════════════════════════════ -->
+    <h2>4.4 Thực hành: Viết và đăng bài báo hoàn chỉnh</h2>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành có hướng dẫn</div>
+      <p>Bạn sẽ tạo và xuất bản một bài báo hoàn chỉnh trên WordPress.com. Bài viết thực hành: tường thuật hội thảo "Báo chí số Việt Nam 2025" (bạn có thể dùng nội dung hư cấu hoàn toàn phù hợp với mục tiêu học tập). Bài cần có: tiêu đề, sapo, ít nhất 3 đoạn văn, 1 ảnh minh họa, 1 trích dẫn nhân vật, 1 heading phân đoạn.</p>
+    </div>
+
+    <h3>Bước 1: Đăng nhập và tạo bài viết mới</h3>
+
+    <ol class="steps">
+      <li>Truy cập <strong>wordpress.com</strong>, đăng nhập vào tài khoản của bạn</li>
+      <li>Từ trang quản trị, nhấn <strong>Write</strong> (nút bút chì) ở thanh trên hoặc vào <strong>Posts → Add New</strong></li>
+      <li>Trình soạn thảo Gutenberg mở ra với một trang trắng. Nhấn vào dòng <em>"Add title"</em> và gõ tiêu đề bài: <strong>Hội thảo Báo chí số 2025: Trí tuệ nhân tạo đang thay đổi nghề báo như thế nào?</strong></li>
+    </ol>
+
+    <h3>Bước 2: Viết sapo (lede) — Đoạn mở đầu quan trọng nhất</h3>
+
+    <ol class="steps">
+      <li>Nhấn Enter để xuống block đầu tiên dưới tiêu đề — đây là block Paragraph mặc định</li>
+      <li>Viết sapo: đoạn văn 2–3 câu tóm tắt toàn bộ thông tin quan trọng nhất của bài (ai, làm gì, ở đâu, khi nào, tại sao quan trọng). Ví dụ: <em>"Hơn 300 nhà báo, biên tập viên và học giả từ khắp cả nước đã tham dự Hội thảo Báo chí số Việt Nam 2025 diễn ra ngày 15/11 tại Hà Nội, nơi các chuyên gia thảo luận về cách trí tuệ nhân tạo đang định hình lại quy trình sản xuất tin tức."</em></li>
+      <li>Chọn toàn bộ đoạn sapo → vào thanh cài đặt bên phải → tăng cỡ chữ lên <strong>Large</strong> hoặc thêm màu nền nhẹ để phân biệt sapo với phần thân bài</li>
+    </ol>
+
+    <h3>Bước 3: Thêm ảnh minh họa đầu bài</h3>
+
+    <ol class="steps">
+      <li>Nhấn <strong>+</strong> để thêm block mới → chọn <strong>Image</strong></li>
+      <li>Nhấn <strong>Upload</strong> để tải ảnh từ máy tính lên, hoặc chọn <strong>Media Library</strong> nếu ảnh đã có sẵn</li>
+      <li>Sau khi ảnh hiển thị, nhấn vào ô <strong>Alt text</strong> ở cột bên phải và mô tả ảnh: <em>"Diễn giả phát biểu tại Hội thảo Báo chí số Việt Nam 2025, Hội trường A, Hà Nội"</em></li>
+      <li>Thêm caption bên dưới ảnh: <em>Ảnh: [Tên tác giả] / [Tên tòa soạn]</em></li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Alt text là bắt buộc, không phải tùy chọn</div>
+      <p>Alt text (văn bản thay thế) phục vụ ba mục đích quan trọng: (1) được đọc to cho người dùng màn hình (screen reader) — người khuyết tật thị giác; (2) hiển thị khi ảnh bị lỗi không tải được; (3) được Google đọc để hiểu nội dung ảnh, cải thiện SEO. Một phóng viên nghiêm túc không bao giờ bỏ qua alt text.</p>
+    </div>
+
+    <h3>Bước 4: Viết thân bài với heading và trích dẫn</h3>
+
+    <ol class="steps">
+      <li>Thêm block <strong>Heading</strong> (H2) cho phần đầu tiên: <em>"AI hỗ trợ hay AI thay thế nhà báo?"</em></li>
+      <li>Viết 1–2 đoạn nội dung phần đó bằng các block Paragraph</li>
+      <li>Thêm block <strong>Quote</strong> để chèn trích dẫn nhân vật: nhấn <strong>/</strong> → gõ <strong>quote</strong> → Enter. Gõ lời trích dẫn vào ô trên và tên người được trích dẫn vào ô dưới: <em>"AI là công cụ khuếch đại năng lực, không phải cỗ máy thay thế tư duy phân tích của nhà báo." — Nguyễn Thị Hương, Tổng biên tập Tạp chí Truyền thông</em></li>
+      <li>Tiếp tục thêm heading H2 và các đoạn văn cho các phần còn lại của bài</li>
+    </ol>
+
+    <h3>Bước 5: Cài đặt trước khi xuất bản</h3>
+
+    <ol class="steps">
+      <li>Ở cột bên phải, tab <strong>Post</strong>: chọn <strong>Category</strong> phù hợp (ví dụ: "Sự kiện" hoặc "Báo chí số"). Nếu chưa có category, nhấn <strong>Add New Category</strong></li>
+      <li>Thêm <strong>Tags</strong>: gõ "hội thảo", "trí tuệ nhân tạo", "báo chí số", nhấn Enter sau mỗi tag</li>
+      <li>Kéo xuống tìm mục <strong>Featured Image</strong> (Ảnh đại diện) → nhấn <strong>Set featured image</strong> → chọn ảnh chính của bài. Đây là ảnh hiển thị khi bài được chia sẻ lên mạng xã hội và hiển thị trong trang danh sách bài viết</li>
+      <li>Điền <strong>Excerpt</strong> (Trích dẫn/Tóm tắt) — 1–2 câu mô tả bài viết, dùng cho mô tả SEO meta description và preview trên mạng xã hội</li>
+      <li>Kiểm tra URL của bài ở mục <strong>Permalink</strong>: đảm bảo URL ngắn gọn, có chứa từ khóa chính, không có dấu tiếng Việt (ví dụ: <code>/hoi-thao-bao-chi-so-2025-ai</code>)</li>
+    </ol>
+
+    <h3>Bước 6: Xuất bản</h3>
+
+    <ol class="steps">
+      <li>Nhấn <strong>Preview</strong> ở góc trên phải để xem trước bài viết trên giao diện người đọc trước khi đăng — đây là bước không nên bỏ qua</li>
+      <li>Kiểm tra trên cả hai chế độ: Desktop và Mobile (chọn từ menu Preview)</li>
+      <li>Nếu hài lòng, nhấn <strong>Publish</strong> → xác nhận một lần nữa bằng cách nhấn <strong>Publish</strong> trong hộp thoại xác nhận</li>
+      <li>Sao chép URL của bài vừa xuất bản để chia sẻ</li>
+    </ol>
+
+    <div class="box note">
+      <div class="box-title">📌 Lập lịch đăng bài (Scheduled Posts)</div>
+      <p>WordPress cho phép đặt lịch đăng bài tự động — tính năng quan trọng cho các tòa soạn muốn đăng bài vào giờ có lượng truy cập cao nhất (thường là 7–8 giờ sáng và 20–21 giờ tối với độc giả Việt Nam). Thay vì nhấn Publish ngay, hãy nhấn vào mục <strong>Publish: Immediately</strong> → chọn ngày và giờ cụ thể → nhấn <strong>Schedule</strong>.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         4.5 CÀI ĐẶT CƠ BẢN
+    ════════════════════════════════════ -->
+    <h2>4.5 Cài đặt cơ bản và plugin thiết yếu</h2>
+
+    <p>
+      Ngoài việc viết bài, người quản lý website WordPress cần nắm các cài đặt nền tảng ảnh hưởng đến toàn bộ trải nghiệm của độc giả và hiệu quả SEO của website.
+    </p>
+
+    <h3>Cấu trúc Permalink — URL thân thiện với SEO</h3>
+
+    <p>
+      Permalink là cấu trúc URL của từng bài viết trên website. Theo mặc định, WordPress tạo URL dạng <code>yoursite.com/?p=123</code> — không chứa từ khóa nào, không có ý nghĩa với độc giả hay với Google. Đây là một trong những cài đặt đầu tiên cần thay đổi khi thiết lập một website WordPress mới.
+    </p>
+
+    <p>
+      Vào <strong>Settings → Permalinks</strong> và chọn cấu trúc <strong>Post name</strong>: URL sẽ có dạng <code>yoursite.com/ten-bai-viet</code>. Đây là cấu trúc được khuyến nghị — ngắn gọn, chứa từ khóa, dễ đọc và dễ nhớ. Với các trang tin tức cần lưu trữ theo ngày, có thể chọn <strong>Day and name</strong>: <code>yoursite.com/2025/11/15/ten-bai-viet</code>.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Cảnh báo quan trọng</div>
+      <p>Không thay đổi cấu trúc Permalink sau khi website đã có nhiều bài viết được index bởi Google — điều này sẽ làm mất toàn bộ thứ hạng SEO đã tích lũy và tạo ra hàng loạt lỗi 404. Nếu buộc phải thay đổi, cần cài plugin Redirection để chuyển hướng tất cả URL cũ sang URL mới.</p>
+    </div>
+
+    <h3>Menus — Thanh điều hướng</h3>
+
+    <p>
+      Menu là thanh điều hướng giúp độc giả tìm đường trong website. Trong WordPress, menu được quản lý tại <strong>Appearance → Menus</strong>. Bạn có thể tạo nhiều menu khác nhau (menu header chính, menu footer, menu mobile) và gán các trang, category hoặc link tùy chỉnh vào từng vị trí.
+    </p>
+
+    <p>
+      Một menu điều hướng tốt cho website tin tức thường gồm: trang chủ, 4–6 chuyên mục chính, trang Giới thiệu và trang Liên hệ. Tránh nhồi nhét quá nhiều mục vào menu header — quá 7 mục sẽ gây khó khăn cho người dùng, đặc biệt trên thiết bị di động.
+    </p>
+
+    <h3>Widgets — Nội dung vùng phụ</h3>
+
+    <p>
+      Widget là các khối nội dung nhỏ hiển thị trong sidebar (thanh bên), footer và các vùng phụ khác của website — không thuộc nội dung bài viết chính. Các widget phổ biến trong báo chí: ô tìm kiếm, bài viết mới nhất, bài viết phổ biến nhất, danh mục chuyên mục, hộp đăng ký nhận tin, và liên kết mạng xã hội.
+    </p>
+
+    <p>
+      Widgets được quản lý tại <strong>Appearance → Widgets</strong>. Trong WordPress phiên bản mới với Full Site Editing (FSE), widgets đã được tích hợp vào Gutenberg editor — bạn chỉnh sửa sidebar và footer trực tiếp như soạn thảo bài viết.
+    </p>
+
+    <h3>Plugin thiết yếu cho website báo chí</h3>
+
+    <p>
+      Dưới đây là các plugin được khuyến nghị cho mọi website WordPress báo chí, đặc biệt khi dùng WordPress.org self-hosted:
+    </p>
+
+    <p>
+      <strong>Yoast SEO</strong> là plugin SEO phổ biến nhất WordPress, được hơn 13 triệu website sử dụng. Yoast giúp bạn tối ưu từng bài viết: kiểm tra mật độ từ khóa, cấu trúc heading, độ dễ đọc (Flesch Reading Ease), tự động tạo sitemap XML và quản lý meta tags. Chúng ta sẽ khám phá sâu hơn về Yoast trong Chương 5 về SEO.
+    </p>
+
+    <p>
+      <strong>Akismet Anti-Spam</strong> là plugin chống spam bình luận của chính đội ngũ WordPress.com. Akismet sử dụng cơ sở dữ liệu spam toàn cầu để tự động lọc và xóa bình luận spam trước khi chúng xuất hiện trên trang. Đây là plugin phải có đối với bất kỳ website nào cho phép bình luận — số lượng spam bình luận có thể lên đến hàng trăm mỗi ngày nếu không có bộ lọc.
+    </p>
+
+    <p>
+      <strong>WP Super Cache</strong> (hoặc W3 Total Cache) là plugin tăng tốc website bằng cách tạo bản sao tĩnh (static cache) của các trang. Thay vì WordPress phải truy vấn cơ sở dữ liệu mỗi lần có người đọc vào xem bài, plugin sẽ phục vụ file HTML đã được tạo sẵn — giảm thời gian tải trang từ 2–3 giây xuống còn dưới 1 giây. Với báo chí, tốc độ tải trang trực tiếp ảnh hưởng đến tỉ lệ thoát (bounce rate) và thứ hạng Google.
+    </p>
+
+    <p>
+      <strong>UpdraftPlus</strong> là plugin sao lưu website tự động. Lên lịch sao lưu toàn bộ website (bao gồm database, media, theme, plugin) lên Google Drive hoặc Dropbox mỗi ngày hoặc mỗi tuần. Đây là bảo hiểm cho toàn bộ công sức xây dựng website — một sự cố hosting hay bị hack mà không có backup đồng nghĩa mất tất cả.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Với WordPress.com Free, không cần lo plugin</div>
+      <p>Nếu bạn dùng WordPress.com (gói miễn phí) cho mục đích học tập, Akismet đã được tích hợp sẵn và WordPress.com tự lo việc cache và backup. Plugin chỉ thực sự cần thiết khi bạn dùng WordPress.org self-hosted. Hãy tập trung vào học cách viết và đăng bài trước — kỹ thuật plugin có thể học sau.</p>
+    </div>
+
+    <h3>Settings cần cài đặt ngay khi lập website mới</h3>
+
+    <p>
+      Khi thiết lập một website WordPress mới, có một số cài đặt cần thực hiện ngay — trước khi đăng bài đầu tiên:
+    </p>
+
+    <ul>
+      <li><strong>Settings → General</strong>: Cập nhật Site Title (tên website), Tagline (slogan), địa chỉ email quản trị, múi giờ (Asia/Ho_Chi_Minh), ngôn ngữ (Tiếng Việt nếu muốn dashboard hiển thị tiếng Việt)</li>
+      <li><strong>Settings → Reading</strong>: Chọn "Your latest posts" (trang chủ hiển thị các bài mới nhất) hoặc "A static page" (trang chủ tùy chỉnh). Với website tin tức, thường chọn "Your latest posts" kết hợp với theme dạng magazine</li>
+      <li><strong>Settings → Discussion</strong>: Quyết định có bật bình luận không; nếu bật, có cần phê duyệt thủ công trước khi hiển thị không; bật hay tắt bình luận lồng nhau (nested comments)</li>
+      <li><strong>Settings → Media</strong>: Cài kích thước ảnh tự động tạo khi upload — WordPress tự động tạo nhiều phiên bản kích thước khác nhau từ mỗi ảnh bạn tải lên</li>
+      <li><strong>Settings → Permalinks</strong>: Chọn "Post name" như đã đề cập ở trên</li>
+    </ul>
+
+
+    <!-- ════════════════════════════════════
+         CÂU HỎI ÔN TẬP
+    ════════════════════════════════════ -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Giải thích sự khác biệt giữa WordPress.com và WordPress.org. Một nhóm sinh viên muốn xây dựng tạp chí báo chí điều tra online với 5 thành viên, cần tùy chỉnh giao diện, tích hợp newsletter và có thể kiếm tiền từ quảng cáo trong tương lai — nên chọn nền tảng nào? Lý giải quyết định đó.</li>
+        <li>Trong WordPress, khi nào nên tạo nội dung dưới dạng Post, khi nào nên tạo dưới dạng Page? Đưa ra ít nhất 4 ví dụ cụ thể cho mỗi loại trong bối cảnh một trang tin tức.</li>
+        <li>Bạn vừa hoàn thành một bài phóng sự dài về ô nhiễm không khí tại Hà Nội. Liệt kê tất cả các bước cần làm trong WordPress trước khi nhấn Publish — không chỉ là "viết bài" mà bao gồm cả các cài đặt metadata, SEO và hình ảnh.</li>
+        <li>Thực hành: Tạo website WordPress.com và đăng ít nhất 2 bài báo hoàn chỉnh trong cùng một chuyên mục tự chọn. Mỗi bài cần có: tiêu đề, sapo in đậm, ít nhất 1 ảnh với alt text, 1 trích dẫn bằng block Quote, cấu trúc heading H2 rõ ràng, và được gắn featured image. Chia sẻ URL website với giảng viên.</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="03-canva.html">← Chương 3: Thiết kế với Canva</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="05-seo.html">Chương 5: SEO cho nhà báo →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 2 — Cấu trúc thông tin &amp; UX cơ bản</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html" class="active">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 2</div>
+      <h1>Cấu trúc thông tin &amp; UX cơ bản</h1>
+      <div class="chapter-meta">
+        <span>⏱ 90 phút</span>
+        <span>📐 Lý thuyết &amp; Thực hành</span>
+        <span>🛠 Google Sites</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Định nghĩa UX và giải thích tại sao trải nghiệm người dùng quyết định thành bại của một trang tin tức</li>
+        <li>Áp dụng các nguyên tắc kiến trúc thông tin để tổ chức nội dung trang báo chí một cách logic</li>
+        <li>Thiết kế hệ thống điều hướng và phân cấp trang hiệu quả, phù hợp với hành vi đọc của độc giả Việt Nam</li>
+        <li>Đánh giá chất lượng UX của một trang web sử dụng bộ tiêu chí heuristic cơ bản</li>
+        <li>Cấu trúc lại điều hướng trên trang Google Sites dựa trên phân tích người dùng</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         2.1 UX LÀ GÌ?
+    ════════════════════════════════════ -->
+    <h2>2.1 UX là gì và tại sao quan trọng với báo chí</h2>
+
+    <p>
+      <strong>UX</strong> — viết tắt của <em>User Experience</em>, tức Trải nghiệm người dùng — là toàn bộ cảm nhận của một người khi tương tác với một sản phẩm, dịch vụ hoặc hệ thống. Trong bối cảnh web, UX bao gồm mọi thứ từ tốc độ tải trang, cách thông tin được sắp xếp, màu sắc và font chữ, cho đến câu hỏi đơn giản nhất: <em>Người dùng có tìm được điều họ cần không?</em>
+    </p>
+
+    <p>
+      Khái niệm UX được phổ biến rộng rãi bởi Don Norman — nhà khoa học nhận thức người Mỹ — trong cuốn sách kinh điển <em>The Design of Everyday Things</em> (1988). Norman lập luận rằng khi người dùng gặp khó khăn khi sử dụng một sản phẩm, lỗi không phải ở người dùng mà ở người thiết kế. Triết lý này đã thay đổi hoàn toàn cách ngành công nghệ tiếp cận việc tạo ra phần mềm và website.
+    </p>
+
+    <p>
+      Với báo chí, UX không phải là xa xỉ phẩm dành cho các trang tin lớn có đội ngũ kỹ thuật riêng. Đó là điều kiện cơ bản để một bài báo được đọc. Hãy nghĩ đến trải nghiệm của chính bạn: bạn đã bao nhiêu lần tắt một trang web vì quảng cáo che kín nội dung, không tìm được nút chia sẻ, hoặc văn bản quá nhỏ để đọc trên điện thoại? Mỗi lần như vậy là một bài báo không được đọc, dù nội dung có tốt đến đâu.
+    </p>
+
+    <h3>UX trong bối cảnh báo chí Việt Nam</h3>
+
+    <p>
+      Khảo sát thói quen đọc tin của người Việt Nam cho thấy một số đặc điểm quan trọng. Hơn 70% người dùng truy cập tin tức qua điện thoại di động, phần lớn trong các khoảng thời gian ngắn — trên xe buýt, trong giờ nghỉ trưa, trước khi ngủ. Họ thường tiếp cận bài viết qua đường dẫn từ Facebook hoặc Zalo, không phải từ trang chủ của tờ báo. Điều này có nghĩa là trang bài viết — chứ không phải trang chủ — thường là ấn tượng đầu tiên và duy nhất mà độc giả có về tờ báo của bạn.
+    </p>
+
+    <p>
+      Trong bối cảnh đó, một trang bài viết có UX tốt cần đảm bảo: nội dung hiển thị ngay lập tức không bị chặn bởi popup, font chữ đủ lớn và đủ tương phản để đọc thoải mái trên màn hình nhỏ, các bài viết liên quan được gợi ý tự nhiên để giữ chân độc giả, và không có yếu tố nào làm gián đoạn việc đọc không cần thiết.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Ghi nhớ</div>
+      <p>Theo nghiên cứu của Nielsen Norman Group — tổ chức nghiên cứu UX hàng đầu thế giới — người dùng quyết định có ở lại một trang web hay không trong vòng <strong>10 đến 20 giây</strong> đầu tiên. Với trang tin tức, khoảng thời gian đó còn ngắn hơn. Không có nội dung nào tốt đến mức có thể bù đắp cho trải nghiệm người dùng kém.</p>
+    </div>
+
+    <h3>UX khác với UI như thế nào?</h3>
+
+    <p>
+      Nhiều người nhầm lẫn giữa UX (User Experience) và UI (User Interface — Giao diện người dùng). UI là những gì bạn <em>nhìn thấy</em>: nút bấm, màu sắc, bố cục, hình ảnh. UX là những gì bạn <em>cảm thấy</em> khi sử dụng: dễ hay khó, logic hay rối, hiệu quả hay lãng phí thời gian.
+    </p>
+
+    <p>
+      Một trang web có thể có UI rất đẹp — màu sắc hài hòa, hình ảnh chất lượng cao — nhưng UX kém nếu người dùng không tìm được mục tìm kiếm, không biết mình đang ở đâu trong trang, hoặc phải bấm quá nhiều lần để đến được nội dung họ muốn. Ngược lại, một trang web trông đơn giản như Wikipedia lại có UX xuất sắc vì mọi thông tin đều có thể tìm thấy trong vài giây.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tiêu chí</th>
+          <th>UI (Giao diện)</th>
+          <th>UX (Trải nghiệm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Câu hỏi</td>
+          <td>Trang web trông như thế nào?</td>
+          <td>Dùng trang web cảm thấy thế nào?</td>
+        </tr>
+        <tr>
+          <td>Yếu tố</td>
+          <td>Màu sắc, font, layout, hình ảnh</td>
+          <td>Tốc độ, cấu trúc, logic điều hướng</td>
+        </tr>
+        <tr>
+          <td>Đo lường</td>
+          <td>Thẩm mỹ, nhất quán thương hiệu</td>
+          <td>Tỷ lệ hoàn thành tác vụ, thời gian ở lại trang</td>
+        </tr>
+        <tr>
+          <td>Ai chịu trách nhiệm</td>
+          <td>Nhà thiết kế đồ họa</td>
+          <td>Cả đội ngũ: biên tập, kỹ thuật, thiết kế</td>
+        </tr>
+        <tr>
+          <td>Ví dụ báo chí</td>
+          <td>Logo đẹp, ảnh bìa chất lượng cao</td>
+          <td>Bài viết dễ tìm, chia sẻ thuận tiện</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
+         2.2 KIẾN TRÚC THÔNG TIN
+    ════════════════════════════════════ -->
+    <h2>2.2 Kiến trúc thông tin (Information Architecture)</h2>
+
+    <p>
+      <strong>Kiến trúc thông tin</strong> (Information Architecture, viết tắt là IA) là nghệ thuật và khoa học tổ chức, phân loại và cấu trúc thông tin để người dùng có thể tìm kiếm và hiểu một cách dễ dàng. Khái niệm này được Peter Morville và Louis Rosenfeld phát triển trong cuốn sách <em>Information Architecture for the World Wide Web</em> (1998), một tác phẩm đặt nền móng cho toàn bộ ngành thiết kế web hiện đại.
+    </p>
+
+    <p>
+      Với một trang báo điện tử, kiến trúc thông tin quyết định: Bài viết nào nằm ở đâu? Mục nào nằm trên thanh điều hướng chính? Làm thế nào để độc giả tìm thấy bài viết từ ba năm trước? Các chuyên mục được đặt tên như thế nào? Tất cả những quyết định này — dù thường vô hình với người dùng khi mọi thứ hoạt động tốt — có tác động trực tiếp đến việc trang báo có giữ được độc giả hay không.
+    </p>
+
+    <h3>Phân cấp thông tin (Information Hierarchy)</h3>
+
+    <p>
+      Thông tin trên web được tổ chức theo cấu trúc phân cấp, tương tự như cách một tòa soạn tổ chức nội dung: từ tổng quát đến cụ thể, từ quan trọng nhất đến ít quan trọng hơn. Trong thiết kế web, chúng ta thường gọi đây là <em>cây thông tin</em> (information tree) hoặc <em>sitemap</em>.
+    </p>
+
+    <p>
+      Một trang báo điện tử điển hình có thể có cấu trúc phân cấp như sau: ở cấp cao nhất là trang chủ, tiếp theo là các chuyên mục lớn (Thời sự, Kinh tế, Văn hóa, Thể thao), rồi đến các chuyên mục nhỏ hơn trong mỗi mảng (Thời sự → Quốc tế, Trong nước, Địa phương), và cuối cùng là các bài viết cụ thể. Mỗi cấp độ trả lời một câu hỏi khác nhau của độc giả: "Trang này có gì?" → "Tôi quan tâm đến mảng nào?" → "Có bài viết nào về chủ đề tôi đang tìm không?"
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Nguyên tắc ba lần bấm</div>
+      <p>Một nguyên tắc cổ điển trong kiến trúc thông tin là "quy tắc ba lần bấm": người dùng không nên cần nhiều hơn ba lần bấm để đến được bất kỳ nội dung nào trên trang web. Dù quy tắc này đã được điều chỉnh qua nhiều nghiên cứu sau này (số lần bấm ít quan trọng hơn sự rõ ràng của từng bước), tinh thần của nó vẫn còn giá trị: <strong>mọi đường đi đến thông tin đều phải ngắn và hiển nhiên</strong>.</p>
+    </div>
+
+    <h3>Navigation patterns — Các mẫu điều hướng</h3>
+
+    <p>
+      Hệ thống điều hướng (navigation) là bộ khung giúp người dùng di chuyển trong trang web. Có nhiều mẫu điều hướng phổ biến, mỗi mẫu phù hợp với một loại nội dung và hành vi người dùng khác nhau.
+    </p>
+
+    <p>
+      <strong>Điều hướng ngang trên cùng (Top navigation)</strong> là cách phổ biến nhất với các trang báo lớn. Thanh menu nằm ở đầu trang, chứa các chuyên mục chính. Cách này phù hợp khi trang có ít hơn 7–8 chuyên mục cấp cao nhất, vì não người khó xử lý hơn 7 lựa chọn cùng một lúc — đây là giới hạn được nhà tâm lý học George Miller gọi là <em>Miller's Law</em> (1956).
+    </p>
+
+    <p>
+      <strong>Điều hướng dọc bên trái (Left sidebar navigation)</strong> được dùng nhiều trong các trang có nội dung phong phú và phân cấp sâu, hoặc trong các trang tài liệu và giáo trình như cuốn sách bạn đang đọc này. Sidebar cho phép hiển thị nhiều mục hơn và rất tiện cho việc duyệt nội dung có cấu trúc.
+    </p>
+
+    <p>
+      <strong>Điều hướng bánh hamburger (Hamburger menu)</strong> — biểu tượng ba gạch ngang — xuất hiện phổ biến trên mobile vì tiết kiệm không gian màn hình. Tuy nhiên, nhiều nghiên cứu cho thấy hamburger menu làm giảm khả năng khám phá nội dung vì nó ẩn điều hướng đi. Các trang tin tức thường kết hợp: hiển thị 3–4 chuyên mục quan trọng nhất trực tiếp, còn lại thu vào hamburger.
+    </p>
+
+    <p>
+      <strong>Breadcrumb (Đường dẫn vụn bánh)</strong> là chuỗi liên kết hiển thị vị trí hiện tại của người dùng trong cấu trúc trang web, ví dụ: <em>Trang chủ → Thời sự → Quốc tế → Bài viết hiện tại</em>. Breadcrumb đặc biệt hữu ích khi người dùng đến trang từ kết quả tìm kiếm và cần hiểu ngữ cảnh của bài viết họ đang đọc.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kiểu điều hướng</th>
+          <th>Ưu điểm</th>
+          <th>Hạn chế</th>
+          <th>Phù hợp cho</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Top navigation</td>
+          <td>Quen thuộc, dễ thấy</td>
+          <td>Giới hạn số mục</td>
+          <td>Trang chủ báo</td>
+        </tr>
+        <tr>
+          <td>Left sidebar</td>
+          <td>Nhiều mục, cấu trúc rõ</td>
+          <td>Chiếm không gian ngang</td>
+          <td>Tài liệu, giáo trình</td>
+        </tr>
+        <tr>
+          <td>Hamburger menu</td>
+          <td>Gọn cho mobile</td>
+          <td>Ẩn nội dung</td>
+          <td>Trang mobile-first</td>
+        </tr>
+        <tr>
+          <td>Breadcrumb</td>
+          <td>Cho biết vị trí</td>
+          <td>Chiếm dòng</td>
+          <td>Trang có phân cấp sâu</td>
+        </tr>
+        <tr>
+          <td>Footer navigation</td>
+          <td>Bổ sung thông tin phụ</td>
+          <td>Ít người cuộn đến</td>
+          <td>Liên hệ, điều khoản</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Mental models — Mô hình tư duy của độc giả</h3>
+
+    <p>
+      Khi người dùng truy cập một trang web mới, họ không đến với một tờ giấy trắng trong đầu. Họ mang theo <em>mental model</em> — mô hình tư duy — được hình thành từ tất cả những trang web họ đã dùng trước đó. Họ mong đợi logo nằm ở góc trên bên trái. Họ mong đợi thanh tìm kiếm ở phía trên bên phải. Họ biết rằng text màu xanh có gạch chân thường là liên kết. Họ biết rằng biểu tượng giỏ hàng nghĩa là mua sắm.
+    </p>
+
+    <p>
+      Với báo chí, độc giả Việt Nam có những mental model cụ thể từ việc đọc VnExpress, Tuổi Trẻ, Thanh Niên trong nhiều năm. Họ mong đợi tin nóng ở đầu trang, ảnh minh họa đứng trước đoạn mở đầu, bình luận nằm phía dưới bài viết. Khi trang web của bạn đi lệch quá xa khỏi những kỳ vọng này mà không có lý do rõ ràng, độc giả sẽ bối rối — và bối rối nhanh chóng dẫn đến thoát trang.
+    </p>
+
+    <p>
+      Điều này không có nghĩa là bạn phải sao chép y chang các trang báo lớn. Đó là nói rằng: <strong>đừng phá vỡ kỳ vọng của người dùng trừ khi bạn có lý do đủ mạnh và đủ rõ ràng</strong>. Sự sáng tạo trong thiết kế là tuyệt vời — nhưng sự sáng tạo khiến người dùng bối rối là thiết kế thất bại.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Ứng dụng thực tế</div>
+      <p>Trước khi thiết kế cấu trúc trang Google Sites cho bài thực hành, hãy mở ba trang báo Việt Nam lớn (VnExpress, Tuổi Trẻ, Dân Trí) và quan sát: logo ở đâu, menu điều hướng ở đâu, thanh tìm kiếm ở đâu. Bạn sẽ thấy một sự nhất quán đáng ngạc nhiên — đó chính là mental model mà độc giả Việt Nam đã được huấn luyện trong nhiều năm.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         2.3 NGUYÊN TẮC THIẾT KẾ WEB BÁO CHÍ
+    ════════════════════════════════════ -->
+    <h2>2.3 Nguyên tắc thiết kế web báo chí</h2>
+
+    <h3>F-pattern và Z-pattern: Mắt người đọc di chuyển như thế nào</h3>
+
+    <p>
+      Một trong những phát hiện quan trọng nhất của nghiên cứu UX là cách mắt người dùng di chuyển khi đọc nội dung trên màn hình. Không giống như đọc sách — nơi chúng ta đọc từng chữ từng dòng — trên web, người dùng thường <em>lướt</em> trước khi đọc sâu, tìm kiếm những điểm chốt xem trang có đáng đọc không.
+    </p>
+
+    <p>
+      <strong>F-pattern</strong> (mẫu chữ F) là hiện tượng được nhà nghiên cứu Jakob Nielsen ghi nhận qua các thí nghiệm eye-tracking (theo dõi chuyển động mắt). Khi đọc một trang văn bản dày, người dùng thường đọc kỹ dòng đầu tiên (ngang trên cùng của chữ F), sau đó đọc kỹ hơn một nửa dòng thứ hai (ngang thứ hai của chữ F, ngắn hơn), rồi chỉ đọc bắt đầu các dòng tiếp theo theo chiều dọc (cột dọc của chữ F). Kết quả là nội dung quan trọng bên phải và ở cuối trang thường bị bỏ qua hoàn toàn.
+    </p>
+
+    <p>
+      <strong>Z-pattern</strong> (mẫu chữ Z) phổ biến hơn với các trang ít văn bản, nhiều hình ảnh và yếu tố thiết kế — tức là trang chủ báo. Mắt người dùng bắt đầu từ góc trên trái, đi ngang sang phải (đọc logo và menu), sau đó di chuyển chéo xuống góc dưới trái, rồi lại đi ngang sang phải. Hành trình này tạo thành hình chữ Z.
+    </p>
+
+    <p>
+      Hiểu được hai pattern này giúp bạn đặt thông tin quan trọng đúng nơi mắt người dùng nhìn vào. Đối với trang bài viết: tiêu đề, lead (đoạn mở đầu) và ảnh đầu phải thật hấp dẫn — vì đó là tất cả những gì nhiều độc giả sẽ thực sự đọc. Đối với trang chủ: logo, tagline và bài nổi bật quan trọng nhất phải nằm trong hành trình Z.
+    </p>
+
+    <figure>
+      <img src="../images/ch02-fz-pattern.png" alt="Sơ đồ F-pattern và Z-pattern">
+      <figcaption>Hình 2.1 — F-pattern (trái) thường gặp trên trang văn bản dày; Z-pattern (phải) trên trang chủ nhiều hình ảnh. Vùng màu đậm là nơi mắt dừng lại nhiều nhất.</figcaption>
+    </figure>
+
+    <h3>Contrast, Whitespace và Alignment — Ba nguyên tắc thị giác nền tảng</h3>
+
+    <p>
+      Bất kể bạn đang thiết kế bằng công cụ nào — Google Sites, WordPress hay Canva — ba nguyên tắc thị giác sau đây sẽ giúp trang web của bạn trông chuyên nghiệp và dễ đọc hơn.
+    </p>
+
+    <p>
+      <strong>Contrast (Tương phản)</strong> là sự khác biệt rõ ràng giữa các yếu tố để hướng sự chú ý. Tương phản có thể là tương phản màu sắc (văn bản tối trên nền sáng), tương phản kích thước (tiêu đề lớn hơn nội dung), hoặc tương phản trọng lượng (chữ đậm so với chữ thường). Một lỗi phổ biến của sinh viên khi thiết kế là dùng màu xám nhạt cho văn bản — điều này làm giảm tương phản và khó đọc, đặc biệt trong điều kiện ánh sáng mạnh khi dùng điện thoại ngoài trời. Tỉ lệ tương phản màu sắc tối thiểu theo chuẩn WCAG (Web Content Accessibility Guidelines) là 4.5:1 cho văn bản thường.
+    </p>
+
+    <p>
+      <strong>Whitespace (Khoảng trắng)</strong> là không gian trống giữa các yếu tố thiết kế. Nhiều người mới thiết kế web có xu hướng nhét đầy mọi khoảng trống vì sợ lãng phí diện tích. Đây là sai lầm. Khoảng trắng không phải là chỗ trống — đó là công cụ thiết kế tích cực giúp mắt người dùng "thở", phân biệt các nhóm thông tin và tạo cảm giác cao cấp, chuyên nghiệp. Những trang báo được đánh giá cao về thiết kế như The New York Times hay The Guardian đều sử dụng khoảng trắng rất thoải mái.
+    </p>
+
+    <p>
+      <strong>Alignment (Căn chỉnh)</strong> là việc sắp xếp các yếu tố theo một đường thẳng ẩn để tạo ra sự trật tự và nhất quán. Văn bản nên được căn trái (không phải căn đều hai bên — justified — vì cách căn này tạo ra các khoảng trắng không đều trong văn bản tiếng Việt), hình ảnh nên được căn chỉnh nhất quán, và các yếu tố liên quan nên được nhóm lại gần nhau theo nguyên tắc <em>proximity</em> (gần nhau = liên quan nhau).
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Lỗi thiết kế phổ biến cần tránh</div>
+      <p>Tránh sử dụng quá nhiều màu sắc (tối đa 2–3 màu trong palette chính), quá nhiều kiểu font (tối đa 2 font: một cho tiêu đề, một cho nội dung), và font chữ quá nhỏ (tối thiểu 16px cho nội dung chính trên màn hình desktop, 14px trên mobile). Những lỗi này là dấu hiệu của thiết kế nghiệp dư và làm giảm uy tín của tờ báo.</p>
+    </div>
+
+    <h3>Mobile-first thinking — Tư duy thiết kế ưu tiên di động</h3>
+
+    <p>
+      "Mobile-first" không đơn giản là làm cho trang web hiển thị được trên điện thoại. Đó là một triết lý thiết kế: <em>bắt đầu thiết kế từ màn hình nhỏ nhất, sau đó mở rộng dần ra màn hình lớn hơn</em>.
+    </p>
+
+    <p>
+      Triết lý này quan trọng vì nó buộc bạn phải ưu tiên. Trên màn hình điện thoại 6 inch, bạn không thể hiển thị tất cả mọi thứ cùng lúc. Bạn phải quyết định: Cái gì quan trọng nhất? Đó là bài viết, hay là thanh quảng cáo? Đó là tiêu đề và ảnh, hay là danh sách bài đọc nhiều? Những quyết định đó, khi được đưa ra trong bối cảnh mobile-first, thường dẫn đến thiết kế tốt hơn cho tất cả kích thước màn hình.
+    </p>
+
+    <p>
+      Với Google Sites — công cụ của chương thực hành — tất cả các trang bạn tạo đều tự động responsive (thích ứng với mọi kích thước màn hình). Tuy nhiên, bạn vẫn có thể kiểm tra xem trang trông như thế nào trên di động bằng chế độ xem trước tích hợp sẵn trong công cụ, hoặc bằng cách thu nhỏ cửa sổ trình duyệt.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Kiểm tra nhanh</div>
+      <p>Mở trang Google Sites của bạn từ chương 1 trên điện thoại. Bạn thấy gì đầu tiên? Có phải là tên và ảnh của bạn không, hay là một đống văn bản khó đọc? Nếu cần cuộn xuống để thấy nội dung chính, đó là dấu hiệu cần cải thiện bố cục trang chủ.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         2.4 THỰC HÀNH
+    ════════════════════════════════════ -->
+    <h2>2.4 Thực hành: Đánh giá và cải thiện trang Google Sites</h2>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành có hướng dẫn</div>
+      <p>Trong phần này, bạn sẽ áp dụng các nguyên tắc UX vừa học để đánh giá trang Google Sites đã tạo ở Chương 1, xác định điểm yếu và thực hiện cải thiện cụ thể. Kết quả của bài thực hành là một trang cải tiến với cấu trúc điều hướng rõ ràng hơn và tổ chức nội dung logic hơn.</p>
+    </div>
+
+    <h3>Bộ tiêu chí đánh giá Heuristic</h3>
+
+    <p>
+      <strong>Heuristic evaluation</strong> (đánh giá theo kinh nghiệm) là phương pháp đánh giá UX không cần người dùng thực. Thay vào đó, người đánh giá sử dụng một bộ nguyên tắc (heuristics) đã được kiểm chứng để tìm ra vấn đề. Bộ 10 heuristic nổi tiếng nhất do Jakob Nielsen đề xuất năm 1994, được gọi là <em>Nielsen's 10 Usability Heuristics</em>.
+    </p>
+
+    <p>
+      Dưới đây là bộ tiêu chí heuristic đơn giản hóa, được điều chỉnh cho trang web báo chí cỡ nhỏ và portfolio cá nhân của nhà báo:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Tiêu chí</th>
+          <th>Câu hỏi kiểm tra</th>
+          <th>Tốt / Cần cải thiện</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Rõ ràng về mục đích</td>
+          <td>Trong 5 giây, khách mới có biết trang này là của ai và về chủ đề gì không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Điều hướng nhất quán</td>
+          <td>Menu có xuất hiện ở cùng vị trí trên mọi trang không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Phân cấp thông tin</td>
+          <td>Tiêu đề trang lớn hơn tiêu đề mục, và mục lớn hơn nội dung?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Tương phản màu sắc</td>
+          <td>Văn bản có đủ tối để đọc dễ dàng trên nền trang không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Tốc độ tải</td>
+          <td>Trang tải trong dưới 3 giây trên kết nối 4G thông thường?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Hiển thị mobile</td>
+          <td>Nội dung có dễ đọc và sử dụng trên điện thoại không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Thông tin liên hệ</td>
+          <td>Người đọc có thể tìm thấy cách liên hệ với tác giả không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Nội dung cập nhật</td>
+          <td>Bài viết mới nhất có hiển thị ngày tháng không? Còn phù hợp không?</td>
+          <td>☐ Tốt &nbsp; ☐ Cần cải thiện</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bước hướng dẫn: Cấu trúc lại điều hướng trang Google Sites</h3>
+
+    <p>
+      Sau khi đánh giá trang của mình theo bảng trên và xác định điểm cần cải thiện, hãy thực hiện theo các bước dưới đây để tái cấu trúc điều hướng:
+    </p>
+
+    <ol class="steps">
+      <li>Mở trang Google Sites của bạn từ Chương 1 trong chế độ chỉnh sửa (Edit mode)</li>
+      <li>Nhấn vào biểu tượng <strong>Trang</strong> (Pages) ở thanh công cụ bên phải để xem cấu trúc trang hiện tại</li>
+      <li>Vẽ ra giấy cấu trúc phân cấp trang bạn muốn hướng đến: trang chủ ở cấp 1, các mục phụ ở cấp 2 (ví dụ: Giới thiệu, Tác phẩm, Liên hệ)</li>
+      <li>Nhấn nút <strong>+ Thêm trang</strong> để tạo các trang còn thiếu theo sơ đồ bạn vừa phác thảo</li>
+      <li>Kéo và thả các trang trong danh sách để thiết lập quan hệ phân cấp: trang con nằm thụt vào dưới trang cha</li>
+      <li>Đặt tên trang ngắn gọn, rõ nghĩa (ví dụ: "Tác phẩm" thay vì "Danh sách các bài viết của tôi")</li>
+      <li>Trong mỗi trang, đảm bảo có liên kết dẫn về trang chủ và đến trang liên hệ</li>
+      <li>Kiểm tra lại bằng chế độ xem trước (Preview) trên cả desktop và mobile</li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Tên trang tốt là tên người dùng đặt ra</div>
+      <p>Một kỹ thuật đơn giản nhưng hiệu quả: thay vì tự đặt tên chuyên mục, hãy hỏi 3–5 người bạn cùng tuổi rằng họ sẽ gọi mục đó là gì nếu muốn tìm "tất cả bài viết bạn từng đăng báo". Câu trả lời của họ thường gần với ngôn ngữ tự nhiên của người dùng hơn là những cái tên chúng ta tự nghĩ ra. Phương pháp này gọi là <em>card sorting</em> trong nghiên cứu UX.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         2.5 CÔNG CỤ KIỂM TRA UX
+    ════════════════════════════════════ -->
+    <h2>2.5 Công cụ kiểm tra UX</h2>
+
+    <p>
+      Sau khi thiết kế và cải thiện trang web, bước cuối cùng là kiểm tra khách quan xem trang của bạn hoạt động như thế nào trong thực tế. Có hai công cụ miễn phí, mạnh mẽ và không cần đăng ký tài khoản mà mọi nhà báo nên biết.
+    </p>
+
+    <h3>Google PageSpeed Insights</h3>
+
+    <p>
+      <strong>Google PageSpeed Insights</strong> (pagespeed.web.dev) là công cụ phân tích hiệu năng trang web do Google phát triển. Bạn chỉ cần nhập địa chỉ URL của trang và công cụ sẽ trả về điểm số từ 0 đến 100 cho cả phiên bản mobile và desktop, cùng danh sách chi tiết những vấn đề ảnh hưởng đến tốc độ.
+    </p>
+
+    <p>
+      Công cụ đo lường bốn chỉ số chính trong nhóm <em>Core Web Vitals</em> — bộ tiêu chí mà Google sử dụng để đánh giá chất lượng UX và ảnh hưởng đến thứ hạng tìm kiếm:
+    </p>
+
+    <ul>
+      <li><strong>LCP (Largest Contentful Paint)</strong>: Thời gian để phần tử nội dung lớn nhất (thường là ảnh đầu trang hoặc tiêu đề) hiển thị. Mục tiêu: dưới 2,5 giây.</li>
+      <li><strong>FID (First Input Delay)</strong>: Thời gian phản hồi khi người dùng lần đầu tương tác (bấm, chạm). Mục tiêu: dưới 100ms.</li>
+      <li><strong>CLS (Cumulative Layout Shift)</strong>: Mức độ các yếu tố trên trang bị "nhảy" vị trí khi tải. Mục tiêu: dưới 0.1.</li>
+      <li><strong>INP (Interaction to Next Paint)</strong>: Độ phản hồi tổng thể của trang khi người dùng tương tác. Mục tiêu: dưới 200ms.</li>
+    </ul>
+
+    <p>
+      Với trang Google Sites cơ bản, bạn thường sẽ đạt điểm khá tốt vì Google đã tối ưu hóa hạ tầng của nền tảng này. Tuy nhiên, nếu bạn nhúng quá nhiều video YouTube, Google Maps hoặc hình ảnh chất lượng cao không được nén, điểm số có thể giảm đáng kể.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Tại sao tốc độ tải quan trọng với báo chí</div>
+      <p>Google đã công bố rằng tỉ lệ thoát trang (bounce rate) tăng 32% khi thời gian tải trang từ 1 giây lên 3 giây, và tăng đến 90% khi thời gian tải lên đến 5 giây. Với độc giả tin tức — những người thường mở nhiều tab cùng lúc và dễ dàng chuyển sang nguồn khác — tốc độ tải chính là rào cản đầu tiên giữa bài viết và người đọc.</p>
+    </div>
+
+    <h3>WAVE Accessibility Checker</h3>
+
+    <p>
+      <strong>WAVE</strong> (wave.webaim.org) là công cụ kiểm tra khả năng tiếp cận (accessibility) của trang web, do tổ chức WebAIM phát triển. Khả năng tiếp cận — hay <em>a11y</em> (viết tắt của "accessibility") — là mức độ mà một trang web có thể được sử dụng bởi tất cả mọi người, bao gồm những người khuyết tật thị giác, thính giác hoặc vận động.
+    </p>
+
+    <p>
+      Đây là khía cạnh thường bị bỏ qua trong các khóa học thiết kế web cơ bản, nhưng lại vô cùng quan trọng từ góc độ đạo đức báo chí. Nếu trang tin của bạn không thể được đọc bởi người dùng màn hình đọc (screen reader) — công cụ chuyển văn bản thành giọng nói cho người khiếm thị — thì bạn đang vô tình loại trừ một phần không nhỏ độc giả tiềm năng.
+    </p>
+
+    <p>
+      WAVE sẽ chỉ ra những lỗi phổ biến về accessibility trong thiết kế web báo chí, bao gồm:
+    </p>
+
+    <ul>
+      <li>Hình ảnh không có <em>alt text</em> (văn bản thay thế mô tả nội dung ảnh)</li>
+      <li>Liên kết không có văn bản mô tả rõ ràng (ví dụ: "nhấn vào đây" không nói lên được nhấn vào đây để làm gì)</li>
+      <li>Tương phản màu sắc không đủ giữa văn bản và nền</li>
+      <li>Cấu trúc tiêu đề (h1, h2, h3) không logic hoặc bỏ qua cấp bậc</li>
+      <li>Form (ô điền thông tin liên hệ) không có nhãn rõ ràng</li>
+    </ul>
+
+    <p>
+      Để sử dụng WAVE, truy cập wave.webaim.org, dán URL trang web của bạn và nhấn Enter. Công cụ sẽ hiển thị trang của bạn với các biểu tượng màu đánh dấu các vấn đề ngay tại vị trí xuất hiện trên trang — giúp bạn dễ dàng xác định và sửa từng lỗi cụ thể.
+    </p>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Bài tập nhỏ</div>
+      <p>Chạy WAVE trên trang Google Sites của bạn. Ghi lại số lượng lỗi (màu đỏ) và cảnh báo (màu vàng). Sau đó thêm alt text cho tất cả hình ảnh trên trang: trong Google Sites, nhấn vào hình ảnh → biểu tượng chỉnh sửa → nhập mô tả vào ô "Văn bản thay thế". Chạy WAVE lại và so sánh kết quả.</p>
+    </div>
+
+    <h3>Tóm tắt: Bộ công cụ UX cơ bản cho nhà báo</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Công cụ</th>
+          <th>Địa chỉ</th>
+          <th>Kiểm tra điều gì</th>
+          <th>Chi phí</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google PageSpeed Insights</td>
+          <td>pagespeed.web.dev</td>
+          <td>Tốc độ tải, Core Web Vitals</td>
+          <td>Miễn phí</td>
+        </tr>
+        <tr>
+          <td>WAVE</td>
+          <td>wave.webaim.org</td>
+          <td>Khả năng tiếp cận (accessibility)</td>
+          <td>Miễn phí</td>
+        </tr>
+        <tr>
+          <td>Google Search Console</td>
+          <td>search.google.com/search-console</td>
+          <td>Lỗi kỹ thuật, hiệu năng tìm kiếm</td>
+          <td>Miễn phí (cần xác minh)</td>
+        </tr>
+        <tr>
+          <td>Hotjar (gói miễn phí)</td>
+          <td>hotjar.com</td>
+          <td>Bản đồ nhiệt (heatmap) hành vi người dùng</td>
+          <td>Miễn phí (giới hạn)</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
+         CÂU HỎI ÔN TẬP
+    ════════════════════════════════════ -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Giải thích sự khác biệt giữa UX và UI bằng ví dụ cụ thể từ một trang báo điện tử Việt Nam mà bạn thường đọc. Trang đó có điểm mạnh gì về UX? Điểm nào cần cải thiện?</li>
+        <li>Một trang tin tức địa phương vừa được thiết kế lại và có menu điều hướng với 12 mục ngang hàng nhau trên thanh trên cùng. Dựa trên các nguyên tắc đã học (Miller's Law, F-pattern, mental models), hãy giải thích tại sao đây là vấn đề và đề xuất cách tổ chức lại hợp lý hơn.</li>
+        <li>Chạy Google PageSpeed Insights trên một trang báo Việt Nam bất kỳ. Chụp màn hình kết quả và viết đoạn phân tích ngắn (150–200 chữ): điểm số là bao nhiêu, vấn đề chính là gì, và những vấn đề đó ảnh hưởng như thế nào đến trải nghiệm của độc giả đọc trên điện thoại?</li>
+        <li>Thực hành: Sử dụng bảng heuristic đánh giá trong mục 2.4 để đánh giá trang Google Sites của bạn. Xác định ít nhất hai điểm cần cải thiện, thực hiện cải tiến và ghi lại quá trình bằng ảnh chụp màn hình trước và sau.</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="01-google-sites.html">← Chương 1: Làm quen với Google Sites</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="03-canva.html">Chương 3: Thiết kế với Canva →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

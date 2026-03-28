@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 9 — Bảo mật &amp; Đạo đức số</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html" class="active">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 9</div>
+      <h1>Bảo mật &amp; Đạo đức số</h1>
+      <div class="chapter-meta">
+        <span>⏱ 90 phút</span>
+        <span>📊 Lý thuyết &amp; Thực hành</span>
+        <span>🛠 Signal · ProtonMail · 1Password · Tor Browser</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Nhận diện các mối đe dọa bảo mật số chủ yếu mà nhà báo phải đối mặt</li>
+        <li>Áp dụng các biện pháp bảo mật cơ bản: mật khẩu mạnh, xác thực hai yếu tố, truyền thông mã hóa</li>
+        <li>Bảo vệ nguồn tin bằng các công cụ liên lạc an toàn</li>
+        <li>Điều hướng bối cảnh đạo đức của báo chí trong thời đại số</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         9.1 TẠI SAO NHÀ BÁO CẦN BẢO MẬT SỐ?
+    ════════════════════════════════════ -->
+    <h2>9.1 Tại sao nhà báo cần bảo mật số?</h2>
+
+    <p>
+      Nhà báo làm việc với thông tin nhạy cảm hằng ngày: nguồn tin tố giác, tài liệu mật, dữ liệu điều tra. Trong thế giới kết nối hoàn toàn số hóa, mỗi tin nhắn, mỗi cuộc gọi, mỗi tệp tài liệu đều có thể bị theo dõi, chặn bắt hoặc rò rỉ nếu không được bảo vệ đúng cách. Bảo mật số không còn là đặc quyền của điệp viên — nó là kỹ năng nghề nghiệp thiết yếu của nhà báo hiện đại.
+    </p>
+
+    <h3>Các vụ tấn công nhà báo nổi tiếng</h3>
+
+    <p>
+      Lịch sử gần đây ghi nhận nhiều vụ tấn công kỹ thuật số nhắm vào nhà báo ở quy mô toàn cầu. Năm 2018, điện thoại của nhà báo Jamal Khashoggi bị giám sát bằng phần mềm gián điệp Pegasus trước khi ông bị sát hại tại Lãnh sự quán Saudi Arabia ở Istanbul. Pegasus — được phát triển bởi tập đoàn NSO Group của Israel — có khả năng xâm nhập iPhone và Android mà không cần nạn nhân nhấp vào bất kỳ đường dẫn nào, đọc toàn bộ tin nhắn, bật micro và camera từ xa.
+    </p>
+
+    <p>
+      Năm 2021, Dự án Pegasus do tổ chức Forbidden Stories dẫn đầu (phối hợp với Amnesty International và 17 tờ báo quốc tế, trong đó có The Guardian, Le Monde, Washington Post) đã phân tích dữ liệu từ danh sách hơn 50.000 số điện thoại bị nhắm tới. Kết quả cho thấy hàng trăm nhà báo, luật sư và lãnh đạo đối lập tại nhiều quốc gia đã bị giám sát bằng phần mềm này.
+    </p>
+
+    <p>
+      Tại khu vực Đông Nam Á, Tổ chức Phóng viên không biên giới (RSF) ghi nhận nhiều trường hợp nhà báo bị hack email, tài khoản mạng xã hội bị chiếm quyền kiểm soát và nguồn tin bị lộ danh tính do thiếu các biện pháp bảo mật cơ bản.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Cảnh báo quan trọng</div>
+      <p>Bảo mật không phải chỉ bảo vệ bạn — nó bảo vệ cả nguồn tin và những người tin tưởng chia sẻ thông tin với bạn. Một nguồn tin lộ danh tính có thể mất việc làm, bị truy tố, thậm chí đối mặt với nguy hiểm tính mạng.</p>
+    </div>
+
+    <h3>Mô hình mối đe dọa (Threat Modeling)</h3>
+
+    <p>
+      <strong>Threat modeling</strong> là quá trình xác định có hệ thống: ai muốn tấn công bạn, họ có khả năng gì, và bạn cần bảo vệ điều gì. Đây là nền tảng của mọi chiến lược bảo mật chuyên nghiệp — thay vì áp dụng tất cả biện pháp một cách tràn lan, bạn tập trung nguồn lực vào những mối đe dọa thực sự liên quan đến mình.
+    </p>
+
+    <p>Để xây dựng threat model cho bản thân, hãy trả lời 5 câu hỏi sau:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Câu hỏi</th>
+          <th>Ví dụ — Nhà báo mảng kinh tế</th>
+          <th>Ví dụ — Nhà báo điều tra tham nhũng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tôi muốn bảo vệ cái gì?</td>
+          <td>Danh sách nguồn tin, bản thảo bài viết</td>
+          <td>Tài liệu mật, danh tính nguồn tin nội bộ</td>
+        </tr>
+        <tr>
+          <td>Ai muốn tấn công tôi?</td>
+          <td>Tin tặc cơ hội, cạnh tranh giữa các tòa soạn</td>
+          <td>Cơ quan nhà nước, tổ chức tội phạm, doanh nghiệp bị điều tra</td>
+        </tr>
+        <tr>
+          <td>Họ có khả năng gì?</td>
+          <td>Phishing email, tấn công mật khẩu yếu</td>
+          <td>Phần mềm gián điệp tinh vi, giám sát pháp lý</td>
+        </tr>
+        <tr>
+          <td>Hậu quả nếu thất bại?</td>
+          <td>Bài viết bị rò rỉ trước khi đăng</td>
+          <td>Nguồn tin bị lộ, điều tra bị phá vỡ</td>
+        </tr>
+        <tr>
+          <td>Tôi sẵn sàng đánh đổi bao nhiêu?</td>
+          <td>Dùng thêm 2FA, đổi mật khẩu</td>
+          <td>Dùng thiết bị riêng cho điều tra, gặp nguồn tin offline</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Công cụ hỗ trợ</div>
+      <p>Electronic Frontier Foundation (EFF) cung cấp hướng dẫn Threat Modeling miễn phí tại <strong>ssd.eff.org</strong> (Surveillance Self-Defense). Đây là tài liệu tham khảo chuẩn của nhiều tòa soạn lớn trên thế giới.</p>
+    </div>
+
+    <h3>Tình hình bảo mật báo chí tại Việt Nam và khu vực</h3>
+
+    <p>
+      Theo Chỉ số Tự do Báo chí Thế giới 2024 của RSF, Việt Nam xếp hạng 174/180 quốc gia. Trong bối cảnh này, các rủi ro kỹ thuật số mà nhà báo Việt Nam đối mặt bao gồm: tài khoản mạng xã hội bị vô hiệu hóa hoặc báo cáo hàng loạt, phishing nhắm vào email tòa soạn, và thiếu nhận thức về bảo mật trong quy trình tác nghiệp hằng ngày.
+    </p>
+
+    <p>
+      Tại khu vực Đông Nam Á, tổ chức Access Now ghi nhận xu hướng gia tăng các cuộc tấn công spear-phishing (lừa đảo có chủ đích) nhắm vào nhà báo — đây là kiểu tấn công trong đó kẻ tấn công nghiên cứu kỹ nạn nhân và soạn email giả mạo trông rất thuyết phục, thường giả danh đồng nghiệp, nguồn tin hoặc tổ chức uy tín.
+    </p>
+
+
+    <!-- ════════════════════════════════════
+         9.2 BẢO MẬT TÀI KHOẢN
+    ════════════════════════════════════ -->
+    <h2>9.2 Bảo mật tài khoản</h2>
+
+    <h3>Tại sao mật khẩu "Abc123" nguy hiểm?</h3>
+
+    <p>
+      Mật khẩu yếu là điểm xâm nhập phổ biến nhất trong các vụ tấn công mạng. Năm 2023, công ty bảo mật NordPass phân tích hơn 4,3 tỷ mật khẩu bị rò rỉ trên internet và phát hiện rằng mật khẩu phổ biến nhất toàn cầu vẫn là <code>123456</code> — có thể bị bẻ khóa trong chưa đầy 1 giây. Mật khẩu như <code>Abc123</code>, tên + ngày sinh, hoặc tên tòa soạn + năm thành lập đều cực kỳ dễ đoán.
+    </p>
+
+    <p>
+      Tin tặc sử dụng hai phương pháp chính để bẻ mật khẩu: <strong>brute force</strong> (thử hàng tỷ tổ hợp bằng máy tính) và <strong>dictionary attack</strong> (dùng danh sách hàng triệu mật khẩu phổ biến). Một mật khẩu 8 ký tự chỉ dùng chữ thường có thể bị bẻ trong vài phút bằng phần cứng phổ thông ngày nay.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Công thức mật khẩu mạnh</div>
+      <p>Một mật khẩu an toàn cần: <strong>ít nhất 16 ký tự</strong>, kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt, và <strong>không có ý nghĩa gì với bạn</strong> (tức là không phải tên, ngày sinh, địa chỉ). Ví dụ tốt: <code>xK#9mPqL!2vRw$7n</code>. Không thể nhớ? Đó chính xác là lý do bạn cần trình quản lý mật khẩu.</p>
+    </div>
+
+    <h3>Trình quản lý mật khẩu</h3>
+
+    <p>
+      Trình quản lý mật khẩu (<em>password manager</em>) là ứng dụng tạo, lưu trữ và điền tự động mật khẩu mạnh và duy nhất cho từng tài khoản. Bạn chỉ cần nhớ một "mật khẩu chủ" (<em>master password</em>) duy nhất, còn lại ứng dụng lo.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Trình quản lý</th>
+          <th>Chi phí</th>
+          <th>Nổi bật</th>
+          <th>Phù hợp cho</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1Password</strong></td>
+          <td>$3/tháng (cá nhân)</td>
+          <td>Giao diện đẹp, Travel Mode ẩn vault khi qua biên giới</td>
+          <td>Nhà báo thường xuyên đi công tác quốc tế</td>
+        </tr>
+        <tr>
+          <td><strong>Bitwarden</strong></td>
+          <td>Miễn phí (mã nguồn mở)</td>
+          <td>Hoàn toàn mã nguồn mở, có thể tự host server</td>
+          <td>Người dùng cần giải pháp miễn phí, tin tưởng mã nguồn mở</td>
+        </tr>
+        <tr>
+          <td><strong>KeePassXC</strong></td>
+          <td>Miễn phí</td>
+          <td>Lưu trữ offline hoàn toàn, không cloud</td>
+          <td>Nhà báo làm việc trong môi trường kiểm duyệt cao</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Khuyến nghị cho sinh viên</div>
+      <p>Bắt đầu với <strong>Bitwarden</strong> vì miễn phí hoàn toàn, đa nền tảng (Windows, Mac, iOS, Android) và đã được kiểm toán bảo mật độc lập nhiều lần. Tải tại bitwarden.com và cài extension cho trình duyệt.</p>
+    </div>
+
+    <h3>Xác thực hai yếu tố (2FA)</h3>
+
+    <p>
+      Xác thực hai yếu tố (<em>Two-Factor Authentication — 2FA</em>) là lớp bảo vệ thứ hai sau mật khẩu. Ngay cả khi kẻ tấn công biết mật khẩu của bạn, họ vẫn không thể đăng nhập nếu không có yếu tố thứ hai. Có ba loại 2FA theo thứ tự bảo mật tăng dần:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Loại 2FA</th>
+          <th>Cách hoạt động</th>
+          <th>Mức bảo mật</th>
+          <th>Nhược điểm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>SMS OTP</strong></td>
+          <td>Mã 6 số gửi qua tin nhắn điện thoại</td>
+          <td>Thấp — Trung bình</td>
+          <td>Dễ bị tấn công SIM swap; không hoạt động khi mất sóng</td>
+        </tr>
+        <tr>
+          <td><strong>Authenticator App</strong></td>
+          <td>App tạo mã 6 số thay đổi mỗi 30 giây (Google Authenticator, Aegis)</td>
+          <td>Cao</td>
+          <td>Mất điện thoại cần backup codes; cần cài app</td>
+        </tr>
+        <tr>
+          <td><strong>Hardware Key</strong></td>
+          <td>Thiết bị vật lý (YubiKey) cắm USB hoặc chạm NFC</td>
+          <td>Rất cao</td>
+          <td>Chi phí ($25–50); có thể mất chìa khóa vật lý</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Tránh dùng SMS 2FA nếu có thể</div>
+      <p>Tấn công SIM swap — trong đó kẻ tấn công thuyết phục nhà mạng chuyển số điện thoại của bạn sang SIM của chúng — ngày càng phổ biến. Nhà báo điều tra nên dùng Authenticator App hoặc Hardware Key thay vì SMS.</p>
+    </div>
+
+    <h3>Thiết lập 2FA với Google Authenticator — Hướng dẫn từng bước</h3>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành: Bật 2FA cho tài khoản Gmail</div>
+      <p>Thực hành này áp dụng cho Gmail, nhưng quy trình tương tự cho hầu hết dịch vụ (Facebook, Twitter, Dropbox).</p>
+    </div>
+
+    <ol class="steps">
+      <li>Truy cập <strong>myaccount.google.com</strong> và đăng nhập</li>
+      <li>Chọn mục <strong>Bảo mật</strong> trong menu bên trái</li>
+      <li>Cuộn xuống phần <strong>Xác minh 2 bước</strong>, nhấn <strong>Bắt đầu</strong></li>
+      <li>Tải ứng dụng <strong>Google Authenticator</strong> hoặc <strong>Aegis</strong> (Android, khuyến nghị vì mã nguồn mở) về điện thoại</li>
+      <li>Trong cài đặt Google, chọn <strong>Ứng dụng Authenticator</strong> thay vì SMS</li>
+      <li>Mở app Authenticator, nhấn dấu <strong>+</strong>, chọn <strong>Quét mã QR</strong></li>
+      <li>Quét mã QR hiển thị trên màn hình máy tính</li>
+      <li>Nhập mã 6 số từ app để xác nhận</li>
+      <li><strong>Quan trọng:</strong> Tải và lưu trữ an toàn các <strong>backup codes</strong> — đây là mã khẩn cấp khi mất điện thoại</li>
+    </ol>
+
+
+    <!-- ════════════════════════════════════
+         9.3 TRUYỀN THÔNG AN TOÀN
+    ════════════════════════════════════ -->
+    <h2>9.3 Truyền thông an toàn</h2>
+
+    <h3>Mã hóa đầu-cuối (End-to-End Encryption) là gì?</h3>
+
+    <p>
+      Hãy tưởng tượng bạn gửi thư trong một phong bì: nhân viên bưu điện có thể thấy phong bì nhưng không đọc được nội dung bên trong. Mã hóa đầu-cuối (<em>end-to-end encryption — E2EE</em>) hoạt động theo nguyên lý tương tự nhưng mạnh hơn nhiều: tin nhắn được mã hóa ngay trên thiết bị của người gửi và chỉ được giải mã trên thiết bị của người nhận. Ngay cả công ty cung cấp dịch vụ cũng không thể đọc nội dung.
+    </p>
+
+    <p>
+      Ngược lại, Gmail thông thường — dù dùng HTTPS khi truyền dữ liệu — vẫn cho phép Google đọc nội dung email của bạn trên máy chủ của họ. Đây là cơ sở để Google phục vụ quảng cáo và tuân thủ yêu cầu từ cơ quan pháp lý.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Các ứng dụng có E2EE</div>
+      <p><strong>Mặc định E2EE:</strong> Signal, WhatsApp (chú ý: WhatsApp thuộc Meta, metadata vẫn bị thu thập), iMessage (giữa iPhone với nhau), ProtonMail.<br>
+      <strong>Không có E2EE mặc định:</strong> Gmail, Telegram (chỉ có E2EE trong "Secret Chat"), Facebook Messenger (trừ khi bật thủ công).</p>
+    </div>
+
+    <h3>Signal: Nhắn tin và gọi điện an toàn</h3>
+
+    <p>
+      Signal là ứng dụng nhắn tin được đánh giá cao nhất về bảo mật trong cộng đồng an ninh mạng toàn cầu. Được phát triển bởi tổ chức phi lợi nhuận Signal Foundation, ứng dụng là mã nguồn mở (bất kỳ ai cũng có thể kiểm tra code), miễn phí và không thu thập metadata người dùng. Edward Snowden, người tiết lộ chương trình giám sát hàng loạt của NSA, đã công khai khuyến nghị dùng Signal.
+    </p>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành: Cài đặt và cấu hình Signal</div>
+      <p>Thực hiện theo các bước sau để thiết lập Signal đúng cách cho tác nghiệp báo chí.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Tải Signal từ <strong>signal.org</strong> (iOS App Store hoặc Google Play Store). Chú ý: chỉ tải từ nguồn chính thức, không từ các app store bên thứ ba</li>
+      <li>Cài đặt và đăng ký bằng số điện thoại. Xác minh qua SMS hoặc cuộc gọi thoại</li>
+      <li>Vào <strong>Settings → Privacy</strong>, bật <strong>Screen Lock</strong> và tắt <strong>Read receipts</strong> (báo đã đọc)</li>
+      <li>Bật <strong>Note to Self</strong> (ghi chú cho bản thân) để thực hành gửi tin trước</li>
+      <li>Trong từng cuộc trò chuyện, nhấn vào tên liên lạc, bật <strong>Disappearing Messages</strong> (tin nhắn tự xóa) — đặt thành 1 tuần hoặc ngắn hơn tùy mức độ nhạy cảm</li>
+      <li>Cài Signal Desktop (signal.org/download) để tiện dùng trên máy tính, nhưng nhớ đặt mã PIN để khóa app</li>
+      <li>Xác minh danh tính liên lạc bằng <strong>Safety Numbers</strong>: gặp trực tiếp hoặc gọi điện để đọc và xác nhận dãy số khớp nhau</li>
+    </ol>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Lưu ý quan trọng khi dùng Signal</div>
+      <p>Signal chỉ an toàn nếu <strong>cả hai đầu</strong> đều dùng Signal. Nếu bạn nhắn tin cho ai đó qua SMS thông thường từ Signal (tin màu xanh lá), tin nhắn đó <strong>không</strong> được mã hóa E2EE. Ngoài ra, điện thoại bị phần mềm gián điệp (như Pegasus) có thể đọc tin nhắn Signal ngay trên màn hình trước khi được mã hóa.</p>
+    </div>
+
+    <h3>ProtonMail: Email mã hóa miễn phí</h3>
+
+    <p>
+      ProtonMail được thành lập năm 2014 bởi các nhà khoa học từ CERN tại Geneva, Thụy Sĩ — quốc gia có luật bảo vệ quyền riêng tư nghiêm ngặt. Email giữa các tài khoản ProtonMail được mã hóa E2EE tự động. Khi gửi đến email thông thường (Gmail, Yahoo), ProtonMail có thể thiết lập mật khẩu bảo vệ email.
+    </p>
+
+    <p>
+      Gói miễn phí cho phép 1 địa chỉ email với 1GB dung lượng — đủ cho việc liên lạc với nguồn tin nhạy cảm. Truy cập tại <strong>proton.me</strong> để tạo tài khoản.
+    </p>
+
+    <h3>Khi nào dùng gì?</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tình huống</th>
+          <th>Công cụ phù hợp</th>
+          <th>Lý do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Trao đổi với biên tập viên về nội dung thông thường</td>
+          <td>Email tòa soạn thông thường</td>
+          <td>Tiện lợi, không cần bảo mật cao</td>
+        </tr>
+        <tr>
+          <td>Nhận tài liệu từ nguồn tin ẩn danh</td>
+          <td>SecureDrop hoặc ProtonMail</td>
+          <td>Ẩn danh, không lưu metadata</td>
+        </tr>
+        <tr>
+          <td>Liên lạc thường xuyên với nguồn tin nhạy cảm</td>
+          <td>Signal</td>
+          <td>E2EE, tin nhắn tự xóa, gọi điện an toàn</td>
+        </tr>
+        <tr>
+          <td>Liên lạc với nguồn tin không dùng smartphone</td>
+          <td>ProtonMail (với mật khẩu email)</td>
+          <td>Không yêu cầu nguồn tin cài app</td>
+        </tr>
+        <tr>
+          <td>Nhắn tin nhóm với cả team điều tra</td>
+          <td>Signal (Group)</td>
+          <td>E2EE cho cả nhóm, không cần tài khoản</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
+         9.4 BẢO VỆ NGUỒN TIN
+    ════════════════════════════════════ -->
+    <h2>9.4 Bảo vệ nguồn tin</h2>
+
+    <h3>Đạo đức và luật pháp bảo vệ nguồn tin</h3>
+
+    <p>
+      Bảo vệ nguồn tin là một trong những nguyên tắc đạo đức cốt lõi của nghề báo toàn cầu. Khi một nguồn tin chia sẻ thông tin với nhà báo trong điều kiện ẩn danh, đó là giao kèo danh dự: nhà báo cam kết không tiết lộ danh tính nguồn tin dù chịu áp lực pháp lý, chính trị hay cá nhân.
+    </p>
+
+    <p>
+      Tại Việt Nam, Luật Báo chí 2016 (Điều 25) quy định nhà báo có quyền "từ chối tiết lộ nguồn tin, trừ trường hợp có yêu cầu của Viện trưởng Viện kiểm sát nhân dân, Chánh án Tòa án nhân dân cấp tỉnh và tương đương trở lên cần thiết cho việc điều tra, xét xử tội phạm nghiêm trọng." Điều này có nghĩa là trong nhiều hoàn cảnh, bảo vệ nguồn tin bằng kỹ thuật số là cách duy nhất để giữ được cam kết này — vì nhà báo không thể tiết lộ điều mình không biết.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Nguyên tắc "Cần biết tối thiểu"</div>
+      <p>Đừng lưu trữ thông tin định danh nguồn tin nếu không cần thiết. Đừng ghi tên thật nguồn tin trong ghi chú điện thoại, email hay tài liệu Google Docs. Càng ít thông tin bạn có, càng ít nguy cơ bị buộc tiết lộ.</p>
+    </div>
+
+    <h3>SecureDrop: Kênh nhận tin tố giác an toàn</h3>
+
+    <p>
+      SecureDrop là hệ thống mã nguồn mở cho phép nguồn tin gửi tài liệu cho nhà báo một cách hoàn toàn ẩn danh, được phát triển bởi Freedom of the Press Foundation. Hệ thống chạy trên mạng Tor, không ghi lại địa chỉ IP, và mã hóa tất cả tài liệu nhận được.
+    </p>
+
+    <p>
+      Nhiều tòa soạn lớn đã triển khai SecureDrop: The Guardian, New York Times, Washington Post, Der Spiegel. Tại Việt Nam, đây vẫn là giải pháp chưa phổ biến nhưng giá trị cao cho các đơn vị báo chí điều tra.
+    </p>
+
+    <h3>Metadata nguy hiểm: Tài liệu tiết lộ gì?</h3>
+
+    <p>
+      Metadata là "dữ liệu về dữ liệu" — thông tin ẩn được nhúng vào tệp tin mà mắt thường không thấy. Đây là một trong những nguồn rò rỉ thông tin nguy hiểm nhất vì nhiều nhà báo không nhận ra nó tồn tại.
+    </p>
+
+    <p>
+      Một bức ảnh chụp bằng điện thoại thông thường có thể chứa: <strong>tọa độ GPS chính xác</strong> nơi chụp, tên thiết bị và số series, ngày giờ chụp, và thậm chí tên người dùng được lưu trong thiết bị. Năm 2012, kỹ thuật viên tại Vice Media vô tình tiết lộ vị trí của John McAfee — người đang trốn cảnh sát Guatemala — thông qua metadata ảnh iPhone đăng kèm bài phỏng vấn.
+    </p>
+
+    <p>
+      Tài liệu Word và PDF cũng chứa metadata: tên tác giả (từ cài đặt Windows/Office), lịch sử chỉnh sửa, tên công ty và thậm chí đoạn văn bản đã bị xóa nhưng vẫn lưu trong file. Đây là cách nhiều vụ rò rỉ tài liệu được truy ra nguồn gốc.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Các loại metadata cần chú ý</div>
+      <p><strong>Ảnh (EXIF data):</strong> GPS, thiết bị, ngày giờ, cài đặt máy ảnh.<br>
+      <strong>Tài liệu Word/PDF:</strong> Tên tác giả, công ty, ngày tạo/sửa, lịch sử phiên bản, văn bản ẩn/bình luận.<br>
+      <strong>Tài liệu PDF in từ máy in công ty:</strong> Một số máy in màu in các chấm vàng nhỏ không nhìn thấy bằng mắt thường chứa mã serial máy in và thời gian in.</p>
+    </div>
+
+    <h3>Cách xóa metadata trước khi đăng</h3>
+
+    <ol class="steps">
+      <li><strong>Ảnh:</strong> Dùng ứng dụng <strong>ExifTool</strong> (miễn phí, đa nền tảng) hoặc trang web <strong>exifremove.com</strong> để xóa toàn bộ EXIF data trước khi đăng ảnh lên web</li>
+      <li><strong>Ảnh (nhanh hơn):</strong> Trên Windows, chuột phải vào file ảnh → Properties → Details → "Remove Properties and Personal Information"</li>
+      <li><strong>Tài liệu Word:</strong> File → Info → Check for Issues → Inspect Document → Remove All để xóa metadata ẩn</li>
+      <li><strong>Tài liệu PDF nhạy cảm:</strong> In sang PDF mới bằng cách dùng "Print to PDF" thay vì save trực tiếp — quá trình này loại bỏ phần lớn metadata</li>
+      <li><strong>Tài liệu nguồn tin gửi:</strong> Không mở trực tiếp trên máy tính thường. Dùng máy tính air-gapped (không kết nối internet) hoặc mở trong sandbox ảo để tránh malware nhúng trong tài liệu</li>
+    </ol>
+
+
+    <!-- ════════════════════════════════════
+         9.5 DUYỆT WEB AN TOÀN
+    ════════════════════════════════════ -->
+    <h2>9.5 Duyệt web an toàn</h2>
+
+    <h3>VPN: Lợi ích và giới hạn</h3>
+
+    <p>
+      VPN (Virtual Private Network) là dịch vụ tạo "đường hầm" mã hóa giữa thiết bị của bạn và máy chủ VPN, ẩn hoạt động duyệt web khỏi nhà mạng và các bên theo dõi mạng cục bộ. VPN hữu ích để: truy cập nội dung bị chặn theo địa lý, bảo vệ khi dùng WiFi công cộng (quán cà phê, sân bay), và ẩn địa chỉ IP khỏi các trang web bạn truy cập.
+    </p>
+
+    <p>
+      Tuy nhiên, VPN không phải "thuốc tiên": nhà cung cấp VPN <em>có thể thấy</em> toàn bộ lưu lượng mạng của bạn. Nếu dùng VPN miễn phí từ nguồn không rõ ràng, bạn có thể đang giao dữ liệu cho một bên còn kém tin cậy hơn nhà mạng. Hãy chọn VPN từ nhà cung cấp uy tín có chính sách không ghi log (no-log policy) được kiểm toán độc lập: <strong>Mullvad</strong>, <strong>ProtonVPN</strong> (có gói miễn phí), hoặc <strong>ExpressVPN</strong>.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ VPN miễn phí — Coi chừng!</div>
+      <p>Nhiều VPN miễn phí — đặc biệt phổ biến trên các app store — kiếm tiền bằng cách bán dữ liệu duyệt web của người dùng cho bên thứ ba. Một nghiên cứu năm 2023 phát hiện hơn 38% VPN miễn phí trên Google Play có hành vi thu thập dữ liệu đáng ngờ. Nếu cần VPN miễn phí đáng tin, chọn <strong>ProtonVPN Free</strong>.</p>
+    </div>
+
+    <h3>Tor Browser: Khi nào cần dùng?</h3>
+
+    <p>
+      Tor Browser định tuyến lưu lượng mạng của bạn qua ít nhất ba máy chủ được mã hóa (gọi là "nodes") do tình nguyện viên vận hành trên toàn thế giới, khiến việc truy vết địa chỉ IP thực của bạn cực kỳ khó. Đây là công cụ mạnh nhất để duyệt web ẩn danh — nhưng cũng chậm nhất.
+    </p>
+
+    <p>
+      Sử dụng Tor Browser khi bạn cần: truy cập SecureDrop để nhận tài liệu ẩn danh, nghiên cứu về đối tượng điều tra mà không để lộ danh tính, hoặc truy cập thông tin trong môi trường kiểm duyệt cao. Tải Tor Browser tại <strong>torproject.org</strong> — đây là trang chính thức duy nhất.
+    </p>
+
+    <h3>HTTPS và chứng chỉ SSL</h3>
+
+    <p>
+      HTTPS (HTTP Secure) là giao thức mã hóa kết nối giữa trình duyệt và máy chủ web. Khi truy cập trang có HTTPS (biểu tượng ổ khóa trên thanh địa chỉ), dữ liệu truyền đi được mã hóa — nhà mạng có thể biết bạn truy cập trang gì nhưng không đọc được nội dung cụ thể.
+    </p>
+
+    <p>
+      Đối với nhà báo, trang web của tòa soạn <em>bắt buộc</em> phải dùng HTTPS. Cài đặt Let's Encrypt — chứng chỉ SSL miễn phí — trên WordPress hoặc bất kỳ hosting nào chỉ mất vài phút và bảo vệ độc giả của bạn.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Extension hữu ích cho trình duyệt</div>
+      <p><strong>uBlock Origin:</strong> Chặn quảng cáo và tracker theo dõi — miễn phí, mã nguồn mở.<br>
+      <strong>Privacy Badger</strong> (EFF): Tự động học và chặn các tracker vô hình.<br>
+      Cả hai đều có trên Chrome, Firefox và Edge.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         9.6 ĐẠO ĐỨC SỐ TRONG BÁO CHÍ
+    ════════════════════════════════════ -->
+    <h2>9.6 Đạo đức số trong báo chí</h2>
+
+    <h3>Quyền riêng tư trong thời đại số</h3>
+
+    <p>
+      Internet không có chức năng "xóa" thực sự — bất kỳ nội dung nào đã được đăng có thể bị lưu bởi cache của Google, Wayback Machine, hay bất kỳ ai chụp màn hình. Đây là thực tế nhà báo phải đối mặt khi đưa tin về cá nhân, đặc biệt là người bình thường xuất hiện trong tin tức vì một hoàn cảnh không mong muốn.
+    </p>
+
+    <p>
+      Quyền được lãng quên (<em>Right to be Forgotten</em>) — được EU công nhận trong GDPR 2018 — cho phép cá nhân yêu cầu xóa thông tin cá nhân khỏi kết quả tìm kiếm trong những trường hợp nhất định. Nhà báo cần cân bằng giữa quyền công chúng được thông tin và quyền riêng tư của cá nhân.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Nguyên tắc "Minimize Harm"</div>
+      <p>SPJ (Society of Professional Journalists) Code of Ethics khuyến cáo nhà báo phải "minimize harm" — giảm thiểu tổn hại: hỏi liệu có thực sự cần thiết đăng ảnh mặt nạn nhân, tên đầy đủ của người vị thành niên, hay địa chỉ nhà của nhân vật tin tức không.</p>
+    </div>
+
+    <h3>Kiểm chứng thông tin (Fact-checking)</h3>
+
+    <p>
+      Trong môi trường tin tức chạy theo tốc độ của mạng xã hội, áp lực đăng trước đăng nhanh thường lấn át yêu cầu kiểm chứng. Nhưng đăng thông tin sai — dù vô tình — gây hại cho uy tín nhà báo và có thể gây tổn hại thực sự cho người liên quan.
+    </p>
+
+    <p>Các công cụ kiểm chứng cơ bản mà nhà báo cần biết:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Công cụ</th>
+          <th>Dùng để</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Reverse Image Search</strong></td>
+          <td>Kiểm tra ảnh có bị dùng sai bối cảnh không</td>
+          <td>images.google.com</td>
+        </tr>
+        <tr>
+          <td><strong>TinEye</strong></td>
+          <td>Tìm nguồn gốc và lịch sử xuất hiện của ảnh</td>
+          <td>tineye.com</td>
+        </tr>
+        <tr>
+          <td><strong>InVID / WeVerify</strong></td>
+          <td>Kiểm tra video: trích xuất frame, reverse search</td>
+          <td>weverify.eu</td>
+        </tr>
+        <tr>
+          <td><strong>Snopes</strong></td>
+          <td>Kiểm tra tin đồn, urban legend toàn cầu</td>
+          <td>snopes.com</td>
+        </tr>
+        <tr>
+          <td><strong>AFP Fact Check</strong></td>
+          <td>Kiểm chứng tin tức khu vực châu Á — Thái Bình Dương</td>
+          <td>factcheck.afp.com</td>
+        </tr>
+        <tr>
+          <td><strong>Mafindo</strong></td>
+          <td>Kiểm chứng tiếng Việt và Đông Nam Á</td>
+          <td>turnbackhoax.id</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Bản quyền nội dung trên mạng</h3>
+
+    <p>
+      Một sai lầm phổ biến: nhiều nhà báo mặc nhiên cho rằng ảnh trên Google Images, hay bài viết trên mạng xã hội, có thể tự do sử dụng. Điều này hoàn toàn sai. Mọi nội dung sáng tạo đều được bảo hộ bản quyền ngay từ khi tạo ra, dù không có dấu © hay đăng ký chính thức.
+    </p>
+
+    <p>
+      Để sử dụng ảnh an toàn, hãy tìm trong các nguồn có giấy phép mở (Creative Commons): <strong>Unsplash</strong>, <strong>Pexels</strong>, <strong>Flickr CC</strong>, <strong>Wikimedia Commons</strong>. Luôn ghi nguồn theo yêu cầu của từng giấy phép CC, và chú ý phân biệt CC-BY (cho phép dùng thương mại với điều kiện ghi nguồn) với CC-BY-NC (phi thương mại).
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Hình ảnh từ mạng xã hội</div>
+      <p>Embedding (nhúng) một bài đăng Twitter/Facebook thường được chấp nhận pháp lý. Nhưng tải ảnh từ mạng xã hội về rồi đăng lại trên trang của bạn mà không xin phép là vi phạm bản quyền — dù đó là ảnh của người bình thường. Luôn xin phép trực tiếp, hoặc dùng chức năng embed của nền tảng.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         CÂU HỎI ÔN TẬP
+    ════════════════════════════════════ -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Xây dựng threat model cho bản thân với vai trò là nhà báo mảng bạn muốn theo đuổi (kinh tế, xã hội, chính trị, v.v.). Xác định: ai có thể muốn tấn công bạn, họ có năng lực gì, và bạn cần bảo vệ thông tin gì nhất?</li>
+        <li>So sánh Signal và Telegram về mức độ bảo mật. Nhiều người cho rằng Telegram an toàn hơn Signal vì có nhiều tính năng hơn — bạn đồng ý hay không đồng ý? Giải thích dựa trên kiến thức về mã hóa E2EE.</li>
+        <li>Một nguồn tin gửi cho bạn tài liệu PDF mật qua email Gmail thông thường và yêu cầu bảo vệ danh tính. Những rủi ro cụ thể nào tồn tại trong kịch bản này? Bạn sẽ xử lý tình huống này như thế nào để bảo vệ nguồn tin?</li>
+        <li>Thực hành: Cài đặt Bitwarden, tạo mật khẩu mạnh cho 3 tài khoản quan trọng nhất của bạn (email, mạng xã hội, tài khoản tòa soạn), và bật 2FA cho ít nhất một tài khoản. Viết báo cáo ngắn về quy trình và những khó khăn gặp phải.</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="08-multimedia.html">← Chương 8: Multimedia Storytelling</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="10-newsletter.html">Chương 10: Newsletter &amp; Email →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

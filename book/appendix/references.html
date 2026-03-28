@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài liệu tham khảo — Thiết kế Web cho Nhà báo</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+  <style>
+    .ref-section { margin: 2.5rem 0 1rem; }
+    .ref-section h2 {
+      font-size: 1.35rem;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.25rem;
+    }
+    .ref-section h3 {
+      font-family: var(--font-ui);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 1.5rem 0 0.75rem;
+    }
+    .ref-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .ref-list li {
+      padding: 0.65rem 0 0.65rem 1.25rem;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.7;
+      position: relative;
+      font-size: 0.95rem;
+    }
+    .ref-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+    .ref-list li:last-child { border-bottom: none; }
+    .ref-author { font-style: italic; color: var(--muted); }
+    .ref-year { font-weight: 600; color: var(--text); }
+    .ref-title { font-weight: 600; }
+    .ref-url {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent);
+      word-break: break-all;
+    }
+    .ref-url a { color: var(--accent); text-decoration: underline; }
+    .ref-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      display: block;
+      margin-top: 0.2rem;
+    }
+    .chapter-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.1rem 0.5rem;
+      border-radius: 3px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .resource-card {
+      background: var(--box-note);
+      border-radius: 6px;
+      padding: 1rem;
+      border: 1px solid var(--accent-light);
+    }
+    .resource-card h4 {
+      font-family: var(--font-ui);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .resource-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .resource-card ul li {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      padding: 0.15rem 0;
+    }
+    .resource-card ul li a { color: var(--accent); }
+    @media (max-width: 680px) {
+      .resource-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="../chapters/01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="../chapters/02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="../chapters/03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="../chapters/04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="../chapters/05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="../chapters/06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="../chapters/07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="../chapters/08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="../chapters/09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="../chapters/10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="../chapters/11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="../chapters/12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="references.html" class="active">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Phụ lục B</div>
+      <h1>Tài liệu tham khảo</h1>
+      <div class="chapter-meta">
+        <span>📚 Sách &amp; Báo cáo</span>
+        <span>🌐 Tài nguyên trực tuyến</span>
+        <span>🛠 Công cụ thực hành</span>
+      </div>
+    </div>
+
+    <p style="color: var(--muted); font-size: 0.93rem; margin-bottom: 2rem; line-height: 1.7;">
+      Danh mục tài liệu tham khảo được tổ chức theo chủ đề và loại hình. Mỗi mục ghi rõ nguồn, năm xuất bản và phạm vi áp dụng trong giáo trình. Ký hiệu <strong>[Ch.X]</strong> chỉ chương liên quan chính.
+    </p>
+
+
+    <!-- ════════════════════════════════
+         SÁCH THAM KHẢO CHÍNH
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>I. Sách tham khảo chính</h2>
+
+      <h3>A. Báo chí số và truyền thông mới</h3>
+      <ul class="ref-list">
+        <li>
+          <span class="ref-author">Pavlik, J. V., &amp; McIntosh, S.</span>
+          <span class="ref-year"> (2023). </span>
+          <span class="ref-title">Converging Media: A New Introduction to Mass Communication</span>
+          (7th ed.). Oxford University Press.
+          <span class="chapter-tag">Ch. 1, 7, 8</span>
+          <span class="ref-note">Tổng quan toàn diện về sự hội tụ truyền thông số; phần multimedia storytelling đặc biệt phù hợp.</span>
+        </li>
+        <li>
+          <span class="ref-author">Briggs, M.</span>
+          <span class="ref-year"> (2021). </span>
+          <span class="ref-title">Journalism Next: A Practical Guide to Digital Reporting and Publishing</span>
+          (5th ed.). CQ Press / SAGE.
+          <span class="chapter-tag">Ch. 1–5</span>
+          <span class="ref-note">Giáo trình thực hành phổ biến nhất tại các trường báo chí Mỹ; bao gồm từ blog đến multimedia và mạng xã hội.</span>
+        </li>
+        <li>
+          <span class="ref-author">Bradshaw, P.</span>
+          <span class="ref-year"> (2023). </span>
+          <span class="ref-title">The Online Journalism Handbook: Skills to Survive and Thrive in the Digital Age</span>
+          (3rd ed.). Routledge.
+          <span class="chapter-tag">Ch. 2, 5, 6, 9</span>
+          <span class="ref-note">Cẩm nang thực chiến từ tác giả của Online Journalism Blog; phần SEO và dữ liệu rất sâu.</span>
+        </li>
+        <li>
+          <span class="ref-author">Nguyen, D. T.</span>
+          <span class="ref-year"> (2013). </span>
+          <span class="ref-title">Journalism in the Age of the Internet</span>.
+          Peter Lang Publishing.
+          <span class="chapter-tag">Ch. 1, 7</span>
+          <span class="ref-note">Phân tích sự chuyển đổi của nghề báo Việt Nam và châu Á trong môi trường số.</span>
+        </li>
+        <li>
+          <span class="ref-author">Kovach, B., &amp; Rosenstiel, T.</span>
+          <span class="ref-year"> (2021). </span>
+          <span class="ref-title">The Elements of Journalism: What Newspeople Should Know and the Public Should Expect</span>
+          (4th ed.). Crown.
+          <span class="chapter-tag">Ch. 9, 12</span>
+          <span class="ref-note">Nền tảng đạo đức báo chí — cần thiết bất kể làm báo trên nền tảng nào.</span>
+        </li>
+      </ul>
+
+      <h3>B. Thiết kế web và UX</h3>
+      <ul class="ref-list">
+        <li>
+          <span class="ref-author">Krug, S.</span>
+          <span class="ref-year"> (2014). </span>
+          <span class="ref-title">Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability</span>
+          (3rd ed.). New Riders.
+          <span class="chapter-tag">Ch. 2</span>
+          <span class="ref-note">Kinh điển về UX web — ngắn gọn, thực tế, dễ đọc. Bắt buộc đọc cho ai làm web.</span>
+        </li>
+        <li>
+          <span class="ref-author">Nielsen, J., &amp; Loranger, H.</span>
+          <span class="ref-year"> (2006). </span>
+          <span class="ref-title">Prioritizing Web Usability</span>.
+          New Riders.
+          <span class="chapter-tag">Ch. 2</span>
+          <span class="ref-note">Nghiên cứu usability chuyên sâu từ Nielsen Norman Group; các nguyên tắc vẫn còn giá trị đến ngày nay.</span>
+        </li>
+        <li>
+          <span class="ref-author">Lupton, E.</span>
+          <span class="ref-year"> (2023). </span>
+          <span class="ref-title">Thinking with Type: A Critical Guide for Designers, Writers, Editors, &amp; Students</span>
+          (3rd ed.). Princeton Architectural Press.
+          <span class="chapter-tag">Ch. 2, 3</span>
+          <span class="ref-note">Nền tảng typography cho người làm nội dung; phần về khả năng đọc trên màn hình rất hữu ích.</span>
+        </li>
+        <li>
+          <span class="ref-author">Garrett, J. J.</span>
+          <span class="ref-year"> (2010). </span>
+          <span class="ref-title">The Elements of User Experience: User-Centered Design for the Web and Beyond</span>
+          (2nd ed.). New Riders.
+          <span class="chapter-tag">Ch. 2</span>
+          <span class="ref-note">Mô hình 5 tầng UX kinh điển — từ chiến lược đến bề mặt thị giác.</span>
+        </li>
+      </ul>
+
+      <h3>C. Báo chí dữ liệu và trực quan hóa</h3>
+      <ul class="ref-list">
+        <li>
+          <span class="ref-author">Cairo, A.</span>
+          <span class="ref-year"> (2016). </span>
+          <span class="ref-title">The Truthful Art: Data, Charts, and Maps for Communication</span>.
+          New Riders.
+          <span class="chapter-tag">Ch. 6</span>
+          <span class="ref-note">Chuẩn mực về trực quan hóa dữ liệu cho nhà báo; tác giả là cố vấn cho The New York Times và National Geographic.</span>
+        </li>
+        <li>
+          <span class="ref-author">Gray, J., Chambers, L., &amp; Bounegru, L. (Eds.)</span>
+          <span class="ref-year"> (2012). </span>
+          <span class="ref-title">The Data Journalism Handbook</span>.
+          O'Reilly Media. (Phiên bản mới: 2021, Amsterdam University Press)
+          <span class="chapter-tag">Ch. 6</span>
+          <span class="ref-note">Truy cập miễn phí tại datajournalism.com — tuyển tập từ các nhà báo dữ liệu hàng đầu thế giới.</span>
+        </li>
+        <li>
+          <span class="ref-author">Knaflic, C. N.</span>
+          <span class="ref-year"> (2015). </span>
+          <span class="ref-title">Storytelling with Data: A Data Visualization Guide for Business Professionals</span>.
+          Wiley.
+          <span class="chapter-tag">Ch. 6</span>
+          <span class="ref-note">Hướng dẫn thực hành về cách chọn loại biểu đồ phù hợp và tránh các sai lầm phổ biến.</span>
+        </li>
+      </ul>
+
+      <h3>D. SEO và Marketing nội dung</h3>
+      <ul class="ref-list">
+        <li>
+          <span class="ref-author">Dean, B., &amp; các chuyên gia Backlinko</span>
+          <span class="ref-year"> (cập nhật 2024). </span>
+          <span class="ref-title">The Definitive Guide to SEO in 2024</span>.
+          Backlinko.
+          <span class="chapter-tag">Ch. 5</span>
+          <span class="ref-url"><a href="https://backlinko.com/seo-this-year" target="_blank">backlinko.com/seo-this-year</a></span>
+        </li>
+        <li>
+          <span class="ref-author">Patel, N.</span>
+          <span class="ref-year"> (2023). </span>
+          <span class="ref-title">Advanced Guide to SEO</span>.
+          Neil Patel Digital.
+          <span class="chapter-tag">Ch. 5</span>
+          <span class="ref-url"><a href="https://neilpatel.com/what-is-seo/" target="_blank">neilpatel.com/what-is-seo</a></span>
+          <span class="ref-note">Hướng dẫn toàn diện, phù hợp cho người mới bắt đầu lẫn người đã có kinh nghiệm.</span>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         BÁO CÁO NGHIÊN CỨU
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>II. Báo cáo nghiên cứu</h2>
+
+      <ul class="ref-list">
+        <li>
+          <span class="ref-author">Newman, N., Fletcher, R., Schulz, A., Andı, S., Robertson, C. T., &amp; Nielsen, R. K.</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">Reuters Institute Digital News Report 2024</span>.
+          Reuters Institute for the Study of Journalism, University of Oxford.
+          <span class="chapter-tag">Ch. 1, 7, 10, 11</span>
+          <span class="ref-url"><a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024" target="_blank">reutersinstitute.politics.ox.ac.uk/digital-news-report/2024</a></span>
+          <span class="ref-note">Khảo sát hàng năm về thói quen tin tức kỹ thuật số tại 46 quốc gia — nguồn dữ liệu tham chiếu quan trọng nhất về truyền thông số toàn cầu.</span>
+        </li>
+        <li>
+          <span class="ref-author">Pew Research Center</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">State of the News Media 2024</span>.
+          Pew Research Center.
+          <span class="chapter-tag">Ch. 1, 7, 11</span>
+          <span class="ref-url"><a href="https://www.pewresearch.org/journalism/" target="_blank">pewresearch.org/journalism</a></span>
+          <span class="ref-note">Theo dõi xu hướng tiêu thụ tin tức và tình trạng kinh tế ngành báo chí Mỹ và toàn cầu.</span>
+        </li>
+        <li>
+          <span class="ref-author">World Association of News Publishers (WAN-IFRA)</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">World Press Trends Report 2024</span>.
+          WAN-IFRA.
+          <span class="chapter-tag">Ch. 1, 4, 10</span>
+          <span class="ref-url"><a href="https://wan-ifra.org/reports/world-press-trends" target="_blank">wan-ifra.org/reports</a></span>
+        </li>
+        <li>
+          <span class="ref-author">Google</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">Web Almanac 2024: State of the Web</span>.
+          HTTP Archive &amp; Google.
+          <span class="chapter-tag">Ch. 5, 11</span>
+          <span class="ref-url"><a href="https://almanac.httparchive.org" target="_blank">almanac.httparchive.org</a></span>
+          <span class="ref-note">Phân tích kỹ thuật toàn diện về 8 triệu trang web — dữ liệu về tốc độ, SEO, accessibility, performance.</span>
+        </li>
+        <li>
+          <span class="ref-author">Statcounter Global Stats</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">Browser &amp; Platform Market Share in Vietnam</span>.
+          <span class="chapter-tag">Ch. 2, 7</span>
+          <span class="ref-url"><a href="https://gs.statcounter.com/browser-market-share/all/vietnam" target="_blank">gs.statcounter.com</a></span>
+          <span class="ref-note">Thống kê thị phần trình duyệt, thiết bị và hệ điều hành tại Việt Nam — cần thiết để quyết định ưu tiên tối ưu hóa.</span>
+        </li>
+        <li>
+          <span class="ref-author">Nielsen Norman Group</span>
+          <span class="ref-year"> (2023). </span>
+          <span class="ref-title">How People Read Online: New and Old Findings</span>.
+          NN/g Research Report.
+          <span class="chapter-tag">Ch. 2, 8</span>
+          <span class="ref-url"><a href="https://www.nngroup.com/articles/how-people-read-online/" target="_blank">nngroup.com/articles/how-people-read-online</a></span>
+          <span class="ref-note">Nghiên cứu eye-tracking kinh điển cho thấy người dùng đọc web theo hình chữ F — ảnh hưởng lớn đến cách viết và trình bày.</span>
+        </li>
+        <li>
+          <span class="ref-author">Bộ Thông tin và Truyền thông Việt Nam</span>
+          <span class="ref-year"> (2024). </span>
+          <span class="ref-title">Báo cáo Tổng quan về truyền thông xã hội và báo chí điện tử Việt Nam 2023–2024</span>.
+          Bộ TT&amp;TT.
+          <span class="chapter-tag">Ch. 1, 7, 9</span>
+          <span class="ref-note">Số liệu chính thức về hệ sinh thái truyền thông số tại Việt Nam.</span>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TÀI LIỆU TRỰC TUYẾN THEO CHƯƠNG
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>III. Tài nguyên trực tuyến theo chủ đề</h2>
+
+      <h3>Chương 1 — Google Sites &amp; Nền tảng web</h3>
+      <ul class="ref-list">
+        <li>
+          Google Sites Help Center. <em>Create &amp; publish a Google Site</em>.
+          <span class="ref-url"><a href="https://support.google.com/sites" target="_blank">support.google.com/sites</a></span>
+        </li>
+        <li>
+          Namecheap Blog. <em>How to Connect a Custom Domain to Google Sites</em>. (2024)
+          <span class="ref-url"><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/" target="_blank">namecheap.com/support</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 2 — UX &amp; Cấu trúc thông tin</h3>
+      <ul class="ref-list">
+        <li>
+          Nielsen Norman Group. <em>10 Usability Heuristics for User Interface Design</em>. Nielsen, J. (1994, cập nhật 2020).
+          <span class="ref-url"><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">nngroup.com/articles/ten-usability-heuristics</a></span>
+        </li>
+        <li>
+          Google Material Design. <em>Design System &amp; Guidelines</em>.
+          <span class="ref-url"><a href="https://material.io" target="_blank">material.io</a></span>
+        </li>
+        <li>
+          Web Content Accessibility Guidelines (WCAG) 2.2. W3C. (2023)
+          <span class="ref-url"><a href="https://www.w3.org/TR/WCAG22/" target="_blank">w3.org/TR/WCAG22</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 3 — Thiết kế với Canva</h3>
+      <ul class="ref-list">
+        <li>
+          Canva Design School. <em>Fundamentals of Design</em>. (Khóa học miễn phí)
+          <span class="ref-url"><a href="https://www.canva.com/learn/design/" target="_blank">canva.com/learn/design</a></span>
+        </li>
+        <li>
+          Smashing Magazine. <em>Color Theory for Designers</em>. Boag, P.
+          <span class="ref-url"><a href="https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/" target="_blank">smashingmagazine.com</a></span>
+        </li>
+        <li>
+          Google Fonts Knowledge. <em>Choosing typefaces for readability</em>.
+          <span class="ref-url"><a href="https://fonts.google.com/knowledge" target="_blank">fonts.google.com/knowledge</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 4 — WordPress</h3>
+      <ul class="ref-list">
+        <li>
+          WordPress.org Documentation. <em>Getting Started with WordPress</em>.
+          <span class="ref-url"><a href="https://wordpress.org/documentation/getting-started/" target="_blank">wordpress.org/documentation</a></span>
+        </li>
+        <li>
+          WPBeginner. <em>WordPress for Beginners: The Ultimate Guide</em>. (2024)
+          <span class="ref-url"><a href="https://www.wpbeginner.com/start-a-wordpress-blog/" target="_blank">wpbeginner.com</a></span>
+        </li>
+        <li>
+          Yoast. <em>WordPress SEO: The Definitive Guide</em>. (2024)
+          <span class="ref-url"><a href="https://yoast.com/wordpress-seo/" target="_blank">yoast.com/wordpress-seo</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 5 — SEO</h3>
+      <ul class="ref-list">
+        <li>
+          Google Search Central. <em>Search Engine Optimization (SEO) Starter Guide</em>. (2024)
+          <span class="ref-url"><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank">developers.google.com/search</a></span>
+          <span class="ref-note">Tài liệu chính thức từ Google — nguồn đáng tin cậy nhất về SEO.</span>
+        </li>
+        <li>
+          Moz. <em>The Beginner's Guide to SEO</em>. (2024)
+          <span class="ref-url"><a href="https://moz.com/beginners-guide-to-seo" target="_blank">moz.com/beginners-guide-to-seo</a></span>
+        </li>
+        <li>
+          Ahrefs Blog. <em>On-Page SEO: The Complete Guide for 2024</em>.
+          <span class="ref-url"><a href="https://ahrefs.com/blog/on-page-seo/" target="_blank">ahrefs.com/blog</a></span>
+        </li>
+        <li>
+          Google. <em>Google's E-E-A-T and Search Quality Evaluator Guidelines</em>. (2024)
+          <span class="ref-url"><a href="https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf" target="_blank">Google Quality Rater Guidelines (PDF)</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 6 — Báo chí dữ liệu</h3>
+      <ul class="ref-list">
+        <li>
+          Bounegru, L., &amp; Gray, J. (Eds.). <em>The Data Journalism Handbook 2</em>. Amsterdam University Press. (2021)
+          <span class="ref-url"><a href="https://datajournalism.com/read/handbook/two" target="_blank">datajournalism.com/read/handbook/two</a></span>
+          <span class="ref-note">Truy cập miễn phí toàn bộ.</span>
+        </li>
+        <li>
+          School of Data. <em>Data Fundamentals</em>. (Khóa học miễn phí)
+          <span class="ref-url"><a href="https://schoolofdata.org/courses/" target="_blank">schoolofdata.org/courses</a></span>
+        </li>
+        <li>
+          Flourish. <em>Data Storytelling Examples &amp; Templates</em>.
+          <span class="ref-url"><a href="https://flourish.studio/examples/" target="_blank">flourish.studio/examples</a></span>
+        </li>
+        <li>
+          Datawrapper Academy. <em>Tutorials and Best Practices for Data Visualization</em>.
+          <span class="ref-url"><a href="https://academy.datawrapper.de" target="_blank">academy.datawrapper.de</a></span>
+        </li>
+        <li>
+          Our World in Data. <em>Open datasets on global development</em>.
+          <span class="ref-url"><a href="https://ourworldindata.org" target="_blank">ourworldindata.org</a></span>
+          <span class="ref-note">Nguồn dữ liệu mở, miễn phí, có trực quan hóa sẵn — lý tưởng cho bài học dữ liệu.</span>
+        </li>
+      </ul>
+
+      <h3>Chương 7 — Mạng xã hội &amp; Phân phối</h3>
+      <ul class="ref-list">
+        <li>
+          Meta for Media. <em>Resources for News Publishers</em>.
+          <span class="ref-url"><a href="https://www.facebook.com/formedia/" target="_blank">facebook.com/formedia</a></span>
+        </li>
+        <li>
+          Twitter/X Media. <em>Best Practices for Journalists</em>.
+          <span class="ref-url"><a href="https://media.twitter.com/en/articles/best-practices/2013/12/journalists_on_twitter.html" target="_blank">media.twitter.com</a></span>
+        </li>
+        <li>
+          Buffer Blog. <em>Social Media Marketing Strategy Guide</em>. (2024)
+          <span class="ref-url"><a href="https://buffer.com/resources/social-media-marketing/" target="_blank">buffer.com/resources</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 8 — Multimedia Storytelling</h3>
+      <ul class="ref-list">
+        <li>
+          Knight Foundation. <em>Principles for Digital Storytelling</em>.
+          <span class="ref-url"><a href="https://knightfoundation.org/features/journalism/" target="_blank">knightfoundation.org</a></span>
+        </li>
+        <li>
+          Shorthand. <em>Visual Storytelling Examples from Top Publications</em>.
+          <span class="ref-url"><a href="https://shorthand.com/stories/" target="_blank">shorthand.com/stories</a></span>
+        </li>
+        <li>
+          Poynter. <em>Visual Journalism Resources</em>.
+          <span class="ref-url"><a href="https://www.poynter.org/visual-journalism/" target="_blank">poynter.org/visual-journalism</a></span>
+        </li>
+        <li>
+          The Pudding. <em>Visual Essays in Culture and Data</em>.
+          <span class="ref-url"><a href="https://pudding.cool" target="_blank">pudding.cool</a></span>
+          <span class="ref-note">Trang web chuyên scrollytelling và data storytelling sáng tạo — nguồn cảm hứng xuất sắc.</span>
+        </li>
+      </ul>
+
+      <h3>Chương 9 — Bảo mật &amp; Đạo đức số</h3>
+      <ul class="ref-list">
+        <li>
+          Committee to Protect Journalists (CPJ). <em>Digital Safety Resources</em>.
+          <span class="ref-url"><a href="https://cpj.org/safety/digital-safety/" target="_blank">cpj.org/safety/digital-safety</a></span>
+        </li>
+        <li>
+          Electronic Frontier Foundation (EFF). <em>Surveillance Self-Defense</em>.
+          <span class="ref-url"><a href="https://ssd.eff.org" target="_blank">ssd.eff.org</a></span>
+          <span class="ref-note">Hướng dẫn bảo mật kỹ thuật số dành riêng cho nhà báo và nhà hoạt động.</span>
+        </li>
+        <li>
+          Reporters Without Borders. <em>Guide to Good Digital Practices for Journalists</em>. (2023)
+          <span class="ref-url"><a href="https://rsf.org/en/digital-security" target="_blank">rsf.org/en/digital-security</a></span>
+        </li>
+        <li>
+          Internet Society. <em>Online Privacy: What Everyone Needs to Know</em>.
+          <span class="ref-url"><a href="https://www.internetsociety.org/issues/privacy/" target="_blank">internetsociety.org</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 10 — Newsletter &amp; Email</h3>
+      <ul class="ref-list">
+        <li>
+          Mailchimp. <em>Email Marketing Benchmarks by Industry</em>. (2024)
+          <span class="ref-url"><a href="https://mailchimp.com/resources/email-marketing-benchmarks/" target="_blank">mailchimp.com/resources</a></span>
+        </li>
+        <li>
+          Substack. <em>The Substack Guide to Growing Your Newsletter</em>.
+          <span class="ref-url"><a href="https://on.substack.com" target="_blank">on.substack.com</a></span>
+        </li>
+        <li>
+          Nieman Lab. <em>Archives: Email Newsletters in Journalism</em>. Harvard.
+          <span class="ref-url"><a href="https://www.niemanlab.org/tag/email-newsletters/" target="_blank">niemanlab.org/tag/email-newsletters</a></span>
+        </li>
+      </ul>
+
+      <h3>Chương 11 — Analytics</h3>
+      <ul class="ref-list">
+        <li>
+          Google Analytics Help. <em>Google Analytics 4 Documentation</em>.
+          <span class="ref-url"><a href="https://support.google.com/analytics" target="_blank">support.google.com/analytics</a></span>
+        </li>
+        <li>
+          Google Search Central. <em>Search Console Help Center</em>.
+          <span class="ref-url"><a href="https://support.google.com/webmasters" target="_blank">support.google.com/webmasters</a></span>
+        </li>
+        <li>
+          Hotjar. <em>What is a Heatmap? Hotjar Documentation</em>.
+          <span class="ref-url"><a href="https://www.hotjar.com/heatmaps/" target="_blank">hotjar.com/heatmaps</a></span>
+        </li>
+        <li>
+          Chartbeat. <em>Newsroom Analytics: Editorial Intelligence Platform</em>.
+          <span class="ref-url"><a href="https://chartbeat.com" target="_blank">chartbeat.com</a></span>
+          <span class="ref-note">Nền tảng analytics chuyên biệt cho tòa soạn báo, được nhiều tờ báo lớn thế giới sử dụng.</span>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TÀI NGUYÊN MIỄN PHÍ
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>IV. Tài nguyên trực tuyến miễn phí theo danh mục</h2>
+
+      <div class="resource-grid">
+
+        <div class="resource-card">
+          <h4>Học báo chí số</h4>
+          <ul>
+            <li><a href="https://www.poynter.org" target="_blank">Poynter Institute</a> — Đào tạo báo chí</li>
+            <li><a href="https://www.niemanlab.org" target="_blank">Nieman Lab (Harvard)</a> — Nghiên cứu media</li>
+            <li><a href="https://ijnet.org" target="_blank">IJNet (ICFJ)</a> — Mạng lưới nhà báo quốc tế</li>
+            <li><a href="https://gijn.org" target="_blank">GIJN</a> — Điều tra quốc tế</li>
+            <li><a href="https://www.americanpressinstitute.org" target="_blank">American Press Institute</a></li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h4>Học thiết kế &amp; UX</h4>
+          <ul>
+            <li><a href="https://www.nngroup.com/articles/" target="_blank">Nielsen Norman Group</a> — UX Research</li>
+            <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a> — Web design</li>
+            <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a> — CSS &amp; frontend</li>
+            <li><a href="https://uxdesign.cc" target="_blank">UX Design (Medium)</a> — Cộng đồng UX</li>
+            <li><a href="https://www.figma.com/community" target="_blank">Figma Community</a> — Template miễn phí</li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h4>Kho ảnh miễn phí</h4>
+          <ul>
+            <li><a href="https://unsplash.com" target="_blank">Unsplash</a> — Ảnh chất lượng cao</li>
+            <li><a href="https://www.pexels.com" target="_blank">Pexels</a> — Ảnh &amp; video</li>
+            <li><a href="https://pixabay.com" target="_blank">Pixabay</a> — Ảnh, vector, nhạc</li>
+            <li><a href="https://commons.wikimedia.org" target="_blank">Wikimedia Commons</a> — CC licensed</li>
+            <li><a href="https://www.flickr.com/creativecommons/" target="_blank">Flickr Creative Commons</a></li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h4>Công cụ SEO miễn phí</h4>
+          <ul>
+            <li><a href="https://pagespeed.web.dev" target="_blank">PageSpeed Insights</a> — Tốc độ trang</li>
+            <li><a href="https://search.google.com/test/rich-results" target="_blank">Rich Results Test</a> — Schema</li>
+            <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/" target="_blank">Mobile-Friendly Test</a></li>
+            <li><a href="https://answerthepublic.com" target="_blank">Answer The Public</a> — Từ khóa</li>
+            <li><a href="https://trends.google.com/trends/?geo=VN" target="_blank">Google Trends Vietnam</a></li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h4>Trực quan hóa dữ liệu</h4>
+          <ul>
+            <li><a href="https://www.datawrapper.de" target="_blank">Datawrapper</a> — Biểu đồ &amp; bản đồ</li>
+            <li><a href="https://flourish.studio" target="_blank">Flourish</a> — Interactive stories</li>
+            <li><a href="https://infogram.com" target="_blank">Infogram</a> — Infographic</li>
+            <li><a href="https://www.rawgraphs.io" target="_blank">RAWGraphs</a> — Biểu đồ nâng cao</li>
+            <li><a href="https://www.mapbox.com" target="_blank">Mapbox</a> — Bản đồ tương tác</li>
+          </ul>
+        </div>
+
+        <div class="resource-card">
+          <h4>Dữ liệu mở Việt Nam</h4>
+          <ul>
+            <li><a href="https://data.gov.vn" target="_blank">Data.gov.vn</a> — Cổng dữ liệu chính phủ</li>
+            <li><a href="https://www.gso.gov.vn" target="_blank">Tổng cục Thống kê (GSO)</a></li>
+            <li><a href="https://data.worldbank.org/country/VN" target="_blank">World Bank — Vietnam</a></li>
+            <li><a href="https://www.undp.org/vietnam" target="_blank">UNDP Vietnam Reports</a></li>
+            <li><a href="https://www.who.int/countries/vnm/" target="_blank">WHO Vietnam Data</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         CÔNG CỤ VÀ PHẦN MỀM
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>V. Công cụ và phần mềm được sử dụng trong giáo trình</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Công cụ</th>
+            <th>Mục đích</th>
+            <th>URL</th>
+            <th>Chi phí</th>
+            <th>Chương</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Sites</strong></td>
+            <td>Tạo trang web không cần code</td>
+            <td><a href="https://sites.google.com" target="_blank">sites.google.com</a></td>
+            <td>Miễn phí</td>
+            <td>Ch. 1</td>
+          </tr>
+          <tr>
+            <td><strong>Canva</strong></td>
+            <td>Thiết kế đồ họa, thumbnail, infographic</td>
+            <td><a href="https://www.canva.com" target="_blank">canva.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 3</td>
+          </tr>
+          <tr>
+            <td><strong>WordPress.org</strong></td>
+            <td>CMS mã nguồn mở, nền tảng chính</td>
+            <td><a href="https://wordpress.org" target="_blank">wordpress.org</a></td>
+            <td>Miễn phí (cần hosting)</td>
+            <td>Ch. 4</td>
+          </tr>
+          <tr>
+            <td><strong>Yoast SEO</strong></td>
+            <td>Plugin SEO cho WordPress</td>
+            <td><a href="https://yoast.com" target="_blank">yoast.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 5</td>
+          </tr>
+          <tr>
+            <td><strong>Datawrapper</strong></td>
+            <td>Biểu đồ và bản đồ tương tác</td>
+            <td><a href="https://www.datawrapper.de" target="_blank">datawrapper.de</a></td>
+            <td>Miễn phí (cơ bản)</td>
+            <td>Ch. 6</td>
+          </tr>
+          <tr>
+            <td><strong>Buffer</strong></td>
+            <td>Lên lịch đăng mạng xã hội</td>
+            <td><a href="https://buffer.com" target="_blank">buffer.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 7</td>
+          </tr>
+          <tr>
+            <td><strong>Shorthand</strong></td>
+            <td>Scrollytelling &amp; longform stories</td>
+            <td><a href="https://shorthand.com" target="_blank">shorthand.com</a></td>
+            <td>Có phí (dùng thử)</td>
+            <td>Ch. 8</td>
+          </tr>
+          <tr>
+            <td><strong>Bitwarden</strong></td>
+            <td>Quản lý mật khẩu an toàn</td>
+            <td><a href="https://bitwarden.com" target="_blank">bitwarden.com</a></td>
+            <td>Miễn phí</td>
+            <td>Ch. 9</td>
+          </tr>
+          <tr>
+            <td><strong>Mailchimp</strong></td>
+            <td>Email marketing &amp; newsletter</td>
+            <td><a href="https://mailchimp.com" target="_blank">mailchimp.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 10</td>
+          </tr>
+          <tr>
+            <td><strong>Substack</strong></td>
+            <td>Nền tảng newsletter có thu phí</td>
+            <td><a href="https://substack.com" target="_blank">substack.com</a></td>
+            <td>Miễn phí (hoa hồng 10%)</td>
+            <td>Ch. 10</td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics 4</strong></td>
+            <td>Phân tích lưu lượng web</td>
+            <td><a href="https://analytics.google.com" target="_blank">analytics.google.com</a></td>
+            <td>Miễn phí</td>
+            <td>Ch. 11</td>
+          </tr>
+          <tr>
+            <td><strong>Google Search Console</strong></td>
+            <td>Theo dõi hiệu suất tìm kiếm</td>
+            <td><a href="https://search.google.com/search-console" target="_blank">search.google.com/search-console</a></td>
+            <td>Miễn phí</td>
+            <td>Ch. 11</td>
+          </tr>
+          <tr>
+            <td><strong>Hotjar</strong></td>
+            <td>Heatmap &amp; session recordings</td>
+            <td><a href="https://www.hotjar.com" target="_blank">hotjar.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 11</td>
+          </tr>
+          <tr>
+            <td><strong>Microsoft Clarity</strong></td>
+            <td>Heatmap &amp; analytics (thay thế Hotjar)</td>
+            <td><a href="https://clarity.microsoft.com" target="_blank">clarity.microsoft.com</a></td>
+            <td>Miễn phí hoàn toàn</td>
+            <td>Ch. 11</td>
+          </tr>
+          <tr>
+            <td><strong>PageSpeed Insights</strong></td>
+            <td>Kiểm tra tốc độ &amp; Core Web Vitals</td>
+            <td><a href="https://pagespeed.web.dev" target="_blank">pagespeed.web.dev</a></td>
+            <td>Miễn phí</td>
+            <td>Ch. 11</td>
+          </tr>
+          <tr>
+            <td><strong>Figma</strong></td>
+            <td>Thiết kế UI &amp; wireframe</td>
+            <td><a href="https://www.figma.com" target="_blank">figma.com</a></td>
+            <td>Freemium</td>
+            <td>Ch. 12</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- ════════════════════════════════
+         TẠPCHÍ VÀ BLOG CHUYÊN NGÀNH
+    ════════════════════════════════ -->
+    <div class="ref-section">
+      <h2>VI. Tạp chí, blog &amp; cộng đồng chuyên ngành nên theo dõi</h2>
+
+      <ul class="ref-list">
+        <li>
+          <span class="ref-title">Nieman Lab</span> — Harvard's Nieman Foundation for Journalism.
+          <span class="ref-url"><a href="https://www.niemanlab.org" target="_blank">niemanlab.org</a></span>
+          <span class="ref-note">Phân tích xu hướng và tương lai của báo chí — cập nhật hàng ngày.</span>
+        </li>
+        <li>
+          <span class="ref-title">Poynter</span> — Hướng dẫn nghiệp vụ và media criticism.
+          <span class="ref-url"><a href="https://www.poynter.org" target="_blank">poynter.org</a></span>
+        </li>
+        <li>
+          <span class="ref-title">Online Journalism Blog</span> — Paul Bradshaw.
+          <span class="ref-url"><a href="https://onlinejournalismblog.com" target="_blank">onlinejournalismblog.com</a></span>
+        </li>
+        <li>
+          <span class="ref-title">Columbia Journalism Review (CJR)</span>.
+          <span class="ref-url"><a href="https://www.cjr.org" target="_blank">cjr.org</a></span>
+        </li>
+        <li>
+          <span class="ref-title">GIJN (Global Investigative Journalism Network)</span>.
+          <span class="ref-url"><a href="https://gijn.org" target="_blank">gijn.org</a></span>
+          <span class="ref-note">Tài nguyên đặc biệt hữu ích cho báo chí điều tra và báo chí dữ liệu.</span>
+        </li>
+        <li>
+          <span class="ref-title">Smashing Magazine</span> — Web design &amp; UX.
+          <span class="ref-url"><a href="https://www.smashingmagazine.com" target="_blank">smashingmagazine.com</a></span>
+        </li>
+        <li>
+          <span class="ref-title">Search Engine Journal</span> — SEO &amp; Digital Marketing.
+          <span class="ref-url"><a href="https://www.searchenginejournal.com" target="_blank">searchenginejournal.com</a></span>
+        </li>
+        <li>
+          <span class="ref-title">Báo Nhà báo &amp; Công luận</span> — Cơ quan ngôn luận Hội Nhà báo Việt Nam.
+          <span class="ref-url"><a href="https://congluan.vn" target="_blank">congluan.vn</a></span>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="glossary.html">← Bảng thuật ngữ</a>
+      <a href="../index.html">Mục lục</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

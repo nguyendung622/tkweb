@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương 11 — Đo lường &amp; Phân tích Web</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html" class="active">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG CHƯƠNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Chương 11</div>
+      <h1>Đo lường &amp; Phân tích Web</h1>
+      <div class="chapter-meta">
+        <span>⏱ 90 phút</span>
+        <span>📊 Trung cấp</span>
+        <span>🛠 Google Analytics 4 · Search Console · Hotjar</span>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU HỌC TẬP -->
+    <div class="learning-objectives">
+      <h4>Sau chương này, sinh viên có thể:</h4>
+      <ul>
+        <li>Cài đặt Google Analytics 4 lên trang web và xác minh dữ liệu đang được thu thập</li>
+        <li>Đọc và diễn giải các báo cáo chính trong GA4: Acquisition, Engagement, Demographics</li>
+        <li>Sử dụng Google Search Console để theo dõi hiệu suất tìm kiếm và phát hiện lỗi kỹ thuật</li>
+        <li>Áp dụng dữ liệu heatmap từ Hotjar để cải thiện bố cục và trải nghiệm độc giả</li>
+        <li>Xây dựng chiến lược nội dung dựa trên KPI và dữ liệu thực tế</li>
+      </ul>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         11.1 TẠI SAO NHÀ BÁO CẦN ANALYTICS?
+    ════════════════════════════════════ -->
+    <h2>11.1 Tại sao nhà báo cần biết phân tích dữ liệu?</h2>
+
+    <p>
+      Trong một thế kỷ, nghề báo vận hành theo logic một chiều: phóng viên viết, tòa soạn xuất bản, độc giả đọc. Phản hồi — nếu có — đến qua thư bạn đọc hoặc phản ứng xã hội, chậm chạp và không có hệ thống. Ngày nay, mọi lần nhấp chuột, mỗi giây đọc trang và từng lần chia sẻ đều để lại dấu vết số có thể đo được. Đây là cuộc cách mạng trong cách tòa soạn hiểu độc giả của mình.
+    </p>
+
+    <h3>Từ "viết xong là xong" đến "đo lường để cải thiện"</h3>
+
+    <p>
+      Tư duy truyền thống xem một bài báo là hoàn thành khi nó được xuất bản. Tư duy số hiện đại hiểu rằng xuất bản chỉ là nửa đầu hành trình. Nửa sau là theo dõi: bài có được đọc không? Độc giả đọc đến đoạn nào thì bỏ? Họ đến từ đâu? Họ có quay lại không?
+    </p>
+
+    <p>
+      Analytics không phải là công cụ để đo lường sự phổ biến nhằm chạy theo số lượt xem. Đúng hơn, nó là la bàn giúp nhà báo hiểu độc giả sâu hơn: họ quan tâm điều gì, tiêu thụ nội dung theo cách nào, và đâu là những rào cản khiến họ không đọc hết bài.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Số liệu đáng suy ngẫm</div>
+      <p>Theo Reuters Institute Digital News Report 2024, 73% tòa soạn báo hiện sử dụng dữ liệu analytics để quyết định chủ đề nội dung. Tại các tòa soạn lớn như The Guardian và New York Times, có cả bộ phận "audience analytics" chuyên phân tích dữ liệu để tư vấn cho biên tập viên.</p>
+    </div>
+
+    <h3>Biên tập viên hiện đại sử dụng analytics như thế nào</h3>
+
+    <p>
+      Một ngày làm việc của biên tập viên kỹ thuật số bắt đầu bằng việc xem báo cáo ngắn: bài nào hôm qua đạt tốt, từ kênh nào, độc giả đọc được bao lâu. Thông tin này định hướng quyết định: đẩy bài lên mạng xã hội nào, lúc nào, với tiêu đề thay thế ra sao.
+    </p>
+
+    <p>
+      Theo chu kỳ tuần, analytics giúp nhận diện xu hướng: chủ đề nào được đọc nhiều trong 7 ngày qua, nhóm độc giả nào đang tăng trưởng, và bài nào tuy ít lượt xem nhưng có thời gian đọc rất dài (dấu hiệu của nội dung chất lượng cao được nhóm độc giả chuyên biệt yêu thích).
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Quan điểm cân bằng</div>
+      <p>Analytics là công cụ hỗ trợ, không phải là người chủ. Một bài điều tra quan trọng có thể chỉ có 500 lượt đọc nhưng thay đổi chính sách — không trang analytics nào đo được điều đó. Dùng dữ liệu để hiểu độc giả, không phải để từ bỏ sứ mệnh báo chí.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         11.2 GIỚI THIỆU GOOGLE ANALYTICS 4
+    ════════════════════════════════════ -->
+    <h2>11.2 Giới thiệu Google Analytics 4</h2>
+
+    <p>
+      Google Analytics 4 (GA4) là phiên bản mới nhất của nền tảng phân tích web miễn phí phổ biến nhất thế giới. Từ tháng 7 năm 2023, Google đã ngừng hỗ trợ Universal Analytics (UA) — phiên bản cũ — và GA4 trở thành tiêu chuẩn bắt buộc.
+    </p>
+
+    <h3>GA4 so với Universal Analytics</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Khía cạnh</th>
+          <th>Universal Analytics (cũ)</th>
+          <th>Google Analytics 4 (mới)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Đơn vị đo cơ bản</td>
+          <td>Phiên (Session)</td>
+          <td>Sự kiện (Event)</td>
+        </tr>
+        <tr>
+          <td>Theo dõi đa thiết bị</td>
+          <td>Hạn chế</td>
+          <td>Mạnh mẽ, theo dõi xuyên thiết bị</td>
+        </tr>
+        <tr>
+          <td>Tích hợp máy học (AI)</td>
+          <td>Không có</td>
+          <td>Có — dự đoán hành vi người dùng</td>
+        </tr>
+        <tr>
+          <td>Báo cáo tùy chỉnh</td>
+          <td>Có giới hạn</td>
+          <td>Linh hoạt hơn với Explore</td>
+        </tr>
+        <tr>
+          <td>Dữ liệu lịch sử</td>
+          <td>Lưu trữ lâu dài</td>
+          <td>Mặc định 14 tháng (có thể mở rộng)</td>
+        </tr>
+        <tr>
+          <td>Phù hợp với</td>
+          <td>Websites truyền thống</td>
+          <td>Websites + ứng dụng di động</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Các khái niệm cốt lõi trong GA4</h3>
+
+    <p>Trước khi cài đặt, cần hiểu bốn khái niệm nền tảng mà GA4 xây dựng toàn bộ dữ liệu xung quanh:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Khái niệm</th>
+          <th>Tiếng Anh</th>
+          <th>Định nghĩa thực tế</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sự kiện</strong></td>
+          <td>Event</td>
+          <td>Bất kỳ hành động nào người dùng thực hiện: mở trang, nhấp link, xem video, cuộn trang. GA4 đo mọi thứ qua events.</td>
+        </tr>
+        <tr>
+          <td><strong>Người dùng</strong></td>
+          <td>Users</td>
+          <td>Số người truy cập duy nhất (theo cookie hoặc User ID). Phân biệt "New users" (lần đầu) và "Returning users" (đã từng ghé).</td>
+        </tr>
+        <tr>
+          <td><strong>Phiên</strong></td>
+          <td>Session</td>
+          <td>Một lượt truy cập liên tục. Nếu người dùng không hoạt động quá 30 phút rồi quay lại, đó là phiên mới.</td>
+        </tr>
+        <tr>
+          <td><strong>Tương tác</strong></td>
+          <td>Engagement</td>
+          <td>GA4 tính "engaged session" khi người dùng ở lại ít nhất 10 giây, xem ít nhất 2 trang, hoặc có conversion event. Chỉ số thay thế tốt hơn "bounce rate" cũ.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box note">
+      <div class="box-title">📌 "Bounce rate" trong GA4</div>
+      <p>Universal Analytics dùng "bounce rate" (tỷ lệ thoát) — người dùng vào xem 1 trang rồi ra. GA4 thay thế bằng "Engagement rate" — phần trăm phiên có tương tác thực sự. Đây là thay đổi quan trọng: một bài báo dài được đọc hết trong 5 phút sẽ không bị tính là "bounce" trong GA4 dù người dùng chỉ xem một trang.</p>
+    </div>
+
+    <h3>Cài đặt GA4 lên WordPress</h3>
+
+    <ol class="steps">
+      <li>Truy cập <strong>analytics.google.com</strong> và đăng nhập bằng tài khoản Google</li>
+      <li>Nhấn <strong>Bắt đầu đo lường</strong> → đặt tên tài khoản (ví dụ: <em>Tên tòa soạn</em>) → tiếp tục</li>
+      <li>Tạo <strong>Property</strong> (đơn vị): đặt tên, chọn múi giờ Việt Nam (UTC+7) và đơn vị tiền tệ VND</li>
+      <li>Chọn <strong>Web</strong> làm nền tảng → nhập URL trang và tên luồng dữ liệu</li>
+      <li>Google sẽ cấp một <strong>Measurement ID</strong> dạng <code>G-XXXXXXXXXX</code> — lưu lại mã này</li>
+      <li>Trong WordPress: cài plugin <strong>Site Kit by Google</strong> (miễn phí, chính thức từ Google)</li>
+      <li>Kích hoạt Site Kit → <strong>Kết nối dịch vụ</strong> → chọn Analytics → đăng nhập Google → cấp quyền</li>
+      <li>Site Kit sẽ tự động chèn mã GA4 vào tất cả trang. Kiểm tra bằng cách vào GA4 → tab <strong>Realtime</strong></li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Cài đặt GA4 lên Google Sites</div>
+      <p>Google Sites tích hợp trực tiếp với Google Analytics: vào phần <strong>Quản lý trang</strong> (biểu tượng bánh răng) → <strong>Phân tích</strong> → dán Measurement ID vào ô "Google Analytics ID" → lưu và xuất bản lại trang. Không cần plugin.</p>
+    </div>
+
+    <h3>Xác minh cài đặt thành công</h3>
+
+    <ol class="steps">
+      <li>Sau khi cài xong, mở trang web trong tab mới</li>
+      <li>Quay lại GA4 → menu trái → <strong>Realtime</strong></li>
+      <li>Nếu thấy "1 người dùng trong 30 phút qua" — cài đặt thành công</li>
+      <li>Nếu không thấy sau 5 phút: kiểm tra lại Measurement ID, đảm bảo không có trình chặn quảng cáo đang chạy</li>
+    </ol>
+
+
+    <!-- ════════════════════════════════════
+         11.3 CÁC BÁO CÁO QUAN TRỌNG TRONG GA4
+    ════════════════════════════════════ -->
+    <h2>11.3 Các báo cáo quan trọng trong GA4</h2>
+
+    <p>
+      GA4 cung cấp hàng chục báo cáo, nhưng với nhà báo và biên tập viên, bốn nhóm báo cáo sau là nền tảng cần nắm vững.
+    </p>
+
+    <h3>Báo cáo Realtime — Ai đang đọc ngay lúc này?</h3>
+
+    <p>
+      Báo cáo Realtime hiển thị hoạt động trong 30 phút gần nhất theo thời gian thực. Đây là công cụ hữu ích khi bạn vừa đăng một bài nóng hoặc chia sẻ lên mạng xã hội và muốn theo dõi phản ứng tức thì.
+    </p>
+
+    <p>
+      Thông tin hữu ích trong Realtime: số người dùng đang hoạt động, bài họ đang xem, kênh đến (organic, social, direct), và vị trí địa lý. Nếu bài được chia sẻ trong nhóm lớn trên Facebook, bạn sẽ thấy spike traffic từ social ngay lập tức.
+    </p>
+
+    <h3>Báo cáo Acquisition — Độc giả đến từ đâu?</h3>
+
+    <p>
+      Đây là báo cáo chiến lược nhất. Nó cho thấy tỷ lệ độc giả đến từ mỗi kênh:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Kênh</th>
+          <th>Ý nghĩa</th>
+          <th>Chiến lược tối ưu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Organic Search</strong></td>
+          <td>Tìm thấy qua Google tìm kiếm</td>
+          <td>Đầu tư vào SEO, từ khóa, tiêu đề mạnh</td>
+        </tr>
+        <tr>
+          <td><strong>Social</strong></td>
+          <td>Từ Facebook, Twitter/X, TikTok...</td>
+          <td>Tối ưu thumbnail, caption, giờ đăng</td>
+        </tr>
+        <tr>
+          <td><strong>Direct</strong></td>
+          <td>Gõ thẳng URL, bookmark, app</td>
+          <td>Xây dựng lòng trung thành, newsletter</td>
+        </tr>
+        <tr>
+          <td><strong>Referral</strong></td>
+          <td>Từ link tại trang khác</td>
+          <td>Xây dựng quan hệ, bài guest post</td>
+        </tr>
+        <tr>
+          <td><strong>Email</strong></td>
+          <td>Từ newsletter, email marketing</td>
+          <td>Tăng chất lượng danh sách subscriber</td>
+        </tr>
+        <tr>
+          <td><strong>Paid Search</strong></td>
+          <td>Quảng cáo Google Ads</td>
+          <td>Theo dõi ROI, đo conversion</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành: Đọc báo cáo Acquisition</div>
+      <p>Trong GA4: <strong>Reports → Acquisition → Traffic acquisition</strong>. Thay đổi phạm vi thời gian sang "Tháng trước". Xác định: kênh nào mang nhiều người dùng nhất? Kênh nào có thời gian tương tác dài nhất? Hai câu trả lời thường khác nhau — đó là thông tin quan trọng.</p>
+    </div>
+
+    <h3>Báo cáo Engagement — Bài nào được đọc và đọc bao lâu?</h3>
+
+    <p>
+      Báo cáo Engagement → Pages and screens là nơi bạn thấy hiệu suất từng bài viết. Các chỉ số cần chú ý:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chỉ số</th>
+          <th>Ý nghĩa cho nhà báo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Views</strong></td>
+          <td>Tổng lượt xem trang (kể cả lượt xem nhiều lần từ cùng một người)</td>
+        </tr>
+        <tr>
+          <td><strong>Users</strong></td>
+          <td>Số người dùng duy nhất đọc bài — chỉ số thực tế về tầm phủ</td>
+        </tr>
+        <tr>
+          <td><strong>Average engagement time</strong></td>
+          <td>Thời gian đọc trung bình. Bài chất lượng thường trên 2–3 phút</td>
+        </tr>
+        <tr>
+          <td><strong>Engaged sessions</strong></td>
+          <td>Số phiên có tương tác thực sự (không chỉ vào rồi ra ngay)</td>
+        </tr>
+        <tr>
+          <td><strong>Scroll depth</strong></td>
+          <td>Phần trăm người đọc cuộn xuống 90% trang (cần bật trong GA4)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Bật sự kiện Scroll</div>
+      <p>GA4 tự động theo dõi scroll khi người dùng cuộn đến 90% trang. Vào <strong>Admin → Events</strong> để xem sự kiện "scroll" có đang hoạt động không. Nếu một bài dài nhưng ít người đọc đến 90%, có thể bài quá dài hoặc phần cuối kém hấp dẫn.</p>
+    </div>
+
+    <h3>Báo cáo Demographics — Độc giả là ai?</h3>
+
+    <p>
+      Báo cáo Demographics (Reports → User → User attributes) cho biết thông tin nhân khẩu học của độc giả: quốc gia, thành phố, ngôn ngữ, thiết bị sử dụng (máy tính hay điện thoại), hệ điều hành và trình duyệt.
+    </p>
+
+    <p>
+      Dữ liệu này cực kỳ có giá trị cho chiến lược nội dung: nếu 70% độc giả dùng điện thoại, bạn phải ưu tiên thiết kế mobile-first và định dạng bài ngắn, dễ đọc trên màn hình nhỏ. Nếu phần lớn đến từ Hà Nội, bạn có thể điều chỉnh góc độ bài viết cho phù hợp với độc giả miền Bắc.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Dữ liệu nhân khẩu học và quyền riêng tư</div>
+      <p>GA4 không thu thập tên hay email cá nhân — dữ liệu demographics dựa trên mô hình thống kê tổng hợp. Tuy nhiên, bạn vẫn cần có chính sách bảo mật (Privacy Policy) rõ ràng trên trang, và cân nhắc tích hợp banner chấp thuận cookie (cookie consent) nếu trang phục vụ độc giả EU theo quy định GDPR.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         11.4 GOOGLE SEARCH CONSOLE
+    ════════════════════════════════════ -->
+    <h2>11.4 Google Search Console</h2>
+
+    <p>
+      Nếu GA4 là kính hiển vi để nhìn vào hành vi người dùng <em>trong</em> trang web, thì Google Search Console (GSC) là kính thiên văn để nhìn vào cách trang web <em>xuất hiện</em> trên Google Search. Hai công cụ bổ trợ nhau và không thể thay thế nhau.
+    </p>
+
+    <h3>Kết nối Search Console với GA4</h3>
+
+    <ol class="steps">
+      <li>Truy cập <strong>search.google.com/search-console</strong> → thêm property (nhập URL trang)</li>
+      <li>Xác minh quyền sở hữu: cách dễ nhất là chọn <strong>HTML tag</strong> → copy thẻ meta → dán vào thẻ <code>&lt;head&gt;</code> của trang (Site Kit làm tự động)</li>
+      <li>Trong GA4: <strong>Admin → Property Settings → Search Console Links → Link</strong></li>
+      <li>Chọn Search Console property → tiếp tục → lưu. Sau 24–48 giờ dữ liệu sẽ xuất hiện</li>
+    </ol>
+
+    <h3>Báo cáo Queries — Từ khóa nào đưa độc giả đến?</h3>
+
+    <p>
+      Đây là một trong những báo cáo giá trị nhất cho nhà báo. <strong>Performance → Search results</strong> cho thấy danh sách từ khóa (queries) mà trang xuất hiện trong kết quả tìm kiếm Google, kèm theo:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chỉ số</th>
+          <th>Ý nghĩa</th>
+          <th>Ngưỡng tham khảo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Impressions</strong></td>
+          <td>Số lần bài xuất hiện trong kết quả tìm kiếm</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Clicks</strong></td>
+          <td>Số lần người dùng nhấp vào kết quả</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>CTR</strong></td>
+          <td>Tỷ lệ click / số lần hiển thị</td>
+          <td>Báo chí thường 2–5%; trên 5% là tốt</td>
+        </tr>
+        <tr>
+          <td><strong>Position</strong></td>
+          <td>Vị trí trung bình trong kết quả (1 = đầu tiên)</td>
+          <td>Top 10 = trang 1; top 3 = rất tốt</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành: Tìm cơ hội SEO từ Search Console</div>
+      <p>Lọc các từ khóa có <strong>Position từ 4–15</strong> và <strong>Impressions cao</strong>. Đây là "low-hanging fruit" — trang đã xuất hiện nhưng chưa đủ nổi bật để được nhấp nhiều. Cải thiện tiêu đề và meta description của những trang này thường tăng CTR đáng kể mà không cần viết thêm nội dung.</p>
+    </div>
+
+    <h3>Coverage — Lỗi index và trang bị loại trừ</h3>
+
+    <p>
+      Tab <strong>Indexing → Pages</strong> (trước đây là Coverage) cho thấy trạng thái của từng URL trong mắt Google:
+    </p>
+
+    <ul>
+      <li><strong>Indexed</strong>: trang đã được Google lập chỉ mục và có thể xuất hiện trong tìm kiếm.</li>
+      <li><strong>Not indexed</strong>: trang chưa được index — có thể do Google chưa crawl tới, hoặc có lỗi kỹ thuật.</li>
+      <li><strong>Excluded</strong>: trang bị loại trừ có chủ ý (ví dụ: có thẻ <code>noindex</code>) hoặc do trùng lặp nội dung.</li>
+    </ul>
+
+    <p>
+      Với trang tin tức, điều quan trọng là đảm bảo tất cả bài viết quan trọng đều được indexed. Nếu thấy bài vừa đăng chưa xuất hiện trong Search Console, dùng tính năng <strong>URL Inspection</strong> để yêu cầu Google crawl lại ngay.
+    </p>
+
+    <h3>Core Web Vitals — Tốc độ và trải nghiệm người dùng</h3>
+
+    <p>
+      Từ năm 2021, Google chính thức dùng Core Web Vitals làm yếu tố xếp hạng. Ba chỉ số cốt lõi:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chỉ số</th>
+          <th>Đo gì?</th>
+          <th>Ngưỡng "Tốt"</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>LCP</strong> (Largest Contentful Paint)</td>
+          <td>Thời gian tải phần tử lớn nhất (thường là ảnh hero)</td>
+          <td>Dưới 2.5 giây</td>
+        </tr>
+        <tr>
+          <td><strong>INP</strong> (Interaction to Next Paint)</td>
+          <td>Độ phản hồi khi người dùng tương tác (nhấp, gõ)</td>
+          <td>Dưới 200ms</td>
+        </tr>
+        <tr>
+          <td><strong>CLS</strong> (Cumulative Layout Shift)</td>
+          <td>Độ dịch chuyển bố cục không mong muốn trong khi tải</td>
+          <td>Dưới 0.1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ CLS — Kẻ thù thầm lặng của trang tin tức</div>
+      <p>CLS cao thường xảy ra khi quảng cáo hoặc banner tải chậm, đẩy nội dung xuống ngay khi người dùng đang đọc. Đây là trải nghiệm rất tệ và bị Google phạt trong xếp hạng. Giải pháp: luôn đặt kích thước cố định cho không gian quảng cáo và ảnh ngay từ đầu trong HTML.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         11.5 HEATMAP VỚI HOTJAR
+    ════════════════════════════════════ -->
+    <h2>11.5 Heatmap với Hotjar</h2>
+
+    <p>
+      GA4 và Search Console cho bạn biết <em>bao nhiêu</em> người đọc và họ đến từ đâu. Hotjar cho bạn biết <em>họ làm gì</em> khi ở trên trang — click vào đâu, cuộn đến đâu, bỏ qua phần nào.
+    </p>
+
+    <h3>Heatmap là gì và cách đọc</h3>
+
+    <p>
+      Heatmap (bản đồ nhiệt) là hình ảnh trực quan hóa nơi người dùng tập trung chú ý trên trang. Màu đỏ/cam = nhiều tương tác; màu xanh/tím = ít tương tác. Hotjar cung cấp ba loại heatmap:
+    </p>
+
+    <ul>
+      <li><strong>Click map</strong>: hiển thị nơi người dùng nhấp chuột (hoặc chạm ngón tay trên mobile). Hữu ích để biết CTA nào được nhấp, link nào bị bỏ qua.</li>
+      <li><strong>Move map</strong>: theo dõi chuyển động con trỏ chuột — thường tương quan với nơi người dùng đang đọc.</li>
+      <li><strong>Scroll map</strong>: cho thấy phần trăm người dùng cuộn xuống đến từng mức độ của trang. Đường nằm ngang đột ngột ở 40% — bài có vấn đề ở đoạn giữa.</li>
+    </ul>
+
+    <div class="box note">
+      <div class="box-title">📌 Đọc Scroll Map cho bài báo</div>
+      <p>Scroll map lý tưởng của một bài báo dạng inverted pyramid (tháp ngược): 90–100% người đọc phần đầu, giảm dần xuống khoảng 50–60% ở phần cuối — đây là bình thường. Nếu có "vách đứng" (drop-off mạnh đột ngột) ở một điểm cụ thể, hãy xem lại nội dung hoặc định dạng ngay tại vị trí đó.</p>
+    </div>
+
+    <h3>Session Recordings — Xem lại hành trình đọc</h3>
+
+    <p>
+      Tính năng Session Recordings ghi lại video màn hình ẩn danh của từng người dùng: họ cuộn trang như thế nào, nhấp vào đâu, dừng lại ở đoạn nào. Đây là cách hiểu người dùng sâu nhất có thể — như ngồi cạnh độc giả và xem họ đọc bài của bạn.
+    </p>
+
+    <p>
+      Tính năng này đặc biệt hữu ích khi có vấn đề bạn không hiểu qua số liệu: tại sao tỷ lệ chuyển đổi thấp dù traffic cao, tại sao người dùng thoát ngay ở trang chủ. Session recordings thường tiết lộ nguyên nhân một cách trực quan.
+    </p>
+
+    <h3>Cài đặt Hotjar miễn phí</h3>
+
+    <ol class="steps">
+      <li>Đăng ký tài khoản tại <strong>hotjar.com</strong> — gói Basic (miễn phí) cho phép thu thập 35 session recordings/ngày</li>
+      <li>Tạo <strong>Site</strong> mới: nhập URL trang web của bạn</li>
+      <li>Hotjar cung cấp đoạn mã JavaScript tracking — copy toàn bộ đoạn code</li>
+      <li>Trong WordPress: cài plugin <strong>Hotjar</strong> chính thức → dán Site ID (số trong mã Hotjar)</li>
+      <li>Hoặc: dán code trực tiếp vào <code>&lt;head&gt;</code> của theme (functions.php hoặc thông qua plugin "Insert Headers and Footers")</li>
+      <li>Kiểm tra: quay lại Hotjar → tab <strong>Verify installation</strong> → truy cập trang web để xác nhận</li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Gói miễn phí của Hotjar đủ dùng chưa?</div>
+      <p>Cho mục đích học tập và trang web nhỏ: hoàn toàn đủ. Hotjar Free cho phép heatmap và session recordings với giới hạn hợp lý. Khi trang tăng traffic đáng kể (hàng chục nghìn phiên/tháng), mới cần cân nhắc nâng cấp lên gói trả phí.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         11.6 XÂY DỰNG CHIẾN LƯỢC NỘI DUNG DỰA TRÊN DỮ LIỆU
+    ════════════════════════════════════ -->
+    <h2>11.6 Xây dựng chiến lược nội dung dựa trên dữ liệu</h2>
+
+    <h3>Đặt KPI cho trang tin tức</h3>
+
+    <p>
+      KPI (Key Performance Indicator — Chỉ số hiệu suất chính) là những con số cụ thể bạn cam kết đạt được. Không có KPI, analytics chỉ là những con số vô nghĩa. Dưới đây là bộ KPI gợi ý cho một trang tin tức/blog báo chí:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mục tiêu</th>
+          <th>KPI đề xuất</th>
+          <th>Công cụ đo</th>
+          <th>Chu kỳ theo dõi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tăng lượng độc giả</td>
+          <td>Monthly Active Users (MAU) tăng 10%/tháng</td>
+          <td>GA4 → Users</td>
+          <td>Hàng tháng</td>
+        </tr>
+        <tr>
+          <td>Tăng chất lượng đọc</td>
+          <td>Average engagement time &gt; 2 phút</td>
+          <td>GA4 → Engagement</td>
+          <td>Hàng tuần</td>
+        </tr>
+        <tr>
+          <td>Tăng traffic tìm kiếm</td>
+          <td>Organic search tăng 20% so với quý trước</td>
+          <td>GA4 + Search Console</td>
+          <td>Hàng tháng</td>
+        </tr>
+        <tr>
+          <td>Giảm tỷ lệ thoát</td>
+          <td>Engagement rate &gt; 55%</td>
+          <td>GA4 → Engagement rate</td>
+          <td>Hàng tuần</td>
+        </tr>
+        <tr>
+          <td>Tăng độc giả quay lại</td>
+          <td>Returning users &gt; 30% tổng users</td>
+          <td>GA4 → User attributes</td>
+          <td>Hàng tháng</td>
+        </tr>
+        <tr>
+          <td>Tăng newsletter subscribers</td>
+          <td>Thêm 50 subscribers mới/tháng</td>
+          <td>Mailchimp / Substack</td>
+          <td>Hàng tháng</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Quy trình: Phân tích → Insight → Hành động</h3>
+
+    <p>
+      Dữ liệu chỉ có giá trị khi dẫn đến hành động cụ thể. Quy trình ba bước sau là khung làm việc thực tế:
+    </p>
+
+    <ol class="steps">
+      <li><strong>Phân tích (Analyze)</strong>: thu thập dữ liệu từ GA4 + Search Console + Hotjar mỗi tuần. Ghi lại những con số bất thường — tăng đột biến hoặc giảm đột ngột.</li>
+      <li><strong>Insight</strong>: đặt câu hỏi "Tại sao?" với mỗi con số bất thường. Bài về chủ đề X đột nhiên tăng 300% views — ai chia sẻ nó? Độc giả từ kênh nào đến nhiều hơn tuần trước? Insight không phải là con số, mà là <em>diễn giải ý nghĩa</em> đằng sau con số.</li>
+      <li><strong>Hành động (Act)</strong>: đưa ra một quyết định cụ thể dựa trên insight. "Chủ đề môi trường đang được đọc nhiều hơn 40% so với tháng trước → lên kế hoạch 2 bài/tuần về chủ đề này trong tháng tới."</li>
+    </ol>
+
+    <h3>Hướng dẫn từng bước: Đọc báo cáo tuần và ra quyết định</h3>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành: Quy trình đọc báo cáo tuần (30 phút mỗi thứ Hai)</div>
+      <p>Xây dựng thói quen đọc analytics đều đặn — đây là kỹ năng phân biệt nhà báo số chuyên nghiệp với người nghiệp dư.</p>
+    </div>
+
+    <ol class="steps">
+      <li>Mở GA4 → đặt phạm vi thời gian "7 ngày qua" vs "7 ngày trước đó" để so sánh</li>
+      <li>Kiểm tra <strong>Users</strong>: tăng hay giảm so với tuần trước? Bao nhiêu phần trăm?</li>
+      <li>Xem <strong>Acquisition</strong>: kênh nào tăng/giảm nhiều nhất? Tại sao?</li>
+      <li>Mở <strong>Pages and screens</strong>: top 5 bài được đọc nhiều nhất tuần này. Điểm chung của chúng là gì (chủ đề, định dạng, tiêu đề)?</li>
+      <li>Kiểm tra Search Console: từ khóa mới nào đang lên? Trang nào đang tụt hạng?</li>
+      <li>Ghi lại 3 insight chính vào file ghi chú — không nhất thiết phải phức tạp, ví dụ: "Bài video đang có engagement time cao gấp đôi bài chỉ có text"</li>
+      <li>Đề xuất 1–2 hành động cụ thể cho tuần tới dựa trên insights đó</li>
+    </ol>
+
+    <div class="box note">
+      <div class="box-title">📌 Template báo cáo hàng tuần đơn giản</div>
+      <p>Tạo một Google Sheets với các cột: Tuần, Users, Sessions, Avg engagement time, Top bài, Kênh lớn nhất, Insight chính, Hành động tiếp theo. Điền mỗi tuần. Sau 3 tháng, bạn sẽ có một bức tranh rõ ràng về xu hướng và những gì thực sự hiệu quả với độc giả của mình.</p>
+    </div>
+
+
+    <!-- CÂU HỎI ÔN TẬP -->
+    <div class="review-questions">
+      <h3>Câu hỏi ôn tập</h3>
+      <ol>
+        <li>Giải thích sự khác biệt giữa "Bounce rate" trong Universal Analytics và "Engagement rate" trong GA4. Tại sao GA4 đổi cách đo này lại có lợi hơn cho việc đánh giá chất lượng nội dung báo chí?</li>
+        <li>Bạn có một bài viết với 10.000 impressions trên Search Console nhưng chỉ có 200 clicks (CTR = 2%). Hãy đề xuất ít nhất 3 cách cải thiện CTR cho bài này mà không cần viết lại toàn bộ bài.</li>
+        <li>Tòa soạn của bạn nhận thấy 65% độc giả truy cập bằng điện thoại nhưng thời gian đọc trên mobile chỉ bằng một nửa so với desktop. Hãy phân tích các nguyên nhân có thể và đề xuất giải pháp.</li>
+        <li>Thiết kế bộ KPI cho một trang blog báo chí cá nhân vừa ra mắt. Giải thích tại sao bạn chọn những chỉ số đó, và chúng sẽ thay đổi như thế nào sau 6 tháng hoạt động?</li>
+      </ol>
+    </div>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="10-newsletter.html">← Chương 10: Newsletter &amp; Email</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="12-du-an.html">Chương 12: Dự án cuối khóa →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>

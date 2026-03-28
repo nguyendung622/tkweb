@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lời nói đầu — Thiết kế Web cho Nhà báo</title>
+  <link rel="stylesheet" href="../css/book.css">
+  <link rel="stylesheet" href="../css/print.css">
+</head>
+<body>
+<div class="book-wrap">
+
+  <!-- SIDEBAR -->
+  <nav class="book-nav">
+    <div class="site-title">Giáo trình</div>
+    <div class="book-title">Thiết kế Web cho Nhà báo</div>
+    <div class="nav-section">Mở đầu</div>
+    <ul>
+      <li><a href="../chapters/00-loi-noi-dau.html" class="active">Lời nói đầu</a></li>
+    </ul>
+    <div class="nav-section">Chương trình</div>
+    <ul>
+      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
+      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
+      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
+      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
+      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
+      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
+      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
+      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
+      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
+      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
+      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
+      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
+    </ul>
+    <div class="nav-section">Phụ lục</div>
+    <ul>
+      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
+      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
+    </ul>
+  </nav>
+
+  <!-- NỘI DUNG -->
+  <main class="book-content">
+
+    <div class="chapter-header">
+      <div class="chapter-num">Mở đầu</div>
+      <h1>Lời nói đầu</h1>
+      <div class="chapter-meta">
+        <span>Nguyễn Dũng</span>
+        <span>Khoa CNTT, ĐH Khoa học Huế</span>
+      </div>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         TẠI SAO VIẾT CUỐN SÁCH NÀY
+    ════════════════════════════════════ -->
+    <h2>Tại sao cuốn sách này ra đời</h2>
+
+    <p>
+      Báo chí Việt Nam đang trải qua một cuộc chuyển đổi lớn nhất trong lịch sử gần một thế kỷ của ngành. Không phải chuyển đổi về tư tưởng hay đường lối — mà là chuyển đổi về <em>hạ tầng kỹ thuật nơi thông tin được tạo ra, truyền đi và tiếp nhận</em>. Độc giả ngày nay không đợi tờ báo buổi sáng; họ kéo màn hình xuống để làm mới bảng tin trước khi thức dậy. Họ chia sẻ bài báo qua Zalo trước khi tờ báo in đến tay người đọc. Họ bỏ qua một trang tin nếu nó tải chậm hơn ba giây.
+    </p>
+
+    <p>
+      Trong bối cảnh đó, khả năng <em>thiết kế và vận hành không gian thông tin trên web</em> không còn là kỹ năng phụ trợ của bộ phận kỹ thuật. Đó là năng lực cốt lõi của mọi nhà báo hiện đại, từ phóng viên tự do đến biên tập viên của tòa soạn lớn.
+    </p>
+
+    <p>
+      Thực tế giảng dạy nhiều năm tại Khoa Công nghệ thông tin, Trường Đại học Khoa học Huế — nơi tôi tiếp xúc với các sinh viên Báo chí đến học các học phần về truyền thông số — cho thấy một khoảng trống rõ ràng: sinh viên báo chí Việt Nam được đào tạo bài bản về ngôn ngữ viết, kỹ năng phỏng vấn và đạo đức nghề nghiệp, nhưng lại thiếu công cụ thực hành để tự mình đưa tác phẩm lên môi trường số một cách chuyên nghiệp. Các giáo trình về web dành cho sinh viên Công nghệ thông tin thì quá kỹ thuật — đầy mã nguồn HTML, CSS và JavaScript. Còn những tài liệu dành cho người dùng phổ thông thì lại quá đơn giản, thiếu chiều sâu về tư duy trình bày thông tin báo chí.
+    </p>
+
+    <p>
+      Cuốn sách này được viết để lấp đầy khoảng trống đó.
+    </p>
+
+
+    <!-- ════════════════════════════════════
+         ĐIỂM KHÁC BIỆT CỦA CUỐN SÁCH
+    ════════════════════════════════════ -->
+    <h2>Điều gì làm cuốn sách này khác biệt</h2>
+
+    <p>
+      Thị trường sách về thiết kế web không thiếu. Nhưng hầu hết chúng được viết cho lập trình viên, nhà thiết kế đồ họa hoặc chủ doanh nghiệp muốn xây dựng trang thương mại điện tử. Cuốn sách này được viết riêng cho <strong>nhà báo và sinh viên báo chí</strong> — những người cần tư duy thiết kế để phục vụ cho việc kể chuyện, không phải bán hàng.
+    </p>
+
+    <h3>Thực hành trước lý thuyết</h3>
+
+    <p>
+      Mỗi chương trong cuốn sách này đều xây dựng theo triết lý <em>học bằng cách làm</em>. Lý thuyết được trình bày vừa đủ để hiểu bản chất vấn đề, sau đó ngay lập tức đi vào các bài thực hành có hướng dẫn từng bước. Đến cuối khóa học, sinh viên sẽ có một sản phẩm thực sự — không phải bài kiểm tra lý thuyết.
+    </p>
+
+    <h3>Không yêu cầu lập trình</h3>
+
+    <p>
+      Cuốn sách này <strong>không dạy HTML, CSS hay JavaScript</strong>. Không có một dòng code nào yêu cầu bạn phải gõ. Thay vào đó, chúng ta sẽ làm quen với các công cụ trực quan mà hàng triệu người dùng trên thế giới đang sử dụng mỗi ngày: Google Sites, Canva, WordPress, và nhiều hơn nữa. Những công cụ này được thiết kế để ai cũng có thể dùng được — và chúng đủ mạnh để tạo ra những sản phẩm truyền thông thực sự chuyên nghiệp.
+    </p>
+
+    <h3>Dựa trên nguyên tắc, không phải phần mềm</h3>
+
+    <p>
+      Web thay đổi rất nhanh. Giao diện của Google Sites năm nay có thể khác năm sau. Một tính năng của Canva có thể bị thay thế hoặc đổi tên. Vì vậy, bên cạnh hướng dẫn thao tác cụ thể, cuốn sách luôn giải thích <em>tại sao</em> — tại sao bố cục này hoạt động, tại sao font chữ này dễ đọc hơn, tại sao cấu trúc thông tin này giúp độc giả tìm được điều họ cần. Khi bạn hiểu nguyên tắc, bạn sẽ tự thích nghi được với bất kỳ công cụ mới nào xuất hiện trong tương lai.
+    </p>
+
+    <div class="box note">
+      <div class="box-title">📌 Về phiên bản công cụ</div>
+      <p>Các hướng dẫn thao tác trong cuốn sách được viết dựa trên giao diện của các công cụ tính đến đầu năm 2026. Do các nền tảng web liên tục cập nhật, một số bước thực hành có thể khác nhỏ so với giao diện bạn thấy. Trong trường hợp đó, hãy áp dụng <em>nguyên tắc</em> được trình bày để tìm ra tính năng tương đương trong phiên bản mới nhất — và coi đó là một bài luyện tập khả năng tự học rất thiết thực.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         SÁCH DÀNH CHO AI
+    ════════════════════════════════════ -->
+    <h2>Sách này dành cho ai</h2>
+
+    <p>
+      Cuốn sách phù hợp nhất với các đối tượng sau:
+    </p>
+
+    <ul>
+      <li><strong>Sinh viên báo chí và truyền thông</strong> đang theo học tại các trường đại học, cao đẳng Việt Nam — đặc biệt những ai chưa có kinh nghiệm kỹ thuật nhưng muốn sẵn sàng cho môi trường tòa soạn số.</li>
+      <li><strong>Nhà báo đang đi làm</strong> muốn xây dựng thương hiệu cá nhân trực tuyến, tạo portfolio chuyên nghiệp hoặc học cách tự đăng bài lên các nền tảng số của tòa soạn.</li>
+      <li><strong>Biên tập viên và quản lý tòa soạn</strong> cần hiểu đủ về web để giao việc đúng, đánh giá sản phẩm số và ra quyết định đầu tư công nghệ hợp lý.</li>
+      <li><strong>Giảng viên báo chí</strong> đang tìm tài liệu thực hành có cấu trúc để tích hợp vào chương trình đào tạo truyền thông số.</li>
+    </ul>
+
+    <p>
+      Bạn <em>không</em> cần bất kỳ kiến thức lập trình nào để đọc và học theo cuốn sách này. Điều duy nhất cần thiết là một máy tính có kết nối internet và sự sẵn lòng thử nghiệm.
+    </p>
+
+
+    <!-- ════════════════════════════════════
+         CẤU TRÚC SÁCH
+    ════════════════════════════════════ -->
+    <h2>Cấu trúc của cuốn sách</h2>
+
+    <p>
+      Cuốn sách được tổ chức thành 12 chương, đi theo một hành trình logic từ công cụ đơn giản đến tư duy phức tạp hơn, từ kỹ năng cá nhân đến chiến lược tòa soạn. Mỗi chương được thiết kế để hoàn thành trong một buổi học 90 phút, bao gồm cả phần thực hành.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chương</th>
+          <th>Chủ đề</th>
+          <th>Trọng tâm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Làm quen với Google Sites</td>
+          <td>Tạo và xuất bản trang web cá nhân đầu tiên</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Cấu trúc thông tin &amp; UX cơ bản</td>
+          <td>Tư duy thiết kế lấy độc giả làm trung tâm</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Thiết kế với Canva</td>
+          <td>Đồ họa, infographic và ảnh bìa chuyên nghiệp</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>WordPress cơ bản</td>
+          <td>Nền tảng quản lý nội dung phổ biến nhất thế giới</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>SEO cho nhà báo</td>
+          <td>Viết để máy tìm kiếm và độc giả đều tìm thấy</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Báo chí dữ liệu</td>
+          <td>Trực quan hóa dữ liệu và kể chuyện bằng số liệu</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Mạng xã hội &amp; Phân phối</td>
+          <td>Đưa nội dung đến đúng độc giả, đúng nền tảng</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Multimedia Storytelling</td>
+          <td>Kể chuyện bằng âm thanh, hình ảnh và tương tác</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Bảo mật &amp; Đạo đức số</td>
+          <td>Bảo vệ nguồn tin và trách nhiệm trên không gian mạng</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Newsletter &amp; Email</td>
+          <td>Xây dựng độc giả trung thành qua hộp thư</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Phân tích &amp; Đo lường</td>
+          <td>Đọc dữ liệu analytics để cải thiện nội dung</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Dự án cuối khóa</td>
+          <td>Tổng hợp tất cả kỹ năng vào một sản phẩm hoàn chỉnh</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Mặc dù các chương được sắp xếp theo trình tự, người đọc có thể tiếp cận từng chương một cách độc lập tùy theo nhu cầu. Mỗi chương đều có phần tóm tắt lý thuyết, hộp ghi chú, bài thực hành và câu hỏi ôn tập.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Gợi ý cho giảng viên</div>
+      <p>Nếu học phần chỉ có 6 buổi, gợi ý chọn các chương 1, 2, 3, 5, 8 và 12 — tạo thành một hành trình cô đọng từ kỹ năng nền tảng đến sản phẩm cuối. Chương 12 (Dự án cuối khóa) được thiết kế để tích hợp kiến thức từ tất cả các chương còn lại.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         LỜI CẢM ƠN
+    ════════════════════════════════════ -->
+    <h2>Lời cảm ơn</h2>
+
+    <p>
+      Cuốn sách này không thể hoàn thành nếu không có sự đồng hành của nhiều người.
+    </p>
+
+    <p>
+      Trước hết, tôi xin gửi lời cảm ơn chân thành đến các sinh viên đã tham gia các lớp học Truyền thông số và Thiết kế web tại Khoa Công nghệ thông tin, Trường Đại học Khoa học Huế qua nhiều năm qua. Chính những câu hỏi của các bạn — đôi khi ngây thơ, đôi khi sắc sảo đến bất ngờ — đã định hình nội dung và cách trình bày của cuốn sách này. Mỗi lần một sinh viên hỏi "Tại sao phải làm vậy?" thay vì chỉ làm theo hướng dẫn, tôi biết mình cần giải thích sâu hơn, rõ hơn.
+    </p>
+
+    <p>
+      Tôi xin cảm ơn Ban Giám hiệu và Ban Chủ nhiệm Khoa Công nghệ thông tin đã tạo điều kiện về thời gian và môi trường học thuật để hoàn thành công trình này. Cảm ơn các đồng nghiệp trong Khoa đã góp ý bản thảo với tinh thần thẳng thắn và xây dựng.
+    </p>
+
+    <p>
+      Đặc biệt, tôi muốn cảm ơn Khoa Báo chí — Truyền thông của các trường đại học đối tác đã chia sẻ chương trình đào tạo và phản hồi về nhu cầu thực tế của sinh viên báo chí trong thời đại số. Sự hợp tác liên ngành này là nền tảng để cuốn sách đứng đúng giữa hai thế giới: công nghệ và truyền thông.
+    </p>
+
+    <blockquote>
+      "Nhà báo tốt nhất thế kỷ 21 không phải là người viết hay nhất, mà là người hiểu rõ nhất cách thông tin di chuyển trong thế giới số."
+      <br>— Nieman Lab, Harvard University
+    </blockquote>
+
+
+    <!-- ════════════════════════════════════
+         LƯU Ý VỀ PHIÊN BẢN CÔNG CỤ
+    ════════════════════════════════════ -->
+    <h2>Một lưu ý về công cụ và phiên bản</h2>
+
+    <p>
+      Web không bao giờ đứng yên. Trong thời gian viết cuốn sách này, Google Sites đã thay đổi giao diện hai lần, Canva ra mắt hơn 50 tính năng mới, và WordPress phát hành ba phiên bản lớn. Đây vừa là điều thú vị — ngành này không bao giờ nhàm chán — vừa là thách thức đối với bất kỳ tài liệu in nào.
+    </p>
+
+    <p>
+      Triết lý của cuốn sách này là: <strong>dạy nguyên tắc, không dạy nút bấm</strong>. Khi bạn hiểu tại sao một trang web cần cấu trúc phân cấp rõ ràng, bạn sẽ tìm ra cách tạo cấu trúc đó dù giao diện công cụ có thay đổi thế nào. Khi bạn hiểu tại sao tốc độ tải trang ảnh hưởng đến hành vi độc giả, bạn sẽ luôn tối ưu hóa hiệu năng dù đang dùng nền tảng nào.
+    </p>
+
+    <p>
+      Các hướng dẫn thao tác cụ thể trong từng chương được minh họa bằng ảnh chụp màn hình từ phiên bản công cụ đầu năm 2026. Nếu bạn thấy giao diện khác với sách, đừng lo lắng — hãy tìm tính năng có chức năng tương đương. Khả năng thích nghi với công cụ mới là một trong những kỹ năng quan trọng nhất mà cuốn sách này muốn giúp bạn phát triển.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Lưu ý quan trọng</div>
+      <p>Một số công cụ miễn phí trong sách có thể thay đổi chính sách, bổ sung giới hạn dùng thử hoặc chuyển sang mô hình trả phí theo thời gian. Hãy kiểm tra trang web chính thức của từng công cụ trước khi bắt đầu học chương đó để nắm được điều kiện sử dụng hiện tại.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         LỜI TÁC GIẢ
+    ════════════════════════════════════ -->
+    <h2>Lời tác giả</h2>
+
+    <p>
+      Tôi bắt đầu giảng dạy về web cho sinh viên báo chí từ những ngày mà "responsive design" còn là khái niệm mới lạ và Facebook chưa phải là nơi mọi người đọc tin tức. Nhiều thứ đã thay đổi từ đó — nhưng câu hỏi trung tâm vẫn vậy: <em>Làm thế nào để thông tin quan trọng đến được với người cần đọc nó?</em>
+    </p>
+
+    <p>
+      Thiết kế web, ở cấp độ sâu nhất, là việc trả lời câu hỏi đó. Không phải bằng cách làm cho trang web trông đẹp — dù thẩm mỹ quan trọng — mà bằng cách hiểu độc giả muốn gì, họ đọc như thế nào, họ tin tưởng điều gì và họ bỏ đi vì lý do gì. Đó chính xác là những gì nhà báo được đào tạo để suy nghĩ, chỉ là trên một môi trường mới.
+    </p>
+
+    <p>
+      Cuốn sách này là kết quả của nhiều năm dạy học, thất bại, điều chỉnh và thử lại. Tôi hy vọng nó sẽ giúp bạn rút ngắn hành trình đó — và dành nhiều thời gian hơn cho điều thực sự quan trọng: kể những câu chuyện đáng được kể.
+    </p>
+
+    <p style="margin-top: 32px;">
+      <em>Huế, tháng 3 năm 2026</em><br>
+      <strong>Nguyễn Dũng</strong><br>
+      Giảng viên Khoa Công nghệ thông tin<br>
+      Trường Đại học Khoa học, Đại học Huế
+    </p>
+
+
+    <!-- ĐIỀU HƯỚNG -->
+    <div class="chapter-nav-bar">
+      <a href="../index.html">← Mục lục</a>
+      <a href="../index.html">Mục lục</a>
+      <a href="01-google-sites.html">Chương 1: Làm quen với Google Sites →</a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
