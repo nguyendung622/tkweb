@@ -1,5 +1,5 @@
 # Kế hoạch Điều chỉnh & Bổ sung Nội dung
-## Giáo trình: Thiết kế Web cho Nhà báo
+## Giáo trình: Làm báo trên môi trường số
 
 **Ngày lập:** 2026-03-28
 **Trạng thái hiện tại:** 15 file HTML hoàn chỉnh (~188 trang B5 ước tính)

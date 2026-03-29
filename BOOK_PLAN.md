@@ -1,4 +1,4 @@
-# Kế hoạch Xuất bản Sách — Thiết kế Web cho Nhà báo
+# Kế hoạch Xuất bản Sách — Làm báo trên môi trường số
 **Giảng viên:** Nguyễn Dũng · Trường Đại học Khoa học, Đại học Huế
 **Cập nhật lần cuối:** 2026-03-28
 
