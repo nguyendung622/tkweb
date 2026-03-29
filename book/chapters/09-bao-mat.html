@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html" class="active">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -137,6 +110,11 @@
         </tr>
       </tbody>
     </table>
+
+    <figure>
+      <img src="../images/ch09-fig01-threat.svg" alt="Mô hình mối đe dọa 5 câu hỏi cho nhà báo">
+      <figcaption>Hình 9.1 — Khung Threat Modeling 5 câu hỏi cho nhà báo. Mức độ bảo mật cần thiết phụ thuộc trực tiếp vào loại công việc và đối thủ tiềm năng — nhà báo điều tra cần chiến lược hoàn toàn khác nhà báo mảng kinh tế thông thường.</figcaption>
+    </figure>
 
     <div class="box tip">
       <div class="box-title">💡 Công cụ hỗ trợ</div>
@@ -335,6 +313,11 @@
       Gói miễn phí cho phép 1 địa chỉ email với 1GB dung lượng — đủ cho việc liên lạc với nguồn tin nhạy cảm. Truy cập tại <strong>proton.me</strong> để tạo tài khoản.
     </p>
 
+    <figure>
+      <img src="../images/ch09-fig02-comms.svg" alt="So sánh công cụ truyền thông an toàn cho nhà báo">
+      <figcaption>Hình 9.2 — So sánh 5 công cụ truyền thông phổ biến theo mức độ bảo mật. Signal là lựa chọn được khuyến nghị mạnh nhất cho liên lạc với nguồn tin nhạy cảm nhờ mã hóa E2EE mặc định và chính sách không thu thập metadata.</figcaption>
+    </figure>
+
     <h3>Khi nào dùng gì?</h3>
 
     <table>
@@ -418,6 +401,11 @@
     <p>
       Tài liệu Word và PDF cũng chứa metadata: tên tác giả (từ cài đặt Windows/Office), lịch sử chỉnh sửa, tên công ty và thậm chí đoạn văn bản đã bị xóa nhưng vẫn lưu trong file. Đây là cách nhiều vụ rò rỉ tài liệu được truy ra nguồn gốc.
     </p>
+
+    <figure>
+      <img src="../images/ch09-fig03-metadata.svg" alt="Các loại metadata ẩn trong tệp tin">
+      <figcaption>Hình 9.3 — Ba loại metadata nguy hiểm ẩn trong ảnh, tài liệu Word và PDF. Vụ Vice/McAfee 2012 là ví dụ điển hình về hậu quả thực tế khi không xóa EXIF data trước khi đăng ảnh.</figcaption>
+    </figure>
 
     <div class="box warning">
       <div class="box-title">⚠️ Các loại metadata cần chú ý</div>
@@ -572,8 +560,103 @@
 
 
     <!-- ════════════════════════════════════
-         CÂU HỎI ÔN TẬP
+         9.7 AI, DEEPFAKE VÀ THÁCH THỨC ĐẠO ĐỨC MỚI
     ════════════════════════════════════ -->
+    <h2>9.7 AI, Deepfake và thách thức đạo đức mới</h2>
+
+    <p>
+      Sự bùng nổ của AI sinh tạo (generative AI) từ năm 2022 đã tạo ra một lớp thách thức hoàn toàn mới cho báo chí: khi ảnh, video và giọng nói có thể được làm giả với chất lượng ngày càng khó phân biệt, nhà báo vừa phải bảo vệ mình trước các cuộc tấn công mới, vừa phải có trách nhiệm không phát tán nội dung giả mạo.
+    </p>
+
+    <h3>Deepfake: Mối đe dọa với báo chí</h3>
+
+    <p>
+      Deepfake là nội dung tổng hợp bằng AI — video, ảnh hoặc âm thanh tạo ra hình ảnh và giọng nói giả của người thật. Các mối đe dọa deepfake cụ thể với nhà báo:
+    </p>
+
+    <ul>
+      <li><strong>Bằng chứng giả trong điều tra:</strong> Kẻ xấu có thể tạo video giả lấy danh nghĩa nhân vật điều tra để đánh lạc hướng hoặc bôi nhọ.</li>
+      <li><strong>Lừa nhà báo qua phỏng vấn giả:</strong> Nguồn tin hoặc phát ngôn viên deepfake liên lạc với nhà báo để cung cấp thông tin sai lệch.</li>
+      <li><strong>Tấn công danh tiếng nhà báo:</strong> Tạo video giả của nhà báo nói hoặc làm điều không bao giờ xảy ra để phá uy tín.</li>
+      <li><strong>Tin giả siêu thực:</strong> Video deepfake của lãnh đạo tuyên bố chiến tranh, thảm họa hay chính sách giả — có thể gây hoảng loạn thực sự trước khi bị cải chính.</li>
+    </ul>
+
+    <h3>Cách phát hiện deepfake — Kỹ thuật cơ bản</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dấu hiệu</th>
+          <th>Quan sát gì</th>
+          <th>Công cụ hỗ trợ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Chớp mắt bất thường</strong></td>
+          <td>Deepfake thế hệ đầu ít hoặc không chớp mắt tự nhiên</td>
+          <td>Xem chậm lại 0.25x</td>
+        </tr>
+        <tr>
+          <td><strong>Đường viền khuôn mặt</strong></td>
+          <td>Tóc, tai, cổ áo không khớp với chuyển động</td>
+          <td>Phóng to phần đường viền</td>
+        </tr>
+        <tr>
+          <td><strong>Ánh sáng không nhất quán</strong></td>
+          <td>Bóng trên mặt không khớp với nguồn sáng môi trường</td>
+          <td>So sánh với ảnh/video thật đã xác minh</td>
+        </tr>
+        <tr>
+          <td><strong>Âm thanh không khớp miệng</strong></td>
+          <td>Môi không khớp hoàn toàn với âm thanh</td>
+          <td>Xem frame-by-frame</td>
+        </tr>
+        <tr>
+          <td><strong>AI Detection Tools</strong></td>
+          <td>—</td>
+          <td>Hive Moderation, Sensity AI, FakeCatcher (Intel)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Hạn chế của công cụ phát hiện deepfake</div>
+      <p>Không có công cụ nào phát hiện deepfake với độ chính xác 100%. Công cụ AI mới nhất của 2024 có thể qua mặt nhiều detector. Nguyên tắc vàng: nếu không thể xác minh nguồn gốc video bằng báo chí truyền thống (ai quay, khi nào, ở đâu), hãy coi nó là nghi vấn dù không phát hiện dấu hiệu deepfake.</p>
+    </div>
+
+    <h3>AI trong tấn công phishing thế hệ mới</h3>
+
+    <p>
+      AI đang nâng cấp đáng kể các cuộc tấn công kỹ thuật xã hội (social engineering) nhắm vào nhà báo:
+    </p>
+
+    <ul>
+      <li><strong>Spear-phishing cá nhân hóa:</strong> AI phân tích social media, bài viết, và hoạt động công khai của nhà báo để soạn email lừa đảo cực kỳ thuyết phục — đúng tên, đúng dự án đang làm, đúng ngôn ngữ của người quen.</li>
+      <li><strong>Voice cloning:</strong> Chỉ cần 3–5 giây âm thanh, AI có thể tạo giọng nói giả của biên tập viên hay nguồn tin gọi điện "yêu cầu" thông tin nhạy cảm.</li>
+      <li><strong>Email từ đồng nghiệp giả:</strong> AI tạo email giống hệt phong cách viết của đồng nghiệp (học từ email cũ) để yêu cầu chuyển tài liệu hoặc đăng nhập vào đường dẫn độc hại.</li>
+    </ul>
+
+    <div class="box tip">
+      <div class="box-title">💡 Quy trình "xác minh ngoài băng tần" (Out-of-band verification)</div>
+      <p>Khi nhận yêu cầu nhạy cảm qua email hoặc tin nhắn — dù từ người quen — hãy xác minh qua kênh khác. Ví dụ: nhận email từ "biên tập viên" yêu cầu gửi tài liệu → gọi điện trực tiếp hoặc nhắn Signal để xác nhận. Không bao giờ dùng thông tin liên lạc có trong email đó để xác minh.</p>
+    </div>
+
+    <h3>Trách nhiệm đạo đức khi dùng AI trong sản xuất nội dung</h3>
+
+    <p>
+      Ngoài việc tự bảo vệ, nhà báo còn có trách nhiệm đạo đức trong việc sử dụng AI. Hội Nhà báo Chuyên nghiệp Hoa Kỳ (SPJ) và nhiều tổ chức báo chí quốc tế đang hội tụ xung quanh một số nguyên tắc chung:
+    </p>
+
+    <ul>
+      <li><strong>Minh bạch về AI:</strong> Nếu AI đóng vai trò đáng kể trong sản xuất một bài báo (viết, phân tích dữ liệu, tạo hình ảnh), phải ghi chú cho độc giả biết.</li>
+      <li><strong>Con người chịu trách nhiệm cuối cùng:</strong> AI không thể là "tác giả" theo nghĩa pháp lý và đạo đức. Nhà báo ký tên chịu trách nhiệm về mọi nội dung, kể cả phần AI hỗ trợ tạo ra.</li>
+      <li><strong>Kiểm chứng không thể giao cho AI:</strong> AI có thể bịa đặt thông tin (hallucination). Mọi sự kiện, số liệu, trích dẫn trong bài cần được nhà báo kiểm chứng độc lập từ nguồn gốc.</li>
+      <li><strong>Không dùng AI để tạo nguồn tin giả:</strong> Tạo "chuyên gia ảo" hay trích dẫn không có thật bằng AI là hành vi giả mạo báo chí nghiêm trọng.</li>
+    </ul>
+
+
+    <!-- CÂU HỎI ÔN TẬP -->
     <div class="review-questions">
       <h3>Câu hỏi ôn tập</h3>
       <ol>
@@ -581,6 +664,8 @@
         <li>So sánh Signal và Telegram về mức độ bảo mật. Nhiều người cho rằng Telegram an toàn hơn Signal vì có nhiều tính năng hơn — bạn đồng ý hay không đồng ý? Giải thích dựa trên kiến thức về mã hóa E2EE.</li>
         <li>Một nguồn tin gửi cho bạn tài liệu PDF mật qua email Gmail thông thường và yêu cầu bảo vệ danh tính. Những rủi ro cụ thể nào tồn tại trong kịch bản này? Bạn sẽ xử lý tình huống này như thế nào để bảo vệ nguồn tin?</li>
         <li>Thực hành: Cài đặt Bitwarden, tạo mật khẩu mạnh cho 3 tài khoản quan trọng nhất của bạn (email, mạng xã hội, tài khoản tòa soạn), và bật 2FA cho ít nhất một tài khoản. Viết báo cáo ngắn về quy trình và những khó khăn gặp phải.</li>
+        <li>Bạn nhận được một video clip 30 giây cho thấy một quan chức địa phương đang nhận hối lộ. Clip được gửi ẩn danh qua Telegram. Mô tả quy trình xác minh đầy đủ trước khi có thể sử dụng clip này — bao gồm cả việc kiểm tra xem đây có phải deepfake không.</li>
+        <li>Tòa soạn bạn đang cân nhắc dùng AI để tự động tóm tắt các bản tin dài thành bản tin ngắn 100 chữ cho bản tin sáng. Nêu 3 lợi ích và 3 rủi ro đạo đức/chất lượng của quy trình này. Đề xuất biện pháp kiểm soát chất lượng cụ thể nếu tòa soạn quyết định triển khai.</li>
       </ol>
     </div>
 
@@ -594,5 +679,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

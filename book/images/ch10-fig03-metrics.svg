@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="310" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="18" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Phễu email newsletter — Từ danh sách đến chuyển đổi</text>
+  <text x="360" y="32" font-size="9" fill="#666" text-anchor="middle">Benchmark ngành báo chí 2024 — Nguồn: Mailchimp Industry Report</text>
+
+  <!-- ===== PHỄU (FUNNEL) — polygon trapezoid ===== -->
+
+  <!-- Tầng 1: Danh sách gửi (100%) — w=500, y=44→80 -->
+  <polygon points="110,44 610,44 590,80 130,80" fill="#1565c0"/>
+  <text x="360" y="59" font-size="9.5" fill="white" text-anchor="middle" font-weight="700">Danh sách gửi (100%)</text>
+  <text x="360" y="72" font-size="8" fill="#bbdefb" text-anchor="middle">Tổng subscribers trong danh sách</text>
+
+  <!-- Tầng 2: Email giao thành công (95–98%) — y=82→118 -->
+  <polygon points="130,82 590,82 568,118 152,118" fill="#1976d2"/>
+  <text x="360" y="97" font-size="9" fill="white" text-anchor="middle" font-weight="700">Email giao thành công (95–98%)</text>
+  <text x="360" y="110" font-size="8" fill="#bbdefb" text-anchor="middle">Loại địa chỉ không hợp lệ, bounce</text>
+
+  <!-- Tầng 3: Open Rate (20–25%) — y=120→156 -->
+  <polygon points="152,120 568,120 544,156 176,156" fill="#388e3c"/>
+  <text x="360" y="135" font-size="9" fill="white" text-anchor="middle" font-weight="700">Email được mở — Open Rate (20–25%)</text>
+  <text x="360" y="148" font-size="8" fill="#c8e6c9" text-anchor="middle">Subject Line + Preview Text quyết định</text>
+
+  <!-- Tầng 4: Click Rate (2–4%) — y=158→194 -->
+  <polygon points="176,158 544,158 516,194 204,194" fill="#f57c00"/>
+  <text x="360" y="173" font-size="9" fill="white" text-anchor="middle" font-weight="700">Có click — Click Rate (2–4%)</text>
+  <text x="360" y="186" font-size="8" fill="#ffe0b2" text-anchor="middle">Nội dung + CTA thúc đẩy hành động</text>
+
+  <!-- Tầng 5: Chuyển đổi (0.5–2%) — y=196→232 -->
+  <polygon points="204,196 516,196 484,232 236,232" fill="#e53935"/>
+  <text x="360" y="211" font-size="9" fill="white" text-anchor="middle" font-weight="700">Chuyển đổi — Website / Trả phí (0.5–2%)</text>
+  <text x="360" y="224" font-size="8" fill="#ffcdd2" text-anchor="middle">Landing page + offer phù hợp</text>
+
+  <!-- ===== ANNOTATIONS BÊN TRÁI (ví dụ 1.000 subscribers) ===== -->
+  <!-- Tầng 1 -->
+  <text x="8" y="56" font-size="8" fill="#1565c0" font-weight="700">1.000 người</text>
+  <text x="8" y="68" font-size="7.5" fill="#555">trong danh sách</text>
+  <line x1="6" y1="62" x2="110" y2="62" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 2 -->
+  <text x="8" y="94" font-size="8" fill="#1976d2" font-weight="700">970 email</text>
+  <text x="8" y="106" font-size="7.5" fill="#555">giao thành công (97%)</text>
+  <line x1="6" y1="100" x2="130" y2="100" stroke="#1976d2" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 3 -->
+  <text x="8" y="132" font-size="8" fill="#388e3c" font-weight="700">220 người mở</text>
+  <text x="8" y="144" font-size="7.5" fill="#555">open rate 22,7%</text>
+  <line x1="6" y1="138" x2="152" y2="138" stroke="#388e3c" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 4 -->
+  <text x="8" y="170" font-size="8" fill="#f57c00" font-weight="700">28 người click</text>
+  <text x="8" y="182" font-size="7.5" fill="#555">click rate 2,9%</text>
+  <line x1="6" y1="176" x2="176" y2="176" stroke="#f57c00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 5 -->
+  <text x="8" y="208" font-size="8" fill="#e53935" font-weight="700">8 chuyển đổi</text>
+  <text x="8" y="220" font-size="7.5" fill="#555">conversion 0,8%</text>
+  <line x1="6" y1="214" x2="204" y2="214" stroke="#e53935" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ===== ANNOTATIONS BÊN PHẢI — canh lề phải tại x=712 ===== -->
+  <!-- Tầng 1 -->
+  <text x="712" y="56" font-size="8" fill="#1565c0" font-weight="700" text-anchor="end">Nếu thấp:</text>
+  <text x="712" y="68" font-size="7.5" fill="#555" text-anchor="end">Thu thêm subscribers</text>
+  <line x1="600" y1="62" x2="714" y2="62" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 2 -->
+  <text x="712" y="94" font-size="8" fill="#1976d2" font-weight="700" text-anchor="end">Nếu thấp:</text>
+  <text x="712" y="106" font-size="7.5" fill="#555" text-anchor="end">Làm sạch danh sách</text>
+  <line x1="579" y1="100" x2="714" y2="100" stroke="#1976d2" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 3 -->
+  <text x="712" y="132" font-size="8" fill="#388e3c" font-weight="700" text-anchor="end">Nếu thấp:</text>
+  <text x="712" y="144" font-size="7.5" fill="#555" text-anchor="end">Cải thiện Subject Line + giờ gửi</text>
+  <line x1="556" y1="138" x2="714" y2="138" stroke="#388e3c" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 4 -->
+  <text x="712" y="170" font-size="8" fill="#f57c00" font-weight="700" text-anchor="end">Nếu thấp:</text>
+  <text x="712" y="182" font-size="7.5" fill="#555" text-anchor="end">Viết lại CTA, kiểm tra nội dung</text>
+  <line x1="530" y1="176" x2="714" y2="176" stroke="#f57c00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Tầng 5 -->
+  <text x="712" y="208" font-size="8" fill="#e53935" font-weight="700" text-anchor="end">Nếu thấp:</text>
+  <text x="712" y="220" font-size="7.5" fill="#555" text-anchor="end">Tối ưu landing page + offer</text>
+  <line x1="500" y1="214" x2="714" y2="214" stroke="#e53935" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ===== 4 METRIC CARDS (y=240, h=44) ===== -->
+  <!-- Card 1: Open Rate -->
+  <rect x="8" y="240" width="160" height="44" fill="white" rx="4" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="88" y="256" font-size="8" fill="#388e3c" text-anchor="middle" font-weight="600">Open Rate</text>
+  <text x="88" y="274" font-size="15" fill="#2e7d32" text-anchor="middle" font-weight="700">20–25%</text>
+
+  <!-- Card 2: Click Rate -->
+  <rect x="184" y="240" width="160" height="44" fill="white" rx="4" stroke="#ff9800" stroke-width="1.5"/>
+  <text x="264" y="256" font-size="8" fill="#f57c00" text-anchor="middle" font-weight="600">Click Rate</text>
+  <text x="264" y="274" font-size="15" fill="#e65100" text-anchor="middle" font-weight="700">2–4%</text>
+
+  <!-- Card 3: CTOR -->
+  <rect x="360" y="240" width="160" height="44" fill="white" rx="4" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="440" y="256" font-size="8" fill="#7b1fa2" text-anchor="middle" font-weight="600">CTOR (Click/Open)</text>
+  <text x="440" y="274" font-size="15" fill="#6a1b9a" text-anchor="middle" font-weight="700">10–15%</text>
+
+  <!-- Card 4: Unsubscribe Rate -->
+  <rect x="536" y="240" width="176" height="44" fill="white" rx="4" stroke="#f44336" stroke-width="1.5"/>
+  <text x="624" y="256" font-size="8" fill="#e53935" text-anchor="middle" font-weight="600">Unsubscribe Rate</text>
+  <text x="624" y="274" font-size="15" fill="#c62828" text-anchor="middle" font-weight="700">&lt;0,5%</text>
+
+  <!-- Ghi chú cuối (y=288, h=18) -->
+  <rect x="8" y="288" width="704" height="18" fill="#fff9c4" rx="3"/>
+  <text x="360" y="301" font-size="7.5" fill="#f57f17" text-anchor="middle">Lưu ý: Open Rate có thể bị inflate do Apple MPP (iOS 15+) — Click Rate là chỉ số đáng tin cậy hơn</text>
+
+</svg>

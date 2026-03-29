@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="350" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="18" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Giải phẫu một Newsletter báo chí hiệu quả</text>
+  <text x="360" y="32" font-size="9" fill="#666" text-anchor="middle">7 thành phần cốt lõi và vai trò của mỗi phần trong hành trình đọc</text>
+
+  <!-- ===== MOCKUP EMAIL — vẽ nền TRƯỚC ===== -->
+  <rect x="160" y="44" width="400" height="280" fill="white" rx="6" stroke="#e0e0e0" stroke-width="1"/>
+
+  <!-- Subject Line bar (y=44, h=28) -->
+  <rect x="160" y="44" width="400" height="28" fill="#1a237e" rx="6"/>
+  <rect x="160" y="57" width="400" height="15" fill="#1a237e"/>
+  <text x="360" y="62" font-size="8.5" fill="white" text-anchor="middle" font-weight="600">[Số 47] Tại sao lạm phát thấp hơn khu vực?</text>
+
+  <!-- Preview text bar (y=72, h=18) -->
+  <rect x="160" y="72" width="400" height="18" fill="#3949ab"/>
+  <text x="360" y="84" font-size="7.5" fill="#c5cae9" text-anchor="middle">Phân tích 3 yếu tố ít ai để ý + 5 bài đọc hay tuần này...</text>
+
+  <!-- Intro Hook (y=90, h=36) -->
+  <rect x="160" y="90" width="400" height="36" fill="#e8f0fe"/>
+  <rect x="160" y="90" width="3" height="36" fill="#1a73e8"/>
+  <text x="172" y="104" font-size="8" fill="#1565c0" font-weight="600">Xin chào! Tuần này chúng ta xem xét một nghịch lý thú vị...</text>
+  <text x="172" y="118" font-size="7.5" fill="#3c4043">Lạm phát Việt Nam đang ở mức thấp nhất trong 3 năm, trong khi...</text>
+
+  <!-- Main Content (y=126, h=68) — dòng giả -->
+  <rect x="160" y="126" width="400" height="68" fill="#fafafa"/>
+  <rect x="172" y="136" width="300" height="7" fill="#e0e0e0" rx="2"/>
+  <rect x="172" y="150" width="340" height="7" fill="#e0e0e0" rx="2"/>
+  <rect x="172" y="164" width="320" height="7" fill="#e0e0e0" rx="2"/>
+  <rect x="172" y="178" width="180" height="7" fill="#e0e0e0" rx="2"/>
+
+  <!-- Bullets section (y=194, h=42) -->
+  <rect x="160" y="194" width="400" height="42" fill="#f5f5f5"/>
+  <text x="172" y="208" font-size="8" fill="#424242">• Link 1: Ngân hàng Nhà nước công bố số liệu quý III</text>
+  <text x="172" y="221" font-size="8" fill="#424242">• Link 2: IMF World Economic Outlook tháng 10/2024</text>
+  <text x="172" y="234" font-size="8" fill="#424242">• Link 3: HSBC Vietnam Research Note</text>
+
+  <!-- CTA button (y=240, h=24) -->
+  <rect x="200" y="240" width="320" height="24" fill="#1a73e8" rx="4"/>
+  <text x="360" y="256" font-size="9" fill="white" text-anchor="middle" font-weight="700">Đọc bài phân tích đầy đủ →</text>
+
+  <!-- Footer (y=268, h=24) -->
+  <rect x="160" y="268" width="400" height="56" fill="#eeeeee"/>
+  <rect x="160" y="268" width="400" height="24" fill="#eeeeee"/>
+  <text x="360" y="284" font-size="7.5" fill="#9e9e9e" text-anchor="middle">Hủy đăng ký | @tòa soạn | 123 Đường ABC, TP.HCM</text>
+
+  <!-- ===== LINES KẾT NỐI (vẽ trước circles) ===== -->
+  <line x1="31" y1="58" x2="158" y2="58" stroke="#e53935" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="81" x2="158" y2="81" stroke="#8e24aa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="108" x2="158" y2="108" stroke="#1e88e5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="160" x2="158" y2="160" stroke="#2e7d32" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="215" x2="158" y2="215" stroke="#f57c00" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="252" x2="198" y2="252" stroke="#00838f" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="31" y1="280" x2="158" y2="280" stroke="#546e7a" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Lines phải -->
+  <line x1="562" y1="58" x2="566" y2="57" stroke="#e53935" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="81" x2="566" y2="83" stroke="#8e24aa" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="108" x2="566" y2="109" stroke="#1e88e5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="160" x2="566" y2="161" stroke="#2e7d32" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="215" x2="566" y2="215" stroke="#f57c00" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="252" x2="566" y2="251" stroke="#00838f" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="562" y1="280" x2="566" y2="281" stroke="#546e7a" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ===== TIPS BÊN PHẢI (vẽ trước circles) ===== -->
+  <rect x="568" y="46" width="144" height="22" fill="#fce4ec" rx="3"/>
+  <text x="640" y="56" font-size="7.5" fill="#880e4f" text-anchor="middle" font-weight="600">Tránh: FWD, Re:, tiêu đề click-bait</text>
+  <text x="640" y="65" font-size="7" fill="#ad1457" text-anchor="middle">Test A/B subject 2 phiên bản</text>
+
+  <rect x="568" y="72" width="144" height="22" fill="#f3e5f5" rx="3"/>
+  <text x="640" y="82" font-size="7.5" fill="#4a148c" text-anchor="middle" font-weight="600">Hiển thị khác nhau trên mobile</text>
+  <text x="640" y="91" font-size="7" fill="#6a1b9a" text-anchor="middle">Luôn test trên iPhone và Gmail</text>
+
+  <rect x="568" y="98" width="144" height="22" fill="#e3f2fd" rx="3"/>
+  <text x="640" y="108" font-size="7.5" fill="#0d47a1" text-anchor="middle" font-weight="600">Viết như viết email cho bạn bè</text>
+  <text x="640" y="117" font-size="7" fill="#1565c0" text-anchor="middle">Dùng "bạn" thay vì "quý độc giả"</text>
+
+  <rect x="568" y="150" width="144" height="22" fill="#e8f5e9" rx="3"/>
+  <text x="640" y="160" font-size="7.5" fill="#1b5e20" text-anchor="middle" font-weight="600">Một chủ đề chính mỗi số</text>
+  <text x="640" y="169" font-size="7" fill="#2e7d32" text-anchor="middle">Không trải ra quá nhiều chủ đề</text>
+
+  <rect x="568" y="204" width="144" height="22" fill="#fff3e0" rx="3"/>
+  <text x="640" y="214" font-size="7.5" fill="#bf360c" text-anchor="middle" font-weight="600">Dùng "Top 3 điều...", "5 tin tức..."</text>
+  <text x="640" y="223" font-size="7" fill="#e64a19" text-anchor="middle">Format scan-friendly tăng click</text>
+
+  <rect x="568" y="240" width="144" height="22" fill="#e0f7fa" rx="3"/>
+  <text x="640" y="250" font-size="7.5" fill="#004d40" text-anchor="middle" font-weight="600">CTA nhiều làm giảm tỷ lệ click</text>
+  <text x="640" y="259" font-size="7" fill="#00695c" text-anchor="middle">Nguyên tắc 1 email = 1 hành động</text>
+
+  <rect x="568" y="270" width="144" height="22" fill="#eceff1" rx="3"/>
+  <text x="640" y="280" font-size="7.5" fill="#263238" text-anchor="middle" font-weight="600">Luật: phải có link hủy đăng ký</text>
+  <text x="640" y="289" font-size="7" fill="#455a64" text-anchor="middle">Vi phạm = bị block là spam</text>
+
+  <!-- ===== ANNOTATION CIRCLES — vẽ SAU CÙNG ===== -->
+  <!-- Circle 1 -->
+  <circle cx="20" cy="58" r="11" fill="#e53935"/>
+  <text x="20" y="62" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+  <text x="36" y="52" font-size="8.5" fill="#b71c1c" font-weight="700">Subject Line</text>
+  <text x="36" y="64" font-size="7.5" fill="#555">40–60 ký tự · 47% open rate</text>
+
+  <!-- Circle 2 -->
+  <circle cx="20" cy="81" r="11" fill="#8e24aa"/>
+  <text x="20" y="85" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+  <text x="36" y="75" font-size="8.5" fill="#6a1b9a" font-weight="700">Preview Text</text>
+  <text x="36" y="87" font-size="7.5" fill="#555">60–100 ký tự · +5–10% open rate</text>
+
+  <!-- Circle 3 -->
+  <circle cx="20" cy="108" r="11" fill="#1e88e5"/>
+  <text x="20" y="112" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+  <text x="36" y="102" font-size="8.5" fill="#1565c0" font-weight="700">Intro Hook</text>
+  <text x="36" y="114" font-size="7.5" fill="#555">50–80 chữ · Giọng thân mật</text>
+
+  <!-- Circle 4 -->
+  <circle cx="20" cy="160" r="11" fill="#2e7d32"/>
+  <text x="20" y="164" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+  <text x="36" y="154" font-size="8.5" fill="#1b5e20" font-weight="700">Nội dung chính</text>
+  <text x="36" y="166" font-size="7.5" fill="#555">300–800 chữ · Lý do đăng ký</text>
+
+  <!-- Circle 5 -->
+  <circle cx="20" cy="215" r="11" fill="#f57c00"/>
+  <text x="20" y="219" font-size="9" fill="white" text-anchor="middle" font-weight="700">5</text>
+  <text x="36" y="209" font-size="8.5" fill="#e65100" font-weight="700">Bullets / Tóm tắt</text>
+  <text x="36" y="221" font-size="7.5" fill="#555">3–5 mục · Scan-friendly</text>
+
+  <!-- Circle 6 -->
+  <circle cx="20" cy="252" r="11" fill="#00838f"/>
+  <text x="20" y="256" font-size="9" fill="white" text-anchor="middle" font-weight="700">6</text>
+  <text x="36" y="246" font-size="8.5" fill="#006064" font-weight="700">CTA duy nhất</text>
+  <text x="36" y="258" font-size="7.5" fill="#555">1 nút/link · Tối đa 1 CTA</text>
+
+  <!-- Circle 7 -->
+  <circle cx="20" cy="280" r="11" fill="#546e7a"/>
+  <text x="20" y="284" font-size="9" fill="white" text-anchor="middle" font-weight="700">7</text>
+  <text x="36" y="274" font-size="8.5" fill="#37474f" font-weight="700">Footer</text>
+  <text x="36" y="286" font-size="7.5" fill="#555">Bắt buộc: link hủy đăng ký</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="330" width="704" height="14" fill="#e3f2fd" rx="4"/>
+  <text x="360" y="341" font-size="8" fill="#0d47a1" text-anchor="middle">Mailchimp · Substack · Beehiiv đều có editor kéo-thả cho phép xây dựng cấu trúc này không cần code</text>
+
+</svg>

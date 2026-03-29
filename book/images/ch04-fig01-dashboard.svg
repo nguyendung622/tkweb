@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="720" height="440" fill="#f0f0f1"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="160" height="440" fill="#1d2327"/>
+
+  <!-- WordPress Logo area -->
+  <rect x="0" y="0" width="160" height="46" fill="#1d2327"/>
+  <circle cx="22" cy="23" r="10" fill="none" stroke="#a7aaad" stroke-width="1.5"/>
+  <text x="38" y="28" font-size="13" fill="#a7aaad" font-weight="bold">WordPress</text>
+
+  <!-- Sidebar menu items -->
+  <!-- Dashboard -->
+  <rect x="0" y="46" width="160" height="32" fill="#1d2327"/>
+  <rect x="12" y="57" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="66" font-size="11" fill="#a7aaad">Dashboard</text>
+
+  <!-- Posts - Active -->
+  <rect x="0" y="78" width="160" height="32" fill="#2c3338"/>
+  <rect x="0" y="78" width="3" height="32" fill="#2271b1"/>
+  <rect x="12" y="89" width="10" height="10" rx="2" fill="#72aee6"/>
+  <text x="28" y="98" font-size="11" fill="#72aee6" font-weight="bold">Posts</text>
+  <!-- Sub items -->
+  <rect x="0" y="110" width="160" height="22" fill="#2c3338"/>
+  <text x="36" y="125" font-size="10" fill="#a7aaad">All Posts</text>
+  <rect x="0" y="132" width="160" height="22" fill="#2c3338"/>
+  <text x="36" y="147" font-size="10" fill="#a7aaad">Add New</text>
+  <rect x="0" y="154" width="160" height="22" fill="#2c3338"/>
+  <text x="36" y="169" font-size="10" fill="#a7aaad">Categories</text>
+
+  <!-- Media -->
+  <rect x="0" y="176" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="186" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="195" font-size="11" fill="#a7aaad">Media</text>
+
+  <!-- Pages -->
+  <rect x="0" y="206" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="216" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="225" font-size="11" fill="#a7aaad">Pages</text>
+
+  <!-- Comments -->
+  <rect x="0" y="236" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="246" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="255" font-size="11" fill="#a7aaad">Comments</text>
+
+  <!-- Appearance -->
+  <rect x="0" y="266" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="276" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="285" font-size="11" fill="#a7aaad">Appearance</text>
+
+  <!-- Plugins -->
+  <rect x="0" y="296" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="306" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="315" font-size="11" fill="#a7aaad">Plugins</text>
+
+  <!-- Users -->
+  <rect x="0" y="326" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="336" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="345" font-size="11" fill="#a7aaad">Users</text>
+
+  <!-- Settings -->
+  <rect x="0" y="356" width="160" height="30" fill="#1d2327"/>
+  <rect x="12" y="366" width="10" height="10" rx="2" fill="#a7aaad"/>
+  <text x="28" y="375" font-size="11" fill="#a7aaad">Settings</text>
+
+  <!-- Main content area -->
+  <!-- Top admin bar -->
+  <rect x="160" y="0" width="560" height="32" fill="#1d2327"/>
+  <text x="175" y="21" font-size="12" fill="#a7aaad">My Site</text>
+  <text x="560" y="21" font-size="11" fill="#a7aaad">Howdy, admin</text>
+  <circle cx="640" cy="16" r="10" fill="#555d66"/>
+
+  <!-- Content header -->
+  <rect x="160" y="32" width="560" height="408" fill="#f0f0f1"/>
+  <text x="180" y="68" font-size="20" font-weight="bold" fill="#1d2327">All Posts</text>
+  <rect x="560" y="48" width="80" height="28" rx="3" fill="#2271b1"/>
+  <text x="576" y="67" font-size="12" fill="white">Add New</text>
+
+  <!-- Label ① -->
+  <circle cx="145" cy="200" r="10" fill="#2271b1"/>
+  <text x="145" y="204" font-size="10" fill="white" text-anchor="middle">①</text>
+
+  <!-- Filter tabs - Label ② -->
+  <rect x="180" y="78" width="380" height="28" fill="#f0f0f1"/>
+  <text x="180" y="96" font-size="12" fill="#2271b1">Tất cả (24)</text>
+  <text x="252" y="96" font-size="12" fill="#646970"> | Đã đăng (20)</text>
+  <text x="380" y="96" font-size="12" fill="#646970"> | Nháp (3)</text>
+  <text x="440" y="96" font-size="12" fill="#646970"> | Thùng rác (1)</text>
+
+  <circle cx="172" cy="92" r="10" fill="#2271b1"/>
+  <text x="172" y="96" font-size="10" fill="white" text-anchor="middle">②</text>
+
+  <!-- Table header -->
+  <rect x="170" y="112" width="530" height="28" fill="#fff" rx="2"/>
+  <rect x="170" y="112" width="530" height="28" fill="none" stroke="#c3c4c7" stroke-width="1" rx="2"/>
+  <text x="210" y="130" font-size="11" font-weight="bold" fill="#1d2327">Tiêu đề</text>
+  <text x="390" y="130" font-size="11" font-weight="bold" fill="#1d2327">Tác giả</text>
+  <text x="470" y="130" font-size="11" font-weight="bold" fill="#1d2327">Chuyên mục</text>
+  <text x="590" y="130" font-size="11" font-weight="bold" fill="#1d2327">Ngày</text>
+  <rect x="186" y="122" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <rect x="170" y="140" width="530" height="34" fill="#fff" rx="2"/>
+  <rect x="170" y="140" width="530" height="34" fill="none" stroke="#c3c4c7" stroke-width="0.5"/>
+  <rect x="186" y="151" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="210" y="162" font-size="11" fill="#2271b1">Ô nhiễm sông Hương: Ai chịu trách nhiệm?</text>
+  <rect x="345" y="152" width="42" height="16" rx="8" fill="#d63638" opacity="0.15"/>
+  <text x="349" y="164" font-size="9" fill="#d63638">Đã đăng</text>
+  <text x="390" y="162" font-size="11" fill="#646970">nguyen.pv</text>
+  <text x="470" y="162" font-size="11" fill="#646970">Môi trường</text>
+  <text x="590" y="162" font-size="11" fill="#646970">28/03/2026</text>
+
+  <!-- Row 2 -->
+  <rect x="170" y="174" width="530" height="34" fill="#f6f7f7" rx="2"/>
+  <rect x="170" y="174" width="530" height="34" fill="none" stroke="#c3c4c7" stroke-width="0.5"/>
+  <rect x="186" y="185" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="210" y="196" font-size="11" fill="#2271b1">Giá thực phẩm tăng cao trước Tết</text>
+  <text x="390" y="196" font-size="11" fill="#646970">tran.editor</text>
+  <text x="470" y="196" font-size="11" fill="#646970">Kinh tế</text>
+  <text x="590" y="196" font-size="11" fill="#646970">27/03/2026</text>
+
+  <!-- Row 3 - Draft -->
+  <rect x="170" y="208" width="530" height="34" fill="#fff" rx="2"/>
+  <rect x="170" y="208" width="530" height="34" fill="none" stroke="#c3c4c7" stroke-width="0.5"/>
+  <rect x="186" y="219" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="210" y="230" font-size="11" fill="#2271b1">Kết quả bầu cử HĐND tỉnh 2026 — Nháp</text>
+  <rect x="354" y="220" width="30" height="16" rx="8" fill="#dba617" opacity="0.2"/>
+  <text x="357" y="232" font-size="9" fill="#b45309">Nháp</text>
+  <text x="390" y="230" font-size="11" fill="#646970">le.reporter</text>
+  <text x="470" y="230" font-size="11" fill="#646970">Chính trị</text>
+  <text x="590" y="230" font-size="11" fill="#646970">26/03/2026</text>
+
+  <!-- Row 4 -->
+  <rect x="170" y="242" width="530" height="34" fill="#f6f7f7" rx="2"/>
+  <rect x="170" y="242" width="530" height="34" fill="none" stroke="#c3c4c7" stroke-width="0.5"/>
+  <rect x="186" y="253" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="210" y="264" font-size="11" fill="#2271b1">Phát triển du lịch bền vững ở A Lưới</text>
+  <text x="390" y="264" font-size="11" fill="#646970">pham.writer</text>
+  <text x="470" y="264" font-size="11" fill="#646970">Du lịch</text>
+  <text x="590" y="264" font-size="11" fill="#646970">25/03/2026</text>
+
+  <!-- Row 5 -->
+  <rect x="170" y="276" width="530" height="34" fill="#fff" rx="2"/>
+  <rect x="170" y="276" width="530" height="34" fill="none" stroke="#c3c4c7" stroke-width="0.5"/>
+  <rect x="186" y="287" width="12" height="12" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="210" y="298" font-size="11" fill="#2271b1">COVID-19: Cập nhật tình hình dịch bệnh</text>
+  <text x="390" y="298" font-size="11" fill="#646970">hoang.pv</text>
+  <text x="470" y="298" font-size="11" fill="#646970">Y tế</text>
+  <text x="590" y="298" font-size="11" fill="#646970">24/03/2026</text>
+
+  <!-- Label ③ -->
+  <circle cx="162" cy="230" r="10" fill="#2271b1"/>
+  <text x="162" y="234" font-size="10" fill="white" text-anchor="middle">③</text>
+
+  <!-- Legend box -->
+  <rect x="170" y="326" width="530" height="90" rx="4" fill="#fff" stroke="#c3c4c7" stroke-width="1"/>
+  <text x="190" y="346" font-size="12" font-weight="bold" fill="#1d2327">Chú thích:</text>
+  <circle cx="200" cy="362" r="9" fill="#2271b1"/>
+  <text x="200" y="366" font-size="10" fill="white" text-anchor="middle">①</text>
+  <text x="215" y="366" font-size="11" fill="#1d2327">Sidebar Menu — thanh điều hướng chính của WordPress Admin</text>
+  <circle cx="200" cy="382" r="9" fill="#2271b1"/>
+  <text x="200" y="386" font-size="10" fill="white" text-anchor="middle">②</text>
+  <text x="215" y="386" font-size="11" fill="#1d2327">Thanh filter — lọc bài viết theo trạng thái (Đã đăng / Nháp / Thùng rác)</text>
+  <circle cx="200" cy="402" r="9" fill="#2271b1"/>
+  <text x="200" y="406" font-size="10" fill="white" text-anchor="middle">③</text>
+  <text x="215" y="406" font-size="11" fill="#1d2327">Danh sách bài viết — hiển thị tác giả, chuyên mục và ngày đăng</text>
+</svg>

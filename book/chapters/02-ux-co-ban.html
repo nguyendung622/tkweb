@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html" class="active">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -283,7 +256,7 @@
     </p>
 
     <figure>
-      <img src="../images/ch02-fz-pattern.png" alt="Sơ đồ F-pattern và Z-pattern">
+      <img src="../images/ch02-fig01-fz-pattern.svg" alt="Sơ đồ F-pattern và Z-pattern">
       <figcaption>Hình 2.1 — F-pattern (trái) thường gặp trên trang văn bản dày; Z-pattern (phải) trên trang chủ nhiều hình ảnh. Vùng màu đậm là nơi mắt dừng lại nhiều nhất.</figcaption>
     </figure>
 
@@ -309,6 +282,11 @@
       <div class="box-title">⚠️ Lỗi thiết kế phổ biến cần tránh</div>
       <p>Tránh sử dụng quá nhiều màu sắc (tối đa 2–3 màu trong palette chính), quá nhiều kiểu font (tối đa 2 font: một cho tiêu đề, một cho nội dung), và font chữ quá nhỏ (tối thiểu 16px cho nội dung chính trên màn hình desktop, 14px trên mobile). Những lỗi này là dấu hiệu của thiết kế nghiệp dư và làm giảm uy tín của tờ báo.</p>
     </div>
+
+    <figure>
+      <img src="../images/ch02-fig02-wireframe.svg" alt="So sánh bố cục trang bài viết tốt và kém">
+      <figcaption>Hình 2.2 — So sánh bố cục trang bài viết báo chí: bố cục tốt (trái) với tiêu đề nổi bật, ảnh full-width và khoảng trắng hợp lý; bố cục kém (phải) với popup quảng cáo, văn bản nhỏ và tương phản thấp.</figcaption>
+    </figure>
 
     <h3>Mobile-first thinking — Tư duy thiết kế ưu tiên di động</h3>
 
@@ -541,6 +519,75 @@
 
 
     <!-- ════════════════════════════════════
+         2.6 ACCESSIBILITY — THIẾT KẾ CHO MỌI NGƯỜI
+    ════════════════════════════════════ -->
+    <h2>2.6 Accessibility — Thiết kế cho mọi người đọc</h2>
+
+    <p>
+      <strong>Accessibility</strong> (khả năng tiếp cận, viết tắt là <em>a11y</em>) là mức độ mà một trang web có thể được sử dụng bởi <em>tất cả</em> mọi người — bao gồm người khiếm thị dùng screen reader, người khó phân biệt màu sắc, người dùng bàn phím thay vì chuột, và người đọc trong điều kiện ánh sáng kém. Đây không chỉ là vấn đề kỹ thuật mà còn là vấn đề đạo đức báo chí: thông tin công cộng phải tiếp cận được với tất cả công chúng.
+    </p>
+
+    <h3>Bốn nguyên tắc Accessibility cơ bản (POUR)</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nguyên tắc</th>
+          <th>Ý nghĩa</th>
+          <th>Áp dụng trong báo chí</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Perceivable</strong> (Có thể nhận biết)</td>
+          <td>Nội dung phải có thể tiếp nhận bằng nhiều giác quan</td>
+          <td>Ảnh có alt text; video có phụ đề; không truyền thông tin chỉ qua màu sắc</td>
+        </tr>
+        <tr>
+          <td><strong>Operable</strong> (Có thể thao tác)</td>
+          <td>Mọi chức năng dùng được bằng bàn phím</td>
+          <td>Menu có thể điều hướng bằng Tab; không có nội dung nhấp nháy gây động kinh</td>
+        </tr>
+        <tr>
+          <td><strong>Understandable</strong> (Có thể hiểu)</td>
+          <td>Nội dung và giao diện rõ ràng, dự đoán được</td>
+          <td>Ngôn ngữ đơn giản; thông báo lỗi giải thích rõ; không thay đổi bố cục bất ngờ</td>
+        </tr>
+        <tr>
+          <td><strong>Robust</strong> (Bền vững)</td>
+          <td>Hoạt động tốt với nhiều công nghệ hỗ trợ</td>
+          <td>HTML ngữ nghĩa chuẩn; không phụ thuộc JavaScript cho nội dung chính</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Những lỗi accessibility phổ biến nhất</h3>
+
+    <ul>
+      <li><strong>Ảnh không có alt text</strong> — Screen reader đọc tên file thay vì mô tả, ví dụ: "img_20250101_001.jpg". Alt text đúng: "Người dân xã Hương Thọ dọn dẹp sau lũ lụt ngày 5/1/2025".</li>
+      <li><strong>Tương phản màu sắc thấp</strong> — Văn bản xám nhạt trên nền trắng rất khó đọc với người suy giảm thị lực. Tiêu chuẩn WCAG AA yêu cầu tỉ lệ tương phản tối thiểu <strong>4.5:1</strong> cho văn bản thường. Kiểm tra nhanh tại <em>webaim.org/resources/contrastchecker</em>.</li>
+      <li><strong>Cấu trúc heading không logic</strong> — Nhảy từ h1 xuống h4 bỏ qua h2–h3 khiến screen reader mất định hướng. Tiêu đề chính là h1, mục lớn là h2, mục nhỏ là h3 — theo thứ tự.</li>
+      <li><strong>Link không mô tả</strong> — "Nhấn vào đây" hay "Xem thêm" không cho người dùng screen reader biết link dẫn đến đâu. Thay bằng "Đọc bài phóng sự về lũ lụt miền Trung".</li>
+    </ul>
+
+    <div class="box tip">
+      <div class="box-title">💡 Kiểm tra nhanh trên Google Sites</div>
+      <p>Để thêm alt text cho ảnh trên Google Sites: nhấn vào ảnh → biểu tượng bút chỉnh sửa → nhập mô tả vào ô <strong>"Văn bản thay thế"</strong>. Mô tả nên ngắn gọn, cụ thể và mô tả thông tin mà ảnh truyền tải — không phải "Ảnh bìa bài viết" mà là "Tiến sĩ Nguyễn Văn A phát biểu tại Hội thảo Báo chí và AI, Hà Nội, tháng 3/2025".</p>
+    </div>
+
+    <div class="box note">
+      <div class="box-title">📌 Xem thêm</div>
+      <p>Vấn đề đạo đức thiết kế rộng hơn — bao gồm <strong>dark patterns</strong> (các thủ thuật thiết kế lừa dối người dùng) — được thảo luận chi tiết tại <strong>Chương 9 — Bảo mật &amp; Đạo đức số</strong>. Accessibility là nền tảng của thiết kế có đạo đức: nếu trang web loại trừ một phần người dùng, bất kể vô tình hay cố ý, đó đều là vấn đề cần giải quyết.</p>
+    </div>
+
+    <div class="box practice">
+      <div class="box-title">💬 Prompt gợi ý — Dùng AI hỗ trợ</div>
+      <p>Khi cần đánh giá UX của một trang web, thử nhập prompt sau vào ChatGPT và đính kèm ảnh chụp màn hình trang:<br>
+      <em>"Đây là ảnh chụp trang web [tên trang]. Hãy đánh giá UX theo các tiêu chí: (1) phân cấp thông tin, (2) tương phản màu sắc, (3) cấu trúc điều hướng, (4) hiển thị mobile. Chỉ ra 3 vấn đề cụ thể nhất và đề xuất cách cải thiện."</em></p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
          CÂU HỎI ÔN TẬP
     ════════════════════════════════════ -->
     <div class="review-questions">
@@ -550,6 +597,8 @@
         <li>Một trang tin tức địa phương vừa được thiết kế lại và có menu điều hướng với 12 mục ngang hàng nhau trên thanh trên cùng. Dựa trên các nguyên tắc đã học (Miller's Law, F-pattern, mental models), hãy giải thích tại sao đây là vấn đề và đề xuất cách tổ chức lại hợp lý hơn.</li>
         <li>Chạy Google PageSpeed Insights trên một trang báo Việt Nam bất kỳ. Chụp màn hình kết quả và viết đoạn phân tích ngắn (150–200 chữ): điểm số là bao nhiêu, vấn đề chính là gì, và những vấn đề đó ảnh hưởng như thế nào đến trải nghiệm của độc giả đọc trên điện thoại?</li>
         <li>Thực hành: Sử dụng bảng heuristic đánh giá trong mục 2.4 để đánh giá trang Google Sites của bạn. Xác định ít nhất hai điểm cần cải thiện, thực hiện cải tiến và ghi lại quá trình bằng ảnh chụp màn hình trước và sau.</li>
+        <li>Giải thích khái niệm <em>accessibility</em> (a11y) và tại sao nó quan trọng với báo chí. Liệt kê 3 lỗi accessibility phổ biến và cách sửa mỗi lỗi trên Google Sites.</li>
+        <li>Một trang báo địa phương đăng bài điều tra về ô nhiễm môi trường với ảnh minh họa không có alt text, văn bản màu xám (#999) trên nền trắng, và menu điều hướng chỉ hoạt động khi di chuột (hover). Hãy phân tích từng vấn đề accessibility và giải thích ảnh hưởng của chúng đến từng nhóm độc giả cụ thể.</li>
       </ol>
     </div>
 
@@ -563,5 +612,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

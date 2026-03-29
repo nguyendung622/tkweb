@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html" class="active">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -57,30 +30,73 @@
     <div class="learning-objectives">
       <h4>Sau chương này, sinh viên có thể:</h4>
       <ul>
-        <li>Giải thích Google Sites là gì và vai trò của nó trong tác nghiệp báo chí</li>
-        <li>Tạo, chỉnh sửa và xuất bản một trang web cá nhân hoàn chỉnh</li>
-        <li>Cấu hình tên miền, quyền truy cập và chia sẻ trang</li>
-        <li>Nhúng nội dung đa phương tiện (video, ảnh, tài liệu) vào trang</li>
+        <li>Giải thích vai trò của trang web cá nhân trong tác nghiệp báo chí hiện đại</li>
+        <li>Mô tả các thành phần giao diện của Google Sites và chức năng từng phần</li>
+        <li>Tạo trang web đa trang với cấu trúc điều hướng hợp lý</li>
+        <li>Nhúng nội dung từ Google Drive và các dịch vụ ngoài (YouTube, Maps, Lịch)</li>
+        <li>Xuất bản trang và cấu hình quyền truy cập phù hợp từng mục đích sử dụng</li>
+        <li>Cộng tác nhóm và quản lý phiên bản trên Google Sites</li>
       </ul>
     </div>
 
 
     <!-- ════════════════════════════════════
-         1.1 GIỚI THIỆU
+         1.1 TẠI SAO NHÀ BÁO CẦN TRANG WEB
     ════════════════════════════════════ -->
     <h2>1.1 Tại sao nhà báo cần trang web cá nhân?</h2>
 
     <p>
-      Trong kỷ nguyên truyền thông số, một nhà báo không chỉ là người viết bài cho tòa soạn — họ còn là một thương hiệu cá nhân. Trang web cá nhân là nơi tập hợp toàn bộ tác phẩm, thể hiện phong cách và năng lực nghề nghiệp trước mắt độc giả, nhà tuyển dụng và cộng đồng báo chí.
+      Trong kỷ nguyên truyền thông số, một nhà báo không chỉ là người viết bài cho tòa soạn — họ còn là một <em>thương hiệu cá nhân</em>. Tên tuổi, chuyên môn và phong cách tác nghiệp của họ được nhận diện không chỉ qua tên trên tờ báo mà còn qua sự hiện diện kỹ thuật số độc lập.
     </p>
 
     <p>
-      Không như mạng xã hội, nơi nội dung bị giới hạn bởi thuật toán và chính sách nền tảng, trang web cá nhân là không gian bạn <em>hoàn toàn kiểm soát</em>. Bạn quyết định giao diện, cách trình bày và thông điệp muốn truyền tải.
+      Trang web cá nhân là nơi tập hợp toàn bộ tác phẩm, thể hiện năng lực nghề nghiệp trước mắt độc giả, nhà tuyển dụng và cộng đồng báo chí. Không như mạng xã hội — nơi nội dung bị giới hạn bởi thuật toán và chính sách nền tảng — trang web cá nhân là không gian bạn <em>hoàn toàn kiểm soát</em>: từ giao diện, cách trình bày đến thông điệp muốn truyền tải.
     </p>
 
     <div class="box note">
-      <div class="box-title">📌 Ghi nhớ</div>
-      <p>Theo khảo sát của Reuters Institute (2023), hơn 60% biên tập viên tuyển dụng tìm kiếm portfolio trực tuyến của ứng viên trước khi phỏng vấn. Trang web cá nhân là CV sống của nhà báo hiện đại.</p>
+      <div class="box-title">📌 Con số đáng chú ý</div>
+      <p>Theo khảo sát của Reuters Institute for the Study of Journalism (2023), hơn <strong>60% biên tập viên tuyển dụng</strong> tìm kiếm portfolio trực tuyến của ứng viên trước khi phỏng vấn. Trang web cá nhân là CV sống của nhà báo hiện đại — luôn cập nhật, luôn tiếp cận được.</p>
+    </div>
+
+    <h3>Trang web cá nhân phục vụ những mục đích gì?</h3>
+
+    <p>Tùy theo giai đoạn sự nghiệp, trang web cá nhân của nhà báo có thể đóng những vai trò khác nhau:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Giai đoạn</th>
+          <th>Mục đích chính</th>
+          <th>Nội dung nên có</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sinh viên / Tập sự</strong></td>
+          <td>Xây dựng portfolio ban đầu</td>
+          <td>Bài viết thực tập, bài học thuật tốt nhất, thông tin liên hệ</td>
+        </tr>
+        <tr>
+          <td><strong>Phóng viên mới vào nghề</strong></td>
+          <td>Tìm kiếm cơ hội tốt hơn</td>
+          <td>Tác phẩm nổi bật, chuyên đề đã viết, giải thưởng</td>
+        </tr>
+        <tr>
+          <td><strong>Nhà báo có kinh nghiệm</strong></td>
+          <td>Định vị chuyên gia</td>
+          <td>Bình luận chuyên sâu, sách/nghiên cứu, lịch nói chuyện</td>
+        </tr>
+        <tr>
+          <td><strong>Nhà báo freelance</strong></td>
+          <td>Thu hút khách hàng</td>
+          <td>Dịch vụ, báo giá, tác phẩm đã xuất bản, testimonial</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="box tip">
+      <div class="box-title">💡 Mẹo thực hành</div>
+      <p>Hãy bắt đầu xây dựng portfolio ngay từ khi còn là sinh viên, không chờ đến khi "có nhiều bài hay hơn". Ba bài viết bình thường nhưng <em>có trang web</em> vẫn tốt hơn mười bài xuất sắc mà không ai tìm được.</p>
     </div>
 
 
@@ -90,115 +106,555 @@
     <h2>1.2 Google Sites là gì?</h2>
 
     <p>
-      Google Sites là công cụ tạo trang web miễn phí trong hệ sinh thái Google Workspace. Không cần biết lập trình, không cần mua hosting — chỉ cần tài khoản Google là có thể tạo và xuất bản trang web trong vòng 30 phút.
+      Google Sites là công cụ tạo trang web miễn phí trong hệ sinh thái <strong>Google Workspace</strong>. Không cần biết lập trình, không cần mua hosting, không cần cài đặt phần mềm — chỉ cần tài khoản Google là có thể tạo và xuất bản trang web hoàn chỉnh trong vòng 30 phút.
     </p>
 
-    <h3>Ưu điểm nổi bật</h3>
+    <p>
+      Ra mắt lần đầu năm 2008 và được thiết kế lại hoàn toàn vào năm 2016, Google Sites thế hệ mới sử dụng mô hình <em>kéo-thả</em> (drag-and-drop) với các khối nội dung linh hoạt. Trang web được lưu trữ trực tiếp trên máy chủ của Google — tức là bạn không cần lo về băng thông, bảo mật máy chủ hay sao lưu dữ liệu.
+    </p>
+
+    <h3>So sánh Google Sites với các nền tảng khác</h3>
 
     <table>
       <thead>
         <tr>
           <th>Tiêu chí</th>
           <th>Google Sites</th>
-          <th>Các nền tảng khác</th>
+          <th>WordPress.com</th>
+          <th>Wix</th>
+          <th>Squarespace</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Chi phí</td>
-          <td>Miễn phí hoàn toàn</td>
-          <td>Thường có phí từ $5–15/tháng</td>
+          <td>Chi phí cơ bản</td>
+          <td>Miễn phí</td>
+          <td>Miễn phí / $4–$45/tháng</td>
+          <td>Miễn phí / $17–$35/tháng</td>
+          <td>$16–$49/tháng</td>
         </tr>
         <tr>
-          <td>Kỹ thuật</td>
-          <td>Không cần code</td>
-          <td>Một số cần kiến thức HTML/CSS</td>
+          <td>Kỹ thuật cần thiết</td>
+          <td>Không cần</td>
+          <td>Cơ bản</td>
+          <td>Không cần</td>
+          <td>Không cần</td>
         </tr>
         <tr>
           <td>Tích hợp Google</td>
-          <td>Google Drive, Docs, YouTube, Maps</td>
-          <td>Cần plugin/tiện ích mở rộng</td>
+          <td>Xuất sắc (native)</td>
+          <td>Tốt (qua plugin)</td>
+          <td>Trung bình</td>
+          <td>Trung bình</td>
         </tr>
         <tr>
-          <td>Tốc độ học</td>
-          <td>Có thể tự học trong 1 buổi</td>
-          <td>Mất vài ngày đến vài tuần</td>
+          <td>Tùy chỉnh giao diện</td>
+          <td>Hạn chế</td>
+          <td>Rất linh hoạt</td>
+          <td>Linh hoạt</td>
+          <td>Đẹp, hạn chế hơn</td>
+        </tr>
+        <tr>
+          <td>Phù hợp cho</td>
+          <td>Portfolio, trang dự án nhỏ</td>
+          <td>Blog, trang tin tức</td>
+          <td>Portfolio, business nhỏ</td>
+          <td>Portfolio sáng tạo</td>
+        </tr>
+        <tr>
+          <td>Thời gian học</td>
+          <td>30–60 phút</td>
+          <td>Vài ngày</td>
+          <td>1–2 ngày</td>
+          <td>1–2 ngày</td>
         </tr>
       </tbody>
     </table>
 
     <div class="box warning">
-      <div class="box-title">⚠️ Lưu ý</div>
-      <p>Google Sites không phù hợp cho trang tin tức lớn có hàng nghìn bài viết mỗi ngày. Đây là công cụ lý tưởng cho portfolio cá nhân, trang dự án hoặc trang giới thiệu nhỏ.</p>
+      <div class="box-title">⚠️ Giới hạn của Google Sites</div>
+      <p>Google Sites <strong>không phù hợp</strong> cho: (1) trang tin tức với hàng trăm bài viết; (2) trang cần hệ thống bình luận và tương tác phức tạp; (3) trang thương mại điện tử; (4) blog cần RSS feed. Đây là công cụ lý tưởng cho portfolio cá nhân, trang dự án hoặc trang giới thiệu nhỏ. Với các mục đích chuyên nghiệp hơn, hãy học WordPress (Chương 4).</p>
     </div>
 
 
     <!-- ════════════════════════════════════
-         1.3 THỰC HÀNH
+         1.3 KHÁM PHÁ GIAO DIỆN
     ════════════════════════════════════ -->
-    <h2>1.3 Thực hành: Tạo trang web đầu tiên</h2>
-
-    <div class="box practice">
-      <div class="box-title">🖥 Thực hành có hướng dẫn</div>
-      <p>Trong phần này, bạn sẽ tạo một trang web cá nhân hoàn chỉnh gồm: trang chủ giới thiệu bản thân, trang portfolio tác phẩm và thông tin liên hệ.</p>
-    </div>
-
-    <h3>Bước 1: Truy cập Google Sites</h3>
-
-    <ol class="steps">
-      <li>Mở trình duyệt và truy cập <strong>sites.google.com</strong></li>
-      <li>Đăng nhập bằng tài khoản Google của bạn</li>
-      <li>Nhấn nút <strong>+ Mới</strong> ở góc trên bên trái</li>
-      <li>Chọn mẫu <strong>Trống</strong> hoặc duyệt qua các template có sẵn</li>
-    </ol>
-
-    <h3>Bước 2: Đặt tên và chọn theme</h3>
-
-    <ol class="steps">
-      <li>Nhấn vào "<em>Trang không có tên</em>" ở góc trên để đặt tên trang (ví dụ: <em>Nguyễn Văn A — Nhà báo</em>)</li>
-      <li>Mở tab <strong>Giao diện</strong> ở thanh bên phải</li>
-      <li>Chọn font chữ và bảng màu phù hợp với phong cách cá nhân</li>
-    </ol>
-
-    <figure>
-      <img src="../images/ch01-google-sites-interface.png" alt="Giao diện Google Sites">
-      <figcaption>Hình 1.1 — Giao diện soạn thảo Google Sites với các công cụ chỉnh sửa bên phải</figcaption>
-    </figure>
-
-    <div class="box tip">
-      <div class="box-title">💡 Mẹo thực hành</div>
-      <p>Chọn font <strong>Lato</strong> hoặc <strong>Roboto</strong> cho nội dung chính — đây là các font được thiết kế tối ưu cho độ dễ đọc trên màn hình, được hàng triệu trang tin tức sử dụng.</p>
-    </div>
-
-    <h3>Bước 3: Thêm nội dung trang chủ</h3>
-
-    <ol class="steps">
-      <li>Nhấn vào vùng tiêu đề để chỉnh sửa tên và mô tả ngắn về bản thân</li>
-      <li>Dùng nút <strong>Chèn</strong> để thêm ảnh đại diện</li>
-      <li>Thêm phần <strong>Giới thiệu</strong>: ai bạn là, bạn viết về chủ đề gì, liên hệ qua đâu</li>
-      <li>Thêm phần <strong>Tác phẩm nổi bật</strong>: 3–5 bài báo tốt nhất</li>
-    </ol>
-
-
-    <!-- ════════════════════════════════════
-         1.4 XUẤT BẢN VÀ CHIA SẺ
-    ════════════════════════════════════ -->
-    <h2>1.4 Xuất bản và chia sẻ trang</h2>
+    <h2>1.3 Khám phá giao diện Google Sites</h2>
 
     <p>
-      Sau khi hoàn thiện nội dung, bước tiếp theo là xuất bản trang để mọi người có thể truy cập. Google Sites cho phép kiểm soát chặt chẽ ai có thể xem trang của bạn.
+      Trước khi bắt tay vào tạo trang, cần nắm vững các thành phần giao diện của Google Sites. Giao diện soạn thảo được chia thành 4 khu vực chính:
+    </p>
+
+    <figure>
+      <img src="../images/ch01-fig01-giao-dien-sites.svg" alt="Giao diện soạn thảo Google Sites với 4 khu vực chính">
+      <figcaption>Hình 1.1 — Giao diện soạn thảo Google Sites. (1) Thanh công cụ trên; (2) Khu vực xem trước trang; (3) Panel công cụ bên phải; (4) Thanh trang phụ</figcaption>
+    </figure>
+
+    <h3>1. Thanh công cụ phía trên</h3>
+    <p>Gồm các nút điều hướng và hành động chính:</p>
+    <ul>
+      <li><strong>Tên trang web</strong> (góc trái) — nhấn để đổi tên dự án</li>
+      <li><strong>Hoàn tác / Làm lại</strong> — Ctrl+Z / Ctrl+Y (quan trọng khi làm hỏng layout)</li>
+      <li><strong>Xem trước</strong> — kiểm tra trang trông như thế nào trên màn hình thực, trước khi xuất bản</li>
+      <li><strong>Xuất bản</strong> — đăng trang lên internet</li>
+      <li><strong>Chia sẻ</strong> — mời người khác cộng tác chỉnh sửa</li>
+    </ul>
+
+    <h3>2. Khu vực xem trước (Canvas)</h3>
+    <p>Đây là vùng trung tâm, hiển thị trang đang chỉnh sửa. Bạn nhấp trực tiếp vào bất kỳ phần tử nào để chỉnh sửa. Google Sites dùng mô hình <em>WYSIWYG</em> (What You See Is What You Get — bạn thấy gì thì hiện thị như vậy), nghĩa là bố cục khi chỉnh sửa gần giống với kết quả cuối cùng.</p>
+
+    <h3>3. Panel công cụ bên phải</h3>
+    <p>Panel này thay đổi tuỳ theo bạn đang làm gì:</p>
+    <ul>
+      <li><strong>Tab Chèn</strong> — danh sách các loại nội dung có thể thêm vào (xem mục 1.4)</li>
+      <li><strong>Tab Trang</strong> — quản lý cấu trúc trang (tạo trang mới, đặt trang con)</li>
+      <li><strong>Tab Giao diện</strong> — chọn theme, font chữ, bảng màu cho toàn bộ trang web</li>
+    </ul>
+
+    <h3>4. Thanh quản lý trang (dưới Panel)</h3>
+    <p>Hiển thị danh sách tất cả các trang trong trang web. Kéo-thả để thay đổi thứ tự; kéo vào trong một trang khác để tạo trang con (subpage).</p>
+
+    <div class="box note">
+      <div class="box-title">📌 Khái niệm: Section vs Page</div>
+      <p>Google Sites phân biệt hai đơn vị: <strong>Section</strong> (phần/khối trong một trang) và <strong>Page</strong> (trang riêng biệt). Một trang web có thể có nhiều trang (như menu navigation), mỗi trang có nhiều section được cuộn từ trên xuống. Hãy nghĩ giống như một tờ báo: "trang" là từng trang giấy, "section" là các cột hay khung trong một trang.</p>
+    </div>
+
+    <h3>Các loại Section cơ bản</h3>
+    <p>Khi nhấn <strong>+ Thêm mục</strong> trong khu vực canvas, bạn có thể chọn các loại section:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Loại Section</th>
+          <th>Mô tả</th>
+          <th>Dùng khi nào</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Tiêu đề</strong></td>
+          <td>Banner lớn ở đầu trang, thường có ảnh nền</td>
+          <td>Đầu trang chủ, đầu từng trang</td>
+        </tr>
+        <tr>
+          <td><strong>Văn bản</strong></td>
+          <td>Khối văn bản thuần, có thể định dạng</td>
+          <td>Nội dung bài viết, mô tả</td>
+        </tr>
+        <tr>
+          <td><strong>Hình ảnh</strong></td>
+          <td>Một hoặc nhiều ảnh cạnh nhau</td>
+          <td>Gallery ảnh, ảnh minh họa</td>
+        </tr>
+        <tr>
+          <td><strong>Ảnh và văn bản</strong></td>
+          <td>Bố cục 2 cột: ảnh trái/phải + text</td>
+          <td>Giới thiệu tác phẩm, profile</td>
+        </tr>
+        <tr>
+          <td><strong>Thẻ</strong></td>
+          <td>Lưới các ô vuông nhỏ, mỗi ô có ảnh + tiêu đề</td>
+          <td>Danh sách tác phẩm, dịch vụ</td>
+        </tr>
+        <tr>
+          <td><strong>Băng chuyền</strong></td>
+          <td>Ảnh hoặc thẻ trượt ngang</td>
+          <td>Portfolio, testimonial</td>
+        </tr>
+        <tr>
+          <td><strong>Dạng trang thu nhỏ</strong></td>
+          <td>Hiển thị nội dung từ trang khác trong site</td>
+          <td>Trang chủ tổng hợp</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
+         1.4 TẠO TRANG ĐA CẤP
+    ════════════════════════════════════ -->
+    <h2>1.4 Xây dựng trang đa cấp và điều hướng</h2>
+
+    <p>
+      Một trang web chuyên nghiệp không chỉ có một trang duy nhất — nó cần cấu trúc điều hướng (navigation) rõ ràng để người đọc tìm đúng nội dung mình cần. Google Sites tự động tạo menu điều hướng từ danh sách trang bạn xây dựng.
+    </p>
+
+    <h3>Cấu trúc điều hướng cơ bản cho nhà báo</h3>
+
+    <p>Dưới đây là cấu trúc điều hướng 2 cấp phù hợp cho portfolio nhà báo:</p>
+
+    <figure>
+      <img src="../images/ch01-fig02-cau-truc-trang.svg" alt="Sơ đồ cấu trúc trang web nhà báo">
+      <figcaption>Hình 1.2 — Cấu trúc điều hướng 2 cấp cho portfolio nhà báo. Bốn trang cấp 1 ngang hàng nhau trong menu chính; "Tác phẩm" có thêm 3 trang con ở cấp 2.</figcaption>
+    </figure>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cấp</th>
+          <th>Trang</th>
+          <th>Nội dung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cấp 1 (menu chính)</td>
+          <td>Trang chủ</td>
+          <td>Giới thiệu ngắn, tác phẩm nổi bật, liên hệ nhanh</td>
+        </tr>
+        <tr>
+          <td>Cấp 1</td>
+          <td>Về tôi</td>
+          <td>Bio đầy đủ, học vấn, kinh nghiệm, ảnh</td>
+        </tr>
+        <tr>
+          <td>Cấp 1</td>
+          <td>Tác phẩm</td>
+          <td>Portfolio tổng hợp</td>
+        </tr>
+        <tr>
+          <td>Cấp 2 (submenu)</td>
+          <td>Tác phẩm → Báo in/online</td>
+          <td>Các bài viết đã đăng</td>
+        </tr>
+        <tr>
+          <td>Cấp 2</td>
+          <td>Tác phẩm → Phóng sự truyền hình</td>
+          <td>Embed video YouTube</td>
+        </tr>
+        <tr>
+          <td>Cấp 2</td>
+          <td>Tác phẩm → Báo chí dữ liệu</td>
+          <td>Biểu đồ, infographic</td>
+        </tr>
+        <tr>
+          <td>Cấp 1</td>
+          <td>Liên hệ</td>
+          <td>Form liên hệ, mạng xã hội, email</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Tạo trang mới và trang con</h3>
+
+    <ol class="steps">
+      <li>Trong panel bên phải, chọn tab <strong>Trang</strong></li>
+      <li>Nhấn nút <strong>+</strong> (Thêm trang) ở dưới cùng</li>
+      <li>Nhập tên trang → nhấn <strong>Xong</strong></li>
+      <li>Để tạo trang con (submenu): trong tab Trang, kéo tên trang vào trong trang cha, hoặc nhấn vào ba chấm (...) cạnh tên trang → <strong>Thêm trang phụ</strong></li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Đặt tên trang ngắn gọn</div>
+      <p>Tên trang sẽ hiển thị trong menu điều hướng, vì vậy hãy đặt ngắn (1–3 từ) và rõ ràng. Thay vì "Các bài viết đã xuất bản của tôi", hãy dùng "Bài viết" hoặc "Tác phẩm". Thanh menu sẽ trông gọn và chuyên nghiệp hơn.</p>
+    </div>
+
+    <h3>Chỉnh sửa điều hướng nhanh</h3>
+    <p>Google Sites tự động tạo menu từ danh sách trang. Bạn có thể ẩn trang khỏi menu (không hiển thị trong navigation nhưng vẫn truy cập được qua URL) bằng cách: trong tab Trang → nhấn ba chấm cạnh tên trang → bỏ chọn <strong>Hiện trang này trong điều hướng</strong>.</p>
+
+
+    <!-- ════════════════════════════════════
+         1.5 NHÚNG GOOGLE DRIVE
+    ════════════════════════════════════ -->
+    <h2>1.5 Nhúng nội dung từ Google Drive</h2>
+
+    <p>
+      Một trong những điểm mạnh nhất của Google Sites là khả năng nhúng trực tiếp mọi loại tài liệu từ Google Drive mà không cần chuyển đổi định dạng. Nội dung được đồng bộ tự động — khi bạn chỉnh sửa tài liệu trong Drive, trang web cũng cập nhật theo ngay lập tức.
+    </p>
+
+    <h3>Các loại nội dung Drive có thể nhúng</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Loại file</th>
+          <th>Ứng dụng trong báo chí</th>
+          <th>Ví dụ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google Docs</strong></td>
+          <td>Bài viết, script phỏng vấn, hồ sơ nhân vật</td>
+          <td>Nhúng bản thảo bài điều tra</td>
+        </tr>
+        <tr>
+          <td><strong>Google Slides</strong></td>
+          <td>Infographic nhiều trang, thuyết trình</td>
+          <td>Slide giới thiệu chủ đề điều tra</td>
+        </tr>
+        <tr>
+          <td><strong>Google Sheets</strong></td>
+          <td>Bảng dữ liệu, bảng so sánh</td>
+          <td>Danh sách nguồn tài liệu tham khảo</td>
+        </tr>
+        <tr>
+          <td><strong>Google Forms</strong></td>
+          <td>Thu thập phản hồi độc giả, khảo sát</td>
+          <td>Form liên hệ, đăng ký nhận tin</td>
+        </tr>
+        <tr>
+          <td><strong>PDF, Word, Excel</strong></td>
+          <td>Tài liệu gốc, báo cáo chính thức</td>
+          <td>Nhúng báo cáo tài chính công ty</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Cách nhúng tài liệu Drive</h3>
+
+    <ol class="steps">
+      <li>Trong panel Chèn, kéo xuống phần <strong>Google Drive</strong> → chọn loại tài liệu (Tài liệu / Trang trình bày / Bảng tính / Biểu mẫu)</li>
+      <li>Cửa sổ chọn file Drive mở ra → tìm và chọn file cần nhúng</li>
+      <li>Nhấn <strong>Chèn</strong> — tài liệu xuất hiện dưới dạng khung nhúng trên trang</li>
+      <li>Kéo góc để điều chỉnh kích thước khung</li>
+    </ol>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Kiểm tra quyền chia sẻ</div>
+      <p>Để người xem thấy được tài liệu nhúng, file trên Drive phải được <strong>chia sẻ công khai</strong> hoặc ít nhất "Bất kỳ ai có đường liên kết đều có thể xem". Nếu file ở chế độ riêng tư, khách truy cập sẽ thấy thông báo lỗi quyền truy cập thay vì nội dung.</p>
+    </div>
+
+    <h3>Ứng dụng thực tế: Nhúng Google Form làm form liên hệ</h3>
+    <p>Google Forms là cách đơn giản nhất để tạo form liên hệ cho trang portfolio. Toàn bộ phản hồi được lưu vào Google Sheets tự động — không cần backend hay code.</p>
+
+    <ol class="steps">
+      <li>Truy cập <strong>forms.google.com</strong> → tạo form với các trường: Họ tên, Email, Nội dung</li>
+      <li>Xuất bản form (nhấn nút Gửi → tab link → sao chép link)</li>
+      <li>Trong Google Sites, chèn Google Forms → chọn form vừa tạo</li>
+      <li>Đặt section liên hệ ở cuối trang Liên hệ</li>
+    </ol>
+
+
+    <!-- ════════════════════════════════════
+         1.6 NHÚNG NỘI DUNG NGOÀI
+    ════════════════════════════════════ -->
+    <h2>1.6 Nhúng nội dung từ dịch vụ ngoài</h2>
+
+    <p>
+      Ngoài Google Drive, Google Sites còn hỗ trợ nhúng nội dung từ hàng chục dịch vụ bên ngoài thông qua <em>embed code</em> (mã nhúng). Đây là tính năng quan trọng để tạo trang phóng sự đa phương tiện phong phú mà không cần lưu trữ file nặng trên máy chủ.
+    </p>
+
+    <h3>YouTube — Nhúng video</h3>
+
+    <ol class="steps">
+      <li>Vào video trên YouTube → nhấn <strong>Chia sẻ</strong> → <strong>Nhúng</strong></li>
+      <li>Sao chép mã nhúng (<code>&lt;iframe ...&gt;</code>)</li>
+      <li>Trong Google Sites, panel Chèn → cuộn xuống → <strong>Nhúng</strong> → dán mã vào ô URL/Nhúng</li>
+      <li>Nhấn <strong>Chèn</strong> → video xuất hiện ngay trong trang</li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Nhúng YouTube trực tiếp</div>
+      <p>Google Sites cũng hỗ trợ thêm YouTube qua panel Chèn → <strong>YouTube</strong> → dán URL video. Cách này tiện hơn vì không cần lấy embed code. Tuy nhiên, nếu cần nhúng từ Vimeo, TikTok hoặc các nền tảng khác, bắt buộc phải dùng cách mã nhúng.</p>
+    </div>
+
+    <h3>Google Maps — Nhúng bản đồ</h3>
+    <p>Bản đồ nhúng rất hữu ích trong bài phóng sự về địa điểm, thiên tai, sự kiện xã hội.</p>
+
+    <ol class="steps">
+      <li>Truy cập <strong>maps.google.com</strong> → tìm địa điểm cần nhúng</li>
+      <li>Nhấn <strong>Chia sẻ</strong> (biểu tượng &lt;) → <strong>Nhúng bản đồ</strong></li>
+      <li>Chọn kích thước phù hợp → <strong>Sao chép HTML</strong></li>
+      <li>Dán mã vào Google Sites qua chức năng Nhúng như với YouTube</li>
+    </ol>
+
+    <h3>Lịch Google — Nhúng lịch sự kiện</h3>
+    <p>Nếu bạn tổ chức sự kiện báo chí, tọa đàm hoặc lớp học, nhúng Google Calendar trực tiếp vào trang giúp độc giả thấy lịch cập nhật realtime.</p>
+
+    <ol class="steps">
+      <li>Mở <strong>calendar.google.com</strong> → chọn lịch cần chia sẻ → Cài đặt lịch</li>
+      <li>Cuộn xuống phần <strong>Tích hợp lịch</strong> → sao chép mã nhúng</li>
+      <li>Dán vào Google Sites qua chức năng Nhúng</li>
+    </ol>
+
+    <h3>Mã nhúng tùy chỉnh (Custom embed)</h3>
+    <p>Nhiều công cụ báo chí dữ liệu như Datawrapper và Flourish (học ở Chương 6) cũng cung cấp mã nhúng <code>&lt;iframe&gt;</code>. Cùng một quy trình: lấy embed code → dán vào Google Sites. Đây là cách tạo trang phóng sự dữ liệu tương tác mà không cần biết lập trình.</p>
+
+    <div class="box note">
+      <div class="box-title">📌 Xem thêm</div>
+      <p>Kỹ thuật nhúng biểu đồ tương tác từ Datawrapper và Flourish vào Google Sites được trình bày chi tiết tại <strong>Chương 6 — Báo chí dữ liệu & Trực quan hóa</strong>. Kỹ thuật nhúng audio podcast và ảnh gallery đa phương tiện được trình bày tại <strong>Chương 8 — Multimedia Storytelling</strong>.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         1.7 XUẤT BẢN VÀ CHIA SẺ
+    ════════════════════════════════════ -->
+    <h2>1.7 Xuất bản, quyền truy cập và tên miền</h2>
+
+    <p>
+      Sau khi hoàn thiện nội dung, bước cuối là xuất bản trang để mọi người có thể truy cập. Google Sites cung cấp ba cấp độ quyền truy cập tương ứng với ba mục đích sử dụng khác nhau.
+    </p>
+
+    <h3>Ba chế độ quyền truy cập</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chế độ</th>
+          <th>Ai xem được?</th>
+          <th>Phù hợp cho</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Công khai</strong></td>
+          <td>Bất kỳ ai, không cần đăng nhập</td>
+          <td>Portfolio cá nhân, trang dự án muốn nhiều người biết</td>
+        </tr>
+        <tr>
+          <td><strong>Bất kỳ ai có đường liên kết</strong></td>
+          <td>Người có link, không cần đăng nhập</td>
+          <td>Chia sẻ giới hạn (cho nhà tuyển dụng, nhà biên tập)</td>
+        </tr>
+        <tr>
+          <td><strong>Hạn chế</strong></td>
+          <td>Chỉ người được mời cụ thể (email)</td>
+          <td>Bản thảo nội bộ, trang làm việc nhóm</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Quy trình xuất bản</h3>
+
+    <ol class="steps">
+      <li>Nhấn nút <strong>Xuất bản</strong> (màu xanh) ở góc trên phải</li>
+      <li>Tại trường "Địa chỉ web", nhập tên đường dẫn mong muốn (ví dụ: <em>nguyenvana-portfolio</em>) → URL sẽ là <em>sites.google.com/view/nguyenvana-portfolio</em></li>
+      <li>Trong phần "Ai có thể xem trang này", chọn chế độ phù hợp</li>
+      <li>Nhấn <strong>Xuất bản</strong> để hoàn tất</li>
+      <li>Sau khi xuất bản, nút chuyển thành <strong>Xuất bản lại</strong> — nhấn mỗi lần muốn cập nhật thay đổi mới nhất lên web</li>
+    </ol>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Thay đổi cần xuất bản lại</div>
+      <p>Đây là điểm nhiều người mới hay quên: sau khi chỉnh sửa nội dung, trang web công khai <strong>chưa cập nhật</strong> cho đến khi bạn nhấn <strong>Xuất bản lại</strong>. Nếu bạn thêm nội dung mới nhưng người xem vẫn thấy trang cũ, đó chính là nguyên nhân.</p>
+    </div>
+
+    <h3>Tên miền tùy chỉnh</h3>
+
+    <p>
+      Mặc định, URL Google Sites có dạng dài và không chuyên nghiệp: <em>sites.google.com/view/ten-cua-ban</em>. Để có địa chỉ riêng như <em>nguyenvana.com</em>, bạn cần:
     </p>
 
     <ol class="steps">
-      <li>Nhấn nút <strong>Xuất bản</strong> ở góc trên bên phải</li>
-      <li>Trong hộp thoại, chọn địa chỉ web (ví dụ: <em>sites.google.com/view/ten-cua-ban</em>)</li>
-      <li>Cài đặt quyền truy cập: <strong>Công khai</strong> (bất kỳ ai) hoặc <strong>Hạn chế</strong> (chỉ người được mời)</li>
-      <li>Nhấn <strong>Xuất bản</strong> để hoàn tất</li>
+      <li>Mua tên miền từ nhà cung cấp (Namecheap ~$10–15/năm, GoDaddy, Inet.vn cho tên miền .vn)</li>
+      <li>Trong cài đặt Google Sites → <strong>Tên miền tùy chỉnh</strong> → nhập tên miền đã mua</li>
+      <li>Google cung cấp một mã xác minh CNAME → vào trang quản lý DNS của nhà cung cấp tên miền → thêm bản ghi CNAME theo hướng dẫn</li>
+      <li>Chờ 24–48 giờ để DNS cập nhật toàn cầu</li>
     </ol>
 
     <div class="box note">
-      <div class="box-title">📌 Tên miền tùy chỉnh</div>
-      <p>Nếu bạn muốn có tên miền riêng như <em>nguyenvana.com</em> thay vì địa chỉ sites.google.com mặc định, cần mua tên miền từ nhà cung cấp như Namecheap ($10–15/năm) và trỏ về Google Sites. Đây là bước nâng cao, không bắt buộc.</p>
+      <div class="box-title">📌 Tên miền — nên hay không?</div>
+      <p>Với sinh viên đang học, tên miền mặc định <em>sites.google.com/view/...</em> là hoàn toàn chấp nhận được. Khi bước vào môi trường làm việc chuyên nghiệp, tên miền riêng (~$10–15/năm) là khoản đầu tư đáng giá cho hình ảnh cá nhân.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         1.8 CỘng TÁC VÀ PHIÊN BẢN
+    ════════════════════════════════════ -->
+    <h2>1.8 Cộng tác nhóm và quản lý phiên bản</h2>
+
+    <p>
+      Google Sites hỗ trợ cộng tác nhóm theo thời gian thực — nhiều người cùng chỉnh sửa một trang cùng lúc, tương tự như Google Docs. Đây là tính năng hữu ích cho dự án nhóm, trang toà soạn học sinh hoặc bài tập nhóm cuối môn học.
+    </p>
+
+    <h3>Mời cộng tác viên</h3>
+
+    <ol class="steps">
+      <li>Nhấn nút <strong>Chia sẻ</strong> (biểu tượng người + dấu cộng) ở thanh trên</li>
+      <li>Nhập địa chỉ email của người cần mời</li>
+      <li>Chọn vai trò: <strong>Người xem</strong> (chỉ đọc) hoặc <strong>Người chỉnh sửa</strong> (có thể sửa)</li>
+      <li>Nhấn <strong>Gửi</strong> — người được mời nhận email với link truy cập</li>
+    </ol>
+
+    <div class="box tip">
+      <div class="box-title">💡 Phân quyền hợp lý</div>
+      <p>Khi làm việc nhóm, chỉ cấp quyền "Người chỉnh sửa" cho thành viên thực sự cần. Giảng viên hoặc khách đánh giá chỉ cần quyền "Người xem". Tránh cấp quyền chỉnh sửa cho người ngoài nhóm vì họ có thể vô tình xóa nội dung.</p>
+    </div>
+
+    <h3>Lịch sử phiên bản</h3>
+
+    <p>
+      Google Sites lưu lịch sử chỉnh sửa tự động. Nếu vô tình xóa nội dung quan trọng hoặc layout bị phá, bạn có thể quay về phiên bản trước:
+    </p>
+
+    <ol class="steps">
+      <li>Nhấn menu ba chấm <strong>⋮</strong> ở góc trên phải</li>
+      <li>Chọn <strong>Lịch sử phiên bản</strong></li>
+      <li>Xem danh sách các lần lưu → nhấn vào phiên bản muốn xem để xem trước</li>
+      <li>Nhấn <strong>Khôi phục phiên bản này</strong> để quay về trạng thái đó</li>
+    </ol>
+
+    <div class="box note">
+      <div class="box-title">📌 Thói quen tốt khi làm bài tập</div>
+      <p>Trước mỗi buổi chỉnh sửa lớn (thêm nhiều nội dung, thay đổi layout toàn bộ), hãy tạo một bản checkpoint bằng cách: menu ⋮ → Lịch sử phiên bản → <strong>Đặt tên phiên bản này</strong>. Bạn sẽ dễ tìm lại hơn trong danh sách dài.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
+         1.9 THỰC HÀNH TỔNG HỢP
+    ════════════════════════════════════ -->
+    <h2>1.9 Thực hành: Xây dựng portfolio nhà báo hoàn chỉnh</h2>
+
+    <div class="box practice">
+      <div class="box-title">🖥 Thực hành — Thời gian: 60 phút</div>
+      <p>Xây dựng một trang portfolio nhà báo cá nhân đầy đủ với ít nhất 3 trang, có nhúng nội dung đa phương tiện, và xuất bản công khai.</p>
+    </div>
+
+    <h3>Giai đoạn 1: Khởi tạo và cấu hình (10 phút)</h3>
+
+    <ol class="steps">
+      <li>Truy cập <strong>sites.google.com</strong> → đăng nhập tài khoản Google</li>
+      <li>Nhấn <strong>+ Mới</strong> → chọn mẫu <strong>Trống</strong></li>
+      <li>Đặt tên dự án: <em>[Họ tên] — Portfolio Nhà báo</em></li>
+      <li>Trong tab <strong>Giao diện</strong> → chọn theme "Impressionism" hoặc "Diplomat" → chọn font và màu phù hợp phong cách</li>
+    </ol>
+
+    <h3>Giai đoạn 2: Xây dựng cấu trúc trang (10 phút)</h3>
+
+    <ol class="steps">
+      <li>Tạo 4 trang: <strong>Trang chủ</strong>, <strong>Về tôi</strong>, <strong>Tác phẩm</strong>, <strong>Liên hệ</strong></li>
+      <li>Trong trang Tác phẩm, tạo 2 trang con: <strong>Bài viết</strong> và <strong>Phóng sự ảnh</strong></li>
+      <li>Kiểm tra menu điều hướng tự động đã xuất hiện chưa (nhấn Xem trước)</li>
+    </ol>
+
+    <h3>Giai đoạn 3: Điền nội dung trang chủ (15 phút)</h3>
+
+    <ol class="steps">
+      <li>Chỉnh sửa section <strong>Tiêu đề</strong>: thêm ảnh bìa, viết tagline ngắn (ví dụ: "Phóng viên mảng văn hóa – xã hội | Huế")</li>
+      <li>Thêm section <strong>Ảnh và văn bản</strong>: ảnh cá nhân bên trái, giới thiệu ngắn 50–80 chữ bên phải</li>
+      <li>Thêm section <strong>Thẻ</strong> cho mục "Tác phẩm nổi bật": 3 thẻ, mỗi thẻ 1 bài báo</li>
+    </ol>
+
+    <h3>Giai đoạn 4: Nhúng nội dung đa phương tiện (15 phút)</h3>
+
+    <ol class="steps">
+      <li>Trong trang <strong>Về tôi</strong>: nhúng Google Docs (CV hoặc hồ sơ tác giả đã soạn sẵn trên Drive)</li>
+      <li>Trong trang <strong>Bài viết</strong>: thêm ít nhất 2 tác phẩm — link đến bài đăng hoặc nhúng Google Docs bản thảo</li>
+      <li>Tìm 1 video phóng sự ngắn trên YouTube → nhúng vào trang Tác phẩm</li>
+      <li>Trong trang <strong>Liên hệ</strong>: tạo Google Form với 3 trường (Họ tên, Email, Nội dung) → nhúng vào trang</li>
+    </ol>
+
+    <h3>Giai đoạn 5: Xuất bản và kiểm tra (10 phút)</h3>
+
+    <ol class="steps">
+      <li>Nhấn <strong>Xem trước</strong> → kiểm tra toàn bộ trang trên desktop và giả lập mobile</li>
+      <li>Nhấn <strong>Xuất bản</strong> → đặt địa chỉ URL rõ ràng (ví dụ: <em>sites.google.com/view/nguyenvana-bao</em>)</li>
+      <li>Chọn chế độ <strong>Công khai</strong> → nhấn Xuất bản</li>
+      <li>Mở URL vừa tạo trong tab ẩn danh (Ctrl+Shift+N) để kiểm tra trang trông như thế nào với người xem thực sự</li>
+      <li>Chia sẻ URL với giảng viên theo hướng dẫn</li>
+    </ol>
+
+    <figure>
+      <img src="../images/ch01-fig03-ket-qua-portfolio.svg" alt="Ví dụ trang portfolio nhà báo hoàn chỉnh trên Google Sites">
+      <figcaption>Hình 1.3 — Ví dụ trang portfolio nhà báo hoàn chỉnh trên Google Sites: trang chủ với ảnh bìa, giới thiệu ngắn và 3 tác phẩm nổi bật.</figcaption>
+    </figure>
+
+    <div class="box tip">
+      <div class="box-title">💡 Prompt gợi ý — Dùng AI hỗ trợ</div>
+      <p>Nếu chưa biết viết phần giới thiệu bản thân, thử nhập prompt sau vào ChatGPT:<br>
+      <em>"Tôi là sinh viên báo chí năm [X] tại [tên trường]. Tôi quan tâm đến mảng [chủ đề]. Hãy viết giúp tôi đoạn giới thiệu bản thân cho trang portfolio nhà báo, khoảng 60 chữ, giọng văn chuyên nghiệp nhưng thân thiện."</em></p>
     </div>
 
 
@@ -208,10 +664,16 @@
     <div class="review-questions">
       <h3>Câu hỏi ôn tập</h3>
       <ol>
-        <li>Giải thích tại sao nhà báo hiện đại cần có trang web cá nhân. Cho ít nhất 3 lý do cụ thể.</li>
-        <li>So sánh Google Sites với một nền tảng tạo web khác mà bạn biết (WordPress, Wix, Squarespace). Nên chọn công cụ nào trong trường hợp nào?</li>
-        <li>Khi xuất bản trang web cá nhân, những thông tin nào nên công khai và thông tin nào cần giữ riêng tư? Giải thích lý do.</li>
-        <li>Thực hành: Tạo và xuất bản một trang web giới thiệu bản thân hoàn chỉnh. Chia sẻ đường link với giảng viên.</li>
+        <li>Giải thích tại sao nhà báo hiện đại cần trang web cá nhân. Trình bày ít nhất 3 lý do cụ thể với ví dụ minh họa.</li>
+        <li>Mô tả 4 khu vực chính trong giao diện soạn thảo Google Sites và chức năng của từng khu vực.</li>
+        <li>Phân biệt khái niệm <em>Section</em> và <em>Page</em> trong Google Sites. Cho ví dụ cụ thể khi nào dùng Section, khi nào nên tạo Page mới.</li>
+        <li>Một nhà báo muốn nhúng bản đồ vị trí vụ tai nạn giao thông vào bài phóng sự trên Google Sites. Mô tả từng bước thực hiện.</li>
+        <li>So sánh ba chế độ quyền truy cập của Google Sites (Công khai / Bất kỳ ai có link / Hạn chế). Trong trường hợp nào bạn chọn mỗi chế độ?</li>
+        <li>Giải thích vì sao sau khi chỉnh sửa nội dung trên Google Sites, người xem bên ngoài vẫn thấy phiên bản cũ. Cần làm gì để cập nhật?</li>
+        <li>Khi cộng tác nhóm trên một trang Google Sites, làm thế nào để: (a) mời thành viên mới tham gia chỉnh sửa; (b) khôi phục nội dung bị xóa nhầm?</li>
+        <li>Một nhà báo tự do muốn chuyên nghiệp hóa trang web bằng tên miền riêng. Liệt kê các bước cần thực hiện và ước tính chi phí.</li>
+        <li>Thiết kế cấu trúc điều hướng (navigation) cho portfolio nhà báo chuyên về mảng môi trường — kinh tế xanh. Liệt kê tên các trang cấp 1 và cấp 2, giải thích lý do lựa chọn.</li>
+        <li>Thực hành: Hoàn thiện trang portfolio cá nhân theo yêu cầu trong mục 1.9. Xuất bản và nộp đường link cho giảng viên cùng với 3 nhận xét về những điểm bạn muốn cải thiện thêm.</li>
       </ol>
     </div>
 
@@ -225,5 +687,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

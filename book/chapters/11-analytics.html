@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html" class="active">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -237,6 +210,11 @@
       GA4 cung cấp hàng chục báo cáo, nhưng với nhà báo và biên tập viên, bốn nhóm báo cáo sau là nền tảng cần nắm vững.
     </p>
 
+    <figure>
+      <img src="../images/ch11-fig01-ga4-reports.svg" alt="4 nhóm báo cáo cốt lõi trong Google Analytics 4" style="width:100%;max-width:720px">
+      <figcaption>Hình 11.1 — 4 nhóm báo cáo cốt lõi trong GA4: Realtime, Acquisition, Engagement và Demographics, mỗi nhóm trả lời một câu hỏi khác nhau về độc giả.</figcaption>
+    </figure>
+
     <h3>Báo cáo Realtime — Ai đang đọc ngay lúc này?</h3>
 
     <p>
@@ -414,6 +392,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch11-fig02-search-console.svg" alt="Google Search Console — 4 chỉ số và chiến lược theo vị trí" style="width:100%;max-width:720px">
+      <figcaption>Hình 11.2 — 4 chỉ số cốt lõi trong Search Console (Impressions, Clicks, CTR, Position) và chiến lược hành động tương ứng với từng vùng vị trí xếp hạng.</figcaption>
+    </figure>
+
     <div class="box practice">
       <div class="box-title">🖥 Thực hành: Tìm cơ hội SEO từ Search Console</div>
       <p>Lọc các từ khóa có <strong>Position từ 4–15</strong> và <strong>Impressions cao</strong>. Đây là "low-hanging fruit" — trang đã xuất hiện nhưng chưa đủ nổi bật để được nhấp nhiều. Cải thiện tiêu đề và meta description của những trang này thường tăng CTR đáng kể mà không cần viết thêm nội dung.</p>
@@ -587,6 +570,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch11-fig03-data-cycle.svg" alt="Vòng lặp dữ liệu — Phân tích, Insight, Hành động" style="width:100%;max-width:720px">
+      <figcaption>Hình 11.3 — Vòng lặp dữ liệu 3 bước: Thu thập dữ liệu từ GA4/Search Console/Hotjar → Diễn giải insight → Ra quyết định hành động cụ thể. Lặp lại mỗi tuần.</figcaption>
+    </figure>
+
     <h3>Quy trình: Phân tích → Insight → Hành động</h3>
 
     <p>
@@ -622,6 +610,59 @@
     </div>
 
 
+    <!-- ════════════════════════════════════
+         11.7 AI TRONG ĐO LƯỜNG & PHÂN TÍCH
+    ════════════════════════════════════ -->
+    <h2>11.7 AI trong đo lường và phân tích web</h2>
+
+    <p>
+      Trí tuệ nhân tạo đang thay đổi cách tòa soạn khai thác dữ liệu analytics — không chỉ đơn giản hóa việc đọc báo cáo mà còn giúp dự báo xu hướng và cá nhân hóa nội dung theo từng nhóm độc giả.
+    </p>
+
+    <h3>GA4 Predictive Insights — Dự báo tích hợp sẵn</h3>
+
+    <p>
+      Google Analytics 4 tích hợp máy học ngay trong nền tảng với tính năng <strong>Predictive Audiences</strong>. GA4 có thể tự động nhận diện:
+    </p>
+
+    <ul>
+      <li><strong>Purchase probability</strong>: người dùng nào có khả năng chuyển đổi (mua báo, đăng ký newsletter) trong 7 ngày tới.</li>
+      <li><strong>Churn probability</strong>: độc giả nào có nguy cơ ngừng đọc trong 7 ngày tới — tín hiệu để chủ động giữ chân họ bằng nội dung phù hợp.</li>
+      <li><strong>Predicted revenue</strong>: ước tính doanh thu từ mỗi nhóm người dùng trong 28 ngày.</li>
+    </ul>
+
+    <p>
+      Đây là những dự báo tự động, không cần kỹ năng lập trình — chỉ cần đủ dữ liệu (thường cần ít nhất 1.000 người dùng/tuần để mô hình hoạt động chính xác).
+    </p>
+
+    <h3>Looker Studio + AI — Báo cáo tự động</h3>
+
+    <p>
+      <strong>Looker Studio</strong> (miễn phí, của Google) kết nối trực tiếp với GA4 và Search Console để tạo dashboard tùy chỉnh. Với tính năng AI mới nhất, Looker Studio có thể tự động nhận diện anomaly (bất thường) và tóm tắt xu hướng dưới dạng văn bản, giảm đáng kể thời gian đọc báo cáo thủ công.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Dùng AI để diễn giải dữ liệu analytics</div>
+      <p>Export dữ liệu GA4 dạng CSV, dán vào ChatGPT hoặc Claude kèm câu hỏi: <em>"Dữ liệu này cho thấy xu hướng gì? Bài nào đang hoạt động tốt và vì sao?"</em>. AI có thể giúp bạn viết tóm tắt weekly analytics report trong vài phút. Lưu ý: chỉ chia sẻ dữ liệu đã ẩn danh, không chứa thông tin cá nhân người dùng.</p>
+    </div>
+
+    <h3>AI và cá nhân hóa nội dung</h3>
+
+    <p>
+      Các tòa soạn lớn như The Guardian và Financial Times sử dụng AI để phân tích hành vi đọc và đề xuất nội dung phù hợp với từng người dùng. Đây là ứng dụng nâng cao, nhưng ngay cả tòa soạn nhỏ cũng có thể áp dụng phiên bản đơn giản:
+    </p>
+
+    <ul>
+      <li>Dùng dữ liệu GA4 Demographics để hiểu nhóm độc giả chính, từ đó viết nội dung hướng đến nhóm đó.</li>
+      <li>Sử dụng AI để phân tích top 10 bài được đọc lâu nhất và nhận diện pattern: độ dài, cấu trúc, chủ đề.</li>
+      <li>Kết hợp Hotjar Session Recordings với AI summarizer để nhanh chóng phát hiện điểm thoát trang phổ biến.</li>
+    </ul>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Giới hạn của AI trong analytics</div>
+      <p>AI có thể diễn giải dữ liệu nhanh nhưng dễ hallucinate (tạo ra "insight" không có thật) nếu dữ liệu không đủ hoặc câu hỏi không rõ ràng. Luôn kiểm chứng lại những phân tích AI đưa ra bằng cách đối chiếu trực tiếp với số liệu gốc trong GA4. AI hỗ trợ tốc độ, nhưng phán đoán báo chí vẫn là của con người.</p>
+    </div>
+
     <!-- CÂU HỎI ÔN TẬP -->
     <div class="review-questions">
       <h3>Câu hỏi ôn tập</h3>
@@ -630,6 +671,8 @@
         <li>Bạn có một bài viết với 10.000 impressions trên Search Console nhưng chỉ có 200 clicks (CTR = 2%). Hãy đề xuất ít nhất 3 cách cải thiện CTR cho bài này mà không cần viết lại toàn bộ bài.</li>
         <li>Tòa soạn của bạn nhận thấy 65% độc giả truy cập bằng điện thoại nhưng thời gian đọc trên mobile chỉ bằng một nửa so với desktop. Hãy phân tích các nguyên nhân có thể và đề xuất giải pháp.</li>
         <li>Thiết kế bộ KPI cho một trang blog báo chí cá nhân vừa ra mắt. Giải thích tại sao bạn chọn những chỉ số đó, và chúng sẽ thay đổi như thế nào sau 6 tháng hoạt động?</li>
+        <li>Một tòa soạn muốn dùng AI để phân tích dữ liệu GA4 hàng tuần và tạo báo cáo tóm tắt tự động. Hãy thiết kế quy trình cụ thể: dữ liệu nào cần export, câu hỏi nào đặt cho AI, và kiểm chứng kết quả AI ra sao để đảm bảo độ chính xác?</li>
+        <li>Phân tích trường hợp: một trang tin có Organic Search chiếm 15% traffic (thấp), Direct chiếm 60% (cao bất thường), và Average engagement time là 4 phút 30 giây (rất cao). Hãy diễn giải ý nghĩa của từng chỉ số, đặt giả thuyết về đặc điểm của trang này, và đề xuất 2 chiến lược phát triển phù hợp.</li>
       </ol>
     </div>
 
@@ -643,5 +686,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

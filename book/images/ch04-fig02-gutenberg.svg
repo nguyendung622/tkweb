@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="720" height="480" fill="#fff"/>
+
+  <!-- TOP TOOLBAR -->
+  <rect x="0" y="0" width="720" height="44" fill="#fff" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Toggle sidebar button -->
+  <rect x="8" y="10" width="24" height="24" rx="3" fill="#f0f0f0"/>
+  <rect x="13" y="15" width="14" height="2" rx="1" fill="#1d2327"/>
+  <rect x="13" y="19" width="14" height="2" rx="1" fill="#1d2327"/>
+  <rect x="13" y="23" width="14" height="2" rx="1" fill="#1d2327"/>
+
+  <!-- Add block button (+) -->
+  <rect x="38" y="10" width="24" height="24" rx="3" fill="#1d2327"/>
+  <text x="50" y="27" font-size="16" fill="white" text-anchor="middle">+</text>
+
+  <!-- Undo / Redo -->
+  <rect x="72" y="10" width="24" height="24" rx="3" fill="#f0f0f0"/>
+  <text x="84" y="27" font-size="13" fill="#646970" text-anchor="middle">↩</text>
+  <rect x="100" y="10" width="24" height="24" rx="3" fill="#f0f0f0"/>
+  <text x="112" y="27" font-size="13" fill="#646970" text-anchor="middle">↪</text>
+
+  <!-- Label ① -->
+  <circle cx="20" cy="52" r="10" fill="#2271b1"/>
+  <text x="20" y="56" font-size="10" fill="white" text-anchor="middle">①</text>
+
+  <!-- Center: Post title info -->
+  <text x="360" y="27" font-size="12" fill="#646970" text-anchor="middle">Đã lưu nháp</text>
+
+  <!-- Right: Preview + Publish -->
+  <rect x="540" y="10" width="70" height="24" rx="3" fill="#f0f0f0" stroke="#c3c4c7" stroke-width="1"/>
+  <text x="575" y="26" font-size="11" fill="#1d2327" text-anchor="middle">Xem trước</text>
+  <rect x="618" y="10" width="72" height="24" rx="3" fill="#2271b1"/>
+  <text x="654" y="26" font-size="11" fill="white" text-anchor="middle">Xuất bản</text>
+
+  <!-- SETTINGS PANEL (right) -->
+  <rect x="520" y="44" width="200" height="436" fill="#f6f7f7" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Panel tabs -->
+  <rect x="520" y="44" width="200" height="36" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <rect x="520" y="44" width="100" height="36" fill="#fff"/>
+  <text x="570" y="67" font-size="12" fill="#1d2327" text-anchor="middle" font-weight="bold">Bài viết</text>
+  <rect x="620" y="44" width="100" height="36" fill="#f6f7f7"/>
+  <text x="670" y="67" font-size="12" fill="#646970" text-anchor="middle">Block</text>
+  <rect x="520" y="76" width="100" height="3" fill="#2271b1"/>
+
+  <!-- Label ③ -->
+  <circle cx="510" cy="62" r="10" fill="#2271b1"/>
+  <text x="510" y="66" font-size="10" fill="white" text-anchor="middle">③</text>
+
+  <!-- Panel: Summary section -->
+  <rect x="528" y="88" width="184" height="1" fill="#ddd"/>
+  <text x="536" y="104" font-size="11" font-weight="bold" fill="#1d2327">Tóm tắt</text>
+
+  <!-- Visibility -->
+  <text x="536" y="122" font-size="10" fill="#646970">Hiển thị</text>
+  <text x="700" y="122" font-size="10" fill="#2271b1" text-anchor="end">Công khai</text>
+  <rect x="528" y="126" width="184" height="1" fill="#eee"/>
+
+  <!-- Publish date -->
+  <text x="536" y="142" font-size="10" fill="#646970">Xuất bản</text>
+  <text x="700" y="142" font-size="10" fill="#2271b1" text-anchor="end">Ngay lập tức</text>
+  <rect x="528" y="146" width="184" height="1" fill="#eee"/>
+
+  <!-- URL -->
+  <text x="536" y="162" font-size="10" fill="#646970">URL</text>
+  <text x="700" y="162" font-size="10" fill="#2271b1" text-anchor="end">o-nhiem-song...</text>
+  <rect x="528" y="166" width="184" height="1" fill="#eee"/>
+
+  <!-- Categories -->
+  <text x="536" y="186" font-size="11" font-weight="bold" fill="#1d2327">Chuyên mục</text>
+  <rect x="536" y="194" width="10" height="10" rx="2" fill="#2271b1"/>
+  <text x="550" y="203" font-size="10" fill="#1d2327">Môi trường</text>
+  <rect x="536" y="208" width="10" height="10" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="550" y="217" font-size="10" fill="#646970">Chính trị</text>
+  <rect x="536" y="222" width="10" height="10" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="550" y="231" font-size="10" fill="#646970">Kinh tế</text>
+  <rect x="536" y="236" width="10" height="10" rx="2" fill="none" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="550" y="245" font-size="10" fill="#646970">Xã hội</text>
+
+  <!-- Tags -->
+  <rect x="528" y="254" width="184" height="1" fill="#eee"/>
+  <text x="536" y="270" font-size="11" font-weight="bold" fill="#1d2327">Thẻ</text>
+  <rect x="536" y="276" width="164" height="24" rx="3" fill="#fff" stroke="#c3c4c7" stroke-width="1"/>
+  <text x="544" y="292" font-size="10" fill="#a7aaad">Thêm thẻ mới...</text>
+
+  <!-- Featured image -->
+  <rect x="528" y="308" width="184" height="1" fill="#eee"/>
+  <text x="536" y="326" font-size="11" font-weight="bold" fill="#1d2327">Ảnh đại diện</text>
+  <rect x="536" y="332" width="164" height="80" rx="3" fill="#ddd" stroke="#c3c4c7" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="618" y="376" font-size="10" fill="#646970" text-anchor="middle">Chọn ảnh...</text>
+
+  <!-- EDITOR AREA -->
+  <rect x="0" y="44" width="520" height="436" fill="#fff"/>
+
+  <!-- Inner writing area -->
+  <rect x="60" y="54" width="400" height="420" fill="#fff"/>
+
+  <!-- Post Title -->
+  <text x="260" y="100" font-size="22" font-weight="bold" fill="#1d2327" text-anchor="middle">Ô nhiễm sông Hương:</text>
+  <text x="260" y="126" font-size="22" font-weight="bold" fill="#1d2327" text-anchor="middle">Ai chịu trách nhiệm?</text>
+
+  <!-- Label ② - Block types area -->
+  <circle cx="46" cy="160" r="10" fill="#2271b1"/>
+  <text x="46" y="164" font-size="10" fill="white" text-anchor="middle">②</text>
+
+  <!-- Paragraph Block -->
+  <rect x="60" y="148" width="400" height="56" rx="3" fill="#fff" stroke="#a8d1f0" stroke-width="1.5"/>
+  <!-- Block drag handle -->
+  <rect x="38" y="166" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <rect x="38" y="172" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <!-- Block type icon -->
+  <rect x="462" y="156" width="20" height="20" rx="3" fill="#f0f0f0"/>
+  <text x="472" y="170" font-size="9" fill="#646970" text-anchor="middle">¶</text>
+  <text x="70" y="165" font-size="11" fill="#1d2327">Theo báo cáo của Sở Tài nguyên và Môi trường tỉnh</text>
+  <text x="70" y="180" font-size="11" fill="#1d2327">Thừa Thiên Huế, mức độ ô nhiễm trên sông Hương...</text>
+  <text x="70" y="196" font-size="11" fill="#a7aaad">Nhấn Enter để bắt đầu viết, hoặc / để chọn block</text>
+
+  <!-- Image Block - active/highlighted -->
+  <rect x="60" y="214" width="400" height="80" rx="3" fill="#f6f7f7" stroke="#2271b1" stroke-width="2"/>
+  <rect x="38" y="248" width="16" height="4" rx="2" fill="#2271b1"/>
+  <rect x="38" y="254" width="16" height="4" rx="2" fill="#2271b1"/>
+  <!-- Toolbar above image block -->
+  <rect x="60" y="200" width="160" height="24" rx="3" fill="#1d2327"/>
+  <text x="75" y="216" font-size="10" fill="white">Ảnh</text>
+  <rect x="96" y="205" width="1" height="14" fill="#555"/>
+  <text x="108" y="216" font-size="10" fill="#a7aaad">⬚</text>
+  <text x="125" y="216" font-size="10" fill="#a7aaad">⛶</text>
+  <text x="142" y="216" font-size="10" fill="#a7aaad">↔</text>
+  <rect x="158" y="205" width="1" height="14" fill="#555"/>
+  <text x="170" y="216" font-size="10" fill="#a7aaad">•••</text>
+  <!-- Image placeholder -->
+  <rect x="80" y="222" width="360" height="64" rx="2" fill="#ddd"/>
+  <text x="260" y="260" font-size="12" fill="#8c8f94" text-anchor="middle">[Ảnh sông Hương bị ô nhiễm]</text>
+  <!-- Label ④ -->
+  <circle cx="46" cy="234" r="10" fill="#2271b1"/>
+  <text x="46" y="238" font-size="10" fill="white" text-anchor="middle">④</text>
+
+  <!-- Quote Block -->
+  <rect x="60" y="304" width="400" height="54" rx="3" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="60" y="304" width="4" height="54" rx="2" fill="#2271b1"/>
+  <rect x="38" y="324" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <rect x="38" y="330" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <text x="74" y="322" font-size="11" font-style="italic" fill="#646970">"Chúng tôi đã nhiều lần kiến nghị nhưng</text>
+  <text x="74" y="336" font-size="11" font-style="italic" fill="#646970">không có kết quả. Nước ở đây rất độc."</text>
+  <text x="74" y="350" font-size="10" fill="#8c8f94">— Người dân xã Hương Hồ, TP. Huế</text>
+
+  <!-- H2 Heading Block -->
+  <rect x="60" y="368" width="400" height="40" rx="3" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="38" y="382" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <rect x="38" y="388" width="16" height="4" rx="2" fill="#c3c4c7"/>
+  <text x="70" y="397" font-size="16" font-weight="bold" fill="#1d2327">Nguồn gốc ô nhiễm</text>
+  <rect x="425" y="376" width="30" height="20" rx="3" fill="#f0f0f0"/>
+  <text x="440" y="390" font-size="10" fill="#646970" text-anchor="middle">H2</text>
+
+  <!-- Legend box -->
+  <rect x="8" y="416" width="510" height="56" rx="4" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1"/>
+  <text x="20" y="433" font-size="11" font-weight="bold" fill="#1d2327">Chú thích:</text>
+  <circle cx="30" cy="448" r="8" fill="#2271b1"/>
+  <text x="30" y="452" font-size="9" fill="white" text-anchor="middle">①</text>
+  <text x="42" y="452" font-size="10" fill="#1d2327">Toolbar soạn thảo</text>
+  <circle cx="140" cy="448" r="8" fill="#2271b1"/>
+  <text x="140" y="452" font-size="9" fill="white" text-anchor="middle">②</text>
+  <text x="152" y="452" font-size="10" fill="#1d2327">Loại block</text>
+  <circle cx="240" cy="448" r="8" fill="#2271b1"/>
+  <text x="240" y="452" font-size="9" fill="white" text-anchor="middle">③</text>
+  <text x="252" y="452" font-size="10" fill="#1d2327">Settings panel</text>
+  <circle cx="355" cy="448" r="8" fill="#2271b1"/>
+  <text x="355" y="452" font-size="9" fill="white" text-anchor="middle">④</text>
+  <text x="367" y="452" font-size="10" fill="#1d2327">Block controls (thanh công cụ block)</text>
+</svg>

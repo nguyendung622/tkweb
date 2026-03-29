@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html" class="active">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -130,6 +103,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch07-fig01-platforms.svg" alt="Biểu đồ số người dùng mạng xã hội tại Việt Nam 2024">
+      <figcaption>Hình 7.1 — Số người dùng mạng xã hội tại Việt Nam (2024). Zalo dẫn đầu với ~75 triệu người dùng, theo sau là Facebook (~72 triệu) và YouTube (~63 triệu). Nguồn: We Are Social &amp; Meltwater 2024.</figcaption>
+    </figure>
+
     <div class="box note">
       <div class="box-title">📌 Ghi nhớ cho nhà báo</div>
       <p>Zalo thường bị bỏ quên trong chiến lược phân phối nội dung, nhưng thực tế đây là kênh rất hiệu quả để tiếp cận nhóm độc giả lớn tuổi hơn (35+) và chia sẻ tin tức qua các nhóm gia đình, cơ quan. Nhiều tòa soạn như VnExpress, Tuổi Trẻ đã có kênh Zalo chính thức với hàng triệu người theo dõi.</p>
@@ -208,6 +186,11 @@
     <p>
       Dù là Facebook, TikTok, Instagram hay YouTube — nguyên tắc vàng đều giống nhau: <em>chất lượng tương tác quan trọng hơn số lượng tiếp cận</em>. Một bài đăng chỉ tiếp cận 5.000 người nhưng có 300 bình luận sẽ được thuật toán đánh giá cao hơn bài tiếp cận 50.000 người nhưng không ai tương tác. Điều này có nghĩa là: thay vì cố gắng đăng thật nhiều nội dung, hãy tập trung vào từng bài đăng để tạo ra giá trị thực sự và khơi gợi phản ứng từ người xem.
     </p>
+
+    <figure>
+      <img src="../images/ch07-fig02-algorithm.svg" alt="So sánh cơ chế thuật toán Facebook và TikTok">
+      <figcaption>Hình 7.2 — Cơ chế phân phối nội dung của Facebook (News Feed Algorithm) và TikTok (For You Page). Facebook dựa nhiều vào mối quan hệ và lịch sử tương tác; TikTok ưu tiên completion rate và cho mọi tài khoản cơ hội tiếp cận ngang nhau.</figcaption>
+    </figure>
 
 
     <!-- ════════════════════════════════════
@@ -565,6 +548,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch07-fig03-repurpose.svg" alt="Sơ đồ repurpose 1 bài phóng sự thành nhiều định dạng">
+      <figcaption>Hình 7.3 — Từ một bài phóng sự 2.000 chữ, nhà báo có thể tạo ra 6 định dạng nội dung khác nhau cho 5 nền tảng với tổng thời gian sản xuất thêm dưới 3 giờ. Nguyên tắc cốt lõi: thiết kế lại cho văn hóa từng nền tảng, không sao chép nguyên.</figcaption>
+    </figure>
+
 
     <!-- ════════════════════════════════════
          7.6 ĐO LƯỜNG HIỆU QUẢ
@@ -644,6 +632,114 @@
     </div>
 
 
+    <!-- ════════════════════════════════════
+         7.7 AI TRONG MẠNG XÃ HỘI
+    ════════════════════════════════════ -->
+    <h2>7.7 AI hỗ trợ quản lý mạng xã hội</h2>
+
+    <p>
+      Trí tuệ nhân tạo đang trở thành trợ lý đắc lực trong quy trình quản lý nội dung mạng xã hội. Từ việc viết caption đến phân tích hiệu quả chiến dịch, các công cụ AI giúp nhà báo và tòa soạn làm việc nhanh hơn và thông minh hơn — miễn là biết cách sử dụng đúng.
+    </p>
+
+    <h3>Viết caption và repurpose nội dung với AI</h3>
+
+    <p>
+      ChatGPT, Claude và Gemini đều có thể hỗ trợ chuyển đổi bài báo thành caption phù hợp từng nền tảng. Thay vì tự viết lại từng phiên bản, bạn có thể cung cấp bài viết gốc và yêu cầu AI tạo:
+    </p>
+
+    <ul>
+      <li>Caption Facebook 300 chữ kèm câu hỏi mở ở cuối</li>
+      <li>Caption Instagram ngắn gọn 3–4 dòng + 10 hashtag liên quan</li>
+      <li>Script TikTok 60 giây với hook mạnh trong 3 giây đầu</li>
+      <li>Bản tin Zalo 5 câu súc tích</li>
+    </ul>
+
+    <div class="box tip">
+      <div class="box-title">💡 Prompt mẫu viết caption đa nền tảng</div>
+      <p>
+        <em>"Dưới đây là bài báo về [chủ đề]. Hãy viết caption cho 3 nền tảng:<br>
+        1. Facebook: 200–300 chữ, kết thúc bằng câu hỏi mở tạo tranh luận<br>
+        2. Instagram: 3–5 dòng ngắn gọn, thêm 8–10 hashtag tiếng Việt<br>
+        3. TikTok script: hook mạnh trong câu đầu, 60 giây nói<br>
+        Giữ giọng văn khách quan, tránh giật tít câu view."</em>
+      </p>
+    </div>
+
+    <h3>Tối ưu thời điểm đăng bài bằng AI Analytics</h3>
+
+    <p>
+      Các nền tảng như Buffer, Hootsuite và Later tích hợp AI để phân tích dữ liệu lịch sử và gợi ý thời điểm đăng bài tối ưu cho từng fanpage cụ thể. Thay vì dùng thông số "giờ vàng" chung chung, AI cá nhân hóa khuyến nghị dựa trên hành vi thực tế của khán giả của bạn:
+    </p>
+
+    <ul>
+      <li><strong>Buffer AI Assistant:</strong> Phân tích engagement rate theo khung giờ trong 30–90 ngày và gợi ý giờ đăng tối ưu cho từng ngày trong tuần.</li>
+      <li><strong>Meta Business Suite:</strong> Biểu đồ "Khi nào khán giả của bạn online" trong phần Insights — công cụ đơn giản nhưng hiệu quả và hoàn toàn miễn phí.</li>
+      <li><strong>TikTok Analytics:</strong> Mục "Follower Activity" cho biết giờ và ngày khán giả của bạn thường online nhiều nhất.</li>
+    </ul>
+
+    <h3>AI phân tích hiệu quả và đề xuất cải thiện</h3>
+
+    <p>
+      Ngoài việc tạo nội dung, AI có thể giúp bạn hiểu <em>tại sao</em> một bài hoạt động tốt hoặc kém. Bạn có thể xuất dữ liệu từ Facebook Insights hay TikTok Analytics ra file CSV, sau đó nhờ ChatGPT hoặc Claude phân tích:
+    </p>
+
+    <ul>
+      <li>Loại nội dung nào có engagement rate cao nhất?</li>
+      <li>Tiêu đề hay caption có pattern gì chung ở các bài đạt reach cao?</li>
+      <li>Giờ đăng nào đang hoạt động hiệu quả nhất với khán giả của bạn?</li>
+    </ul>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Giới hạn của AI trong quản lý mạng xã hội</div>
+      <p>AI không thể thay thế phán đoán biên tập của nhà báo. Các rủi ro cần lưu ý:</p>
+      <ul>
+        <li><strong>Tone không phù hợp:</strong> AI có thể tạo caption quá "marketing" hoặc thiếu tính báo chí nghiêm túc khi đưa tin về thảm họa, tai nạn.</li>
+        <li><strong>Thông tin lỗi thời:</strong> AI không biết tin tức mới nhất — luôn kiểm tra lại số liệu và sự kiện trong nội dung được tạo ra.</li>
+        <li><strong>Giọng văn đồng nhất:</strong> Nếu quá phụ thuộc AI, tất cả caption sẽ nghe giống nhau, mất đi phong cách riêng của tòa soạn.</li>
+        <li><strong>Bản quyền hình ảnh:</strong> AI tạo ảnh (DALL-E, Midjourney) chỉ dùng cho minh họa — không thể thay thế ảnh thực tế của phóng viên.</li>
+      </ul>
+    </div>
+
+    <h3>Công cụ AI thực hành cho nhà báo</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Công cụ</th>
+          <th>Tính năng AI chính</th>
+          <th>Phù hợp nhất cho</th>
+          <th>Gói miễn phí</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Buffer AI Assistant</strong></td>
+          <td>Tạo caption, đề xuất giờ đăng, viết lại nội dung theo tone</td>
+          <td>Lên lịch đa nền tảng</td>
+          <td>3 kênh, 10 bài/kênh</td>
+        </tr>
+        <tr>
+          <td><strong>ChatGPT / Claude</strong></td>
+          <td>Repurpose nội dung, viết script, phân tích dữ liệu analytics</td>
+          <td>Sản xuất nội dung hàng loạt</td>
+          <td>Có (giới hạn)</td>
+        </tr>
+        <tr>
+          <td><strong>Canva Magic Write</strong></td>
+          <td>Tạo caption trực tiếp trong giao diện thiết kế</td>
+          <td>Tạo infographic + caption cùng lúc</td>
+          <td>Có (giới hạn lần dùng)</td>
+        </tr>
+        <tr>
+          <td><strong>Hootsuite OwlyWriter</strong></td>
+          <td>Gợi ý nội dung, tạo caption từ URL bài báo</td>
+          <td>Tòa soạn có nhiều kênh</td>
+          <td>Không (30 ngày dùng thử)</td>
+        </tr>
+      </tbody>
+    </table>
+
+
     <!-- CÂU HỎI ÔN TẬP -->
     <div class="review-questions">
       <h3>Câu hỏi ôn tập</h3>
@@ -652,6 +748,8 @@
         <li>Thuật toán Facebook ưu tiên những loại nội dung nào? Thuật toán TikTok ưu tiên những chỉ số hành vi nào của người dùng? So sánh sự khác biệt và rút ra hàm ý cho chiến lược nội dung.</li>
         <li>Một tòa soạn sinh viên có 2 người phụ trách mạng xã hội. Hãy thiết kế lịch nội dung tuần hợp lý cho 3 nền tảng: Facebook, Instagram và TikTok. Giải thích lý do cho mỗi quyết định.</li>
         <li>Thực hành: Chọn một bài báo đã được đăng trên trang tin tức trong nước. Lập kế hoạch "repurpose" bài báo đó thành ít nhất 4 định dạng nội dung khác nhau cho các nền tảng khác nhau. Trình bày cụ thể nội dung từng định dạng.</li>
+        <li>Bạn muốn dùng AI để viết caption cho một bài phóng sự về vụ cháy nhà xưởng khiến 3 công nhân thiệt mạng. Viết prompt chi tiết để yêu cầu AI tạo caption Facebook phù hợp — bao gồm những ràng buộc về tone và giới hạn về nội dung nên đặt ra. Sau đó nêu 2 rủi ro cần kiểm tra trước khi đăng.</li>
+        <li>So sánh chiến lược phân phối nội dung của một tòa soạn dựa hoàn toàn vào mạng xã hội với một tòa soạn dùng mạng xã hội chỉ như "kênh dẫn" về website. Mô hình nào bền vững hơn trong dài hạn và tại sao? Liên hệ với các thay đổi thuật toán lớn đã từng xảy ra.</li>
       </ol>
     </div>
 
@@ -665,5 +763,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

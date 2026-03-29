@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html" class="active">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -348,6 +321,11 @@
       <li>Nhờ một người khác xem lại với mắt "tươi" — người không tham gia thiết kế thường phát hiện lỗi nhanh hơn</li>
     </ol>
 
+    <figure>
+      <img src="../images/ch03-fig01-poster.svg" alt="Ví dụ poster sự kiện Hội thảo Báo chí số Việt Nam 2025 thiết kế bằng Canva">
+      <figcaption>Hình 3.1 — Ví dụ poster A3 đứng hoàn chỉnh cho sự kiện hội thảo. Chú ý phân cấp thông tin: tiêu đề lớn nhất, ngày giờ nổi bật thứ hai, thông tin chi tiết nhỏ hơn ở phần dưới. Dải màu accent đỏ–cam tạo điểm nhấn thị giác.</figcaption>
+    </figure>
+
 
     <!-- ════════════════════════════════════
          3.5 THỰC HÀNH: BANNER MẠNG XÃ HỘI
@@ -468,10 +446,20 @@
       <li>Nếu cần, quay lại Canva và điều chỉnh — thường là tăng cỡ chữ và giảm bớt chi tiết thừa</li>
     </ol>
 
+    <figure>
+      <img src="../images/ch03-fig02-banner.svg" alt="Ví dụ banner Facebook 1200×630 px thiết kế bằng Canva">
+      <figcaption>Hình 3.2 — Ví dụ banner Facebook (1200 × 630 px) hoàn chỉnh cho sự kiện hội thảo. Bố cục ngang chia 2 vùng — văn bản bên trái, ảnh bên phải — giữ nguyên bảng màu và phong cách từ poster để đảm bảo nhất quán thương hiệu.</figcaption>
+    </figure>
+
     <div class="box practice">
       <div class="box-title">🖥 Thử thách nâng cao</div>
       <p>Tạo thêm phiên bản Story (1080 × 1920 px) cho cùng sự kiện đó. Story cho phép bạn thêm hiệu ứng động, sticker và tính năng tương tác (thăm dò ý kiến, đếm ngược). Sử dụng công cụ <strong>Animate</strong> trong Canva để thêm hiệu ứng xuất hiện cho tiêu đề — điều này làm tăng đáng kể tỉ lệ người xem dừng lại và đọc Story.</p>
     </div>
+
+    <figure>
+      <img src="../images/ch03-fig03-story.svg" alt="Ví dụ Story Instagram/Facebook 1080×1920 px thiết kế bằng Canva" style="max-width:320px; display:block; margin:0 auto;">
+      <figcaption>Hình 3.3 — Gợi ý kết quả thử thách: Story (1080 × 1920 px, tỉ lệ 9:16) cho cùng sự kiện hội thảo. Bố cục dọc với ảnh phía trên, văn bản phía dưới; thêm thanh progress, sticker tương tác "Bạn sẽ tham dự?" và nút CTA "Vuốt lên để đăng ký" — các yếu tố đặc trưng của định dạng Story.</figcaption>
+    </figure>
 
 
     <!-- ════════════════════════════════════
@@ -600,5 +588,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

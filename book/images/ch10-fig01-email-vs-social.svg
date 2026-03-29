@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 288" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="288" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="18" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Email Newsletter vs Mạng xã hội — Đất sở hữu vs Đất thuê</text>
+  <text x="360" y="32" font-size="9" fill="#666" text-anchor="middle">Khi thuật toán thay đổi, bạn mất tất cả — trừ danh sách email là tài sản thật sự của bạn</text>
+
+  <!-- ===== CỘT TRÁI: MẠNG XÃ HỘI ===== -->
+  <!-- Header -->
+  <rect x="8" y="40" width="344" height="34" fill="#ef5350" rx="4"/>
+  <text x="180" y="54" font-size="10" fill="white" text-anchor="middle" font-weight="700">Mạng xã hội — Đất thuê</text>
+  <text x="180" y="68" font-size="8" fill="#ffcdd2" text-anchor="middle">Nền tảng kiểm soát ai thấy nội dung của bạn</text>
+
+  <!-- Ô 1 -->
+  <rect x="8" y="78" width="344" height="38" fill="#ffebee" rx="4"/>
+  <text x="20" y="91" font-size="9" fill="#b71c1c" font-weight="700">Thuật toán kiểm soát reach</text>
+  <text x="20" y="108" font-size="8" fill="#c62828">Facebook 2018: organic reach giảm từ 16% xuống 2%</text>
+
+  <!-- Ô 2 -->
+  <rect x="8" y="120" width="344" height="38" fill="#ffebee" rx="4"/>
+  <text x="20" y="133" font-size="9" fill="#b71c1c" font-weight="700">Không sở hữu dữ liệu người theo dõi</text>
+  <text x="20" y="150" font-size="8" fill="#c62828">100.000 followers nhưng không có email của ai</text>
+
+  <!-- Ô 3 -->
+  <rect x="8" y="162" width="344" height="38" fill="#ffebee" rx="4"/>
+  <text x="20" y="175" font-size="9" fill="#b71c1c" font-weight="700">Nền tảng thay đổi chính sách bất ngờ</text>
+  <text x="20" y="192" font-size="8" fill="#c62828">Mất toàn bộ lượng tiếp cận chỉ sau một đêm</text>
+
+  <!-- Ô 4 -->
+  <rect x="8" y="204" width="344" height="38" fill="#ffebee" rx="4"/>
+  <text x="20" y="217" font-size="9" fill="#b71c1c" font-weight="700">Nền tảng có thể đóng hoặc ban tài khoản</text>
+  <text x="20" y="234" font-size="8" fill="#c62828">MySpace, Vine, Google+ đã biến mất cùng nội dung</text>
+
+  <!-- Ghi chú trái -->
+  <rect x="8" y="246" width="344" height="20" fill="#ffcdd2" rx="4"/>
+  <text x="180" y="260" font-size="8" fill="#b71c1c" text-anchor="middle" font-weight="600">Tỷ lệ tiếp cận thực tế: ~2–20% người theo dõi thấy bài</text>
+
+  <!-- ===== CỘT PHẢI: EMAIL NEWSLETTER ===== -->
+  <!-- Header -->
+  <rect x="368" y="40" width="344" height="34" fill="#2e7d32" rx="4"/>
+  <text x="540" y="54" font-size="10" fill="white" text-anchor="middle" font-weight="700">Email Newsletter — Tài sản sở hữu</text>
+  <text x="540" y="68" font-size="8" fill="#c8e6c9" text-anchor="middle">100% subscribers đều nhận được email của bạn</text>
+
+  <!-- Ô 1 -->
+  <rect x="368" y="78" width="344" height="38" fill="#e8f5e9" rx="4"/>
+  <text x="380" y="91" font-size="9" fill="#1b5e20" font-weight="700">Tiếp cận trực tiếp 85–95% danh sách</text>
+  <text x="380" y="108" font-size="8" fill="#2e7d32">Email vào hộp thư, không qua bộ lọc thuật toán</text>
+
+  <!-- Ô 2 -->
+  <rect x="368" y="120" width="344" height="38" fill="#e8f5e9" rx="4"/>
+  <text x="380" y="133" font-size="9" fill="#1b5e20" font-weight="700">Hoàn toàn sở hữu danh sách người đọc</text>
+  <text x="380" y="150" font-size="8" fill="#2e7d32">Export CSV bất kỳ lúc nào, chuyển nền tảng tự do</text>
+
+  <!-- Ô 3 -->
+  <rect x="368" y="162" width="344" height="38" fill="#e8f5e9" rx="4"/>
+  <text x="380" y="175" font-size="9" fill="#1b5e20" font-weight="700">Không thể bị lấy đi hay giảm reach đột ngột</text>
+  <text x="380" y="192" font-size="8" fill="#2e7d32">Danh sách email tồn tại độc lập với mọi nền tảng</text>
+
+  <!-- Ô 4 -->
+  <rect x="368" y="204" width="344" height="38" fill="#e8f5e9" rx="4"/>
+  <text x="380" y="217" font-size="9" fill="#1b5e20" font-weight="700">Open rate 20–25% vs reach 2–5% mạng xã hội</text>
+  <text x="380" y="234" font-size="8" fill="#2e7d32">Chất lượng tương tác cao hơn 5–10 lần</text>
+
+  <!-- Ghi chú phải -->
+  <rect x="368" y="246" width="344" height="20" fill="#c8e6c9" rx="4"/>
+  <text x="540" y="260" font-size="8" fill="#1b5e20" text-anchor="middle" font-weight="600">Tỷ lệ tiếp cận thực tế: 85–95% giao vào hộp thư</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="270" width="704" height="14" fill="#fffde7" rx="4"/>
+  <text x="360" y="281" font-size="8" fill="#f57f17" text-anchor="middle" font-weight="600">Nguyên tắc vàng: Dùng mạng xã hội để thu hút — Dùng email để giữ và chuyển đổi độc giả thành cộng đồng trung thành</text>
+
+</svg>

@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 374" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN + COLUMN BACKGROUNDS -->
+  <rect width="720" height="374" fill="#f5f6f8" rx="6"/>
+  <!-- Cột trái: Facebook -->
+  <rect x="10" y="44" width="334" height="292" fill="white" rx="6" stroke="#e0e0e0" stroke-width="1.2"/>
+  <!-- Cột phải: TikTok -->
+  <rect x="376" y="44" width="334" height="292" fill="white" rx="6" stroke="#e0e0e0" stroke-width="1.2"/>
+
+  <!-- Header cột trái (Facebook) -->
+  <rect x="10" y="44" width="334" height="32" fill="#1877f2" rx="6"/>
+  <rect x="10" y="64"  width="334" height="12" fill="#1877f2"/>
+  <!-- Header cột phải (TikTok) -->
+  <rect x="376" y="44" width="334" height="32" fill="#212121" rx="6"/>
+  <rect x="376" y="64" width="334" height="12" fill="#212121"/>
+
+  <!-- Step backgrounds — Facebook (5 steps, mỗi step h=44, gap=8) -->
+  <!-- Step y: 84, 136, 188, 240, 292 -->
+  <rect x="18"  y="84"  width="318" height="44" fill="#f0f4ff" rx="4"/>
+  <rect x="18"  y="136" width="318" height="44" fill="#e8f0fe" rx="4"/>
+  <rect x="18"  y="188" width="318" height="44" fill="#f0f4ff" rx="4"/>
+  <rect x="18"  y="240" width="318" height="44" fill="#e8f0fe" rx="4"/>
+  <rect x="18"  y="292" width="318" height="44" fill="#fff3e0" rx="4"/>
+
+  <!-- Step backgrounds — TikTok -->
+  <rect x="384" y="84"  width="318" height="44" fill="#f5f5f5" rx="4"/>
+  <rect x="384" y="136" width="318" height="44" fill="#fafafa" rx="4"/>
+  <rect x="384" y="188" width="318" height="44" fill="#f5f5f5" rx="4"/>
+  <rect x="384" y="240" width="318" height="44" fill="#fafafa" rx="4"/>
+  <rect x="384" y="292" width="318" height="44" fill="#e8f5e9" rx="4"/>
+
+  <!-- ② VĂN BẢN -->
+  <text x="360" y="22" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Cách thuật toán phân phối nội dung</text>
+  <text x="360" y="36" font-size="9.5" fill="#666" text-anchor="middle">Hiểu cơ chế phân phối để tối ưu nội dung cho từng nền tảng</text>
+
+  <!-- Header text -->
+  <text x="177" y="64" font-size="11.5" fill="white" text-anchor="middle" font-weight="700">Facebook — News Feed Algorithm</text>
+  <text x="543" y="64" font-size="11.5" fill="white" text-anchor="middle" font-weight="700">TikTok — For You Page (FYP)</text>
+
+  <!-- ===== Facebook steps ===== -->
+  <!-- Step 1 -->
+  <circle cx="32" cy="106" r="10" fill="#1877f2"/>
+  <text x="32" y="110" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+  <text x="50" y="102" font-size="10" fill="#1a1a2e" font-weight="700">Bài đăng mới lên fanpage</text>
+  <text x="50" y="118" font-size="9" fill="#555">Phân phối đến ~1–5% followers trước tiên</text>
+
+  <!-- Arrow -->
+  <line x1="177" y1="128" x2="177" y2="136" stroke="#1877f2" stroke-width="1.5"/>
+  <polygon points="177,136 173,130 181,130" fill="#1877f2"/>
+
+  <!-- Step 2 -->
+  <circle cx="32" cy="158" r="10" fill="#1877f2"/>
+  <text x="32" y="162" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+  <text x="50" y="154" font-size="10" fill="#1a1a2e" font-weight="700">Đo tương tác trong 1–2 giờ đầu</text>
+  <text x="50" y="170" font-size="9" fill="#555">Like, comment, share → thuật toán chấm điểm</text>
+
+  <line x1="177" y1="180" x2="177" y2="188" stroke="#1877f2" stroke-width="1.5"/>
+  <polygon points="177,188 173,182 181,182" fill="#1877f2"/>
+
+  <!-- Step 3 -->
+  <circle cx="32" cy="210" r="10" fill="#1877f2"/>
+  <text x="32" y="214" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+  <text x="50" y="206" font-size="10" fill="#1a1a2e" font-weight="700">Mối quan hệ người dùng ↔ trang</text>
+  <text x="50" y="222" font-size="9" fill="#555">Ai hay tương tác → thấy bài nhiều hơn</text>
+
+  <line x1="177" y1="232" x2="177" y2="240" stroke="#1877f2" stroke-width="1.5"/>
+  <polygon points="177,240 173,234 181,234" fill="#1877f2"/>
+
+  <!-- Step 4 -->
+  <circle cx="32" cy="262" r="10" fill="#1877f2"/>
+  <text x="32" y="266" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+  <text x="50" y="258" font-size="10" fill="#1a1a2e" font-weight="700">Loại nội dung: video native &gt; link</text>
+  <text x="50" y="274" font-size="9" fill="#555">Video đăng thẳng được ưu tiên hơn link ngoài</text>
+
+  <line x1="177" y1="284" x2="177" y2="292" stroke="#e8710a" stroke-width="1.5"/>
+  <polygon points="177,292 173,286 181,286" fill="#e8710a"/>
+
+  <!-- Step 5 -->
+  <circle cx="32" cy="314" r="10" fill="#e8710a"/>
+  <text x="32" y="318" font-size="9" fill="white" text-anchor="middle" font-weight="700">⚠</text>
+  <text x="50" y="310" font-size="10" fill="#e8710a" font-weight="700">Không tương tác → reach tắt dần</text>
+  <text x="50" y="326" font-size="9" fill="#bf360c">Organic reach fanpage thường chỉ 2–5%</text>
+
+  <!-- ===== TikTok steps ===== -->
+  <!-- Step 1 -->
+  <circle cx="398" cy="106" r="10" fill="#424242"/>
+  <text x="398" y="110" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+  <text x="416" y="102" font-size="10" fill="#1a1a2e" font-weight="700">Video mới được đăng tải</text>
+  <text x="416" y="118" font-size="9" fill="#555">Phân phối đến batch nhỏ: 200–500 người ngẫu nhiên</text>
+
+  <line x1="543" y1="128" x2="543" y2="136" stroke="#424242" stroke-width="1.5"/>
+  <polygon points="543,136 539,130 547,130" fill="#424242"/>
+
+  <!-- Step 2 -->
+  <circle cx="398" cy="158" r="10" fill="#424242"/>
+  <text x="398" y="162" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+  <text x="416" y="154" font-size="10" fill="#1a1a2e" font-weight="700">Đo completion rate &amp; lượt share</text>
+  <text x="416" y="170" font-size="9" fill="#555">Chỉ số quan trọng nhất: % người xem hết video</text>
+
+  <line x1="543" y1="180" x2="543" y2="188" stroke="#424242" stroke-width="1.5"/>
+  <polygon points="543,188 539,182 547,182" fill="#424242"/>
+
+  <!-- Step 3 -->
+  <circle cx="398" cy="210" r="10" fill="#424242"/>
+  <text x="398" y="214" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+  <text x="416" y="206" font-size="10" fill="#1a1a2e" font-weight="700">Hook 3 giây đầu quyết định tất cả</text>
+  <text x="416" y="222" font-size="9" fill="#555">Bỏ qua trong 3 giây đầu → không được đẩy tiếp</text>
+
+  <line x1="543" y1="232" x2="543" y2="240" stroke="#424242" stroke-width="1.5"/>
+  <polygon points="543,240 539,234 547,234" fill="#424242"/>
+
+  <!-- Step 4 -->
+  <circle cx="398" cy="262" r="10" fill="#424242"/>
+  <text x="398" y="266" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+  <text x="416" y="258" font-size="10" fill="#1a1a2e" font-weight="700">Batch lớn hơn nếu chỉ số tốt</text>
+  <text x="416" y="274" font-size="9" fill="#555">Vòng lặp viral: 500 → 5.000 → 50.000+</text>
+
+  <line x1="543" y1="284" x2="543" y2="292" stroke="#2e7d32" stroke-width="1.5"/>
+  <polygon points="543,292 539,286 547,286" fill="#2e7d32"/>
+
+  <!-- Step 5 -->
+  <circle cx="398" cy="314" r="10" fill="#2e7d32"/>
+  <text x="398" y="318" font-size="9" fill="white" text-anchor="middle" font-weight="700">✓</text>
+  <text x="416" y="310" font-size="10" fill="#2e7d32" font-weight="700">Tài khoản mới cũng có thể viral</text>
+  <text x="416" y="326" font-size="9" fill="#1b5e20">Không phụ thuộc follower — cơ hội bình đẳng</text>
+
+  <!-- Divider -->
+  <line x1="360" y1="44" x2="360" y2="336" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Bottom note -->
+  <rect x="10" y="342" width="700" height="24" fill="#e8f0fe" rx="4" stroke="#90caf9" stroke-width="1"/>
+  <text x="360" y="358" font-size="9.5" fill="#1565c0" text-anchor="middle">💡 Nguyên tắc chung: <tspan font-weight="700">Engagement quan trọng hơn Reach</tspan> — 5.000 người xem với 200 bình luận tốt hơn 50.000 người xem không tương tác</text>
+
+</svg>

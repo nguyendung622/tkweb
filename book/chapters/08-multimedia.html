@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html" class="active">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -135,6 +108,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch08-fig01-formats.svg" alt="Các hình thức báo chí đa phương tiện theo độ phức tạp sản xuất">
+      <figcaption>Hình 8.1 — Sáu hình thức báo chí đa phương tiện phổ biến, phân loại theo độ phức tạp sản xuất. Tòa soạn sinh viên nên bắt đầu từ Photo Essay và Longform trước khi thử nghiệm các hình thức phức tạp hơn.</figcaption>
+    </figure>
+
     <div class="box note">
       <div class="box-title">📌 Ghi nhớ</div>
       <p>Không phải mọi câu chuyện đều cần tất cả các phương tiện. Câu hỏi quan trọng không phải "Làm thế nào để thêm video vào bài này?" mà là "Phương tiện nào kể câu chuyện này tốt nhất?" Đôi khi một bức ảnh duy nhất, được chụp đúng khoảnh khắc, hiệu quả hơn một video dài 5 phút.</p>
@@ -186,6 +164,11 @@
       <li>Video nên có tỷ lệ 9:16 (dọc) hoặc 1:1 (vuông) cho Stories và TikTok; 16:9 cho YouTube.</li>
       <li>Biểu đồ cần đủ lớn và đủ đơn giản để đọc được trên màn hình 5–6 inch.</li>
     </ul>
+
+    <figure>
+      <img src="../images/ch08-fig02-roles.svg" alt="Vai trò của từng phương tiện trong báo chí đa phương tiện">
+      <figcaption>Hình 8.2 — Năm phương tiện chính và vai trò riêng biệt của từng phương tiện. Nguyên tắc cốt lõi: không để hai phương tiện mô tả cùng một thông tin — mỗi cái làm điều mà nó làm tốt nhất.</figcaption>
+    </figure>
 
     <div class="box tip">
       <div class="box-title">💡 Kiểm tra mobile trước khi xuất bản</div>
@@ -456,6 +439,11 @@
       <p>Trước khi chia sẻ multimedia story với độc giả, hãy kiểm tra: (1) Tất cả link và embed có hoạt động không? (2) Ảnh có load nhanh trên điện thoại 3G không? (3) Caption ảnh có đầy đủ thông tin tác giả/nguồn không? (4) Chính tả và dữ liệu đã được kiểm tra chưa? (5) Bài trông như thế nào trên màn hình điện thoại?</p>
     </div>
 
+    <figure>
+      <img src="../images/ch08-fig03-workflow.svg" alt="Quy trình sản xuất một Multimedia Story">
+      <figcaption>Hình 8.3 — Bốn giai đoạn sản xuất một multimedia story hoàn chỉnh. Giai đoạn lên kế hoạch — đặc biệt là lập dàn ý đa phương tiện — thường bị bỏ qua nhưng quyết định phần lớn chất lượng sản phẩm cuối.</figcaption>
+    </figure>
+
     <h3>Bảng tổng hợp: Công cụ sản xuất đa phương tiện</h3>
 
     <table>
@@ -514,6 +502,112 @@
     </table>
 
 
+    <!-- ════════════════════════════════════
+         8.7 AI TRONG SẢN XUẤT ĐA PHƯƠNG TIỆN
+    ════════════════════════════════════ -->
+    <h2>8.7 AI hỗ trợ sản xuất nội dung đa phương tiện</h2>
+
+    <p>
+      Trí tuệ nhân tạo đang rút ngắn đáng kể thời gian sản xuất trong nhiều công đoạn của multimedia storytelling — từ chỉnh ảnh tự động, phụ đề tự động cho video, đến tóm tắt nội dung dài. Đây là những kỹ năng thực tế mà nhà báo hiện đại cần nắm vững.
+    </p>
+
+    <h3>AI trong xử lý ảnh và video</h3>
+
+    <ul>
+      <li><strong>Google Photos Magic Eraser:</strong> Xóa đối tượng không mong muốn khỏi ảnh trong vài giây. Lưu ý đạo đức: chỉ dùng cho ảnh minh họa, tuyệt đối không dùng cho ảnh tin tức thực tế — đây là vi phạm đạo đức báo chí nghiêm trọng.</li>
+      <li><strong>CapCut AI Auto-Caption:</strong> Tự động tạo phụ đề tiếng Việt từ giọng nói trong video, đạt độ chính xác 80–90%. Tiết kiệm hàng giờ công việc thủ công. Luôn đọc soát lại trước khi xuất bản.</li>
+      <li><strong>Adobe Firefly (trong Lightroom):</strong> Tính năng Generative Fill cho phép mở rộng khung ảnh hoặc xóa vật thể. Tương tự Magic Eraser — chỉ dùng cho ảnh minh họa, không phải ảnh tin tức.</li>
+      <li><strong>DaVinci Resolve (phiên bản miễn phí):</strong> AI tự động color grading, loại bỏ tiếng ồn nền khỏi audio track. Kết quả tốt hơn hẳn các app điện thoại.</li>
+    </ul>
+
+    <h3>AI tạo biểu đồ và infographic</h3>
+
+    <p>
+      Flourish và Datawrapper đều tích hợp AI để gợi ý loại biểu đồ phù hợp khi bạn upload dữ liệu. Ngoài ra, ChatGPT và Claude có thể giúp:
+    </p>
+
+    <ul>
+      <li>Làm sạch và chuẩn hóa dữ liệu Excel/CSV trước khi đưa vào Flourish</li>
+      <li>Gợi ý cách trực quan hóa dữ liệu phức tạp: "Dữ liệu này nên dùng biểu đồ gì và tại sao?"</li>
+      <li>Viết tiêu đề và chú thích biểu đồ súc tích, dễ hiểu</li>
+      <li>Tạo code Python/JavaScript để vẽ biểu đồ tùy chỉnh nếu cần</li>
+    </ul>
+
+    <div class="box tip">
+      <div class="box-title">💡 Prompt mẫu phân tích dữ liệu cho biểu đồ</div>
+      <p>
+        <em>"Tôi có bảng dữ liệu sau [dán bảng]. Hãy: (1) Xác định xu hướng quan trọng nhất; (2) Gợi ý 2–3 loại biểu đồ phù hợp và giải thích lý do; (3) Viết tiêu đề biểu đồ ngắn gọn (dưới 10 chữ) và một câu chú thích mô tả điểm chính."</em>
+      </p>
+    </div>
+
+    <h3>AI hỗ trợ sản xuất podcast</h3>
+
+    <p>
+      Quy trình sản xuất podcast truyền thống tốn nhiều thời gian nhất ở khâu biên tập và cắt ghép. AI đang thay đổi điều đó:
+    </p>
+
+    <ul>
+      <li><strong>Adobe Podcast Enhance (podcast.adobe.com):</strong> Nâng cấp chất lượng âm thanh miễn phí — biến giọng nói thu bằng micro điện thoại thành chất lượng phòng thu chuyên nghiệp. Kết quả ấn tượng và dùng được ngay.</li>
+      <li><strong>Descript:</strong> Chỉnh sửa podcast bằng cách chỉnh văn bản phiên âm — xóa chữ trong bản phiên âm thì đoạn âm thanh tương ứng cũng bị xóa. Rất trực quan.</li>
+      <li><strong>Otter.ai / Whisper (OpenAI):</strong> Phiên âm (transcribe) tự động file âm thanh tiếng Việt. Whisper là model mã nguồn mở, miễn phí, độ chính xác cao với tiếng Việt.</li>
+    </ul>
+
+    <h3>Giới hạn đạo đức khi dùng AI trong báo chí đa phương tiện</h3>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Ranh giới đỏ: Những điều tuyệt đối không làm</div>
+      <ul>
+        <li><strong>Không chỉnh sửa ảnh tin tức:</strong> Xóa người, thêm vật thể, thay đổi bối cảnh trong ảnh báo chí dù bằng AI hay Photoshop đều là vi phạm đạo đức nghiêm trọng và có thể bị sa thải.</li>
+        <li><strong>Không dùng AI voice clone cho phỏng vấn:</strong> Tạo giọng nói giả lấy danh nghĩa người thật (deepfake audio) mà không ghi chú rõ ràng là thông tin giả mạo.</li>
+        <li><strong>Không dùng ảnh AI làm ảnh tin tức:</strong> Ảnh tạo bởi Midjourney, DALL-E không thể dùng minh họa cho tin tức thực tế nếu không ghi chú "ảnh minh họa do AI tạo."</li>
+        <li><strong>Luôn công khai khi dùng AI:</strong> Nếu nội dung có sự trợ giúp đáng kể của AI (ảnh, giọng đọc, văn bản), cần ghi chú minh bạch cho độc giả.</li>
+      </ul>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Công đoạn</th>
+          <th>Công cụ AI</th>
+          <th>Thời gian tiết kiệm</th>
+          <th>Lưu ý</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Phụ đề tự động cho video</td>
+          <td>CapCut AI, YouTube Auto-caption</td>
+          <td>60–80%</td>
+          <td>Soát lại tiếng Việt có dấu</td>
+        </tr>
+        <tr>
+          <td>Nâng chất lượng âm thanh</td>
+          <td>Adobe Podcast Enhance</td>
+          <td>Thay thế hoàn toàn</td>
+          <td>Miễn phí, kết quả rất tốt</td>
+        </tr>
+        <tr>
+          <td>Phiên âm phỏng vấn</td>
+          <td>Whisper, Otter.ai</td>
+          <td>70–90%</td>
+          <td>Kiểm tra tên riêng, số liệu</td>
+        </tr>
+        <tr>
+          <td>Viết caption ảnh</td>
+          <td>ChatGPT / Claude</td>
+          <td>50%</td>
+          <td>Thêm thông tin tác giả thủ công</td>
+        </tr>
+        <tr>
+          <td>Gợi ý loại biểu đồ</td>
+          <td>Claude, Flourish AI</td>
+          <td>30%</td>
+          <td>Quyết định cuối thuộc về editor</td>
+        </tr>
+      </tbody>
+    </table>
+
+
     <!-- CÂU HỎI ÔN TẬP -->
     <div class="review-questions">
       <h3>Câu hỏi ôn tập</h3>
@@ -522,6 +616,8 @@
         <li>So sánh định dạng <em>longform</em> và <em>scrollytelling</em>: điểm giống, điểm khác, và hoàn cảnh nào phù hợp với từng định dạng? Tại sao một tòa soạn báo sinh viên nên bắt đầu với longform thay vì scrollytelling?</li>
         <li>Bạn được phân công làm một phóng sự về tình trạng rác thải nhựa ở một con sông tại địa phương. Lên kế hoạch sản xuất multimedia story hoàn chỉnh: (a) Liệt kê các phương tiện sẽ sử dụng và vai trò của mỗi phương tiện; (b) Xác định những gì cần thu thập ở hiện trường; (c) Công cụ sẽ dùng để sản xuất và xuất bản.</li>
         <li>Thực hành: Xây dựng một multimedia story ngắn (ít nhất 500 chữ văn bản, 3 ảnh, 1 video nhúng và 1 biểu đồ Flourish) trên Google Sites về một chủ đề tự chọn liên quan đến cuộc sống sinh viên. Chia sẻ link để giảng viên và bạn cùng lớp xem.</li>
+        <li>Adobe Podcast Enhance có thể biến âm thanh chất lượng thấp thành "phòng thu." Điều này đặt ra câu hỏi gì về tính xác thực trong báo chí âm thanh? Đâu là ranh giới giữa "cải thiện kỹ thuật" và "làm giả hiện trường"?</li>
+        <li>Một phóng viên dùng AI xóa một người qua đường khỏi ảnh hiện trường vì "họ làm mất tập trung." Một phóng viên khác dùng AI để tự động phiên âm toàn bộ buổi phỏng vấn 2 giờ rồi đọc soát lại. Phân tích từng trường hợp: trường hợp nào vi phạm đạo đức báo chí và tại sao?</li>
       </ol>
     </div>
 
@@ -535,5 +631,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 568" font-family="'Be Vietnam Pro', Arial, sans-serif">
+  <!-- Story format — tỉ lệ 1080×1920 (9:16), scale xuống 320×568 -->
+
+  <defs>
+    <linearGradient id="storyBg" x1="0%" y1="0%" x2="40%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="storyAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#e63946"/>
+      <stop offset="100%" style="stop-color:#f4a261"/>
+    </linearGradient>
+    <linearGradient id="overlayFade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0d1b2a;stop-opacity:0"/>
+      <stop offset="60%"  style="stop-color:#0d1b2a;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0d1b2a;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Nền -->
+  <rect width="320" height="568" fill="url(#storyBg)" rx="16"/>
+
+  <!-- Vùng ảnh phía trên (placeholder) -->
+  <rect x="0" y="0" width="320" height="320" fill="#1e3a5f" rx="16"/>
+  <rect x="0" y="280" width="320" height="40" fill="url(#overlayFade)"/>
+  <!-- Họa tiết hình tròn -->
+  <circle cx="160" cy="155" r="110" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="160" cy="155" r="75"  fill="rgba(255,255,255,0.05)"/>
+  <circle cx="160" cy="155" r="42"  fill="rgba(255,255,255,0.07)"/>
+  <!-- Biểu tượng ảnh -->
+  <rect x="125" y="130" width="70" height="52" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2" rx="6"/>
+  <circle cx="160" cy="156" r="16" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+  <circle cx="160" cy="156" r="6"  fill="rgba(255,255,255,0.18)"/>
+  <rect x="128" y="133" width="16" height="11" fill="rgba(255,255,255,0.12)" rx="2"/>
+  <text x="160" y="207" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="middle">[ Ảnh phóng sự ]</text>
+
+  <!-- Thanh progress Story (trên cùng) -->
+  <rect x="12"  y="14" width="70" height="3" fill="rgba(255,255,255,0.5)" rx="2"/>
+  <rect x="86"  y="14" width="70" height="3" fill="rgba(255,255,255,0.5)" rx="2"/>
+  <rect x="160" y="14" width="70" height="3" fill="rgba(255,255,255,0.5)" rx="2"/>
+  <rect x="234" y="14" width="74" height="3" fill="rgba(255,255,255,0.2)" rx="2"/>
+
+  <!-- Avatar + tên tài khoản (header Story) -->
+  <circle cx="28" cy="36" r="14" fill="rgba(255,255,255,0.15)" stroke="url(#storyAccent)" stroke-width="2"/>
+  <text x="28" y="40" font-size="8" fill="white" text-anchor="middle" font-weight="700">TN</text>
+  <text x="48" y="33" font-size="10" fill="white" font-weight="700">Thanh Niên Online</text>
+  <text x="48" y="45" font-size="9" fill="rgba(255,255,255,0.6)">Vừa đăng · 15/11/2025</text>
+  <text x="300" y="40" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">···</text>
+
+  <!-- ── PHẦN VĂN BẢN PHÍA DƯỚI ── -->
+
+  <!-- Tag -->
+  <rect x="18" y="300" width="76" height="18" fill="url(#storyAccent)" rx="3"/>
+  <text x="56" y="313" font-size="8" fill="white" text-anchor="middle" font-weight="700" letter-spacing="1">HỘI THẢO</text>
+
+  <!-- Tiêu đề lớn -->
+  <text x="18" y="346" font-size="24" fill="white" font-weight="900">BÁO CHÍ SỐ</text>
+  <text x="18" y="374" font-size="24" fill="white" font-weight="900">VIỆT NAM 2025</text>
+
+  <!-- Dòng phụ đề -->
+  <rect x="18" y="384" width="50" height="2" fill="url(#storyAccent)" rx="1"/>
+  <text x="18" y="400" font-size="11" fill="rgba(255,255,255,0.8)" font-style="italic">Truyền thông trong kỷ nguyên AI</text>
+
+  <!-- Thông tin sự kiện -->
+  <rect x="18" y="416" width="284" height="56" fill="rgba(255,255,255,0.08)" rx="8"/>
+  <text x="30" y="434" font-size="10" fill="rgba(255,255,255,0.55)" font-weight="600">📅  Thứ Bảy, 15/11/2025</text>
+  <text x="30" y="450" font-size="10" fill="rgba(255,255,255,0.55)" font-weight="600">⏰  8:00 – 17:00</text>
+  <text x="30" y="464" font-size="10" fill="rgba(255,255,255,0.55)" font-weight="600">📍  Học viện Báo chí và Tuyên truyền, HN</text>
+
+  <!-- Nút CTA -->
+  <rect x="18" y="486" width="284" height="40" fill="url(#storyAccent)" rx="20"/>
+  <text x="160" y="511" font-size="13" fill="white" text-anchor="middle" font-weight="700">Đăng ký tham dự →</text>
+
+  <!-- Sticker tương tác giả lập -->
+  <rect x="18" y="534" width="132" height="26" fill="rgba(255,255,255,0.1)" rx="13" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="84" y="551" font-size="10" fill="rgba(255,255,255,0.75)" text-anchor="middle">📊 Bạn sẽ tham dự?</text>
+
+  <rect x="158" y="534" width="144" height="26" fill="rgba(255,255,255,0.1)" rx="13" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="230" y="551" font-size="10" fill="rgba(255,255,255,0.75)" text-anchor="middle">⬆ Vuốt lên để đăng ký</text>
+
+  <!-- Ghi chú kích thước -->
+  <text x="160" y="564" font-size="7" fill="rgba(255,255,255,0.2)" text-anchor="middle">Instagram / Facebook Story — 1080 × 1920 px (9:16)</text>
+
+</svg>

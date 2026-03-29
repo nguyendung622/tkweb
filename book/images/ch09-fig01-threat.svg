@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="320" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Mô hình Mối đe dọa (Threat Model) — 5 câu hỏi cốt lõi</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Xây dựng chiến lược bảo mật cá nhân hóa theo mức độ rủi ro thực sự của bạn</text>
+
+  <!-- Header cột -->
+  <rect x="8"   y="42" width="220" height="26" fill="#455a64" rx="4"/>
+  <rect x="246" y="42" width="222" height="26" fill="#1565c0" rx="4"/>
+  <rect x="486" y="42" width="226" height="26" fill="#b71c1c" rx="4"/>
+
+  <text x="118" y="58" font-size="10"   fill="white" text-anchor="middle" font-weight="700">Câu hỏi</text>
+  <text x="357" y="58" font-size="10"   fill="white" text-anchor="middle" font-weight="700">Nhà báo kinh tế / xã hội</text>
+  <text x="599" y="58" font-size="10"   fill="white" text-anchor="middle" font-weight="700">Nhà báo điều tra tham nhũng</text>
+
+  <!-- 5 hàng — y bắt đầu từ 74, mỗi hàng h=44, gap=2 -->
+  <!-- Hàng 1: y=74 -->
+  <rect x="8"   y="74" width="220" height="44" fill="#eceff1" rx="3"/>
+  <rect x="246" y="74" width="222" height="44" fill="#e3f2fd" rx="3"/>
+  <rect x="486" y="74" width="226" height="44" fill="#ffebee" rx="3"/>
+
+  <circle cx="24"  cy="96" r="10" fill="#455a64"/>
+  <text x="24"  y="100" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+  <text x="42"  y="92"  font-size="9" fill="#263238" font-weight="700">Tôi muốn bảo vệ cái gì?</text>
+  <text x="42"  y="106" font-size="8.5" fill="#546e7a">Xác định tài sản cần bảo vệ</text>
+  <text x="357" y="92"  font-size="8.5" fill="#1565c0" text-anchor="middle">Bản thảo bài viết</text>
+  <text x="357" y="106" font-size="8.5" fill="#1565c0" text-anchor="middle">Danh sách nguồn tin thông thường</text>
+  <text x="599" y="92"  font-size="8.5" fill="#b71c1c" text-anchor="middle">Tài liệu mật, danh tính tố giác</text>
+  <text x="599" y="106" font-size="8.5" fill="#b71c1c" text-anchor="middle">Lịch công tác, kết quả điều tra</text>
+
+  <!-- Hàng 2: y=120 -->
+  <rect x="8"   y="120" width="220" height="44" fill="#eceff1" rx="3"/>
+  <rect x="246" y="120" width="222" height="44" fill="#e3f2fd" rx="3"/>
+  <rect x="486" y="120" width="226" height="44" fill="#ffebee" rx="3"/>
+
+  <circle cx="24"  cy="142" r="10" fill="#455a64"/>
+  <text x="24"  y="146" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+  <text x="42"  y="138" font-size="9" fill="#263238" font-weight="700">Ai muốn tấn công tôi?</text>
+  <text x="42"  y="152" font-size="8.5" fill="#546e7a">Xác định đối thủ tiềm năng</text>
+  <text x="357" y="138" font-size="8.5" fill="#1565c0" text-anchor="middle">Tin tặc cơ hội, cạnh tranh</text>
+  <text x="357" y="152" font-size="8.5" fill="#1565c0" text-anchor="middle">giữa các tòa soạn</text>
+  <text x="599" y="138" font-size="8.5" fill="#b71c1c" text-anchor="middle">Tổ chức bị điều tra, cơ quan</text>
+  <text x="599" y="152" font-size="8.5" fill="#b71c1c" text-anchor="middle">nhà nước, tổ chức tội phạm</text>
+
+  <!-- Hàng 3: y=166 -->
+  <rect x="8"   y="166" width="220" height="44" fill="#eceff1" rx="3"/>
+  <rect x="246" y="166" width="222" height="44" fill="#e3f2fd" rx="3"/>
+  <rect x="486" y="166" width="226" height="44" fill="#ffebee" rx="3"/>
+
+  <circle cx="24"  cy="188" r="10" fill="#455a64"/>
+  <text x="24"  y="192" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+  <text x="42"  y="184" font-size="9" fill="#263238" font-weight="700">Họ có khả năng gì?</text>
+  <text x="42"  y="198" font-size="8.5" fill="#546e7a">Đánh giá năng lực đối thủ</text>
+  <text x="357" y="184" font-size="8.5" fill="#1565c0" text-anchor="middle">Phishing email, tấn công</text>
+  <text x="357" y="198" font-size="8.5" fill="#1565c0" text-anchor="middle">mật khẩu yếu</text>
+  <text x="599" y="184" font-size="8.5" fill="#b71c1c" text-anchor="middle">Phần mềm gián điệp (Pegasus)</text>
+  <text x="599" y="198" font-size="8.5" fill="#b71c1c" text-anchor="middle">giám sát pháp lý, theo dõi thực</text>
+
+  <!-- Hàng 4: y=212 -->
+  <rect x="8"   y="212" width="220" height="44" fill="#eceff1" rx="3"/>
+  <rect x="246" y="212" width="222" height="44" fill="#e3f2fd" rx="3"/>
+  <rect x="486" y="212" width="226" height="44" fill="#ffebee" rx="3"/>
+
+  <circle cx="24"  cy="234" r="10" fill="#455a64"/>
+  <text x="24"  y="238" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+  <text x="42"  y="230" font-size="9" fill="#263238" font-weight="700">Hậu quả nếu thất bại?</text>
+  <text x="42"  y="244" font-size="8.5" fill="#546e7a">Đánh giá mức độ thiệt hại</text>
+  <text x="357" y="230" font-size="8.5" fill="#1565c0" text-anchor="middle">Bài bị rò rỉ trước đăng</text>
+  <text x="357" y="244" font-size="8.5" fill="#1565c0" text-anchor="middle">Mất uy tín cạnh tranh</text>
+  <text x="599" y="230" font-size="8.5" fill="#b71c1c" text-anchor="middle">Nguồn tin bị lộ → nguy hiểm</text>
+  <text x="599" y="244" font-size="8.5" fill="#b71c1c" text-anchor="middle">Điều tra bị phá vỡ, truy tố</text>
+
+  <!-- Hàng 5: y=258 -->
+  <rect x="8"   y="258" width="220" height="44" fill="#eceff1" rx="3"/>
+  <rect x="246" y="258" width="222" height="44" fill="#e3f2fd" rx="3"/>
+  <rect x="486" y="258" width="226" height="44" fill="#ffebee" rx="3"/>
+
+  <circle cx="24"  cy="280" r="10" fill="#455a64"/>
+  <text x="24"  y="284" font-size="9" fill="white" text-anchor="middle" font-weight="700">5</text>
+  <text x="42"  y="276" font-size="9" fill="#263238" font-weight="700">Tôi sẵn sàng đánh đổi gì?</text>
+  <text x="42"  y="290" font-size="8.5" fill="#546e7a">Cân bằng bảo mật và tiện lợi</text>
+  <text x="357" y="276" font-size="8.5" fill="#1565c0" text-anchor="middle">Dùng 2FA · Đổi mật khẩu</text>
+  <text x="357" y="290" font-size="8.5" fill="#1565c0" text-anchor="middle">Bitwarden cho tài khoản quan trọng</text>
+  <text x="599" y="276" font-size="8.5" fill="#b71c1c" text-anchor="middle">Thiết bị riêng cho điều tra</text>
+  <text x="599" y="290" font-size="8.5" fill="#b71c1c" text-anchor="middle">Signal + gặp offline + Tor Browser</text>
+
+  <!-- Thanh mức bảo mật -->
+  <rect x="8" y="308" width="704" height="8" fill="#e0e0e0" rx="4"/>
+  <rect x="8" y="308" width="350" height="8" fill="#1565c0" rx="4"/>
+  <text x="100" y="306" font-size="7.5" fill="#1565c0" text-anchor="middle">Mức bảo mật cơ bản</text>
+  <rect x="362" y="308" width="350" height="8" fill="#b71c1c" rx="4"/>
+  <text x="540" y="306" font-size="7.5" fill="#b71c1c" text-anchor="middle">Mức bảo mật nâng cao</text>
+
+</svg>

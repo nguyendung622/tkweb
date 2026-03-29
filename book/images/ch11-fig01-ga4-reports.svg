@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 232" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="232" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="16" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">4 nhóm báo cáo cốt lõi trong Google Analytics 4</text>
+
+  <!-- ══════════════════════════════════════
+       CARD 1: REALTIME
+  ══════════════════════════════════════ -->
+  <rect x="8" y="24" width="168" height="196" fill="white" rx="4" stroke="#e53935" stroke-width="1.5"/>
+  <rect x="8" y="24" width="168" height="38" fill="#e53935" rx="4"/>
+  <rect x="8" y="50" width="168" height="12" fill="#e53935"/>
+  <text x="92" y="38" font-size="10" fill="white" text-anchor="middle" font-weight="700">Realtime</text>
+  <text x="92" y="54" font-size="7.5" fill="#ffcdd2" text-anchor="middle">Ai đang đọc ngay lúc này?</text>
+
+  <circle cx="20" cy="75" r="3" fill="#e53935"/>
+  <text x="28" y="79" font-size="8.5" fill="#222" font-weight="700">Active users</text>
+  <text x="28" y="91" font-size="7.5" fill="#666">Số người trong 30 phút qua</text>
+  <line x1="14" y1="100" x2="168" y2="100" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="20" cy="111" r="3" fill="#e53935"/>
+  <text x="28" y="115" font-size="8.5" fill="#222" font-weight="700">Trang đang xem</text>
+  <text x="28" y="127" font-size="7.5" fill="#666">Bài nào được xem nhiều nhất</text>
+  <line x1="14" y1="136" x2="168" y2="136" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="20" cy="147" r="3" fill="#e53935"/>
+  <text x="28" y="151" font-size="8.5" fill="#222" font-weight="700">Nguồn traffic</text>
+  <text x="28" y="163" font-size="7.5" fill="#666">Social, organic, direct...</text>
+  <line x1="14" y1="172" x2="168" y2="172" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="20" cy="183" r="3" fill="#e53935"/>
+  <text x="28" y="187" font-size="8.5" fill="#222" font-weight="700">Vị trí địa lý</text>
+  <text x="28" y="199" font-size="7.5" fill="#666">Thành phố, quốc gia</text>
+
+  <!-- ══════════════════════════════════════
+       CARD 2: ACQUISITION
+  ══════════════════════════════════════ -->
+  <rect x="184" y="24" width="168" height="196" fill="white" rx="4" stroke="#1565c0" stroke-width="1.5"/>
+  <rect x="184" y="24" width="168" height="38" fill="#1565c0" rx="4"/>
+  <rect x="184" y="50" width="168" height="12" fill="#1565c0"/>
+  <text x="268" y="38" font-size="10" fill="white" text-anchor="middle" font-weight="700">Acquisition</text>
+  <text x="268" y="54" font-size="7.5" fill="#bbdefb" text-anchor="middle">Độc giả đến từ đâu?</text>
+
+  <circle cx="196" cy="75" r="3" fill="#1565c0"/>
+  <text x="204" y="79" font-size="8.5" fill="#222" font-weight="700">Organic Search</text>
+  <text x="204" y="91" font-size="7.5" fill="#666">Tìm kiếm qua Google</text>
+  <line x1="190" y1="100" x2="344" y2="100" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="196" cy="111" r="3" fill="#1565c0"/>
+  <text x="204" y="115" font-size="8.5" fill="#222" font-weight="700">Social</text>
+  <text x="204" y="127" font-size="7.5" fill="#666">Facebook, TikTok, Twitter...</text>
+  <line x1="190" y1="136" x2="344" y2="136" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="196" cy="147" r="3" fill="#1565c0"/>
+  <text x="204" y="151" font-size="8.5" fill="#222" font-weight="700">Direct</text>
+  <text x="204" y="163" font-size="7.5" fill="#666">Gõ URL hoặc bookmark</text>
+  <line x1="190" y1="172" x2="344" y2="172" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="196" cy="183" r="3" fill="#1565c0"/>
+  <text x="204" y="187" font-size="8.5" fill="#222" font-weight="700">Email / Referral</text>
+  <text x="204" y="199" font-size="7.5" fill="#666">Newsletter, link từ trang khác</text>
+
+  <!-- ══════════════════════════════════════
+       CARD 3: ENGAGEMENT
+  ══════════════════════════════════════ -->
+  <rect x="360" y="24" width="168" height="196" fill="white" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
+  <rect x="360" y="24" width="168" height="38" fill="#2e7d32" rx="4"/>
+  <rect x="360" y="50" width="168" height="12" fill="#2e7d32"/>
+  <text x="444" y="38" font-size="10" fill="white" text-anchor="middle" font-weight="700">Engagement</text>
+  <text x="444" y="54" font-size="7.5" fill="#c8e6c9" text-anchor="middle">Đọc bao lâu, bài nào?</text>
+
+  <circle cx="372" cy="75" r="3" fill="#2e7d32"/>
+  <text x="380" y="79" font-size="8.5" fill="#222" font-weight="700">Views &amp; Users</text>
+  <text x="380" y="91" font-size="7.5" fill="#666">Lượt xem và người đọc duy nhất</text>
+  <line x1="366" y1="100" x2="520" y2="100" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="372" cy="111" r="3" fill="#2e7d32"/>
+  <text x="380" y="115" font-size="8.5" fill="#222" font-weight="700">Avg engagement time</text>
+  <text x="380" y="127" font-size="7.5" fill="#666">Thời gian đọc trung bình</text>
+  <line x1="366" y1="136" x2="520" y2="136" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="372" cy="147" r="3" fill="#2e7d32"/>
+  <text x="380" y="151" font-size="8.5" fill="#222" font-weight="700">Engaged sessions</text>
+  <text x="380" y="163" font-size="7.5" fill="#666">Phiên có tương tác thực sự</text>
+  <line x1="366" y1="172" x2="520" y2="172" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="372" cy="183" r="3" fill="#2e7d32"/>
+  <text x="380" y="187" font-size="8.5" fill="#222" font-weight="700">Scroll depth 90%</text>
+  <text x="380" y="199" font-size="7.5" fill="#666">Tỷ lệ đọc đến cuối bài</text>
+
+  <!-- ══════════════════════════════════════
+       CARD 4: DEMOGRAPHICS
+  ══════════════════════════════════════ -->
+  <rect x="536" y="24" width="176" height="196" fill="white" rx="4" stroke="#6a1b9a" stroke-width="1.5"/>
+  <rect x="536" y="24" width="176" height="38" fill="#6a1b9a" rx="4"/>
+  <rect x="536" y="50" width="176" height="12" fill="#6a1b9a"/>
+  <text x="624" y="38" font-size="10" fill="white" text-anchor="middle" font-weight="700">Demographics</text>
+  <text x="624" y="54" font-size="7.5" fill="#e1bee7" text-anchor="middle">Độc giả là ai?</text>
+
+  <circle cx="548" cy="75" r="3" fill="#6a1b9a"/>
+  <text x="556" y="79" font-size="8.5" fill="#222" font-weight="700">Thiết bị</text>
+  <text x="556" y="91" font-size="7.5" fill="#666">Mobile 65%, desktop 35%</text>
+  <line x1="542" y1="100" x2="704" y2="100" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="548" cy="111" r="3" fill="#6a1b9a"/>
+  <text x="556" y="115" font-size="8.5" fill="#222" font-weight="700">Vị trí địa lý</text>
+  <text x="556" y="127" font-size="7.5" fill="#666">Thành phố, tỉnh thành</text>
+  <line x1="542" y1="136" x2="704" y2="136" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="548" cy="147" r="3" fill="#6a1b9a"/>
+  <text x="556" y="151" font-size="8.5" fill="#222" font-weight="700">New vs Returning</text>
+  <text x="556" y="163" font-size="7.5" fill="#666">Độc giả mới và quay lại</text>
+  <line x1="542" y1="172" x2="704" y2="172" stroke="#eee" stroke-width="1"/>
+
+  <circle cx="548" cy="183" r="3" fill="#6a1b9a"/>
+  <text x="556" y="187" font-size="8.5" fill="#222" font-weight="700">Ngôn ngữ / Trình duyệt</text>
+  <text x="556" y="199" font-size="7.5" fill="#666">Tiếng Việt, tiếng Anh...</text>
+
+</svg>

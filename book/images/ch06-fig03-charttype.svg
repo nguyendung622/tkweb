@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 362" font-family="'Be Vietnam Pro', Arial, sans-serif">
+<defs>
+  <!-- ClipPath cho từng ô chart — đảm bảo không tràn ra ngoài hộp -->
+  <clipPath id="cc1"><rect x="9"   y="74" width="130" height="116"/></clipPath>
+  <clipPath id="cc2"><rect x="149" y="74" width="130" height="116"/></clipPath>
+  <clipPath id="cc3"><rect x="289" y="74" width="130" height="116"/></clipPath>
+  <clipPath id="cc4"><rect x="429" y="74" width="130" height="116"/></clipPath>
+  <clipPath id="cc5"><rect x="569" y="74" width="142" height="116"/></clipPath>
+  <!-- Gradient thang màu bản đồ -->
+  <linearGradient id="map-grad" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%"   stop-color="#e8eaf6"/>
+    <stop offset="100%" stop-color="#283593"/>
+  </linearGradient>
+</defs>
+
+<!-- ① NỀN + CÁC Ô — vẽ trước -->
+<rect width="720" height="362" fill="#f5f6f8" rx="6"/>
+
+<!-- 5 ô trắng -->
+<rect x="8"   y="48" width="132" height="228" fill="white" rx="6" stroke="#d8dde3" stroke-width="1.2"/>
+<rect x="148" y="48" width="132" height="228" fill="white" rx="6" stroke="#d8dde3" stroke-width="1.2"/>
+<rect x="288" y="48" width="132" height="228" fill="white" rx="6" stroke="#d8dde3" stroke-width="1.2"/>
+<rect x="428" y="48" width="132" height="228" fill="white" rx="6" stroke="#d8dde3" stroke-width="1.2"/>
+<rect x="568" y="48" width="144" height="228" fill="white" rx="6" stroke="#d8dde3" stroke-width="1.2"/>
+
+<!-- Thanh màu đầu mỗi ô -->
+<rect x="8"   y="48" width="132" height="24" fill="#e3f2fd" rx="6"/>
+<rect x="8"   y="60" width="132" height="12" fill="#e3f2fd"/>
+<rect x="148" y="48" width="132" height="24" fill="#e8f5e9" rx="6"/>
+<rect x="148" y="60" width="132" height="12" fill="#e8f5e9"/>
+<rect x="288" y="48" width="132" height="24" fill="#fff3e0" rx="6"/>
+<rect x="288" y="60" width="132" height="12" fill="#fff3e0"/>
+<rect x="428" y="48" width="132" height="24" fill="#f3e5f5" rx="6"/>
+<rect x="428" y="60" width="132" height="12" fill="#f3e5f5"/>
+<rect x="568" y="48" width="144" height="24" fill="#e0f7fa" rx="6"/>
+<rect x="568" y="60" width="144" height="12" fill="#e0f7fa"/>
+
+<!-- Đường kẻ ngăn header / chart area -->
+<line x1="8"   y1="72" x2="140" y2="72" stroke="#d8dde3" stroke-width="1"/>
+<line x1="148" y1="72" x2="280" y2="72" stroke="#d8dde3" stroke-width="1"/>
+<line x1="288" y1="72" x2="420" y2="72" stroke="#d8dde3" stroke-width="1"/>
+<line x1="428" y1="72" x2="560" y2="72" stroke="#d8dde3" stroke-width="1"/>
+<line x1="568" y1="72" x2="712" y2="72" stroke="#d8dde3" stroke-width="1"/>
+
+<!-- ② TIÊU ĐỀ TỔNG + TIÊU ĐỀ CÁC Ô -->
+<text x="360" y="22" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Chọn đúng loại biểu đồ theo câu hỏi báo chí</text>
+<text x="360" y="38" font-size="9.5" fill="#555" text-anchor="middle">Mỗi loại biểu đồ trả lời một loại câu hỏi cụ thể — không có loại nào "tốt nhất"</text>
+
+<!-- Tiêu đề ô (trong thanh màu đầu) -->
+<text x="74"  y="64" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">Biểu đồ cột</text>
+<text x="214" y="64" font-size="10" fill="#2e7d32" text-anchor="middle" font-weight="700">Biểu đồ đường</text>
+<text x="354" y="64" font-size="10" fill="#bf360c" text-anchor="middle" font-weight="700">Biểu đồ tròn</text>
+<text x="494" y="64" font-size="10" fill="#6a1b9a" text-anchor="middle" font-weight="700">Bản đồ choropleth</text>
+<text x="640" y="64" font-size="10" fill="#00695c" text-anchor="middle" font-weight="700">Scatter plot</text>
+
+<!-- ③ NỘI DUNG CHART — dùng clipPath, vẽ giữa -->
+
+<!-- ===== Ô 1: Biểu đồ cột đứng ===== -->
+<g clip-path="url(#cc1)">
+  <!-- Grid lines mờ -->
+  <line x1="9"  y1="155" x2="139" y2="155" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="9"  y1="135" x2="139" y2="135" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="9"  y1="115" x2="139" y2="115" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="9"  y1="95"  x2="139" y2="95"  stroke="#f0f0f0" stroke-width="1"/>
+  <!-- Trục x -->
+  <line x1="20" y1="175" x2="138" y2="175" stroke="#ccc" stroke-width="1"/>
+  <!-- 5 cột đứng, mỗi cột 16px, cách nhau 7px -->
+  <!-- leftmost bar x=22, rightmost right edge=22+5×16+4×7=22+108=130 < 140 -->
+  <rect x="22" y="133" width="16" height="42" fill="#90caf9" rx="2"/>
+  <rect x="45" y="118" width="16" height="57" fill="#64b5f6" rx="2"/>
+  <rect x="68" y="103" width="16" height="72" fill="#42a5f5" rx="2"/>
+  <rect x="91" y="92"  width="16" height="83" fill="#2196f3" rx="2"/>
+  <rect x="114" y="80" width="16" height="95" fill="#1565c0" rx="2"/>
+</g>
+<!-- Nhãn trục X — bên dưới clipPath, không cần clip -->
+<text x="30"  y="186" font-size="7.5" fill="#888" text-anchor="middle">2019</text>
+<text x="53"  y="186" font-size="7.5" fill="#888" text-anchor="middle">2020</text>
+<text x="76"  y="186" font-size="7.5" fill="#888" text-anchor="middle">2021</text>
+<text x="99"  y="186" font-size="7.5" fill="#888" text-anchor="middle">2022</text>
+<text x="122" y="186" font-size="7.5" fill="#888" text-anchor="middle">2023</text>
+
+<!-- ===== Ô 2: Biểu đồ đường ===== -->
+<g clip-path="url(#cc2)">
+  <!-- Grid lines -->
+  <line x1="149" y1="155" x2="279" y2="155" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="149" y1="135" x2="279" y2="135" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="149" y1="115" x2="279" y2="115" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="149" y1="95"  x2="279" y2="95"  stroke="#f0f0f0" stroke-width="1"/>
+  <!-- Trục -->
+  <line x1="162" y1="76"  x2="162" y2="175" stroke="#ddd" stroke-width="1"/>
+  <line x1="162" y1="175" x2="278" y2="175" stroke="#ddd" stroke-width="1"/>
+  <!-- Vùng dưới đường -->
+  <polygon
+    points="166,175 166,162 183,152 200,141 217,128 234,116 251,106 268,94 268,175"
+    fill="#a5d6a7" opacity="0.3"/>
+  <!-- Đường trend -->
+  <polyline
+    points="166,162 183,152 200,141 217,128 234,116 251,106 268,94"
+    fill="none" stroke="#388e3c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Điểm dữ liệu -->
+  <circle cx="166" cy="162" r="3" fill="white" stroke="#388e3c" stroke-width="1.5"/>
+  <circle cx="200" cy="141" r="3" fill="white" stroke="#388e3c" stroke-width="1.5"/>
+  <circle cx="234" cy="116" r="3" fill="white" stroke="#388e3c" stroke-width="1.5"/>
+  <circle cx="268" cy="94"  r="3" fill="white" stroke="#388e3c" stroke-width="1.5"/>
+</g>
+<text x="166" y="185" font-size="7.5" fill="#888" text-anchor="middle">2020</text>
+<text x="200" y="185" font-size="7.5" fill="#888" text-anchor="middle">2021</text>
+<text x="234" y="185" font-size="7.5" fill="#888" text-anchor="middle">2022</text>
+<text x="268" y="185" font-size="7.5" fill="#888" text-anchor="middle">2023</text>
+
+<!-- ===== Ô 3: Donut chart ===== -->
+<!-- Dùng stroke-dasharray trên đường tròn — không cần arc path -->
+<g clip-path="url(#cc3)">
+  <!-- Nền xám -->
+  <circle cx="354" cy="128" r="34" fill="none" stroke="#f0f0f0" stroke-width="18"/>
+  <!-- Segment 1: 40% xanh dương — dasharray=circumference×0.4, offset=0 -->
+  <!-- C=2π×34≈213.6 · 40%=85.4 · 30%=64.1 · 20%=42.7 · 10%=21.4 -->
+  <circle cx="354" cy="128" r="34" fill="none" stroke="#1e88e5" stroke-width="18"
+    stroke-dasharray="85.4 213.6" stroke-dashoffset="0"
+    transform="rotate(-90 354 128)"/>
+  <!-- Segment 2: 30% cam — offset=-(40%×C)=-85.4 -->
+  <circle cx="354" cy="128" r="34" fill="none" stroke="#fb8c00" stroke-width="18"
+    stroke-dasharray="64.1 213.6" stroke-dashoffset="-85.4"
+    transform="rotate(-90 354 128)"/>
+  <!-- Segment 3: 20% xanh lá — offset=-(70%×C)=-149.5 -->
+  <circle cx="354" cy="128" r="34" fill="none" stroke="#43a047" stroke-width="18"
+    stroke-dasharray="42.7 213.6" stroke-dashoffset="-149.5"
+    transform="rotate(-90 354 128)"/>
+  <!-- Segment 4: 10% tím — offset=-(90%×C)=-192.2 -->
+  <circle cx="354" cy="128" r="34" fill="none" stroke="#8e24aa" stroke-width="18"
+    stroke-dasharray="21.4 213.6" stroke-dashoffset="-192.2"
+    transform="rotate(-90 354 128)"/>
+  <!-- Lõi trắng -->
+  <circle cx="354" cy="128" r="23" fill="white"/>
+  <text x="354" y="125" font-size="8"  fill="#555" text-anchor="middle">Cơ</text>
+  <text x="354" y="136" font-size="8"  fill="#555" text-anchor="middle">cấu</text>
+</g>
+<!-- Legend donut — bên dưới clip area -->
+<rect x="295" y="176" width="8" height="8" fill="#1e88e5" rx="1"/>
+<text x="306" y="184" font-size="7.5" fill="#555">XK CN</text>
+<rect x="337" y="176" width="8" height="8" fill="#fb8c00" rx="1"/>
+<text x="348" y="184" font-size="7.5" fill="#555">Nông</text>
+<rect x="295" y="188" width="8" height="8" fill="#43a047" rx="1"/>
+<text x="306" y="196" font-size="7.5" fill="#555">Dịch vụ</text>
+<rect x="337" y="188" width="8" height="8" fill="#8e24aa" rx="1"/>
+<text x="348" y="196" font-size="7.5" fill="#555">Khác</text>
+
+<!-- ===== Ô 4: Choropleth heatmap ===== -->
+<!-- Grid 5×4 ô. Cell 14×14, gap 3. Width=5×14+4×3=82. Left=494-41=453. Right=453+82=535 < 560 ✓ -->
+<g clip-path="url(#cc4)">
+  <!-- Row 0 y=80 -->
+  <rect x="453" y="80"  width="14" height="14" fill="#c5cae9" rx="1"/>
+  <rect x="470" y="80"  width="14" height="14" fill="#7986cb" rx="1"/>
+  <rect x="487" y="80"  width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <rect x="504" y="80"  width="14" height="14" fill="#7986cb" rx="1"/>
+  <rect x="521" y="80"  width="14" height="14" fill="#c5cae9" rx="1"/>
+  <!-- Row 1 y=97 -->
+  <rect x="453" y="97"  width="14" height="14" fill="#9fa8da" rx="1"/>
+  <rect x="470" y="97"  width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <rect x="487" y="97"  width="14" height="14" fill="#3949ab" rx="1"/>
+  <rect x="504" y="97"  width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <rect x="521" y="97"  width="14" height="14" fill="#9fa8da" rx="1"/>
+  <!-- Row 2 y=114 -->
+  <rect x="453" y="114" width="14" height="14" fill="#c5cae9" rx="1"/>
+  <rect x="470" y="114" width="14" height="14" fill="#7986cb" rx="1"/>
+  <rect x="487" y="114" width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <rect x="504" y="114" width="14" height="14" fill="#3949ab" rx="1"/>
+  <rect x="521" y="114" width="14" height="14" fill="#7986cb" rx="1"/>
+  <!-- Row 3 y=131 -->
+  <rect x="453" y="131" width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <rect x="470" y="131" width="14" height="14" fill="#3949ab" rx="1"/>
+  <rect x="487" y="131" width="14" height="14" fill="#283593" rx="1"/>
+  <rect x="504" y="131" width="14" height="14" fill="#3949ab" rx="1"/>
+  <rect x="521" y="131" width="14" height="14" fill="#5c6bc0" rx="1"/>
+  <!-- Thang màu -->
+  <rect x="453" y="152" width="82" height="7" fill="url(#map-grad)" rx="2"/>
+</g>
+<text x="453" y="170" font-size="7.5" fill="#888">Thấp</text>
+<text x="535" y="170" font-size="7.5" fill="#888" text-anchor="end">Cao</text>
+<!-- Nhãn cột -->
+<text x="460" y="180" font-size="7" fill="#aaa" text-anchor="middle">HN</text>
+<text x="477" y="180" font-size="7" fill="#aaa" text-anchor="middle">MB</text>
+<text x="494" y="180" font-size="7" fill="#aaa" text-anchor="middle">MT</text>
+<text x="511" y="180" font-size="7" fill="#aaa" text-anchor="middle">MN</text>
+<text x="528" y="180" font-size="7" fill="#aaa" text-anchor="middle">HCM</text>
+
+<!-- ===== Ô 5: Scatter plot ===== -->
+<g clip-path="url(#cc5)">
+  <!-- Grid -->
+  <line x1="569" y1="155" x2="711" y2="155" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="569" y1="135" x2="711" y2="135" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="569" y1="115" x2="711" y2="115" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="569" y1="95"  x2="711" y2="95"  stroke="#f0f0f0" stroke-width="1"/>
+  <!-- Trục -->
+  <line x1="582" y1="76"  x2="582" y2="175" stroke="#ddd" stroke-width="1"/>
+  <line x1="582" y1="175" x2="708" y2="175" stroke="#ddd" stroke-width="1"/>
+  <!-- Đường xu hướng -->
+  <line x1="588" y1="170" x2="704" y2="90" stroke="#4dd0e1" stroke-width="1.2"
+        stroke-dasharray="4,3" opacity="0.7"/>
+  <!-- Scatter dots — tất cả trong x=588-704, y=90-170 -->
+  <circle cx="590" cy="168" r="3.5" fill="#00acc1" opacity="0.75"/>
+  <circle cx="599" cy="163" r="3"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="607" cy="157" r="4"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="616" cy="151" r="3"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="624" cy="144" r="4.5" fill="#00acc1" opacity="0.75"/>
+  <circle cx="632" cy="139" r="3"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="641" cy="132" r="4"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="650" cy="126" r="3.5" fill="#00acc1" opacity="0.75"/>
+  <circle cx="659" cy="118" r="3"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="668" cy="112" r="4"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="678" cy="106" r="3"   fill="#00acc1" opacity="0.75"/>
+  <circle cx="690" cy="98"  r="4.5" fill="#00acc1" opacity="0.75"/>
+</g>
+<text x="640" y="186" font-size="7.5" fill="#888" text-anchor="middle">GDP bình quân →</text>
+<text x="580" y="82"  font-size="7.5" fill="#888" text-anchor="end">Tuổi</text>
+<text x="580" y="91"  font-size="7.5" fill="#888" text-anchor="end">thọ ↑</text>
+
+<!-- ④ "DÙNG KHI" LABELS — dưới vùng chart, không cần clip -->
+<!-- Ô 1 -->
+<text x="74"  y="204" font-size="8.5" fill="#333" text-anchor="middle" font-weight="700">Dùng khi:</text>
+<text x="74"  y="216" font-size="8.5" fill="#555" text-anchor="middle">So sánh nhiều</text>
+<text x="74"  y="228" font-size="8.5" fill="#555" text-anchor="middle">danh mục theo</text>
+<text x="74"  y="240" font-size="8.5" fill="#555" text-anchor="middle">cùng tiêu chí</text>
+<!-- Ô 2 -->
+<text x="214" y="204" font-size="8.5" fill="#333" text-anchor="middle" font-weight="700">Dùng khi:</text>
+<text x="214" y="216" font-size="8.5" fill="#555" text-anchor="middle">Xu hướng thay</text>
+<text x="214" y="228" font-size="8.5" fill="#555" text-anchor="middle">đổi theo thời</text>
+<text x="214" y="240" font-size="8.5" fill="#555" text-anchor="middle">gian liên tục</text>
+<!-- Ô 3 -->
+<text x="354" y="204" font-size="8.5" fill="#333" text-anchor="middle" font-weight="700">Dùng khi:</text>
+<text x="354" y="216" font-size="8.5" fill="#555" text-anchor="middle">Tỷ lệ cấu phần</text>
+<text x="354" y="228" font-size="8.5" fill="#555" text-anchor="middle">của một tổng</text>
+<text x="354" y="240" font-size="8.5" fill="#555" text-anchor="middle">thể (≤ 6 phần)</text>
+<!-- Ô 4 -->
+<text x="494" y="204" font-size="8.5" fill="#333" text-anchor="middle" font-weight="700">Dùng khi:</text>
+<text x="494" y="216" font-size="8.5" fill="#555" text-anchor="middle">Phân bố địa lý</text>
+<text x="494" y="228" font-size="8.5" fill="#555" text-anchor="middle">theo vùng hoặc</text>
+<text x="494" y="240" font-size="8.5" fill="#555" text-anchor="middle">đơn vị hành chính</text>
+<!-- Ô 5 -->
+<text x="640" y="204" font-size="8.5" fill="#333" text-anchor="middle" font-weight="700">Dùng khi:</text>
+<text x="640" y="216" font-size="8.5" fill="#555" text-anchor="middle">Tương quan</text>
+<text x="640" y="228" font-size="8.5" fill="#555" text-anchor="middle">giữa hai biến</text>
+<text x="640" y="240" font-size="8.5" fill="#555" text-anchor="middle">số liên tục</text>
+
+<!-- Ghi chú cuối -->
+<rect x="8" y="286" width="704" height="50" fill="#fce4ec" rx="5" stroke="#f48fb1" stroke-width="1"/>
+<text x="360" y="301" font-size="10" fill="#c2185b" text-anchor="middle" font-weight="700">⚠ Lỗi phổ biến cần tránh:</text>
+<text x="360" y="315" font-size="9.5" fill="#880e4f" text-anchor="middle">Biểu đồ tròn &gt;6 phần · Trục Y không bắt đầu từ 0 · 3D chart che khuất dữ liệu · Thiếu ghi nguồn</text>
+<text x="360" y="329" font-size="9.5" fill="#880e4f" text-anchor="middle">Màu đỏ-xanh cùng lúc (8% nam bị mù màu) · Không có nhãn đơn vị trên trục</text>
+
+<!-- Dòng công cụ -->
+<text x="360" y="352" font-size="9.5" fill="#555" text-anchor="middle">Công cụ: <tspan font-weight="700" fill="#1a73e8">Datawrapper</tspan> (cột, đường, bản đồ) · <tspan font-weight="700" fill="#e8710a">Flourish</tspan> (tương tác, race chart) · <tspan font-weight="700" fill="#2e7d32">Google Sheets</tspan> (nội bộ, nhanh)</text>
+
+</svg>

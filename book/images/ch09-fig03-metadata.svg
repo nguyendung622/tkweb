@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 316" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="316" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Metadata ẩn trong tệp tin — Những gì mắt thường không thấy</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Metadata là nguồn rò rỉ thông tin nguy hiểm nhất mà nhiều nhà báo không nhận ra</text>
+
+  <!-- ═══ 3 thẻ: Ảnh / Word / PDF ═══ -->
+  <!-- x: 8, 251, 494 · w: 233, 233, 218 -->
+
+  <!-- Thẻ 1: ẢNH (EXIF) — camera icon -->
+  <rect x="8"   y="42" width="233" height="258" fill="white" rx="6" stroke="#90caf9" stroke-width="1.5"/>
+  <rect x="8"   y="42" width="233" height="36"  fill="#1565c0" rx="6"/>
+  <rect x="8"   y="64" width="233" height="14"  fill="#1565c0"/>
+  <text x="124" y="58" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">📷  Ảnh (EXIF Metadata)</text>
+  <text x="124" y="73" font-size="8.5"  fill="#bbdefb" text-anchor="middle">Được ghi tự động bởi mọi thiết bị chụp ảnh</text>
+
+  <!-- Danh sách EXIF -->
+  <text x="20"  y="96"  font-size="9"  fill="#c62828" font-weight="700">⚠ Nguy hiểm nhất:</text>
+  <rect x="16"  y="102" width="217" height="20" fill="#ffebee" rx="3"/>
+  <text x="24"  y="116" font-size="8.5" fill="#c62828" font-weight="600">📍 Tọa độ GPS chính xác nơi chụp</text>
+
+  <text x="20"  y="136" font-size="8.5" fill="#444">📅 Ngày giờ chụp chính xác</text>
+  <text x="20"  y="150" font-size="8.5" fill="#444">📱 Tên thiết bị và số model</text>
+  <text x="20"  y="164" font-size="8.5" fill="#444">🔢 Số serial của máy ảnh/điện thoại</text>
+  <text x="20"  y="178" font-size="8.5" fill="#444">⚙ Cài đặt kỹ thuật (ISO, khẩu độ)</text>
+  <text x="20"  y="192" font-size="8.5" fill="#444">👤 Tên người dùng lưu trong thiết bị</text>
+
+  <line x1="16" y1="200" x2="233" y2="200" stroke="#e3f2fd" stroke-width="1"/>
+  <text x="20"  y="214" font-size="8.5" fill="#1565c0" font-weight="700">Cách xóa:</text>
+  <text x="20"  y="227" font-size="8"   fill="#555">• ExifTool (miễn phí, đa nền tảng)</text>
+  <text x="20"  y="240" font-size="8"   fill="#555">• Windows: Properties → Details → Remove</text>
+  <text x="20"  y="253" font-size="8"   fill="#555">• exifremove.com (online, nhanh)</text>
+
+  <rect x="16"  y="262" width="217" height="22" fill="#e3f2fd" rx="11"/>
+  <text x="124" y="277" font-size="8" fill="#0d47a1" text-anchor="middle" font-weight="600">Tắt GPS trong camera trước khi tác nghiệp nhạy cảm</text>
+
+  <!-- Thẻ 2: TÀI LIỆU WORD/OFFICE -->
+  <rect x="251" y="42" width="233" height="258" fill="white" rx="6" stroke="#a5d6a7" stroke-width="1.5"/>
+  <rect x="251" y="42" width="233" height="36"  fill="#2e7d32" rx="6"/>
+  <rect x="251" y="64" width="233" height="14"  fill="#2e7d32"/>
+  <text x="367" y="58" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">📄  Tài liệu Word / Office</text>
+  <text x="367" y="73" font-size="8.5"  fill="#c8e6c9" text-anchor="middle">Metadata ẩn trong mọi tài liệu Microsoft Office</text>
+
+  <text x="263" y="96"  font-size="9"  fill="#c62828" font-weight="700">⚠ Nguy hiểm nhất:</text>
+  <rect x="259" y="102" width="217" height="20" fill="#ffebee" rx="3"/>
+  <text x="267" y="116" font-size="8.5" fill="#c62828" font-weight="600">👤 Tên tác giả từ cài đặt Windows/Office</text>
+
+  <text x="263" y="136" font-size="8.5" fill="#444">🏢 Tên công ty/tổ chức</text>
+  <text x="263" y="150" font-size="8.5" fill="#444">📅 Ngày tạo và ngày sửa lần cuối</text>
+  <text x="263" y="164" font-size="8.5" fill="#444">📝 Lịch sử chỉnh sửa (Track Changes)</text>
+  <text x="263" y="178" font-size="8.5" fill="#444">🗑 Văn bản đã xóa nhưng vẫn lưu</text>
+  <text x="263" y="192" font-size="8.5" fill="#444">💬 Bình luận ẩn (hidden comments)</text>
+
+  <line x1="259" y1="200" x2="476" y2="200" stroke="#e8f5e9" stroke-width="1"/>
+  <text x="263" y="214" font-size="8.5" fill="#2e7d32" font-weight="700">Cách xóa:</text>
+  <text x="263" y="227" font-size="8"   fill="#555">• File → Info → Check for Issues</text>
+  <text x="263" y="240" font-size="8"   fill="#555">  → Inspect Document → Remove All</text>
+  <text x="263" y="253" font-size="8"   fill="#555">• Save As → PDF (loại bỏ hầu hết metadata)</text>
+
+  <rect x="259" y="262" width="217" height="22" fill="#e8f5e9" rx="11"/>
+  <text x="367" y="277" font-size="8" fill="#1b5e20" text-anchor="middle" font-weight="600">Không mở tài liệu nguồn tin trên máy tính thường</text>
+
+  <!-- Thẻ 3: PDF / MÁY IN -->
+  <rect x="494" y="42" width="218" height="258" fill="white" rx="6" stroke="#ffcc80" stroke-width="1.5"/>
+  <rect x="494" y="42" width="218" height="36"  fill="#e65100" rx="6"/>
+  <rect x="494" y="64" width="218" height="14"  fill="#e65100"/>
+  <text x="603" y="58" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">🖨  PDF &amp; Máy in</text>
+  <text x="603" y="73" font-size="8.5"  fill="#ffe0b2" text-anchor="middle">Nguy cơ ít biết nhưng rất thực</text>
+
+  <text x="506" y="96"  font-size="9"  fill="#c62828" font-weight="700">⚠ Nguy hiểm nhất:</text>
+  <rect x="502" y="102" width="202" height="20" fill="#ffebee" rx="3"/>
+  <text x="510" y="116" font-size="8.5" fill="#c62828" font-weight="600">🟡 Chấm vàng in bí mật của máy in màu</text>
+
+  <text x="506" y="136" font-size="8.5" fill="#444">📄 Tác giả PDF từ phần mềm tạo file</text>
+  <text x="506" y="150" font-size="8.5" fill="#444">🖥 Tên máy tính tạo ra file</text>
+  <text x="506" y="164" font-size="8.5" fill="#444">📅 Ngày tạo PDF chính xác</text>
+  <text x="506" y="178" font-size="8.5" fill="#444">🔑 Phần mềm tạo file (Office, Adobe)</text>
+  <text x="506" y="192" font-size="8.5" fill="#444">⚠ Văn bản ẩn trong layer PDF</text>
+
+  <line x1="502" y1="200" x2="704" y2="200" stroke="#fff3e0" stroke-width="1"/>
+  <text x="506" y="214" font-size="8.5" fill="#e65100" font-weight="700">Cách xóa:</text>
+  <text x="506" y="227" font-size="8"   fill="#555">• Print to PDF (không Save As PDF)</text>
+  <text x="506" y="240" font-size="8"   fill="#555">• Adobe Acrobat: Tools → Redact</text>
+  <text x="506" y="253" font-size="8"   fill="#555">  → Sanitize Document</text>
+
+  <rect x="502" y="262" width="202" height="22" fill="#fff3e0" rx="11"/>
+  <text x="603" y="277" font-size="8" fill="#bf360c" text-anchor="middle" font-weight="600">Chấm vàng: EFF có công cụ giải mã tại eff.org</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="292" width="704" height="18" fill="#fff9c4" rx="4" stroke="#f9a825" stroke-width="1"/>
+  <text x="360" y="305" font-size="8.5" fill="#e65100" text-anchor="middle">Vụ Vice/McAfee 2012: GPS trong ảnh iPhone tiết lộ vị trí người đang trốn cảnh sát — nhắc nhở về mức độ nguy hiểm của EXIF data</text>
+
+</svg>

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 286" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN -->
+  <rect width="720" height="286" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Quy trình sản xuất một Multimedia Story</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Từ ý tưởng đến xuất bản — 4 giai đoạn cốt lõi</text>
+
+  <!-- ═══ 4 hộp bước ═══ -->
+  <!-- Box 1: Lên kế hoạch (blue) x=8, w=158 -->
+  <!-- Box 2: Thu thập (green) x=183, w=158 -->
+  <!-- Box 3: Sản xuất (purple) x=358, w=158 -->
+  <!-- Box 4: Xuất bản (teal) x=536, w=176 -->
+
+  <!-- Nền hộp -->
+  <rect x="8"   y="44" width="158" height="210" fill="#e3f2fd" rx="6"/>
+  <rect x="183" y="44" width="158" height="210" fill="#e8f5e9" rx="6"/>
+  <rect x="358" y="44" width="158" height="210" fill="#f3e5f5" rx="6"/>
+  <rect x="536" y="44" width="176" height="210" fill="#e0f2f1" rx="6"/>
+
+  <!-- Header strip (h=34) -->
+  <rect x="8"   y="44" width="158" height="34" fill="#1565c0" rx="6"/>
+  <rect x="8"   y="64" width="158" height="14" fill="#1565c0"/>
+  <rect x="183" y="44" width="158" height="34" fill="#2e7d32" rx="6"/>
+  <rect x="183" y="64" width="158" height="14" fill="#2e7d32"/>
+  <rect x="358" y="44" width="158" height="34" fill="#6a1b9a" rx="6"/>
+  <rect x="358" y="64" width="158" height="14" fill="#6a1b9a"/>
+  <rect x="536" y="44" width="176" height="34" fill="#00695c" rx="6"/>
+  <rect x="536" y="64" width="176" height="14" fill="#00695c"/>
+
+  <!-- Step number circles -->
+  <circle cx="28"  cy="61" r="11" fill="white"/>
+  <text   x="28"  y="65" font-size="10" fill="#1565c0" text-anchor="middle" font-weight="700">1</text>
+  <circle cx="203" cy="61" r="11" fill="white"/>
+  <text   x="203" y="65" font-size="10" fill="#2e7d32" text-anchor="middle" font-weight="700">2</text>
+  <circle cx="378" cy="61" r="11" fill="white"/>
+  <text   x="378" y="65" font-size="10" fill="#6a1b9a" text-anchor="middle" font-weight="700">3</text>
+  <circle cx="556" cy="61" r="11" fill="white"/>
+  <text   x="556" y="65" font-size="10" fill="#00695c" text-anchor="middle" font-weight="700">4</text>
+
+  <!-- Header titles -->
+  <text x="96"  y="65" font-size="10.5" fill="white" font-weight="700">Lên kế hoạch</text>
+  <text x="271" y="65" font-size="10.5" fill="white" font-weight="700">Thu thập</text>
+  <text x="446" y="65" font-size="10.5" fill="white" font-weight="700">Sản xuất</text>
+  <text x="628" y="65" font-size="10.5" fill="white" font-weight="700">Xuất bản</text>
+
+  <!-- Step 1 sub-items (x center=87) -->
+  <text x="16" y="96"  font-size="8.5" fill="#1a237e">● Chọn chủ đề + góc tiếp cận</text>
+  <text x="16" y="112" font-size="8.5" fill="#1a237e">● Lập dàn ý đa phương tiện</text>
+  <text x="16" y="128" font-size="8.5" fill="#1a237e">● Phân công vai trò từng PT</text>
+  <text x="16" y="144" font-size="8.5" fill="#1a237e">● Xác định nhân vật, chuyên gia</text>
+  <text x="16" y="160" font-size="8.5" fill="#1a237e">● Thu thập số liệu ban đầu</text>
+
+  <!-- Step 1 tool badge -->
+  <rect x="14" y="174" width="146" height="18" fill="#bbdefb" rx="9"/>
+  <text x="87" y="187" font-size="8" fill="#0d47a1" text-anchor="middle" font-weight="600">Công cụ: Google Docs · Mindmap</text>
+
+  <!-- Step 2 sub-items -->
+  <text x="191" y="96"  font-size="8.5" fill="#1b5e20">● Chụp ảnh tại hiện trường</text>
+  <text x="191" y="112" font-size="8.5" fill="#1b5e20">● Quay video phỏng vấn</text>
+  <text x="191" y="128" font-size="8.5" fill="#1b5e20">● Ghi âm tiếng động môi trường</text>
+  <text x="191" y="144" font-size="8.5" fill="#1b5e20">● Thu thập số liệu từ nguồn tin</text>
+  <text x="191" y="160" font-size="8.5" fill="#1b5e20">● Ghi chú trích dẫn chính xác</text>
+
+  <!-- Step 2 tool badge -->
+  <rect x="189" y="174" width="146" height="18" fill="#c8e6c9" rx="9"/>
+  <text x="262" y="187" font-size="8" fill="#1b5e20" text-anchor="middle" font-weight="600">Công cụ: Điện thoại · Micro cài áo</text>
+
+  <!-- Step 3 sub-items -->
+  <text x="366" y="96"  font-size="8.5" fill="#4a148c">● Chỉnh ảnh: Snapseed / Lightroom</text>
+  <text x="366" y="112" font-size="8.5" fill="#4a148c">● Dựng video: CapCut / iMovie</text>
+  <text x="366" y="128" font-size="8.5" fill="#4a148c">● Tạo biểu đồ: Flourish</text>
+  <text x="366" y="144" font-size="8.5" fill="#4a148c">● Biên tập âm thanh: Audacity</text>
+  <text x="366" y="160" font-size="8.5" fill="#4a148c">● Viết bài longform + caption</text>
+
+  <!-- Step 3 tool badge -->
+  <rect x="364" y="174" width="146" height="18" fill="#e1bee7" rx="9"/>
+  <text x="437" y="187" font-size="8" fill="#4a148c" text-anchor="middle" font-weight="600">Công cụ: Snapseed · CapCut · Flourish</text>
+
+  <!-- Step 4 sub-items -->
+  <text x="544" y="96"  font-size="8.5" fill="#004d40">● Xây dựng trang Google Sites</text>
+  <text x="544" y="112" font-size="8.5" fill="#004d40">● Nhúng video, biểu đồ, audio</text>
+  <text x="544" y="128" font-size="8.5" fill="#004d40">● Thêm ảnh + caption đầy đủ</text>
+  <text x="544" y="144" font-size="8.5" fill="#004d40">● Kiểm tra trên điện thoại</text>
+  <text x="544" y="160" font-size="8.5" fill="#004d40">● Chia sẻ và theo dõi số liệu</text>
+
+  <!-- Step 4 tool badge -->
+  <rect x="542" y="174" width="162" height="18" fill="#b2dfdb" rx="9"/>
+  <text x="623" y="187" font-size="8" fill="#004d40" text-anchor="middle" font-weight="600">Công cụ: Google Sites · Mobile preview</text>
+
+  <!-- Checklist area -->
+  <rect x="14"  y="200" width="146" height="48" fill="#e8eaf6" rx="4"/>
+  <text x="87"  y="214" font-size="8" fill="#283593" text-anchor="middle" font-weight="700">Câu hỏi cốt lõi:</text>
+  <text x="87"  y="226" font-size="7.5" fill="#3949ab" text-anchor="middle">Phương tiện nào kể</text>
+  <text x="87"  y="237" font-size="7.5" fill="#3949ab" text-anchor="middle">chuyện này tốt nhất?</text>
+
+  <rect x="189" y="200" width="146" height="48" fill="#f1f8e9" rx="4"/>
+  <text x="262" y="214" font-size="8" fill="#33691e" text-anchor="middle" font-weight="700">Nguyên tắc:</text>
+  <text x="262" y="226" font-size="7.5" fill="#558b2f" text-anchor="middle">Mobile-first — 70%</text>
+  <text x="262" y="237" font-size="7.5" fill="#558b2f" text-anchor="middle">người đọc dùng điện thoại</text>
+
+  <rect x="364" y="200" width="146" height="48" fill="#fce4ec" rx="4"/>
+  <text x="437" y="214" font-size="8" fill="#880e4f" text-anchor="middle" font-weight="700">Kiểm tra:</text>
+  <text x="437" y="226" font-size="7.5" fill="#ad1457" text-anchor="middle">Mỗi PT có làm việc</text>
+  <text x="437" y="237" font-size="7.5" fill="#ad1457" text-anchor="middle">riêng không trùng lặp?</text>
+
+  <rect x="542" y="200" width="162" height="48" fill="#e0f7fa" rx="4"/>
+  <text x="623" y="214" font-size="8" fill="#006064" text-anchor="middle" font-weight="700">Checklist xuất bản:</text>
+  <text x="623" y="226" font-size="7.5" fill="#00838f" text-anchor="middle">Link OK · Ảnh load nhanh</text>
+  <text x="623" y="237" font-size="7.5" fill="#00838f" text-anchor="middle">Caption · Nguồn · Mobile</text>
+
+  <!-- Mũi tên giữa các bước -->
+  <polygon points="171,145 171,155 179,150" fill="#78909c"/>
+  <polygon points="346,145 346,155 354,150" fill="#78909c"/>
+  <polygon points="521,145 521,155 529,150" fill="#78909c"/>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="262" width="704" height="18" fill="#e8eaf6" rx="4" stroke="#9fa8da" stroke-width="1"/>
+  <text x="360" y="275" font-size="9" fill="#283593" text-anchor="middle" font-weight="600">💡 Giai đoạn 1 (Lên kế hoạch) quyết định 50% chất lượng sản phẩm cuối — đừng bỏ qua bước lập dàn ý đa phương tiện</text>
+
+</svg>

@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html" class="active">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -167,6 +140,11 @@
       Nghiên cứu từ khóa (keyword research) là quá trình tìm hiểu những gì độc giả tiềm năng đang gõ vào ô tìm kiếm để tìm thông tin liên quan đến chủ đề bạn định viết. Đây là bước thường bị bỏ qua nhưng lại có tác động lớn nhất đến khả năng tiếp cận của bài báo.
     </p>
 
+    <figure>
+      <img src="../images/ch05-fig01-serp.svg" alt="Giải phẫu trang kết quả tìm kiếm Google: title tag, URL slug, meta description và ngày xuất bản">
+      <figcaption>Hình 5.1 — Các yếu tố SERP ảnh hưởng đến thứ hạng và tỷ lệ click: ① Title tag (50–60 ký tự, chứa từ khóa), ② URL slug (ngắn gọn, không dấu), ③ Meta description (150–160 ký tự, có call-to-action), ④ Ngày xuất bản (tín hiệu tính thời sự)</figcaption>
+    </figure>
+
     <h3>Từ khóa ngắn và từ khóa dài (long-tail)</h3>
 
     <p>
@@ -194,6 +172,11 @@
     <p>
       <strong>Tính năng autocomplete của Google</strong> — Đừng bỏ qua: khi bạn gõ vào ô tìm kiếm và Google gợi ý các cụm từ hoàn chỉnh, đó chính là dữ liệu thực tế về những gì người dùng đang tìm. Tương tự, phần "Mọi người cũng tìm kiếm" (People Also Ask) ở giữa trang kết quả và phần tìm kiếm liên quan ở cuối trang là nguồn ý tưởng từ khóa hoàn toàn miễn phí.
     </p>
+
+    <figure>
+      <img src="../images/ch05-fig03-keyword.svg" alt="Biểu đồ phễu so sánh từ khóa ngắn và từ khóa dài: lượng tìm kiếm, độ cạnh tranh và ý định tìm kiếm">
+      <figcaption>Hình 5.2 — Phễu từ khóa trong báo chí: từ khóa ngắn có lượng tìm kiếm lớn nhưng cạnh tranh cực cao và ý định mơ hồ; từ khóa dài cạnh tranh thấp hơn, ý định rõ hơn và phù hợp hơn cho nội dung báo chí chuyên sâu</figcaption>
+    </figure>
 
     <h3>Ý định tìm kiếm (Search Intent)</h3>
 
@@ -336,6 +319,11 @@
     <p>
       Nguyên tắc: liên kết đến bài liên quan thực sự, dùng anchor text (văn bản hiển thị của link) mô tả chính xác nội dung đích thay vì dùng "xem tại đây" hay "click vào đây". Mỗi bài nên có ít nhất 2–3 internal links đến các bài cùng chủ đề.
     </p>
+
+    <figure>
+      <img src="../images/ch05-fig02-onpage.svg" alt="Các yếu tố on-page SEO trên một trang bài báo: H1, URL, H2, internal link và alt text ảnh">
+      <figcaption>Hình 5.3 — On-page SEO trong một bài báo: ① H1 tiêu đề chứa từ khóa chính, ② URL slug ngắn không dấu, ③ H2/H3 tạo cấu trúc nội dung, ④ Internal link với anchor text mô tả, ⑤ Alt text ảnh đầy đủ và cụ thể</figcaption>
+    </figure>
 
     <table>
       <caption>Bảng 5.2 — Checklist SEO cho mỗi bài báo</caption>
@@ -500,6 +488,48 @@
 
 
     <!-- ════════════════════════════════════
+         5.7 SEO VÀ AI: XU HƯỚNG 2025
+    ════════════════════════════════════ -->
+    <h2>5.7 SEO và AI: Những thay đổi nhà báo cần biết</h2>
+
+    <p>
+      Năm 2023–2025 đánh dấu sự thay đổi lớn nhất trong lịch sử SEO kể từ khi Google ra đời: sự xuất hiện của <strong>AI Overviews</strong> (trước đây gọi là Search Generative Experience — SGE). Thay vì chỉ liệt kê các trang web, Google hiện tóm tắt câu trả lời trực tiếp trên đầu trang kết quả bằng AI, rút ra thông tin từ nhiều nguồn. Điều này đang thay đổi căn bản cách người dùng tương tác với kết quả tìm kiếm.
+    </p>
+
+    <h3>AI Overviews ảnh hưởng đến traffic báo chí như thế nào?</h3>
+
+    <p>
+      Nghiên cứu của SparkToro (2024) cho thấy tỷ lệ "zero-click searches" — người dùng tìm kiếm nhưng không nhấp vào bất kỳ trang nào — đã tăng lên hơn 60% trên desktop. AI Overviews khiến nhiều câu hỏi đơn giản được trả lời ngay tại chỗ, không cần truy cập website nguồn. Điều này đặc biệt ảnh hưởng đến các bài giải thích ngắn, bài FAQ, và tin tổng hợp đơn thuần.
+    </p>
+
+    <p>
+      Tuy nhiên, nội dung báo chí điều tra, phóng sự thực địa, và phân tích chuyên sâu — những thứ AI không thể tự tạo ra — vẫn giữ được giá trị và lợi thế SEO. Google vẫn phải trích dẫn nguồn trong AI Overviews, và việc được trích dẫn trong box AI có thể mang lại lượng impression lớn dù click có thể thấp hơn.
+    </p>
+
+    <h3>Dùng AI để hỗ trợ nghiên cứu từ khóa</h3>
+
+    <p>
+      AI tạo sinh (ChatGPT, Gemini, Claude) đang trở thành công cụ hỗ trợ hữu ích trong nghiên cứu từ khóa, không phải thay thế mà là <em>bổ sung</em> cho các công cụ truyền thống:
+    </p>
+
+    <ul>
+      <li><strong>Mở rộng ý tưởng từ khóa:</strong> Prompt AI: "Tôi định viết về ô nhiễm không khí Hà Nội. Hãy gợi ý 20 câu hỏi mà độc giả có thể tìm kiếm về chủ đề này." Kết quả sau đó được kiểm chứng lại bằng Ubersuggest hoặc Google Trends.</li>
+      <li><strong>Phân tích ý định tìm kiếm:</strong> "Người dùng gõ 'AQI Hà Nội hôm nay' thường đang tìm gì? Họ cần loại nội dung nào?" — AI giúp bạn suy nghĩ về search intent trước khi viết.</li>
+      <li><strong>Viết meta description:</strong> Dán nội dung bài báo vào AI và yêu cầu "Viết 3 phương án meta description dưới 160 ký tự, có từ khóa 'ô nhiễm không khí Hà Nội' và có call-to-action." Bạn chọn và tinh chỉnh.</li>
+    </ul>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ Nội dung AI thuần túy và rủi ro SEO</div>
+      <p>Google đã tuyên bố rõ ràng: họ không phạt nội dung do AI tạo ra chỉ vì nó do AI tạo, nhưng họ <strong>phạt nội dung kém chất lượng, không có giá trị thực</strong> — dù được viết bởi con người hay AI. Nội dung AI không được kiểm tra thực tế, nhồi nhét từ khóa, hoặc không có góc nhìn gốc sẽ bị thuật toán Helpful Content Update (2023) xử lý. Nguyên tắc: AI là công cụ soạn thảo, nhà báo là người xác minh, bổ sung thông tin gốc và chịu trách nhiệm.</p>
+    </div>
+
+    <div class="box tip">
+      <div class="box-title">💡 Lợi thế cạnh tranh của báo chí trong kỷ nguyên AI</div>
+      <p>Những gì AI không thể tạo ra — và Google vẫn cần trích dẫn — chính là vũ khí SEO mạnh nhất của nhà báo: thông tin độc quyền từ phỏng vấn trực tiếp, dữ liệu từ điều tra thực địa, hình ảnh/video gốc từ hiện trường, và góc nhìn phân tích được ký tên bởi chuyên gia uy tín. Đầu tư vào chất lượng báo chí <em>là</em> đầu tư vào SEO dài hạn.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
          CÂU HỎI ÔN TẬP
     ════════════════════════════════════ -->
     <div class="review-questions">
@@ -509,6 +539,8 @@
         <li>Giải thích E-E-A-T và nêu ba biện pháp cụ thể mà một tòa soạn báo địa phương có thể áp dụng để cải thiện điểm E-E-A-T trong mắt Google.</li>
         <li>So sánh ưu và nhược điểm của từ khóa ngắn và từ khóa dài (long-tail) trong chiến lược SEO cho báo chí. Với một bài báo điều tra về nợ xấu ngân hàng, bạn sẽ nhắm vào loại từ khóa nào và tại sao?</li>
         <li>Tại sao internal linking quan trọng cả với người đọc lẫn với SEO? Mô tả cách bạn sẽ xây dựng mạng lưới internal links cho một chuyên mục "Kinh tế" với 50 bài báo đã xuất bản.</li>
+        <li>Google AI Overviews đang thay đổi hành vi tìm kiếm như thế nào? Theo bạn, loại nội dung báo chí nào sẽ bị ảnh hưởng nhiều nhất và loại nào ít bị ảnh hưởng nhất? Lý giải dựa trên đặc điểm của từng loại nội dung.</li>
+        <li>Thực hành: Chọn một chủ đề báo chí đang thời sự. Sử dụng Google Trends và Ubersuggest để tìm 5 từ khóa dài phù hợp. Với mỗi từ khóa, phân tích: lượng tìm kiếm, độ cạnh tranh, ý định tìm kiếm, và loại bài báo bạn sẽ viết để nhắm vào từ khóa đó. Trình bày kết quả dưới dạng bảng.</li>
       </ol>
     </div>
 
@@ -521,5 +553,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

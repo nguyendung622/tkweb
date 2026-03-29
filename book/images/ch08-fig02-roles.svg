@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 308" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN -->
+  <rect width="720" height="308" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Mỗi phương tiện có vai trò riêng trong câu chuyện đa phương tiện</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Tránh để hai phương tiện mô tả cùng một thông tin — mỗi cái làm việc nó giỏi nhất</text>
+
+  <!-- ═══ 5 thẻ phương tiện ═══ -->
+  <!-- Định nghĩa: x=10,152,294,436,578 · w=132 · y=44 · h=226 -->
+
+  <!-- Card 1: Văn bản (blue #1565c0) -->
+  <rect x="10"  y="44" width="132" height="226" fill="white" rx="6" stroke="#90caf9" stroke-width="1.2"/>
+  <rect x="10"  y="44" width="132" height="34"  fill="#1565c0" rx="6"/>
+  <rect x="10"  y="64" width="132" height="14"  fill="#1565c0"/>
+  <text x="76"  y="66" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Văn bản</text>
+  <text x="76"  y="90"  font-size="8.5" fill="#1565c0" text-anchor="middle" font-weight="700">Giỏi nhất ở:</text>
+  <text x="76"  y="104" font-size="8"   fill="#333"   text-anchor="middle">✓ Phân tích, lập luận</text>
+  <text x="76"  y="117" font-size="8"   fill="#333"   text-anchor="middle">✓ Giải thích bối cảnh</text>
+  <text x="76"  y="130" font-size="8"   fill="#333"   text-anchor="middle">✓ Trích dẫn chính xác</text>
+  <text x="76"  y="143" font-size="8"   fill="#333"   text-anchor="middle">✓ Lập luận nhiều chiều</text>
+  <line x1="20" y1="156" x2="132" y2="156" stroke="#e3f2fd" stroke-width="1"/>
+  <text x="76"  y="168" font-size="7.5" fill="#999"   text-anchor="middle" font-style="italic">Kém hơn ở:</text>
+  <text x="76"  y="180" font-size="7.5" fill="#aaa"   text-anchor="middle">Tái hiện cảm xúc</text>
+  <text x="76"  y="191" font-size="7.5" fill="#aaa"   text-anchor="middle">tức thì, không khí</text>
+  <rect x="18"  y="200" width="116" height="18" fill="#e3f2fd" rx="9"/>
+  <text x="76"  y="213" font-size="7.5" fill="#1565c0" text-anchor="middle" font-weight="600">Công cụ: Google Docs</text>
+  <text x="76"  y="228" font-size="7"   fill="#bbb"   text-anchor="middle">Không giới hạn</text>
+  <text x="76"  y="238" font-size="7"   fill="#bbb"   text-anchor="middle">độ sâu nội dung</text>
+  <text x="76"  y="261" font-size="8"   fill="#1565c0" text-anchor="middle" font-weight="700">Báo in / Online / App</text>
+
+  <!-- Card 2: Ảnh (green #2e7d32) -->
+  <rect x="152" y="44" width="132" height="226" fill="white" rx="6" stroke="#a5d6a7" stroke-width="1.2"/>
+  <rect x="152" y="44" width="132" height="34"  fill="#2e7d32" rx="6"/>
+  <rect x="152" y="64" width="132" height="14"  fill="#2e7d32"/>
+  <text x="218" y="66" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Ảnh</text>
+  <text x="218" y="90"  font-size="8.5" fill="#2e7d32" text-anchor="middle" font-weight="700">Giỏi nhất ở:</text>
+  <text x="218" y="104" font-size="8"   fill="#333"   text-anchor="middle">✓ Khoảnh khắc cụ thể</text>
+  <text x="218" y="117" font-size="8"   fill="#333"   text-anchor="middle">✓ Cảm xúc gương mặt</text>
+  <text x="218" y="130" font-size="8"   fill="#333"   text-anchor="middle">✓ Không khí hiện trường</text>
+  <text x="218" y="143" font-size="8"   fill="#333"   text-anchor="middle">✓ Tác động tức thì</text>
+  <line x1="162" y1="156" x2="274" y2="156" stroke="#e8f5e9" stroke-width="1"/>
+  <text x="218" y="168" font-size="7.5" fill="#999"   text-anchor="middle" font-style="italic">Kém hơn ở:</text>
+  <text x="218" y="180" font-size="7.5" fill="#aaa"   text-anchor="middle">Giải thích nguyên nhân,</text>
+  <text x="218" y="191" font-size="7.5" fill="#aaa"   text-anchor="middle">số liệu, bối cảnh rộng</text>
+  <rect x="160" y="200" width="116" height="18" fill="#e8f5e9" rx="9"/>
+  <text x="218" y="213" font-size="7.5" fill="#2e7d32" text-anchor="middle" font-weight="600">Công cụ: Snapseed</text>
+  <text x="218" y="228" font-size="7"   fill="#bbb"   text-anchor="middle">Tỷ lệ 1:1 hoặc</text>
+  <text x="218" y="238" font-size="7"   fill="#bbb"   text-anchor="middle">3:2 cho báo online</text>
+  <text x="218" y="261" font-size="8"   fill="#2e7d32" text-anchor="middle" font-weight="700">Web / App / In</text>
+
+  <!-- Card 3: Video (red #c62828) -->
+  <rect x="294" y="44" width="132" height="226" fill="white" rx="6" stroke="#ef9a9a" stroke-width="1.2"/>
+  <rect x="294" y="44" width="132" height="34"  fill="#c62828" rx="6"/>
+  <rect x="294" y="64" width="132" height="14"  fill="#c62828"/>
+  <text x="360" y="66" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Video</text>
+  <text x="360" y="90"  font-size="8.5" fill="#c62828" text-anchor="middle" font-weight="700">Giỏi nhất ở:</text>
+  <text x="360" y="104" font-size="8"   fill="#333"   text-anchor="middle">✓ Chuyển động, diễn tiến</text>
+  <text x="360" y="117" font-size="8"   fill="#333"   text-anchor="middle">✓ Phỏng vấn sinh động</text>
+  <text x="360" y="130" font-size="8"   fill="#333"   text-anchor="middle">✓ Trải nghiệm thực tế</text>
+  <text x="360" y="143" font-size="8"   fill="#333"   text-anchor="middle">✓ Kết hợp hình + tiếng</text>
+  <line x1="304" y1="156" x2="416" y2="156" stroke="#ffebee" stroke-width="1"/>
+  <text x="360" y="168" font-size="7.5" fill="#999"   text-anchor="middle" font-style="italic">Kém hơn ở:</text>
+  <text x="360" y="180" font-size="7.5" fill="#aaa"   text-anchor="middle">Tra cứu nhanh, đọc</text>
+  <text x="360" y="191" font-size="7.5" fill="#aaa"   text-anchor="middle">lướt trong im lặng</text>
+  <rect x="302" y="200" width="116" height="18" fill="#ffebee" rx="9"/>
+  <text x="360" y="213" font-size="7.5" fill="#c62828" text-anchor="middle" font-weight="600">Công cụ: CapCut</text>
+  <text x="360" y="228" font-size="7"   fill="#bbb"   text-anchor="middle">16:9 YouTube</text>
+  <text x="360" y="238" font-size="7"   fill="#bbb"   text-anchor="middle">9:16 TikTok/Reels</text>
+  <text x="360" y="261" font-size="8"   fill="#c62828" text-anchor="middle" font-weight="700">YouTube / TikTok / FB</text>
+
+  <!-- Card 4: Âm thanh (purple #6a1b9a) -->
+  <rect x="436" y="44" width="132" height="226" fill="white" rx="6" stroke="#ce93d8" stroke-width="1.2"/>
+  <rect x="436" y="44" width="132" height="34"  fill="#6a1b9a" rx="6"/>
+  <rect x="436" y="64" width="132" height="14"  fill="#6a1b9a"/>
+  <text x="502" y="66" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Âm thanh</text>
+  <text x="502" y="90"  font-size="8.5" fill="#6a1b9a" text-anchor="middle" font-weight="700">Giỏi nhất ở:</text>
+  <text x="502" y="104" font-size="8"   fill="#333"   text-anchor="middle">✓ Tiếng động hiện trường</text>
+  <text x="502" y="117" font-size="8"   fill="#333"   text-anchor="middle">✓ Cảm giác hiện diện</text>
+  <text x="502" y="130" font-size="8"   fill="#333"   text-anchor="middle">✓ Giọng nói cảm xúc</text>
+  <text x="502" y="143" font-size="8"   fill="#333"   text-anchor="middle">✓ Nghe khi di chuyển</text>
+  <line x1="446" y1="156" x2="558" y2="156" stroke="#f3e5f5" stroke-width="1"/>
+  <text x="502" y="168" font-size="7.5" fill="#999"   text-anchor="middle" font-style="italic">Kém hơn ở:</text>
+  <text x="502" y="180" font-size="7.5" fill="#aaa"   text-anchor="middle">Nhiều số liệu, biểu</text>
+  <text x="502" y="191" font-size="7.5" fill="#aaa"   text-anchor="middle">đồ, nội dung phức tạp</text>
+  <rect x="444" y="200" width="116" height="18" fill="#f3e5f5" rx="9"/>
+  <text x="502" y="213" font-size="7.5" fill="#6a1b9a" text-anchor="middle" font-weight="600">Công cụ: Audacity</text>
+  <text x="502" y="228" font-size="7"   fill="#bbb"   text-anchor="middle">MP3 128kbps</text>
+  <text x="502" y="238" font-size="7"   fill="#bbb"   text-anchor="middle">cho podcast</text>
+  <text x="502" y="261" font-size="8"   fill="#6a1b9a" text-anchor="middle" font-weight="700">Spotify / SoundCloud</text>
+
+  <!-- Card 5: Biểu đồ (orange #e65100) -->
+  <rect x="578" y="44" width="132" height="226" fill="white" rx="6" stroke="#ffcc80" stroke-width="1.2"/>
+  <rect x="578" y="44" width="132" height="34"  fill="#e65100" rx="6"/>
+  <rect x="578" y="64" width="132" height="14"  fill="#e65100"/>
+  <text x="644" y="66" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Biểu đồ / Dữ liệu</text>
+  <text x="644" y="90"  font-size="8.5" fill="#e65100" text-anchor="middle" font-weight="700">Giỏi nhất ở:</text>
+  <text x="644" y="104" font-size="8"   fill="#333"   text-anchor="middle">✓ Xu hướng theo thời gian</text>
+  <text x="644" y="117" font-size="8"   fill="#333"   text-anchor="middle">✓ So sánh quy mô</text>
+  <text x="644" y="130" font-size="8"   fill="#333"   text-anchor="middle">✓ Dữ liệu phức tạp</text>
+  <text x="644" y="143" font-size="8"   fill="#333"   text-anchor="middle">✓ Đọc nhanh, trực quan</text>
+  <line x1="588" y1="156" x2="700" y2="156" stroke="#fff3e0" stroke-width="1"/>
+  <text x="644" y="168" font-size="7.5" fill="#999"   text-anchor="middle" font-style="italic">Kém hơn ở:</text>
+  <text x="644" y="180" font-size="7.5" fill="#aaa"   text-anchor="middle">Kể chuyện cá nhân,</text>
+  <text x="644" y="191" font-size="7.5" fill="#aaa"   text-anchor="middle">cảm xúc con người</text>
+  <rect x="586" y="200" width="116" height="18" fill="#fff3e0" rx="9"/>
+  <text x="644" y="213" font-size="7.5" fill="#e65100" text-anchor="middle" font-weight="600">Công cụ: Flourish</text>
+  <text x="644" y="228" font-size="7"   fill="#bbb"   text-anchor="middle">Nhúng iframe</text>
+  <text x="644" y="238" font-size="7"   fill="#bbb"   text-anchor="middle">vào Google Sites</text>
+  <text x="644" y="261" font-size="8"   fill="#e65100" text-anchor="middle" font-weight="700">Web / App</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="280" width="704" height="22" fill="#fffde7" rx="4" stroke="#f9a825" stroke-width="1"/>
+  <text x="360" y="295" font-size="9.5" fill="#e65100" text-anchor="middle">Nguyên tắc vàng: Ảnh không cần caption mô tả lại nội dung ảnh · Video không cần trích nguyên văn trong bài viết</text>
+
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 378" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- Banner Facebook — tỉ lệ 1200×630 px (scale xuống 720×378) -->
+  <defs>
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#1a3a5c"/>
+      <stop offset="60%"  style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="redLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#e63946"/>
+      <stop offset="100%" style="stop-color:#f4a261"/>
+    </linearGradient>
+    <linearGradient id="imgPanel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#1e3a5f;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#1e3a5f;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Nền chính -->
+  <rect width="720" height="378" fill="url(#bannerBg)" rx="6"/>
+
+  <!-- Vùng ảnh bên phải (placeholder) -->
+  <rect x="400" y="0" width="320" height="378" fill="#1e3a5f" rx="6"/>
+  <rect x="400" y="0" width="320" height="378" fill="url(#imgPanel)"/>
+  <!-- Placeholder ảnh -->
+  <rect x="430" y="40"  width="260" height="298" fill="rgba(255,255,255,0.04)" rx="8"/>
+  <circle cx="560" cy="190" r="70" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="560" cy="190" r="45" fill="rgba(255,255,255,0.07)"/>
+  <!-- Biểu tượng camera/ảnh -->
+  <rect x="535" y="174" width="50" height="38" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" rx="5"/>
+  <circle cx="560" cy="193" r="12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <circle cx="560" cy="193" r="5"  fill="rgba(255,255,255,0.2)"/>
+  <rect x="538" y="177" width="12" height="8" fill="rgba(255,255,255,0.15)" rx="2"/>
+  <text x="560" y="240" font-size="9" fill="rgba(255,255,255,0.25)" text-anchor="middle">[ Ảnh phóng sự ]</text>
+
+  <!-- Họa tiết đường chéo trang trí -->
+  <line x1="400" y1="0"   x2="720" y2="378" stroke="rgba(255,255,255,0.03)" stroke-width="60"/>
+
+  <!-- ── PHẦN VĂN BẢN BÊN TRÁI ── -->
+
+  <!-- Tag chuyên mục -->
+  <rect x="36" y="46" width="88" height="22" fill="url(#redLine)" rx="3"/>
+  <text x="80" y="61" font-size="10" fill="white" text-anchor="middle" font-weight="700" letter-spacing="1">ĐIỀU TRA</text>
+
+  <!-- Đường kẻ ngang accent -->
+  <rect x="36" y="80" width="60" height="3" fill="url(#redLine)" rx="2"/>
+
+  <!-- Tiêu đề chính -->
+  <text x="36" y="118" font-size="28" fill="white" font-weight="900">Ô nhiễm sông Hương:</text>
+  <text x="36" y="152" font-size="28" fill="white" font-weight="900">Ai chịu trách nhiệm?</text>
+
+  <!-- Mô tả ngắn -->
+  <text x="36" y="188" font-size="13" fill="rgba(255,255,255,0.7)">Loạt phóng sự điều tra 3 kỳ về thực trạng</text>
+  <text x="36" y="206" font-size="13" fill="rgba(255,255,255,0.7)">xả thải công nghiệp tại lưu vực sông Hương,</text>
+  <text x="36" y="224" font-size="13" fill="rgba(255,255,255,0.7)">tỉnh Thừa Thiên Huế.</text>
+
+  <!-- Thông tin tác giả + ngày -->
+  <line x1="36" y1="248" x2="360" y2="248" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <circle cx="52"  cy="270" r="16" fill="rgba(255,255,255,0.12)"/>
+  <text x="52"  cy="270" font-size="10" fill="rgba(255,255,255,0.4)" text-anchor="middle" dominant-baseline="middle">NVA</text>
+  <text x="52" y="270" font-size="9" fill="rgba(255,255,255,0.4)" text-anchor="middle">NVA</text>
+  <text x="76"  y="266" font-size="11" fill="white"                font-weight="600">Nguyễn Văn A</text>
+  <text x="76"  y="280" font-size="10" fill="rgba(255,255,255,0.5)">Phóng viên điều tra · 20/03/2025</text>
+
+  <!-- Nút CTA -->
+  <rect x="36"  y="308" width="130" height="36" fill="url(#redLine)" rx="18"/>
+  <text x="101" y="331" font-size="12" fill="white" text-anchor="middle" font-weight="700">Đọc ngay →</text>
+
+  <rect x="180" y="308" width="150" height="36" fill="rgba(255,255,255,0.1)" rx="18" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <text x="255" y="331" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Chia sẻ bài viết</text>
+
+  <!-- Logo tòa soạn góc dưới phải -->
+  <text x="684" y="358" font-size="11" fill="rgba(255,255,255,0.35)" text-anchor="end" font-weight="700">THANH NIÊN ONLINE</text>
+
+  <!-- Kích thước ghi chú nhỏ -->
+  <rect x="0" y="362" width="720" height="16" fill="rgba(0,0,0,0.3)" rx="6"/>
+  <text x="360" y="373" font-size="8" fill="rgba(255,255,255,0.3)" text-anchor="middle">Facebook Banner — 1200 × 630 px (tỉ lệ ~1.9:1) · Canva template: Social Media</text>
+
+</svg>

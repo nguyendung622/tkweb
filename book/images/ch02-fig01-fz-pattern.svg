@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <rect width="720" height="360" fill="#fafbfc" rx="8"/>
+  <text x="360" y="26" font-size="13" fill="#333" text-anchor="middle" font-weight="700">Mẫu chuyển động mắt: F-pattern và Z-pattern</text>
+
+  <!-- ══════════════════════
+       TRÁI: F-PATTERN
+  ══════════════════════ -->
+  <text x="175" y="48" font-size="11" fill="#555" text-anchor="middle" font-weight="700">F-pattern — Trang văn bản dày</text>
+  <text x="175" y="62" font-size="9" fill="#888" text-anchor="middle">(bài viết, phóng sự dài)</text>
+
+  <!-- Trang giả lập -->
+  <rect x="30" y="70" width="290" height="256" fill="white" stroke="#e0e0e0" rx="6"/>
+
+  <!-- Dòng 1 — đọc KỸ (nóng nhất) -->
+  <rect x="40"  y="80"  width="270" height="14" fill="#e53935" rx="3" opacity="0.85"/>
+  <!-- Dòng 2 — đọc kỹ nửa đầu -->
+  <rect x="40"  y="100" width="180" height="14" fill="#e53935" rx="3" opacity="0.7"/>
+  <rect x="222" y="100" width="88"  height="14" fill="#ffcdd2" rx="3" opacity="0.4"/>
+  <!-- Dòng 3 — chỉ đọc đầu dòng -->
+  <rect x="40"  y="120" width="70"  height="12" fill="#ef9a9a" rx="3" opacity="0.6"/>
+  <rect x="112" y="120" width="198" height="12" fill="#fafafa" rx="3" stroke="#f0f0f0"/>
+  <!-- Dòng 4 -->
+  <rect x="40"  y="138" width="60"  height="12" fill="#ef9a9a" rx="3" opacity="0.5"/>
+  <rect x="102" y="138" width="208" height="12" fill="#fafafa" rx="3" stroke="#f0f0f0"/>
+  <!-- Dòng 5 -->
+  <rect x="40"  y="156" width="50"  height="12" fill="#ffcdd2" rx="3" opacity="0.4"/>
+  <rect x="92"  y="156" width="218" height="12" fill="#fafafa" rx="3" stroke="#f0f0f0"/>
+  <!-- Dòng 6 -->
+  <rect x="40"  y="174" width="44"  height="12" fill="#ffcdd2" rx="3" opacity="0.3"/>
+  <rect x="86"  y="174" width="224" height="12" fill="#fafafa" rx="3" stroke="#f0f0f0"/>
+  <!-- Dòng 7-10 — chỉ quét đầu dòng -->
+  <rect x="40"  y="192" width="38"  height="12" fill="#ffebee" rx="3" opacity="0.25"/>
+  <rect x="40"  y="208" width="35"  height="12" fill="#ffebee" rx="3" opacity="0.2"/>
+  <rect x="40"  y="224" width="32"  height="12" fill="#ffebee" rx="3" opacity="0.15"/>
+  <rect x="40"  y="240" width="30"  height="12" fill="#ffebee" rx="3" opacity="0.1"/>
+  <!-- Các dòng còn lại (không màu) -->
+  <rect x="40"  y="258" width="270" height="10" fill="#f5f5f5" rx="2"/>
+  <rect x="40"  y="274" width="270" height="10" fill="#f5f5f5" rx="2"/>
+  <rect x="40"  y="290" width="230" height="10" fill="#f5f5f5" rx="2"/>
+  <rect x="40"  y="306" width="270" height="10" fill="#f5f5f5" rx="2"/>
+
+  <!-- Mũi tên chữ F minh họa -->
+  <text x="326" y="92"  font-size="10" fill="#e53935" font-weight="700">━━</text>
+  <text x="326" y="108" font-size="10" fill="#e53935" font-weight="700">━━</text>
+  <text x="326" y="185" font-size="10" fill="#e53935" font-weight="700">⬇</text>
+  <text x="322" y="330" font-size="28" fill="#e53935" opacity="0.3" font-weight="900">F</text>
+
+  <!-- Chú thích -->
+  <rect x="30" y="332" width="290" height="20" fill="#fff3e0" rx="4"/>
+  <text x="175" y="345" font-size="9" fill="#e65100" text-anchor="middle">Nội dung quan trọng phải ở đầu dòng và đầu trang</text>
+
+  <!-- Đường phân cách -->
+  <line x1="360" y1="45" x2="360" y2="355" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- ══════════════════════
+       PHẢI: Z-PATTERN
+  ══════════════════════ -->
+  <text x="545" y="48" font-size="11" fill="#555" text-anchor="middle" font-weight="700">Z-pattern — Trang chủ nhiều hình ảnh</text>
+  <text x="545" y="62" font-size="9" fill="#888" text-anchor="middle">(landing page, trang chủ báo)</text>
+
+  <!-- Trang giả lập -->
+  <rect x="400" y="70" width="290" height="256" fill="white" stroke="#e0e0e0" rx="6"/>
+
+  <!-- Logo + Menu bar -->
+  <rect x="410" y="80"  width="50"  height="22" fill="#1a73e8" rx="4" opacity="0.8"/>
+  <text x="435" y="95"  font-size="8" fill="white" text-anchor="middle">LOGO</text>
+  <rect x="470" y="86"  width="40"  height="10" fill="#e8eaed" rx="2"/>
+  <rect x="516" y="86"  width="40"  height="10" fill="#e8eaed" rx="2"/>
+  <rect x="562" y="86"  width="40"  height="10" fill="#e8eaed" rx="2"/>
+  <rect x="608" y="86"  width="70"  height="10" fill="#e8eaed" rx="2"/>
+
+  <!-- Hero image -->
+  <rect x="410" y="112" width="270" height="80" fill="#e3f2fd" rx="4"/>
+  <text x="545" y="158" font-size="11" fill="#1565c0" text-anchor="middle">ẢNH CHÍNH</text>
+
+  <!-- Cards row -->
+  <rect x="410" y="202" width="82"  height="60" fill="#f5f5f5" rx="4"/>
+  <rect x="410" y="202" width="82"  height="28" fill="#ddd" rx="4"/>
+  <rect x="500" y="202" width="82"  height="60" fill="#f5f5f5" rx="4"/>
+  <rect x="500" y="202" width="82"  height="28" fill="#ddd" rx="4"/>
+  <rect x="590" y="202" width="80"  height="60" fill="#f5f5f5" rx="4"/>
+  <rect x="590" y="202" width="80"  height="28" fill="#ddd" rx="4"/>
+
+  <!-- Footer bar -->
+  <rect x="410" y="272" width="270" height="40" fill="#f5f5f5" rx="4"/>
+  <rect x="420" y="280" width="60"  height="8"  fill="#ddd" rx="2"/>
+  <rect x="420" y="294" width="50"  height="8"  fill="#ddd" rx="2"/>
+  <rect x="540" y="280" width="60"  height="8"  fill="#ddd" rx="2"/>
+  <rect x="620" y="280" width="50"  height="8"  fill="#ddd" rx="2"/>
+
+  <!-- Đường Z và điểm dừng mắt -->
+  <defs>
+    <marker id="arrowZ" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1a73e8"/>
+    </marker>
+  </defs>
+  <!-- Điểm 1: Logo (góc trái) -->
+  <circle cx="435" cy="91" r="10" fill="#1a73e8" opacity="0.7"/>
+  <text x="435" y="95" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+  <!-- Đường ngang sang phải -->
+  <line x1="445" y1="91" x2="668" y2="91" stroke="#1a73e8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowZ)"/>
+  <!-- Điểm 2: Menu (góc phải) -->
+  <circle cx="671" cy="91" r="10" fill="#1a73e8" opacity="0.7"/>
+  <text x="671" y="95" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+  <!-- Đường chéo xuống trái -->
+  <line x1="665" y1="99" x2="445" y2="228" stroke="#1a73e8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowZ)"/>
+  <!-- Điểm 3: Cards bên trái -->
+  <circle cx="451" cy="232" r="10" fill="#1a73e8" opacity="0.7"/>
+  <text x="451" y="236" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+  <!-- Đường ngang sang phải -->
+  <line x1="461" y1="232" x2="668" y2="232" stroke="#1a73e8" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowZ)"/>
+  <!-- Điểm 4: Cards bên phải -->
+  <circle cx="671" cy="232" r="10" fill="#1a73e8" opacity="0.7"/>
+  <text x="671" y="236" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+
+  <!-- Chú thích Z -->
+  <text x="692" y="100" font-size="26" fill="#1a73e8" opacity="0.2" font-weight="900">Z</text>
+
+  <!-- Chú thích -->
+  <rect x="400" y="332" width="290" height="20" fill="#e8f0fe" rx="4"/>
+  <text x="545" y="345" font-size="9" fill="#1a34b8" text-anchor="middle">Đặt logo, tiêu đề chính và CTA trong hành trình Z</text>
+
+  <!-- Legend dưới cùng -->
+  <rect x="30" y="356" width="660" height="0" fill="none"/>
+
+  <!-- Màu nhiệt -->
+  <text x="360" y="358" font-size="0" fill="transparent">spacer</text>
+
+</svg>

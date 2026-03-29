@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html" class="active">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -114,6 +87,11 @@
       <li><strong>Trực quan hóa (Visualize):</strong> Chuyển dữ liệu thành biểu đồ, bản đồ, hoặc hình thức trực quan phù hợp với câu chuyện.</li>
       <li><strong>Kể chuyện (Narrate):</strong> Đặt biểu đồ vào bối cảnh, giải thích ý nghĩa, kết nối với con người thật — để dữ liệu trở thành câu chuyện, không chỉ là số.</li>
     </ol>
+
+    <figure>
+      <img src="../images/ch06-fig01-workflow.svg" alt="Quy trình 5 bước của báo chí dữ liệu" style="width:100%">
+      <figcaption>Hình 6.1 — Quy trình 5 bước của báo chí dữ liệu. Bước Làm sạch chiếm phần lớn thời gian (60–80%) và thường phải lặp lại nhiều lần trong một dự án thực tế.</figcaption>
+    </figure>
 
     <div class="box note">
       <div class="box-title">Câu chuyện là trung tâm, dữ liệu là bằng chứng</div>
@@ -312,6 +290,11 @@
       Datawrapper tổ chức quy trình tạo biểu đồ thành 4 bước tuyến tính, hiển thị ở thanh trên cùng: (1) Upload data, (2) Check &amp; Describe, (3) Visualize, (4) Publish &amp; Embed. Mỗi bước có giao diện rõ ràng và hướng dẫn bên trong, giúp người mới học nhanh chóng.
     </p>
 
+    <figure>
+      <img src="../images/ch06-fig02-datawrapper.svg" alt="Giao diện Datawrapper với 4 bước tạo biểu đồ" style="width:100%">
+      <figcaption>Hình 6.2 — Giao diện Datawrapper: 4 bước từ Upload đến Publish. Bước 3 (Visualize) cho phép chọn loại biểu đồ ở panel trái, xem trước trực tiếp ở trung tâm, và tùy chỉnh màu sắc, nhãn ở panel phải.</figcaption>
+    </figure>
+
     <h3>Chọn đúng loại biểu đồ</h3>
 
     <p>
@@ -370,6 +353,11 @@
         </tr>
       </tbody>
     </table>
+
+    <figure>
+      <img src="../images/ch06-fig03-charttype.svg" alt="Hướng dẫn chọn loại biểu đồ phù hợp theo câu hỏi báo chí" style="width:100%">
+      <figcaption>Hình 6.3 — Năm loại biểu đồ phổ biến và câu hỏi báo chí phù hợp với từng loại. Chọn đúng loại biểu đồ là kỹ năng quan trọng để truyền đạt dữ liệu trung thực và hiệu quả.</figcaption>
+    </figure>
 
     <h3>Step-by-step: Tạo biểu đồ đường trên Datawrapper</h3>
 
@@ -484,6 +472,52 @@
 
 
     <!-- ════════════════════════════════════
+         6.7 AI VÀ BÁO CHÍ DỮ LIỆU
+    ════════════════════════════════════ -->
+    <h2>6.7 AI trong báo chí dữ liệu</h2>
+
+    <p>
+      Trí tuệ nhân tạo đang thay đổi cách nhà báo làm việc với dữ liệu — không phải thay thế kỹ năng phân tích, mà tăng tốc và mở rộng những gì có thể làm được trong thời gian ít hơn. AI đặc biệt hữu ích ở ba giai đoạn: làm sạch dữ liệu, phân tích khám phá, và tạo mã trực quan hóa.
+    </p>
+
+    <h3>ChatGPT và Claude để khám phá dữ liệu</h3>
+
+    <p>
+      Một trong những ứng dụng thực tế nhất của AI trong báo chí dữ liệu là dùng như một "cộng tác viên phân tích" — bạn mô tả tập dữ liệu và đặt câu hỏi, AI gợi ý các góc nhìn phân tích, cách lọc, hay phép tính phù hợp. Ví dụ, bạn có thể dán vào chat một đoạn mẫu từ bảng dữ liệu tỉnh thành và hỏi: <em>"Tôi có dữ liệu GDP 63 tỉnh từ 2015–2024. Tôi muốn tìm tỉnh nào có tốc độ tăng trưởng bất thường so với khu vực. Công thức Google Sheets nào nên dùng?"</em>
+    </p>
+
+    <p>
+      AI cũng rất hữu ích để viết công thức Google Sheets phức tạp. Thay vì tự tra cứu cú pháp của ARRAYFORMULA, QUERY, hay REGEXEXTRACT, bạn có thể mô tả kết quả mong muốn bằng ngôn ngữ thường và nhận lại công thức sẵn để dán vào sheet. Tuy nhiên, <strong>luôn kiểm tra lại kết quả</strong>: AI có thể tạo ra công thức "trông đúng" nhưng tính sai trên một số trường hợp đặc biệt.
+    </p>
+
+    <h3>AI tạo mã trực quan hóa nâng cao</h3>
+
+    <p>
+      Datawrapper và Flourish đủ mạnh cho phần lớn nhu cầu báo chí dữ liệu. Nhưng khi cần biểu đồ tùy chỉnh cao hơn — ví dụ một infographic kết hợp nhiều loại dữ liệu, hay một scrollytelling hoàn chỉnh — các nhà báo dữ liệu chuyên nghiệp thường dùng thư viện JavaScript như D3.js hoặc Vega-Lite. Trước đây, điều này đòi hỏi kỹ năng lập trình đáng kể.
+    </p>
+
+    <p>
+      Với AI (ChatGPT, Claude, Gemini), bạn có thể mô tả biểu đồ muốn tạo và nhận được đoạn code JavaScript hoàn chỉnh mà không cần biết lập trình. Quan trọng hơn, bạn có thể hỏi AI giải thích từng phần của code, chỉnh sửa màu sắc, thêm tooltip, hay điều chỉnh layout — và AI sẽ hướng dẫn theo từng bước. Đây là cách học lập trình hiệu quả trong khi vẫn hoàn thành công việc.
+    </p>
+
+    <h3>Tự động hóa thu thập dữ liệu</h3>
+
+    <p>
+      AI có thể giúp viết script Python để scraping dữ liệu từ nhiều trang, tự động tải về các báo cáo PDF định kỳ, hoặc thiết lập pipeline dữ liệu tự động cập nhật. Dù đây là lĩnh vực đòi hỏi kiến thức kỹ thuật nhiều hơn, AI giúp "hạ thấp ngưỡng vào" đáng kể — một nhà báo có thể viết một script scraping đơn giản chỉ bằng cách mô tả vấn đề cho AI.
+    </p>
+
+    <div class="box warning">
+      <div class="box-title">Giới hạn quan trọng của AI trong báo chí dữ liệu</div>
+      <p><strong>Không giao phó hoàn toàn việc phân tích cho AI.</strong> AI có thể "bịa" con số, nhầm lẫn đơn vị, hay đưa ra nhận xét về xu hướng mà thực ra không có trong dữ liệu — đặc biệt khi làm việc với dữ liệu phức tạp hoặc không quen thuộc. Mọi kết quả phân tích AI đề xuất đều phải được kiểm chứng bằng cách xem lại dữ liệu gốc. Kỹ năng đọc bảng tính và hiểu số liệu thống kê cơ bản là không thể thay thế.</p>
+    </div>
+
+    <div class="box tip">
+      <div class="box-title">Prompt hiệu quả cho phân tích dữ liệu</div>
+      <p>Thay vì hỏi chung chung, hãy cung cấp ngữ cảnh cụ thể: <em>"Tôi đang dùng Google Sheets. Cột A là tên tỉnh (63 hàng), cột B là GDP năm 2024 (nghìn tỷ đồng), cột C là GDP năm 2023. Tôi muốn cột D hiển thị tốc độ tăng trưởng (%) và cột E đánh dấu TRUE nếu tỉnh đó tăng trưởng nhanh hơn 15%. Viết cho tôi công thức cho cột D và E."</em> Prompt càng cụ thể, kết quả càng chính xác.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
          CÂU HỎI ÔN TẬP
     ════════════════════════════════════ -->
     <div class="review-questions">
@@ -493,6 +527,8 @@
         <li>Một nhà báo muốn viết bài về sự thay đổi cơ cấu dân số Việt Nam từ 2000 đến 2024, thể hiện cả xu hướng theo thời gian và phân bố địa lý. Họ nên dùng loại biểu đồ nào cho mỗi góc độ? Tại sao? Nguồn dữ liệu phù hợp là gì?</li>
         <li>Phân biệt Datawrapper và Flourish về điểm mạnh và trường hợp sử dụng phù hợp nhất. Khi nào bạn chọn Datawrapper, khi nào chọn Flourish?</li>
         <li>Ngoài tính thẩm mỹ, một biểu đồ tốt trong báo chí dữ liệu cần đáp ứng những tiêu chí đạo đức và chuyên môn nào? Liệt kê ít nhất năm tiêu chí và giải thích vì sao mỗi tiêu chí quan trọng.</li>
+        <li>Bạn được giao viết bài điều tra về tình trạng ô nhiễm không khí tại các khu công nghiệp Việt Nam. Trình bày kế hoạch thu thập và xử lý dữ liệu: sẽ lấy từ nguồn nào, làm sạch bằng công cụ gì, phân tích theo hướng nào, và chọn loại biểu đồ nào để trình bày kết quả? Giải thích lý do cho mỗi lựa chọn.</li>
+        <li>Thảo luận về vai trò của AI trong quy trình báo chí dữ liệu: AI hỗ trợ hiệu quả nhất ở giai đoạn nào, và ở giai đoạn nào nhà báo cần thận trọng hoặc không nên phụ thuộc vào AI? Lấy ít nhất hai ví dụ cụ thể để minh họa quan điểm của bạn.</li>
       </ol>
     </div>
 
@@ -505,5 +541,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

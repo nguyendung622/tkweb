@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <rect width="720" height="300" fill="#fafbfc" rx="8"/>
+  <text x="360" y="28" font-size="13" fill="#333" text-anchor="middle" font-weight="700">Cấu trúc điều hướng — Portfolio Nhà báo</text>
+
+  <!-- ══════════════════════════════════════
+       CẤP 1 — 4 trang ngang hàng nhau
+  ══════════════════════════════════════ -->
+  <text x="360" y="48" font-size="10" fill="#999" text-anchor="middle" font-weight="600">CẤP 1 — MENU CHÍNH (4 trang ngang hàng nhau)</text>
+
+  <!-- Trang chủ — center 90 -->
+  <rect x="28"  y="56" width="124" height="40" fill="#1a73e8" rx="6"/>
+  <text x="90"  y="81" font-size="12" fill="white" text-anchor="middle" font-weight="600">Trang chủ</text>
+
+  <!-- Về tôi — center 222 -->
+  <rect x="160" y="56" width="124" height="40" fill="#1a73e8" rx="6"/>
+  <text x="222" y="81" font-size="12" fill="white" text-anchor="middle" font-weight="600">Về tôi</text>
+
+  <!-- Tác phẩm — center 374 -->
+  <rect x="312" y="56" width="124" height="40" fill="#1a73e8" rx="6"/>
+  <text x="374" y="74" font-size="12" fill="white" text-anchor="middle" font-weight="600">Tác phẩm</text>
+  <text x="374" y="89" font-size="10" fill="rgba(255,255,255,0.85)" text-anchor="middle">(có trang con ▾)</text>
+
+  <!-- Liên hệ — center 568 -->
+  <rect x="506" y="56" width="124" height="40" fill="#1a73e8" rx="6"/>
+  <text x="568" y="81" font-size="12" fill="white" text-anchor="middle" font-weight="600">Liên hệ</text>
+
+  <!-- Chú thích bên phải -->
+  <line x1="640" y1="76" x2="658" y2="76" stroke="#1a73e8" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="662" y="72" font-size="9" fill="#888">4 trang ngang</text>
+  <text x="662" y="83" font-size="9" fill="#888">hàng nhau</text>
+
+  <!-- ══════════════════════════════════════
+       ĐƯỜNG NỐI — từ "Tác phẩm" xuống cấp 2
+  ══════════════════════════════════════ -->
+  <!-- Đường dọc từ giữa "Tác phẩm" -->
+  <line x1="374" y1="96" x2="374" y2="128" stroke="#34a853" stroke-width="2"/>
+  <!-- Đường ngang nối 3 nhánh -->
+  <line x1="194" y1="128" x2="554" y2="128" stroke="#34a853" stroke-width="2"/>
+  <!-- 3 đường dọc xuống -->
+  <line x1="194" y1="128" x2="194" y2="148" stroke="#34a853" stroke-width="2"/>
+  <line x1="374" y1="128" x2="374" y2="148" stroke="#34a853" stroke-width="2"/>
+  <line x1="554" y1="128" x2="554" y2="148" stroke="#34a853" stroke-width="2"/>
+
+  <text x="374" y="120" font-size="9" fill="#34a853" text-anchor="middle" font-weight="600">CẤP 2 — TRANG CON (chỉ dưới "Tác phẩm")</text>
+
+  <!-- ══════════════════════════════════════
+       CẤP 2 — 3 trang con của Tác phẩm
+  ══════════════════════════════════════ -->
+
+  <!-- Báo in / Online — center 194 -->
+  <rect x="130" y="148" width="128" height="38" fill="#34a853" rx="6"/>
+  <text x="194" y="171" font-size="11" fill="white" text-anchor="middle" font-weight="600">Báo in / Online</text>
+
+  <!-- Phóng sự truyền hình — center 374 -->
+  <rect x="310" y="148" width="128" height="38" fill="#34a853" rx="6"/>
+  <text x="374" y="163" font-size="11" fill="white" text-anchor="middle" font-weight="600">Phóng sự</text>
+  <text x="374" y="178" font-size="11" fill="white" text-anchor="middle" font-weight="600">truyền hình</text>
+
+  <!-- Báo chí dữ liệu — center 554 -->
+  <rect x="490" y="148" width="128" height="38" fill="#34a853" rx="6"/>
+  <text x="554" y="171" font-size="11" fill="white" text-anchor="middle" font-weight="600">Báo chí dữ liệu</text>
+
+  <!-- ══════════════════════════════════════
+       MÔ TẢ NỘI DUNG — text label đơn giản
+  ══════════════════════════════════════ -->
+  <text x="90"  y="214" font-size="9" fill="#888" text-anchor="middle">Ảnh bìa, giới thiệu ngắn,</text>
+  <text x="90"  y="226" font-size="9" fill="#888" text-anchor="middle">tác phẩm nổi bật</text>
+
+  <text x="222" y="214" font-size="9" fill="#888" text-anchor="middle">Tiểu sử, học vấn,</text>
+  <text x="222" y="226" font-size="9" fill="#888" text-anchor="middle">kinh nghiệm, ảnh</text>
+
+  <text x="374" y="214" font-size="9" fill="#888" text-anchor="middle">Tổng hợp → phân loại</text>
+  <text x="374" y="226" font-size="9" fill="#888" text-anchor="middle">theo từng trang con</text>
+
+  <text x="568" y="214" font-size="9" fill="#888" text-anchor="middle">Form liên hệ, email,</text>
+  <text x="568" y="226" font-size="9" fill="#888" text-anchor="middle">mạng xã hội</text>
+
+  <!-- Đường nối ngắn từ cấp 1 xuống mô tả -->
+  <line x1="90"  y1="96" x2="90"  y2="207" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="222" y1="96" x2="222" y2="207" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="374" y1="186" x2="374" y2="207" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="568" y1="96" x2="568" y2="207" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ══════════════════════════════════════
+       LEGEND
+  ══════════════════════════════════════ -->
+  <rect x="18" y="246" width="684" height="40" fill="white" stroke="#e8eaed" rx="6"/>
+
+  <rect x="34" y="259" width="16" height="14" fill="#1a73e8" rx="3"/>
+  <text x="56" y="270" font-size="10" fill="#444">Cấp 1 — Trang menu chính (ngang hàng nhau)</text>
+
+  <rect x="310" y="259" width="16" height="14" fill="#34a853" rx="3"/>
+  <text x="332" y="270" font-size="10" fill="#444">Cấp 2 — Trang con của "Tác phẩm"</text>
+
+  <line x1="530" y1="266" x2="556" y2="266" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="562" y="270" font-size="10" fill="#888">Mô tả nội dung trang</text>
+
+  <text x="360" y="282" font-size="9" fill="#bbb" text-anchor="middle">Google Sites tự động tạo menu điều hướng từ danh sách trang — kéo thả để sắp xếp thứ tự</text>
+
+</svg>

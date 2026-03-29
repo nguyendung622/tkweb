@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 346" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN + COLUMN BACKGROUNDS (vẽ trước) -->
+  <rect width="720" height="346" fill="#f5f6f8" rx="6"/>
+
+  <!-- 3 cột nền nhạt -->
+  <rect x="8"   y="96" width="226" height="196" fill="#e8f0fe" rx="6" opacity="0.5"/>
+  <rect x="246" y="96" width="226" height="196" fill="#e8f5e9" rx="6" opacity="0.5"/>
+  <rect x="484" y="96" width="228" height="196" fill="#fff3e0" rx="6" opacity="0.5"/>
+
+  <!-- 6 ô định dạng (vẽ trước text) -->
+  <!-- Col 1: Văn bản -->
+  <rect x="12"  y="100" width="218" height="86" fill="white" rx="5" stroke="#90caf9" stroke-width="1.2"/>
+  <rect x="12"  y="202" width="218" height="86" fill="white" rx="5" stroke="#80cbc4" stroke-width="1.2"/>
+  <!-- Col 2: Hình ảnh -->
+  <rect x="250" y="100" width="218" height="86" fill="white" rx="5" stroke="#a5d6a7" stroke-width="1.2"/>
+  <rect x="250" y="202" width="218" height="86" fill="white" rx="5" stroke="#a5d6a7" stroke-width="1.2"/>
+  <!-- Col 3: Video -->
+  <rect x="488" y="100" width="220" height="86" fill="white" rx="5" stroke="#ffcc80" stroke-width="1.2"/>
+  <rect x="488" y="202" width="220" height="86" fill="white" rx="5" stroke="#ef9a9a" stroke-width="1.2"/>
+
+  <!-- Hộp nguồn (source) -->
+  <rect x="220" y="8" width="280" height="52" fill="#1a237e" rx="8"/>
+
+  <!-- Hộp nhãn danh mục -->
+  <rect x="12"  y="72" width="218" height="24" fill="#1e88e5" rx="4"/>
+  <rect x="250" y="72" width="218" height="24" fill="#43a047" rx="4"/>
+  <rect x="488" y="72" width="220" height="24" fill="#fb8c00" rx="4"/>
+
+  <!-- ② VĂN BẢN (vẽ sau rects) -->
+  <text x="360" y="30" font-size="12.5" fill="white" text-anchor="middle" font-weight="700">1 bài phóng sự (2.000 chữ)</text>
+  <text x="360" y="48" font-size="10" fill="#90caf9" text-anchor="middle">→ Chuyển thành nhiều định dạng cho nhiều nền tảng (Repurpose)</text>
+
+  <!-- Nhãn danh mục -->
+  <text x="121"  y="88" font-size="10" fill="white" text-anchor="middle" font-weight="700">Văn bản / Caption</text>
+  <text x="359" y="88" font-size="10" fill="white" text-anchor="middle" font-weight="700">Hình ảnh / Đồ họa</text>
+  <text x="598" y="88" font-size="10" fill="white" text-anchor="middle" font-weight="700">Video</text>
+
+  <!-- ===== Col 1 Box A: Facebook ===== -->
+  <text x="121" y="118" font-size="10"  fill="#1877f2" text-anchor="middle" font-weight="700">Facebook — Caption + link</text>
+  <text x="121" y="133" font-size="8.5" fill="#555"    text-anchor="middle">Tóm tắt 5 số liệu ấn tượng nhất</text>
+  <text x="121" y="145" font-size="8.5" fill="#555"    text-anchor="middle">+ câu hỏi mở để tạo bình luận</text>
+  <rect x="76" y="158" width="90" height="18" fill="#e3f2fd" rx="9"/>
+  <text x="121" y="171" font-size="8" fill="#1565c0" text-anchor="middle" font-weight="600">⏱ ~15 phút</text>
+
+  <!-- ===== Col 1 Box B: Zalo OA ===== -->
+  <text x="121" y="220" font-size="10"  fill="#0b84ff" text-anchor="middle" font-weight="700">Zalo OA — Bản tin ngắn</text>
+  <text x="121" y="235" font-size="8.5" fill="#555"    text-anchor="middle">3 điểm chính + link đọc thêm</text>
+  <text x="121" y="247" font-size="8.5" fill="#555"    text-anchor="middle">Gửi qua nhóm gia đình, cơ quan</text>
+  <rect x="76" y="260" width="90" height="18" fill="#e3f2fd" rx="9"/>
+  <text x="121" y="273" font-size="8" fill="#0b84ff" text-anchor="middle" font-weight="600">⏱ ~10 phút</text>
+
+  <!-- ===== Col 2 Box A: Infographic ===== -->
+  <text x="359" y="118" font-size="10"  fill="#2e7d32" text-anchor="middle" font-weight="700">Infographic — Instagram / FB</text>
+  <text x="359" y="133" font-size="8.5" fill="#555"    text-anchor="middle">Bản đồ + số liệu thiệt hại</text>
+  <text x="359" y="145" font-size="8.5" fill="#555"    text-anchor="middle">Tạo bằng Canva, 1080×1080px</text>
+  <rect x="314" y="158" width="90" height="18" fill="#e8f5e9" rx="9"/>
+  <text x="359" y="171" font-size="8" fill="#2e7d32" text-anchor="middle" font-weight="600">⏱ 30–60 phút</text>
+
+  <!-- ===== Col 2 Box B: Stories ===== -->
+  <text x="359" y="220" font-size="10"  fill="#388e3c" text-anchor="middle" font-weight="700">Stories — Instagram / Facebook</text>
+  <text x="359" y="235" font-size="8.5" fill="#555"    text-anchor="middle">5–7 Stories kể theo trình tự</text>
+  <text x="359" y="247" font-size="8.5" fill="#555"    text-anchor="middle">Thêm poll: "Bạn bị ảnh hưởng không?"</text>
+  <rect x="314" y="260" width="90" height="18" fill="#e8f5e9" rx="9"/>
+  <text x="359" y="273" font-size="8" fill="#388e3c" text-anchor="middle" font-weight="600">⏱ ~20 phút</text>
+
+  <!-- ===== Col 3 Box A: TikTok/Reels ===== -->
+  <text x="598" y="118" font-size="10"  fill="#e65100" text-anchor="middle" font-weight="700">TikTok / Reels — Video 60s</text>
+  <text x="598" y="133" font-size="8.5" fill="#555"    text-anchor="middle">Hook mạnh từ giây đầu tiên</text>
+  <text x="598" y="145" font-size="8.5" fill="#555"    text-anchor="middle">Phóng viên giải thích nguyên nhân</text>
+  <rect x="553" y="158" width="90" height="18" fill="#fff3e0" rx="9"/>
+  <text x="598" y="171" font-size="8" fill="#e65100" text-anchor="middle" font-weight="600">⏱ ~30 phút</text>
+
+  <!-- ===== Col 3 Box B: YouTube ===== -->
+  <text x="598" y="220" font-size="10"  fill="#c62828" text-anchor="middle" font-weight="700">YouTube — Video 8–10 phút</text>
+  <text x="598" y="235" font-size="8.5" fill="#555"    text-anchor="middle">Phóng sự kèm phỏng vấn nhân chứng</text>
+  <text x="598" y="247" font-size="8.5" fill="#555"    text-anchor="middle">Tiêu đề chứa từ khóa SEO</text>
+  <rect x="553" y="260" width="90" height="18" fill="#ffebee" rx="9"/>
+  <text x="598" y="273" font-size="8" fill="#c62828" text-anchor="middle" font-weight="600">⏱ Vài giờ đến vài ngày</text>
+
+  <!-- Đường kết nối — vẽ sau nền nhưng trước các box chính -->
+  <!-- Vertical stem từ source xuống horizontal bar -->
+  <!-- Các đường này cần vẽ trước, nhưng boxes đã được vẽ trước. -->
+  <!-- Ta sẽ "vẽ đè" các đường kết nối lên các box background mà không che text -->
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="298" width="704" height="40" fill="#fffde7" rx="5" stroke="#f9a825" stroke-width="1"/>
+  <text x="360" y="313" font-size="10" fill="#e65100" text-anchor="middle" font-weight="700">💡 Nguyên tắc repurpose: Không sao chép nguyên — hãy thiết kế lại cho văn hóa của từng nền tảng</text>
+  <text x="360" y="330" font-size="9.5" fill="#5d4037" text-anchor="middle">Cùng một câu chuyện nhưng Facebook cần chiều sâu, TikTok cần hook mạnh, Infographic cần số liệu trực quan</text>
+
+</svg>

@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html" class="active">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -131,6 +104,11 @@
     <p>
       Nguồn: Mailchimp Industry Benchmarks 2024, Hootsuite Digital Report 2024. Số liệu tỷ lệ tiếp cận email cao hơn so với open rate vì email được giao vào hộp thư ngay cả khi không được mở.
     </p>
+
+    <figure>
+      <img src="../images/ch10-fig01-email-vs-social.svg" alt="So sánh email newsletter và mạng xã hội">
+      <figcaption>Hình 10.1 — Email newsletter là "đất sở hữu" trong khi mạng xã hội là "đất thuê." Khi Facebook giảm organic reach từ 16% xuống 2% vào 2018, các tòa soạn không có danh sách email mất hàng triệu độc giả qua đêm mà không có cách liên hệ lại.</figcaption>
+    </figure>
 
     <div class="box note">
       <div class="box-title">📌 Sức mạnh của kênh trực tiếp</div>
@@ -370,6 +348,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch10-fig02-newsletter.svg" alt="Giải phẫu một newsletter báo chí hiệu quả">
+      <figcaption>Hình 10.2 — 7 thành phần cốt lõi của một newsletter báo chí. Subject line quyết định 47% quyết định mở email; CTA duy nhất tập trung có thể tăng click-through rate lên đến 371% so với nhiều CTA cạnh tranh nhau.</figcaption>
+    </figure>
+
     <div class="box note">
       <div class="box-title">📌 Một CTA, không phải mười</div>
       <p>Sai lầm phổ biến nhất: nhét quá nhiều lời kêu gọi hành động vào một email. Nghiên cứu của WordStream cho thấy email có một CTA duy nhất tăng click-through rate lên đến 371%. Chọn một hành động quan trọng nhất và hướng toàn bộ email đến đó.</p>
@@ -593,6 +576,11 @@
       </tbody>
     </table>
 
+    <figure>
+      <img src="../images/ch10-fig03-metrics.svg" alt="Phễu email newsletter từ danh sách đến chuyển đổi">
+      <figcaption>Hình 10.3 — Phễu chuyển đổi của email newsletter. Với 1.000 subscribers: ~970 email giao thành công, ~220 người mở, ~28 người click, ~8 người chuyển đổi. Mỗi tầng phễu hẹp hơn cần một chiến lược tối ưu riêng.</figcaption>
+    </figure>
+
     <div class="box warning">
       <div class="box-title">⚠️ Open Rate không còn chính xác như trước</div>
       <p>Kể từ iOS 15 (2021), Apple Mail Privacy Protection (MPP) tự động "mở" email trong background để tải ảnh — làm cho open rate trông cao hơn thực tế. Nhiều tòa soạn lớn hiện chuyển sang dùng <strong>Click Rate</strong> như chỉ số chính xác hơn để đo engagement thực sự.</p>
@@ -621,6 +609,107 @@
 
 
     <!-- ════════════════════════════════════
+         10.7 AI TRONG EMAIL NEWSLETTER
+    ════════════════════════════════════ -->
+    <h2>10.7 AI hỗ trợ sản xuất và tối ưu newsletter</h2>
+
+    <p>
+      AI đang thay đổi cách các nhà làm newsletter tiếp cận từng khâu — từ viết nội dung, tối ưu subject line, đến phân tích hành vi đọc của từng subscriber. Đây là những ứng dụng thực tế nhất hiện nay.
+    </p>
+
+    <h3>AI viết và tối ưu subject line</h3>
+
+    <p>
+      Subject line là yếu tố quyết định open rate, nhưng cũng là phần tốn thời gian nhất vì cần thử nhiều phương án. AI có thể tạo 10–20 biến thể subject line trong vài giây để bạn chọn hoặc kết hợp:
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Prompt mẫu tối ưu subject line</div>
+      <p>
+        <em>"Tôi có một newsletter về [chủ đề]. Bài hôm nay nói về [tóm tắt 2 câu]. Audience của tôi là [mô tả]. Hãy viết 10 subject line theo các phong cách khác nhau: (1) tò mò, (2) số liệu cụ thể, (3) câu hỏi, (4) cảnh báo nhẹ, (5) cá nhân hóa. Mỗi cái dưới 60 ký tự, không dùng các từ trigger spam như 'miễn phí', 'khuyến mãi'."</em>
+      </p>
+    </div>
+
+    <p>
+      Ngoài ra, các công cụ chuyên biệt như <strong>CoSchedule Headline Analyzer</strong> và <strong>Omnisend Subject Line Tester</strong> dùng AI để chấm điểm subject line theo các tiêu chí: độ dài, từ ngữ cảm xúc, mức độ rõ ràng và dự báo open rate.
+    </p>
+
+    <h3>AI tóm tắt và repurpose nội dung cho newsletter</h3>
+
+    <p>
+      Nhiều newsletter báo chí hoạt động theo mô hình "curator" — tổng hợp những bài viết hay từ nhiều nguồn, thêm bình luận của người viết. AI giúp đẩy nhanh khâu này đáng kể:
+    </p>
+
+    <ul>
+      <li><strong>Tóm tắt bài dài:</strong> Dán bài 2.000 chữ vào Claude/ChatGPT, yêu cầu tóm tắt thành 3 điểm chính kèm trích dẫn quan trọng nhất — tiết kiệm 80% thời gian đọc để curation.</li>
+      <li><strong>Viết bình luận gợi ý:</strong> "Đây là bài tôi muốn đưa vào newsletter. Viết cho tôi 3 góc bình luận khác nhau — ủng hộ, phản biện, và đặt câu hỏi mở — mỗi góc 2–3 câu."</li>
+      <li><strong>Chuyển bài báo thành bullets:</strong> AI chuyển bài viết dài thành 5 bullet points phù hợp định dạng "smart brevity" của Axios.</li>
+      <li><strong>Điều chỉnh tone:</strong> "Viết lại đoạn này theo giọng thân mật hơn, như viết cho bạn bè thay vì độc giả chính thức."</li>
+    </ul>
+
+    <h3>AI cá nhân hóa nội dung và phân khúc danh sách</h3>
+
+    <p>
+      Các nền tảng newsletter cao cấp như Klaviyo và ActiveCampaign tích hợp AI để cá nhân hóa nội dung theo hành vi của từng subscriber:
+    </p>
+
+    <ul>
+      <li><strong>Phân khúc tự động:</strong> AI phân chia danh sách thành nhóm dựa trên hành vi — ai hay click bài về kinh tế, ai hay click bài về công nghệ — và gửi nội dung khác nhau cho từng nhóm.</li>
+      <li><strong>Gợi ý thời điểm gửi cá nhân:</strong> Beehiiv và Mailchimp Pro có tính năng "Send Time Optimization" — AI phân tích lịch sử mở email của từng subscriber và gửi vào thời điểm họ hay mở nhất, không phải giờ trung bình của toàn danh sách.</li>
+      <li><strong>Dự đoán unsubscribe:</strong> AI nhận diện subscriber có nguy cơ hủy đăng ký (không mở 3 số liên tiếp) và kích hoạt email tái thu hút tự động.</li>
+    </ul>
+
+    <h3>Giới hạn và rủi ro khi dùng AI cho newsletter</h3>
+
+    <div class="box warning">
+      <div class="box-title">⚠️ AI không thể thay thế giọng văn cá nhân</div>
+      <p>Lý do người đăng ký newsletter cá nhân của nhà báo là vì họ muốn <em>nghe từ bạn</em> — quan điểm, trải nghiệm và tiếng nói riêng của bạn. Nếu dùng AI quá nhiều, newsletter sẽ mất đi điều đó. Các rủi ro cụ thể:</p>
+      <ul>
+        <li><strong>Giọng văn đồng nhất:</strong> AI tạo ra ngôn ngữ "an toàn" và có thể đoán trước — đối lập với lý do người ta đăng ký newsletter cá nhân.</li>
+        <li><strong>Hallucination:</strong> AI có thể bịa số liệu, trích dẫn hoặc sự kiện không có thật. Luôn kiểm chứng mọi thông tin AI tạo ra trước khi gửi đến danh sách.</li>
+        <li><strong>Thiếu minh bạch:</strong> Nếu newsletter được quảng bá là "viết bởi nhà báo X" nhưng chủ yếu do AI tạo ra, đây là vấn đề đạo đức cần cân nhắc — nhất là với newsletter subscription trả phí.</li>
+      </ul>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Công đoạn</th>
+          <th>Mức độ AI hỗ trợ</th>
+          <th>Vẫn cần con người</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tạo biến thể subject line</td>
+          <td>Rất cao — AI tạo nhanh, nhiều lựa chọn</td>
+          <td>Lựa chọn cuối và điều chỉnh theo brand voice</td>
+        </tr>
+        <tr>
+          <td>Tóm tắt bài curation</td>
+          <td>Cao — tiết kiệm 70–80% thời gian đọc</td>
+          <td>Bình luận cá nhân, góc nhìn riêng</td>
+        </tr>
+        <tr>
+          <td>Viết nội dung chính newsletter</td>
+          <td>Thấp — chỉ nên dùng để phác thảo</td>
+          <td>Toàn bộ giọng văn và quan điểm cá nhân</td>
+        </tr>
+        <tr>
+          <td>Phân tích số liệu analytics</td>
+          <td>Trung bình — AI giải thích số liệu CSV</td>
+          <td>Quyết định chiến lược dựa trên insight</td>
+        </tr>
+        <tr>
+          <td>Cá nhân hóa & phân khúc</td>
+          <td>Cao — cần dữ liệu đủ lớn (&gt;1.000 sub)</td>
+          <td>Thiết kế segment logic và nội dung cho mỗi nhóm</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- ════════════════════════════════════
          CÂU HỎI ÔN TẬP
     ════════════════════════════════════ -->
     <div class="review-questions">
@@ -630,6 +719,8 @@
         <li>Phân tích email newsletter từ một tòa soạn báo chí Việt Nam hoặc quốc tế mà bạn đang đăng ký (hoặc đăng ký mới để phân tích). Đánh giá: cấu trúc, subject line, CTA, thiết kế mobile, và tần suất gửi. Điều gì làm tốt, điều gì có thể cải thiện?</li>
         <li>Một newsletter báo chí có open rate 35% nhưng click rate chỉ 0.8% — thấp hơn nhiều so với benchmark ngành. Đề xuất ít nhất 3 giả thuyết về nguyên nhân và 3 giải pháp cụ thể để cải thiện click rate mà không làm giảm open rate.</li>
         <li>Thực hành: Tạo tài khoản Mailchimp Free, thiết kế template newsletter của riêng bạn (tên, màu sắc, logo), viết số đầu tiên với ít nhất 200 chữ nội dung thực, và gửi test cho email của mình. Chụp màn hình email nhận được trên điện thoại và nộp cùng nhận xét về những điểm cần cải thiện.</li>
+        <li>Dùng ChatGPT hoặc Claude để tạo 10 biến thể subject line cho một newsletter về chủ đề bạn tự chọn. Sau đó: (a) Chọn 3 cái tốt nhất và giải thích tại sao; (b) Chọn 2 cái tệ nhất và chỉ ra vấn đề; (c) Viết thêm 2 subject line của riêng bạn mà AI không tạo ra — và giải thích điều gì khiến chúng khác biệt so với output của AI.</li>
+        <li>Một nhà báo có newsletter 500 subscribers, open rate 28%, click rate 1.2%. Họ muốn dùng AI để tăng click rate lên 3% trong 3 tháng tới. Xây dựng một kế hoạch cụ thể: (a) Những yếu tố AI có thể hỗ trợ trong kế hoạch này; (b) Những yếu tố chỉ con người mới có thể thực hiện; (c) Cách đo lường tiến độ sau mỗi 4 số newsletter.</li>
       </ol>
     </div>
 
@@ -643,5 +734,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

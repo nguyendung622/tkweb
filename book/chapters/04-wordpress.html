@@ -11,34 +11,7 @@
 <div class="book-wrap">
 
   <!-- SIDEBAR -->
-  <nav class="book-nav">
-    <div class="site-title">Giáo trình</div>
-    <div class="book-title">Thiết kế Web cho Nhà báo</div>
-    <div class="nav-section">Mở đầu</div>
-    <ul>
-      <li><a href="../chapters/00-loi-noi-dau.html">Lời nói đầu</a></li>
-    </ul>
-    <div class="nav-section">Chương trình</div>
-    <ul>
-      <li><a href="01-google-sites.html">1. Làm quen với Google Sites</a></li>
-      <li><a href="02-ux-co-ban.html">2. Cấu trúc thông tin &amp; UX</a></li>
-      <li><a href="03-canva.html">3. Thiết kế với Canva</a></li>
-      <li><a href="04-wordpress.html" class="active">4. WordPress cơ bản</a></li>
-      <li><a href="05-seo.html">5. SEO cho nhà báo</a></li>
-      <li><a href="06-du-lieu.html">6. Báo chí dữ liệu</a></li>
-      <li><a href="07-mang-xa-hoi.html">7. Mạng xã hội &amp; Phân phối</a></li>
-      <li><a href="08-multimedia.html">8. Multimedia Storytelling</a></li>
-      <li><a href="09-bao-mat.html">9. Bảo mật &amp; Đạo đức số</a></li>
-      <li><a href="10-newsletter.html">10. Newsletter &amp; Email</a></li>
-      <li><a href="11-analytics.html">11. Phân tích &amp; Đo lường</a></li>
-      <li><a href="12-du-an.html">12. Dự án cuối khóa</a></li>
-    </ul>
-    <div class="nav-section">Phụ lục</div>
-    <ul>
-      <li><a href="../appendix/glossary.html">Bảng thuật ngữ</a></li>
-      <li><a href="../appendix/references.html">Tài liệu tham khảo</a></li>
-    </ul>
-  </nav>
+  <nav class="book-nav" id="book-nav"></nav>
 
   <!-- NỘI DUNG CHƯƠNG -->
   <main class="book-content">
@@ -252,6 +225,11 @@
       <li><strong>Settings</strong> — cài đặt chung: tên trang, ngôn ngữ, múi giờ, permalink</li>
     </ul>
 
+    <figure>
+      <img src="../images/ch04-fig01-dashboard.svg" alt="Giao diện WordPress Admin Dashboard với sidebar menu bên trái, danh sách bài viết và thanh filter">
+      <figcaption>Hình 4.1 — Giao diện WordPress Admin Dashboard: ① Sidebar menu điều hướng chính; ② Thanh filter trạng thái bài viết (Published/Draft/Trash); ③ Danh sách bài viết với tác giả, chuyên mục và ngày đăng</figcaption>
+    </figure>
+
 
     <!-- ════════════════════════════════════
          4.3 GUTENBERG BLOCK EDITOR
@@ -340,6 +318,11 @@
     <p>
       Lưu ý quan trọng: khi chỉnh sửa một Reusable Block, thay đổi sẽ tự động áp dụng lên <em>tất cả</em> bài viết đang dùng block đó. Đây là tính năng mạnh mẽ (cập nhật thông tin liên hệ một lần, hiệu lực trên toàn trang) nhưng cũng cần cẩn thận nếu bạn chỉ muốn thay đổi ở một bài cụ thể — trong trường hợp đó, cần "detach" block khỏi bản gốc trước.
     </p>
+
+    <figure>
+      <img src="../images/ch04-fig02-gutenberg.svg" alt="Giao diện trình soạn thảo Gutenberg với toolbar, các loại block và panel cài đặt bên phải">
+      <figcaption>Hình 4.2 — Trình soạn thảo Gutenberg: ① Toolbar soạn thảo (nút +, Undo/Redo, Preview, Publish); ② Các loại block trong vùng soạn thảo (Paragraph, Image, Quote, Heading); ③ Settings panel bên phải (Categories, Tags, Ảnh đại diện); ④ Block controls — thanh công cụ nổi phía trên block đang active</figcaption>
+    </figure>
 
 
     <!-- ════════════════════════════════════
@@ -487,6 +470,16 @@
       <p>Nếu bạn dùng WordPress.com (gói miễn phí) cho mục đích học tập, Akismet đã được tích hợp sẵn và WordPress.com tự lo việc cache và backup. Plugin chỉ thực sự cần thiết khi bạn dùng WordPress.org self-hosted. Hãy tập trung vào học cách viết và đăng bài trước — kỹ thuật plugin có thể học sau.</p>
     </div>
 
+    <figure>
+      <img src="../images/ch04-fig03-plugins.svg" alt="Màn hình quản lý Plugin WordPress với danh sách 5 plugin thiết yếu cho báo chí">
+      <figcaption>Hình 4.3 — Plugin thiết yếu cho website báo chí: Yoast SEO (tối ưu nội dung), Jetpack (bảo mật và thống kê), Wordfence Security (tường lửa), UpdraftPlus Backup (sao lưu tự động), Contact Form 7 (biểu mẫu liên hệ)</figcaption>
+    </figure>
+
+    <div class="box note">
+      <div class="box-title">📌 Liên kết đến Chương 5</div>
+      <p>Plugin <strong>Yoast SEO</strong> sẽ được khám phá chuyên sâu trong <strong>Chương 5 — SEO cho nhà báo</strong>: cách cài đặt từ khóa mục tiêu, phân tích readability, tạo sitemap, và cấu trúc schema markup cho bài báo.</p>
+    </div>
+
     <h3>Settings cần cài đặt ngay khi lập website mới</h3>
 
     <p>
@@ -503,6 +496,35 @@
 
 
     <!-- ════════════════════════════════════
+         4.6 WORDPRESS VÀ AI: XU HƯỚNG 2025
+    ════════════════════════════════════ -->
+    <h2>4.6 WordPress và AI: Công cụ hỗ trợ tòa soạn năm 2025</h2>
+
+    <p>
+      Hệ sinh thái WordPress đang tích hợp AI mạnh mẽ trong năm 2024–2025. Tính năng <strong>Jetpack AI Assistant</strong> — được tích hợp trực tiếp vào Gutenberg — cho phép nhà báo tạo nháp bài, tóm tắt, viết lại đoạn văn và dịch nội dung ngay trong trình soạn thảo mà không cần rời khỏi WordPress. Một số theme cao cấp như Newspaper (ThemeForest) cũng tích hợp block AI tạo layout tự động.
+    </p>
+
+    <p>
+      Tuy nhiên, điều quan trọng cần nhớ: <strong>AI hỗ trợ sản xuất, không hỗ trợ phán xét báo chí</strong>. AI có thể soạn nháp nhanh, gợi ý tiêu đề, hay tóm tắt tài liệu dài — nhưng nhà báo vẫn phải tự xác minh sự kiện, lựa chọn góc nhìn và chịu trách nhiệm về tính chính xác.
+    </p>
+
+    <h3>Full Site Editing (FSE) — Thiết kế toàn trang không cần code</h3>
+
+    <p>
+      WordPress 6.x đã hoàn thiện <strong>Full Site Editing</strong> — tính năng cho phép chỉnh sửa toàn bộ website (header, footer, sidebar, trang lưu trữ) bằng Gutenberg editor mà không cần chỉnh sửa code PHP. Đây là bước tiến lớn giúp nhà báo có thể tự thiết kế website chuyên nghiệp mà không phụ thuộc vào developer.
+    </p>
+
+    <p>
+      Với FSE, bạn có thể: chỉnh sửa header và footer như soạn một bài viết bình thường; tạo các <strong>Template</strong> khác nhau cho trang chủ, trang chuyên mục, trang bài viết đơn; và sử dụng <strong>Style Book</strong> để thống nhất font chữ, màu sắc, spacing toàn trang trong vài cú click.
+    </p>
+
+    <div class="box tip">
+      <div class="box-title">💡 Gợi ý AI cho soạn thảo WordPress</div>
+      <p>Thử dùng ChatGPT hoặc Gemini để hỗ trợ viết bài trong WordPress: (1) Dán một đoạn tường thuật dài và yêu cầu "Rút ngắn đoạn này xuống còn 3 câu giữ nguyên thông tin quan trọng"; (2) Yêu cầu "Đề xuất 5 tiêu đề SEO cho bài về chủ đề X"; (3) Dán bản ghi âm phỏng vấn thô và yêu cầu "Tạo nháp đoạn trích dẫn theo phong cách báo chí". Luôn kiểm tra lại và viết lại bằng giọng văn của bạn.</p>
+    </div>
+
+
+    <!-- ════════════════════════════════════
          CÂU HỎI ÔN TẬP
     ════════════════════════════════════ -->
     <div class="review-questions">
@@ -512,6 +534,8 @@
         <li>Trong WordPress, khi nào nên tạo nội dung dưới dạng Post, khi nào nên tạo dưới dạng Page? Đưa ra ít nhất 4 ví dụ cụ thể cho mỗi loại trong bối cảnh một trang tin tức.</li>
         <li>Bạn vừa hoàn thành một bài phóng sự dài về ô nhiễm không khí tại Hà Nội. Liệt kê tất cả các bước cần làm trong WordPress trước khi nhấn Publish — không chỉ là "viết bài" mà bao gồm cả các cài đặt metadata, SEO và hình ảnh.</li>
         <li>Thực hành: Tạo website WordPress.com và đăng ít nhất 2 bài báo hoàn chỉnh trong cùng một chuyên mục tự chọn. Mỗi bài cần có: tiêu đề, sapo in đậm, ít nhất 1 ảnh với alt text, 1 trích dẫn bằng block Quote, cấu trúc heading H2 rõ ràng, và được gắn featured image. Chia sẻ URL website với giảng viên.</li>
+        <li>Phân tích cấu trúc một website báo chí độc lập tiếng Việt dùng WordPress (ví dụ: Luật Khoa Tạp Chí, hoặc bất kỳ website nào bạn biết). Nhận diện: theme đang dùng (gợi ý dùng công cụ WhatCMS.org), ít nhất 3 plugin có thể đang được cài (dựa trên tính năng quan sát được), và cách tổ chức category/menu của họ. Đánh giá điểm mạnh và điểm cần cải thiện.</li>
+        <li>Thảo luận: Jetpack AI Assistant có thể tự động viết nháp bài báo dựa trên prompt của nhà báo. Theo bạn, trong bối cảnh báo chí Việt Nam, nhà báo nên sử dụng tính năng này như thế nào để đảm bảo tính chính xác, khách quan và trách nhiệm nghề nghiệp? Đưa ra ít nhất 3 nguyên tắc sử dụng AI có trách nhiệm trong quy trình sản xuất tin bài.</li>
       </ol>
     </div>
 
@@ -525,5 +549,6 @@
 
   </main>
 </div>
+  <script src="../js/nav.js"></script>
 </body>
 </html>

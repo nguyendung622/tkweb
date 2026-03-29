@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- NỀN -->
+  <rect width="720" height="320" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">So sánh công cụ truyền thông an toàn cho nhà báo</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Chọn công cụ phù hợp với từng tình huống tác nghiệp</text>
+
+  <!-- ═══ Thanh mức bảo mật (y=46 bar, label y=44) ═══ -->
+  <!-- Nhãn mức bảo mật BÊN TRONG ô bar (fill trắng) -->
+  <rect x="10"  y="44" width="130" height="16" fill="#ef5350" rx="8"/>
+  <rect x="150" y="44" width="130" height="16" fill="#ff9800" rx="8"/>
+  <rect x="290" y="44" width="130" height="16" fill="#fdd835" rx="8"/>
+  <rect x="430" y="44" width="130" height="16" fill="#66bb6a" rx="8"/>
+  <rect x="570" y="44" width="140" height="16" fill="#26a69a" rx="8"/>
+
+  <text x="75"  y="56" font-size="8.5" fill="white" text-anchor="middle" font-weight="700">Thấp</text>
+  <text x="215" y="56" font-size="8.5" fill="white" text-anchor="middle" font-weight="700">Trung bình</text>
+  <text x="355" y="56" font-size="8.5" fill="#5d4037" text-anchor="middle" font-weight="700">Khá tốt</text>
+  <text x="495" y="56" font-size="8.5" fill="white" text-anchor="middle" font-weight="700">Tốt</text>
+  <text x="640" y="56" font-size="8.5" fill="white" text-anchor="middle" font-weight="700">Rất tốt</text>
+
+  <!-- ═══ 5 thẻ công cụ — y=66 ═══ -->
+
+  <!-- Thẻ 1: Gmail thông thường -->
+  <rect x="10"  y="66" width="130" height="244" fill="white" rx="6" stroke="#ef9a9a" stroke-width="1.5"/>
+  <rect x="10"  y="66" width="130" height="32" fill="#ef5350" rx="6"/>
+  <rect x="10"  y="84" width="130" height="14" fill="#ef5350"/>
+  <text x="75"  y="87" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Gmail thường</text>
+  <text x="75"  y="108" font-size="8.5" fill="#b71c1c" text-anchor="middle" font-weight="600">✗ Không có E2EE</text>
+  <text x="75"  y="122" font-size="8"   fill="#555"   text-anchor="middle">Google đọc được nội dung</text>
+  <text x="75"  y="134" font-size="8"   fill="#555"   text-anchor="middle">Tuân thủ lệnh tòa án</text>
+  <text x="75"  y="146" font-size="8"   fill="#555"   text-anchor="middle">Lưu metadata đầy đủ</text>
+  <line x1="18" y1="158" x2="132" y2="158" stroke="#ffcdd2" stroke-width="1"/>
+  <text x="75"  y="170" font-size="8"   fill="#555"   text-anchor="middle" font-weight="600">Phù hợp khi:</text>
+  <text x="75"  y="182" font-size="7.5" fill="#777"   text-anchor="middle">Liên lạc nội bộ thông</text>
+  <text x="75"  y="193" font-size="7.5" fill="#777"   text-anchor="middle">thường không nhạy cảm</text>
+  <rect x="18"  y="204" width="114" height="16" fill="#ffebee" rx="8"/>
+  <text x="75"  y="216" font-size="8"   fill="#ef5350" text-anchor="middle" font-weight="600">Không dùng cho nguồn tin</text>
+  <text x="75"  y="238" font-size="9"   fill="#e53935" text-anchor="middle">⚠ Rủi ro cao</text>
+  <text x="75"  y="250" font-size="7.5" fill="#888"   text-anchor="middle">cho nhà báo điều tra</text>
+  <text x="75"  y="272" font-size="9"   fill="#ef5350" text-anchor="middle" font-weight="700">Miễn phí</text>
+  <text x="75"  y="284" font-size="7.5" fill="#aaa"   text-anchor="middle">Google</text>
+
+  <!-- Thẻ 2: Telegram -->
+  <rect x="150" y="66" width="130" height="244" fill="white" rx="6" stroke="#ffcc80" stroke-width="1.5"/>
+  <rect x="150" y="66" width="130" height="32" fill="#ff9800" rx="6"/>
+  <rect x="150" y="84" width="130" height="14" fill="#ff9800"/>
+  <text x="215" y="87" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">Telegram</text>
+  <text x="215" y="108" font-size="8.5" fill="#e65100" text-anchor="middle" font-weight="600">△ E2EE chỉ trong Secret Chat</text>
+  <text x="215" y="122" font-size="8"   fill="#555"   text-anchor="middle">Chat thường lưu cloud</text>
+  <text x="215" y="134" font-size="8"   fill="#555"   text-anchor="middle">Telegram thấy nội dung</text>
+  <text x="215" y="146" font-size="8"   fill="#555"   text-anchor="middle">Metadata bị lưu trữ</text>
+  <line x1="158" y1="158" x2="272" y2="158" stroke="#ffe0b2" stroke-width="1"/>
+  <text x="215" y="170" font-size="8"   fill="#555"   text-anchor="middle" font-weight="600">Phù hợp khi:</text>
+  <text x="215" y="182" font-size="7.5" fill="#777"   text-anchor="middle">Nhóm lớn, nội dung</text>
+  <text x="215" y="193" font-size="7.5" fill="#777"   text-anchor="middle">không nhạy cảm</text>
+  <rect x="158" y="204" width="114" height="16" fill="#fff3e0" rx="8"/>
+  <text x="215" y="216" font-size="7.5" fill="#e65100" text-anchor="middle" font-weight="600">Bật Secret Chat nếu cần bảo mật</text>
+  <text x="215" y="238" font-size="9"   fill="#f57c00" text-anchor="middle">△ Rủi ro trung bình</text>
+  <text x="215" y="250" font-size="7.5" fill="#888"   text-anchor="middle">nếu dùng chat thường</text>
+  <text x="215" y="272" font-size="9"   fill="#ff9800" text-anchor="middle" font-weight="700">Miễn phí</text>
+  <text x="215" y="284" font-size="7.5" fill="#aaa"   text-anchor="middle">Telegram FZ-LLC</text>
+
+  <!-- Thẻ 3: WhatsApp -->
+  <rect x="290" y="66" width="130" height="244" fill="white" rx="6" stroke="#fff176" stroke-width="1.5"/>
+  <rect x="290" y="66" width="130" height="32" fill="#fdd835" rx="6"/>
+  <rect x="290" y="84" width="130" height="14" fill="#fdd835"/>
+  <text x="355" y="87" font-size="10.5" fill="#333" text-anchor="middle" font-weight="700">WhatsApp</text>
+  <text x="355" y="108" font-size="8.5" fill="#5d4037" text-anchor="middle" font-weight="600">✓ E2EE mặc định</text>
+  <text x="355" y="122" font-size="8"   fill="#555"   text-anchor="middle">Nhưng thuộc Meta</text>
+  <text x="355" y="134" font-size="8"   fill="#555"   text-anchor="middle">Metadata chia sẻ với Facebook</text>
+  <text x="355" y="146" font-size="8"   fill="#555"   text-anchor="middle">Backup cloud không mã hóa</text>
+  <line x1="298" y1="158" x2="412" y2="158" stroke="#fff9c4" stroke-width="1"/>
+  <text x="355" y="170" font-size="8"   fill="#555"   text-anchor="middle" font-weight="600">Phù hợp khi:</text>
+  <text x="355" y="182" font-size="7.5" fill="#777"   text-anchor="middle">Nguồn tin quen thuộc</text>
+  <text x="355" y="193" font-size="7.5" fill="#777"   text-anchor="middle">không dùng Signal</text>
+  <rect x="298" y="204" width="114" height="16" fill="#fffde7" rx="8"/>
+  <text x="355" y="216" font-size="7.5" fill="#5d4037" text-anchor="middle" font-weight="600">Tắt backup Google/iCloud</text>
+  <text x="355" y="238" font-size="9"   fill="#f9a825" text-anchor="middle">~ Rủi ro vừa</text>
+  <text x="355" y="250" font-size="7.5" fill="#888"   text-anchor="middle">nếu tắt cloud backup</text>
+  <text x="355" y="272" font-size="9"   fill="#e6b800" text-anchor="middle" font-weight="700">Miễn phí</text>
+  <text x="355" y="284" font-size="7.5" fill="#aaa"   text-anchor="middle">Meta Platforms</text>
+
+  <!-- Thẻ 4: ProtonMail -->
+  <rect x="430" y="66" width="130" height="244" fill="white" rx="6" stroke="#a5d6a7" stroke-width="1.5"/>
+  <rect x="430" y="66" width="130" height="32" fill="#66bb6a" rx="6"/>
+  <rect x="430" y="84" width="130" height="14" fill="#66bb6a"/>
+  <text x="495" y="87" font-size="10.5" fill="white" text-anchor="middle" font-weight="700">ProtonMail</text>
+  <text x="495" y="108" font-size="8.5" fill="#2e7d32" text-anchor="middle" font-weight="600">✓ E2EE giữa ProtonMail</text>
+  <text x="495" y="122" font-size="8"   fill="#555"   text-anchor="middle">Máy chủ ở Thụy Sĩ</text>
+  <text x="495" y="134" font-size="8"   fill="#555"   text-anchor="middle">Không cần số điện thoại</text>
+  <text x="495" y="146" font-size="8"   fill="#555"   text-anchor="middle">Tạo tài khoản ẩn danh</text>
+  <line x1="438" y1="158" x2="552" y2="158" stroke="#c8e6c9" stroke-width="1"/>
+  <text x="495" y="170" font-size="8"   fill="#555"   text-anchor="middle" font-weight="600">Phù hợp khi:</text>
+  <text x="495" y="182" font-size="7.5" fill="#777"   text-anchor="middle">Nhận tài liệu từ nguồn</text>
+  <text x="495" y="193" font-size="7.5" fill="#777"   text-anchor="middle">tin không dùng Signal</text>
+  <rect x="438" y="204" width="114" height="16" fill="#e8f5e9" rx="8"/>
+  <text x="495" y="216" font-size="7.5" fill="#2e7d32" text-anchor="middle" font-weight="600">Gói miễn phí: 1GB · 1 địa chỉ</text>
+  <text x="495" y="238" font-size="9"   fill="#388e3c" text-anchor="middle">✓ An toàn cao</text>
+  <text x="495" y="250" font-size="7.5" fill="#888"   text-anchor="middle">cho email nhạy cảm</text>
+  <text x="495" y="272" font-size="9"   fill="#388e3c" text-anchor="middle" font-weight="700">Miễn phí / €4/tháng</text>
+  <text x="495" y="284" font-size="7.5" fill="#aaa"   text-anchor="middle">Proton AG · Thụy Sĩ</text>
+
+  <!-- Thẻ 5: Signal -->
+  <rect x="570" y="66" width="140" height="244" fill="white" rx="6" stroke="#80cbc4" stroke-width="2"/>
+  <rect x="570" y="66" width="140" height="32" fill="#26a69a" rx="6"/>
+  <rect x="570" y="84" width="140" height="14" fill="#26a69a"/>
+  <text x="640" y="87" font-size="10" fill="white" text-anchor="middle" font-weight="700">Signal ★ Khuyến nghị</text>
+  <text x="640" y="108" font-size="8.5" fill="#004d40" text-anchor="middle" font-weight="600">✓ E2EE mọi loại tin nhắn</text>
+  <text x="640" y="122" font-size="8"   fill="#555"   text-anchor="middle">Không metadata, mã nguồn mở</text>
+  <text x="640" y="134" font-size="8"   fill="#555"   text-anchor="middle">Tin nhắn tự xóa tùy chỉnh</text>
+  <text x="640" y="146" font-size="8"   fill="#555"   text-anchor="middle">Được Snowden, EFF khuyến nghị</text>
+  <line x1="578" y1="158" x2="702" y2="158" stroke="#b2dfdb" stroke-width="1"/>
+  <text x="640" y="170" font-size="8"   fill="#555"   text-anchor="middle" font-weight="600">Phù hợp khi:</text>
+  <text x="640" y="182" font-size="7.5" fill="#777"   text-anchor="middle">Mọi liên lạc với nguồn tin</text>
+  <text x="640" y="193" font-size="7.5" fill="#777"   text-anchor="middle">nhạy cảm, nhóm điều tra</text>
+  <rect x="578" y="204" width="124" height="16" fill="#e0f2f1" rx="8"/>
+  <text x="640" y="216" font-size="7.5" fill="#004d40" text-anchor="middle" font-weight="600">Cần cả hai bên dùng Signal</text>
+  <text x="640" y="238" font-size="9"   fill="#00695c" text-anchor="middle">★ An toàn nhất</text>
+  <text x="640" y="250" font-size="7.5" fill="#888"   text-anchor="middle">cho tác nghiệp báo chí</text>
+  <text x="640" y="272" font-size="9"   fill="#26a69a" text-anchor="middle" font-weight="700">Hoàn toàn miễn phí</text>
+  <text x="640" y="284" font-size="7.5" fill="#aaa"   text-anchor="middle">Signal Foundation (phi lợi nhuận)</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="316" width="704" height="0" fill="none"/>
+
+</svg>

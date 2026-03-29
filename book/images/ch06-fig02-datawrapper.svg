@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 442" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN VÀ RECT — vẽ trước -->
+  <rect width="720" height="442" fill="#f5f5f5" rx="6"/>
+  <!-- Browser window -->
+  <rect x="20" y="40" width="680" height="368" fill="white" rx="8" stroke="#ddd" stroke-width="1.5"/>
+  <!-- Tab bar background -->
+  <rect x="20" y="40" width="680" height="44" fill="#f1f3f4" rx="8"/>
+  <rect x="20" y="68" width="680" height="16" fill="#f1f3f4"/>
+  <!-- Tab 1: Upload (done) -->
+  <rect x="28"  y="46" width="148" height="32" fill="#e8f5e9" rx="4"/>
+  <!-- Tab 2: Check (done) -->
+  <rect x="184" y="46" width="160" height="32" fill="#e8f5e9" rx="4"/>
+  <!-- Tab 3: Visualize (active) -->
+  <rect x="352" y="42" width="156" height="36" fill="#1a73e8" rx="5"/>
+  <!-- Tab 4: Publish (inactive) -->
+  <rect x="516" y="46" width="176" height="32" fill="#f5f5f5" rx="4" stroke="#ddd" stroke-width="1"/>
+  <!-- Left panel: chart type list -->
+  <rect x="20"  y="84" width="150" height="324" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <!-- Selected chart type highlight -->
+  <rect x="26"  y="108" width="138" height="28" fill="#e8f0fe" rx="4" stroke="#1a73e8" stroke-width="1.5"/>
+  <!-- Center chart area -->
+  <rect x="174" y="84" width="370" height="324" fill="white" stroke="#eee" stroke-width="1"/>
+  <!-- Right panel -->
+  <rect x="548" y="84" width="152" height="324" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <!-- Right panel active tab -->
+  <rect x="548" y="84" width="76"  height="30" fill="#1a73e8"/>
+  <rect x="624" y="84" width="76"  height="30" fill="#f0f0f0" stroke="#eee" stroke-width="1"/>
+  <!-- Line chart grid lines (pale) -->
+  <line x1="220" y1="150" x2="520" y2="150" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="220" y1="192" x2="520" y2="192" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="220" y1="234" x2="520" y2="234" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="220" y1="276" x2="520" y2="276" stroke="#f0f0f0" stroke-width="1"/>
+  <line x1="220" y1="318" x2="520" y2="318" stroke="#f0f0f0" stroke-width="1"/>
+  <!-- Chart axes -->
+  <line x1="220" y1="146" x2="220" y2="322" stroke="#ddd" stroke-width="1.2"/>
+  <line x1="220" y1="322" x2="522" y2="322" stroke="#ddd" stroke-width="1.2"/>
+  <!-- Area fill under line chart -->
+  <polygon points="235,280 269,277 302,271 336,264 369,268 402,220 436,152 469,227 502,238 519,238 519,322 235,322"
+           fill="#1a73e8" opacity="0.08"/>
+  <!-- Embed code area background -->
+  <rect x="180" y="366" width="356" height="32" fill="#f8f8f8" rx="4" stroke="#ddd" stroke-width="1"/>
+  <!-- Proceed button -->
+  <rect x="556" y="370" width="136" height="28" fill="#1a73e8" rx="4"/>
+
+  <!-- ② NỘI DUNG TEXT — vẽ giữa -->
+  <text x="360" y="24" font-size="13" fill="#333" text-anchor="middle" font-weight="700">Giao diện Datawrapper: 4 bước tạo biểu đồ</text>
+
+  <!-- Tab labels -->
+  <text x="102"  y="66" font-size="10" fill="#34a853" text-anchor="middle">✓ 1 · Upload data</text>
+  <text x="264"  y="66" font-size="10" fill="#34a853" text-anchor="middle">✓ 2 · Check &amp; Describe</text>
+  <text x="430"  y="65" font-size="10.5" fill="white"   text-anchor="middle" font-weight="700">● 3 · Visualize</text>
+  <text x="604"  y="66" font-size="10" fill="#aaa"     text-anchor="middle">4 · Publish &amp; Embed</text>
+
+  <!-- Left panel content -->
+  <text x="95" y="103" font-size="9.5" fill="#555" text-anchor="middle" font-weight="600">Chọn loại biểu đồ</text>
+  <text x="95" y="127" font-size="10" fill="#1a73e8" text-anchor="middle" font-weight="700">📈 Biểu đồ đường</text>
+  <text x="95" y="148" font-size="9.5" fill="#444" text-anchor="middle">📊 Biểu đồ cột</text>
+  <text x="95" y="166" font-size="9.5" fill="#444" text-anchor="middle">🥧 Biểu đồ tròn</text>
+  <text x="95" y="184" font-size="9.5" fill="#444" text-anchor="middle">🗺 Bản đồ choropleth</text>
+  <text x="95" y="202" font-size="9.5" fill="#444" text-anchor="middle">⚬ Scatter plot</text>
+  <text x="95" y="220" font-size="9.5" fill="#444" text-anchor="middle">⋮⋮ Bar chart race</text>
+  <text x="95" y="238" font-size="9.5" fill="#444" text-anchor="middle">☰ Stacked bar</text>
+
+  <!-- Center: chart title -->
+  <text x="359" y="108" font-size="11" fill="#202124" text-anchor="middle" font-weight="700">Tỷ lệ thất nghiệp Việt Nam 2015–2024 (%)</text>
+  <text x="359" y="122" font-size="8.5" fill="#888"    text-anchor="middle">Nguồn: Tổng cục Thống kê Việt Nam</text>
+
+  <!-- Y-axis labels -->
+  <text x="215" y="150" font-size="8" fill="#bbb" text-anchor="end">3,0</text>
+  <text x="215" y="192" font-size="8" fill="#bbb" text-anchor="end">2,5</text>
+  <text x="215" y="234" font-size="8" fill="#bbb" text-anchor="end">2,0</text>
+  <text x="215" y="276" font-size="8" fill="#bbb" text-anchor="end">1,5</text>
+  <text x="215" y="318" font-size="8" fill="#bbb" text-anchor="end">1,0</text>
+
+  <!-- X-axis year labels -->
+  <text x="235" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2015</text>
+  <text x="269" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2016</text>
+  <text x="302" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2017</text>
+  <text x="336" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2018</text>
+  <text x="369" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2019</text>
+  <text x="402" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2020</text>
+  <text x="436" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2021</text>
+  <text x="469" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2022</text>
+  <text x="502" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2023</text>
+  <text x="519" y="333" font-size="7.5" fill="#bbb" text-anchor="middle">2024</text>
+
+  <!-- Line chart polyline (unemployment %) -->
+  <!-- Scale: y=322 = 1.0%, y=150 = 3.0%, so 1% = 86px -->
+  <!-- Approx values: 2.31,2.30,2.24,2.19,2.17,2.48,3.22,2.39,2.27,2.27 -->
+  <polyline
+    points="235,280 269,277 302,271 336,264 369,268 402,220 436,152 469,227 502,238 519,238"
+    fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Annotation dot for 2021 peak -->
+  <circle cx="436" cy="152" r="4" fill="#1a73e8"/>
+  <text x="442" y="147" font-size="8" fill="#1a73e8" font-weight="700">3,22% (2021)</text>
+  <text x="442" y="157" font-size="7" fill="#888">↑ COVID-19</text>
+
+  <!-- Right panel content -->
+  <text x="586" y="102" font-size="10" fill="white"   text-anchor="middle" font-weight="700">Refine</text>
+  <text x="662" y="102" font-size="10" fill="#888"    text-anchor="middle">Annotate</text>
+  <text x="558" y="130" font-size="9" fill="#555">Màu đường:</text>
+  <rect x="620" y="120" width="60" height="14" fill="#1a73e8" rx="3"/>
+  <text x="558" y="152" font-size="9" fill="#555">Độ dày:</text>
+  <rect x="602" y="143" width="84" height="7" fill="#ddd" rx="3.5"/>
+  <circle cx="640" cy="147" r="6" fill="white" stroke="#1a73e8" stroke-width="2"/>
+  <text x="558" y="173" font-size="9" fill="#555">Hiện nhãn:</text>
+  <rect x="620" y="163" width="34" height="14" fill="#1a73e8" rx="7"/>
+  <circle cx="648" cy="170" r="5.5" fill="white"/>
+  <text x="558" y="194" font-size="9" fill="#555">Đơn vị:</text>
+  <rect x="600" y="184" width="86" height="14" fill="white" rx="3" stroke="#ddd" stroke-width="1"/>
+  <text x="643" y="195" font-size="9" fill="#777" text-anchor="middle">%</text>
+  <text x="558" y="215" font-size="9" fill="#555">Nguồn DL:</text>
+  <rect x="558" y="220" width="130" height="14" fill="white" rx="3" stroke="#ddd" stroke-width="1"/>
+  <text x="623" y="231" font-size="8" fill="#777" text-anchor="middle">Tổng cục Thống kê</text>
+
+  <!-- Embed code placeholder -->
+  <text x="188" y="384" font-size="9" fill="#888">&lt;iframe src="https://datawrapper.de/live/..." /&gt;</text>
+  <!-- Proceed button label -->
+  <text x="624" y="388" font-size="11" fill="white" text-anchor="middle" font-weight="700">Proceed →</text>
+
+  <!-- ③ CHÚ THÍCH ANNOTATION — vẽ SAU CÙNG -->
+  <!-- Chú thích bảng trái: chart type selector -->
+  <line x1="170" y1="120" x2="188" y2="120" stroke="#e8710a" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="163" cy="120" r="10" fill="#e8710a"/>
+  <text x="163" y="124" font-size="9" fill="white" text-anchor="middle" font-weight="700">①</text>
+
+  <!-- Chú thích vùng biểu đồ trung tâm -->
+  <line x1="544" y1="220" x2="526" y2="220" stroke="#34a853" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="551" cy="220" r="10" fill="#34a853"/>
+  <text x="551" y="224" font-size="9" fill="white" text-anchor="middle" font-weight="700">②</text>
+
+  <!-- Chú thích panel phải -->
+  <line x1="544" y1="170" x2="556" y2="170" stroke="#9334e6" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <circle cx="537" cy="170" r="10" fill="#9334e6"/>
+  <text x="537" y="174" font-size="9" fill="white" text-anchor="middle" font-weight="700">③</text>
+
+  <!-- Legend — bên dưới browser window (y=412 trở đi, trong viewBox 442) -->
+  <circle cx="36"  cy="424" r="9" fill="#e8710a"/>
+  <text   x="36"  y="428" font-size="9" fill="white" text-anchor="middle" font-weight="700">①</text>
+  <text   x="50"  y="428" font-size="9" fill="#444">Chọn loại biểu đồ</text>
+  <circle cx="192" cy="424" r="9" fill="#34a853"/>
+  <text   x="192" y="428" font-size="9" fill="white" text-anchor="middle" font-weight="700">②</text>
+  <text   x="206" y="428" font-size="9" fill="#444">Vùng xem trước biểu đồ</text>
+  <circle cx="390" cy="424" r="9" fill="#9334e6"/>
+  <text   x="390" y="428" font-size="9" fill="white" text-anchor="middle" font-weight="700">③</text>
+  <text   x="404" y="428" font-size="9" fill="#444">Tùy chỉnh (Refine / Annotate)</text>
+
+</svg>

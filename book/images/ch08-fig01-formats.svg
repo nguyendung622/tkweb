@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 308" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <!-- ① NỀN -->
+  <rect width="720" height="308" fill="#f5f6f8" rx="6"/>
+
+  <!-- Tiêu đề -->
+  <text x="360" y="20" font-size="13" fill="#1a1a2e" text-anchor="middle" font-weight="700">Các hình thức báo chí đa phương tiện theo độ phức tạp sản xuất</text>
+  <text x="360" y="34" font-size="9" fill="#666" text-anchor="middle">Chọn hình thức phù hợp với nguồn lực và kỹ năng hiện có của tòa soạn</text>
+
+  <!-- 3 nền cột -->
+  <rect x="8"   y="42" width="220" height="242" fill="#e8f5e9" rx="6" opacity="0.6"/>
+  <rect x="246" y="42" width="220" height="242" fill="#fff3e0" rx="6" opacity="0.6"/>
+  <rect x="484" y="42" width="228" height="242" fill="#ffebee" rx="6" opacity="0.6"/>
+
+  <!-- Nhãn cột -->
+  <rect x="8"   y="42" width="220" height="26" fill="#43a047" rx="6"/>
+  <rect x="8"   y="56" width="220" height="12" fill="#43a047"/>
+  <rect x="246" y="42" width="220" height="26" fill="#f57c00" rx="6"/>
+  <rect x="246" y="56" width="220" height="12" fill="#f57c00"/>
+  <rect x="484" y="42" width="228" height="26" fill="#e53935" rx="6"/>
+  <rect x="484" y="56" width="228" height="12" fill="#e53935"/>
+
+  <!-- Nhãn cột text -->
+  <text x="118" y="59" font-size="10" fill="white" text-anchor="middle" font-weight="700">Thấp – Trung bình</text>
+  <text x="356" y="59" font-size="10" fill="white" text-anchor="middle" font-weight="700">Trung bình</text>
+  <text x="598" y="59" font-size="10" fill="white" text-anchor="middle" font-weight="700">Phức tạp cao — Cần kỹ thuật</text>
+
+  <!-- ═══ 6 ô format ═══ -->
+  <!-- Col 1, Card A: Photo Essay — y=76 -->
+  <rect x="12"  y="76" width="212" height="94" fill="white" rx="5" stroke="#a5d6a7" stroke-width="1.2"/>
+  <text x="118" y="93"  font-size="10.5" fill="#2e7d32" text-anchor="middle" font-weight="700">Photo Essay</text>
+  <text x="118" y="108" font-size="8.5"  fill="#444"    text-anchor="middle">Kể chuyện chủ yếu bằng ảnh</text>
+  <text x="118" y="120" font-size="8.5"  fill="#444"    text-anchor="middle">Caption ngắn gọn · Ít văn bản</text>
+  <text x="118" y="132" font-size="8.5"  fill="#444"    text-anchor="middle">Ít đòi hỏi kỹ thuật nhất</text>
+  <text x="118" y="147" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">National Geographic · TTXVN</text>
+
+  <!-- Col 1, Card B: Longform — y=178 -->
+  <rect x="12"  y="178" width="212" height="94" fill="white" rx="5" stroke="#a5d6a7" stroke-width="1.2"/>
+  <text x="118" y="195" font-size="10.5" fill="#2e7d32" text-anchor="middle" font-weight="700">Longform</text>
+  <text x="118" y="210" font-size="8.5"  fill="#444"    text-anchor="middle">Văn bản 2.000–10.000 chữ</text>
+  <text x="118" y="222" font-size="8.5"  fill="#444"    text-anchor="middle">Kết hợp ảnh, đồ họa tĩnh</text>
+  <text x="118" y="234" font-size="8.5"  fill="#444"    text-anchor="middle">Đọc tuyến tính, không cần JS</text>
+  <text x="118" y="249" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">NYT Snow Fall · VnExpress Megastory</text>
+
+  <!-- Col 2, Card A: Podcast — y=76 -->
+  <rect x="250" y="76" width="212" height="94" fill="white" rx="5" stroke="#ffcc80" stroke-width="1.2"/>
+  <text x="356" y="93"  font-size="10.5" fill="#e65100" text-anchor="middle" font-weight="700">Podcast Journalism</text>
+  <text x="356" y="108" font-size="8.5"  fill="#444"    text-anchor="middle">Phóng sự âm thanh dài</text>
+  <text x="356" y="120" font-size="8.5"  fill="#444"    text-anchor="middle">Phỏng vấn + tiếng động hiện trường</text>
+  <text x="356" y="132" font-size="8.5"  fill="#444"    text-anchor="middle">Cần biên tập audio (Audacity)</text>
+  <text x="356" y="147" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">This American Life · Mở Miệng Ra</text>
+
+  <!-- Col 2, Card B: Video Documentary — y=178 -->
+  <rect x="250" y="178" width="212" height="94" fill="white" rx="5" stroke="#ffcc80" stroke-width="1.2"/>
+  <text x="356" y="195" font-size="10.5" fill="#e65100" text-anchor="middle" font-weight="700">Video Documentary</text>
+  <text x="356" y="210" font-size="8.5"  fill="#444"    text-anchor="middle">Phỏng vấn + hình ảnh hiện trường</text>
+  <text x="356" y="222" font-size="8.5"  fill="#444"    text-anchor="middle">10–20 phút · Xây dựng nhân vật</text>
+  <text x="356" y="234" font-size="8.5"  fill="#444"    text-anchor="middle">Cần dựng phim, hậu kỳ bài bản</text>
+  <text x="356" y="249" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">Al Jazeera · VTV Đặc biệt</text>
+
+  <!-- Col 3, Card A: Interactive — y=76 -->
+  <rect x="488" y="76" width="220" height="94" fill="white" rx="5" stroke="#ef9a9a" stroke-width="1.2"/>
+  <text x="598" y="93"  font-size="10.5" fill="#c62828" text-anchor="middle" font-weight="700">Interactive Story</text>
+  <text x="598" y="108" font-size="8.5"  fill="#444"    text-anchor="middle">Người dùng bấm, lọc dữ liệu</text>
+  <text x="598" y="120" font-size="8.5"  fill="#444"    text-anchor="middle">Bản đồ, biểu đồ tương tác động</text>
+  <text x="598" y="132" font-size="8.5"  fill="#444"    text-anchor="middle">Cần kỹ năng web · Flourish/D3.js</text>
+  <text x="598" y="147" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">Reuters Graphics · Flourish Stories</text>
+
+  <!-- Col 3, Card B: Scrollytelling — y=178 -->
+  <rect x="488" y="178" width="220" height="94" fill="white" rx="5" stroke="#ef9a9a" stroke-width="1.2"/>
+  <text x="598" y="195" font-size="10.5" fill="#c62828" text-anchor="middle" font-weight="700">Scrollytelling</text>
+  <text x="598" y="210" font-size="8.5"  fill="#444"    text-anchor="middle">Yếu tố xuất hiện khi người dùng cuộn</text>
+  <text x="598" y="222" font-size="8.5"  fill="#444"    text-anchor="middle">Hiệu ứng animation khi lướt</text>
+  <text x="598" y="234" font-size="8.5"  fill="#444"    text-anchor="middle">Cần CSS/JS hoặc Scrollama</text>
+  <text x="598" y="249" font-size="8"    fill="#888"    text-anchor="middle" font-style="italic">The Guardian · Pudding.cool</text>
+
+  <!-- Ghi chú cuối -->
+  <rect x="8" y="280" width="704" height="22" fill="#e8f5e9" rx="4" stroke="#81c784" stroke-width="1"/>
+  <text x="360" y="295" font-size="9" fill="#2e7d32" text-anchor="middle" font-weight="700">💡 Tòa soạn sinh viên nên bắt đầu từ Photo Essay và Longform, sau đó nâng dần độ phức tạp theo nguồn lực</text>
+
+</svg>

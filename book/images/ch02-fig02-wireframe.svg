@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="'Be Vietnam Pro', Arial, sans-serif">
+
+  <rect width="720" height="460" fill="#fafbfc" rx="8"/>
+  <text x="360" y="26" font-size="13" fill="#333" text-anchor="middle" font-weight="700">Wireframe bố cục trang bài viết báo chí</text>
+
+  <!-- ══════════════════════
+       TRÁI: BỐ CỤC TỐT
+  ══════════════════════ -->
+  <text x="168" y="46" font-size="11" fill="#2e7d32" text-anchor="middle" font-weight="700">✓  Bố cục tốt</text>
+
+  <rect x="20" y="54" width="296" height="310" fill="white" stroke="#c8e6c9" stroke-width="2" rx="6"/>
+
+  <!-- Header -->
+  <rect x="20" y="54" width="296" height="32" fill="#2e7d32" rx="6"/>
+  <rect x="20" y="70" width="296" height="16" fill="#2e7d32"/>
+  <rect x="30" y="62" width="40" height="16" fill="rgba(255,255,255,0.3)" rx="3"/>
+  <text x="50" y="74" font-size="8" fill="white" text-anchor="middle">LOGO</text>
+  <rect x="160" y="63" width="30" height="12" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="196" y="63" width="30" height="12" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="232" y="63" width="30" height="12" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="268" y="63" width="36" height="12" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <!-- Badge ① -->
+  <circle cx="310" cy="70" r="9" fill="#2e7d32" stroke="white" stroke-width="1.5"/>
+  <text x="310" y="74" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+
+  <!-- Breadcrumb -->
+  <rect x="30" y="96" width="120" height="8" fill="#e0e0e0" rx="2"/>
+
+  <!-- Headline lớn -->
+  <rect x="30" y="112" width="276" height="18" fill="#1565c0" rx="2" opacity="0.8"/>
+  <rect x="30" y="134" width="210" height="14" fill="#1565c0" rx="2" opacity="0.6"/>
+  <text x="165" y="125" font-size="8" fill="white" text-anchor="middle">TIÊU ĐỀ LỚN — RÕ RÀNG</text>
+  <!-- Badge ② -->
+  <circle cx="310" cy="122" r="9" fill="#2e7d32" stroke="white" stroke-width="1.5"/>
+  <text x="310" y="126" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+
+  <!-- Meta: tác giả + ngày -->
+  <rect x="30" y="154" width="80" height="8" fill="#e0e0e0" rx="2"/>
+  <rect x="116" y="154" width="60" height="8" fill="#e0e0e0" rx="2"/>
+
+  <!-- Ảnh chính full-width -->
+  <rect x="30" y="168" width="276" height="70" fill="#e3f2fd" rx="4"/>
+  <text x="168" y="207" font-size="10" fill="#1565c0" text-anchor="middle">ẢNH CHÍNH (full width)</text>
+  <rect x="30" y="238" width="276" height="8" fill="#e8f5e9" rx="2"/>
+  <text x="168" y="244" font-size="7" fill="#666" text-anchor="middle">Chú thích ảnh</text>
+  <!-- Badge ③ -->
+  <circle cx="310" cy="200" r="9" fill="#2e7d32" stroke="white" stroke-width="1.5"/>
+  <text x="310" y="204" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+
+  <!-- Lead paragraph nổi bật -->
+  <rect x="30" y="254" width="276" height="12" fill="#f5f5f5" rx="2" stroke="#e0e0e0"/>
+  <rect x="30" y="270" width="276" height="8" fill="#f5f5f5" rx="2"/>
+  <rect x="30" y="282" width="200" height="8" fill="#f5f5f5" rx="2"/>
+  <text x="168" y="263" font-size="7" fill="#888" text-anchor="middle">Đoạn lead — chữ hơi lớn hơn nội dung</text>
+  <!-- Badge ④ -->
+  <circle cx="310" cy="268" r="9" fill="#2e7d32" stroke="white" stroke-width="1.5"/>
+  <text x="310" y="272" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+
+  <!-- Nội dung -->
+  <rect x="30" y="298" width="276" height="7" fill="#eeeeee" rx="1"/>
+  <rect x="30" y="309" width="276" height="7" fill="#eeeeee" rx="1"/>
+  <rect x="30" y="320" width="230" height="7" fill="#eeeeee" rx="1"/>
+  <rect x="30" y="331" width="276" height="7" fill="#eeeeee" rx="1"/>
+
+  <!-- Bài liên quan -->
+  <text x="168" y="350" font-size="7" fill="#2e7d32" text-anchor="middle">Bài viết liên quan</text>
+  <rect x="30"  y="354" width="85" height="6" fill="#c8e6c9" rx="1"/>
+  <rect x="121" y="354" width="85" height="6" fill="#c8e6c9" rx="1"/>
+  <rect x="212" y="354" width="84" height="6" fill="#c8e6c9" rx="1"/>
+  <!-- Badge ⑤ -->
+  <circle cx="310" cy="354" r="9" fill="#2e7d32" stroke="white" stroke-width="1.5"/>
+  <text x="310" y="358" font-size="9" fill="white" text-anchor="middle" font-weight="700">5</text>
+
+  <!-- Legend bên trái — nằm trong vùng x=20..316 -->
+  <rect x="20" y="372" width="296" height="80" fill="#f1f8e9" stroke="#c8e6c9" rx="5"/>
+  <text x="30" y="388" font-size="9" fill="#2e7d32" font-weight="700">Điểm tốt:</text>
+  <text x="30" y="402" font-size="9" fill="#33691e">① Header rõ ràng, logo dễ thấy</text>
+  <text x="30" y="415" font-size="9" fill="#33691e">② Tiêu đề lớn, tương phản cao</text>
+  <text x="30" y="428" font-size="9" fill="#33691e">③ Ảnh full-width, có chú thích</text>
+  <text x="170" y="402" font-size="9" fill="#33691e">④ Lead nổi bật, dễ lướt</text>
+  <text x="170" y="415" font-size="9" fill="#33691e">⑤ Bài liên quan cuối trang</text>
+
+  <!-- Đường phân cách -->
+  <line x1="360" y1="44" x2="360" y2="458" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ══════════════════════
+       PHẢI: BỐ CỤC KÉM
+  ══════════════════════ -->
+  <text x="550" y="46" font-size="11" fill="#c62828" text-anchor="middle" font-weight="700">✗  Bố cục kém</text>
+
+  <rect x="404" y="54" width="296" height="310" fill="white" stroke="#ffcdd2" stroke-width="2" rx="6"/>
+
+  <!-- Header lộn xộn -->
+  <rect x="404" y="54" width="296" height="20" fill="#888" rx="6"/>
+  <rect x="404" y="68" width="296" height="6" fill="#888"/>
+  <text x="552" y="66" font-size="7" fill="white" text-anchor="middle">LOGO NHỎ + TEXT NHIỀU TRÊN HEADER</text>
+
+  <!-- Popup quảng cáo -->
+  <rect x="450" y="78" width="160" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5" rx="4"/>
+  <text x="530" y="98" font-size="9" fill="#f57f17" text-anchor="middle" font-weight="600">⚠ POPUP QUẢNG CÁO</text>
+  <text x="530" y="112" font-size="8" fill="#888" text-anchor="middle">che nội dung chính</text>
+  <rect x="592" y="80" width="14" height="14" fill="#e53935" rx="2"/>
+  <text x="599" y="91" font-size="9" fill="white" text-anchor="middle">✕</text>
+  <!-- Badge ① -->
+  <circle cx="414" cy="98" r="9" fill="#c62828" stroke="white" stroke-width="1.5"/>
+  <text x="414" y="102" font-size="9" fill="white" text-anchor="middle" font-weight="700">1</text>
+
+  <!-- Tiêu đề nhỏ -->
+  <text x="424" y="133" font-size="7" fill="#f44336">② tiêu đề nhỏ, chìm vào nền</text>
+  <rect x="414" y="136" width="150" height="8" fill="#bdbdbd" rx="1"/>
+  <rect x="414" y="148" width="120" height="8" fill="#bdbdbd" rx="1"/>
+  <!-- Badge ② -->
+  <circle cx="686" cy="143" r="9" fill="#c62828" stroke="white" stroke-width="1.5"/>
+  <text x="686" y="147" font-size="9" fill="white" text-anchor="middle" font-weight="700">2</text>
+
+  <!-- 3 cột nhỏ -->
+  <rect x="414" y="162" width="88"  height="86" fill="#fafafa" stroke="#e0e0e0" rx="2"/>
+  <rect x="506" y="162" width="88"  height="86" fill="#fafafa" stroke="#e0e0e0" rx="2"/>
+  <rect x="598" y="162" width="88"  height="86" fill="#fafafa" stroke="#e0e0e0" rx="2"/>
+  <rect x="414" y="162" width="88"  height="28" fill="#ddd" rx="2"/>
+  <rect x="506" y="162" width="88"  height="28" fill="#ddd" rx="2"/>
+  <rect x="598" y="162" width="88"  height="28" fill="#ddd" rx="2"/>
+  <text x="458" y="182" font-size="7" fill="#aaa" text-anchor="middle">Ảnh nhỏ</text>
+  <text x="550" y="182" font-size="7" fill="#aaa" text-anchor="middle">Ảnh nhỏ</text>
+  <text x="642" y="182" font-size="7" fill="#aaa" text-anchor="middle">Ảnh nhỏ</text>
+  <rect x="420" y="197" width="76" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="420" y="207" width="56" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="420" y="217" width="66" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="420" y="227" width="46" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="512" y="197" width="76" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="512" y="207" width="56" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="512" y="217" width="66" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="604" y="197" width="76" height="5" fill="#e0e0e0" rx="1"/>
+  <rect x="604" y="207" width="60" height="5" fill="#e0e0e0" rx="1"/>
+  <!-- Badge ③ -->
+  <circle cx="686" cy="205" r="9" fill="#c62828" stroke="white" stroke-width="1.5"/>
+  <text x="686" y="209" font-size="9" fill="white" text-anchor="middle" font-weight="700">3</text>
+
+  <!-- Văn bản nhỏ -->
+  <text x="550" y="260" font-size="7" fill="#f44336" text-anchor="middle">văn bản quá nhỏ (font 10px)</text>
+  <rect x="414" y="264" width="276" height="5" fill="#e8e8e8" rx="1"/>
+  <rect x="414" y="273" width="276" height="5" fill="#e8e8e8" rx="1"/>
+  <rect x="414" y="282" width="276" height="5" fill="#e8e8e8" rx="1"/>
+  <rect x="414" y="291" width="276" height="5" fill="#e8e8e8" rx="1"/>
+
+  <!-- Banner quảng cáo giữa bài -->
+  <rect x="414" y="302" width="276" height="26" fill="#fff3e0" stroke="#ffb300" stroke-width="1" rx="3"/>
+  <text x="552" y="319" font-size="9" fill="#e65100" text-anchor="middle">📢 QUẢNG CÁO GIỮA BÀI</text>
+  <!-- Badge ④ -->
+  <circle cx="686" cy="315" r="9" fill="#c62828" stroke="white" stroke-width="1.5"/>
+  <text x="686" y="319" font-size="9" fill="white" text-anchor="middle" font-weight="700">4</text>
+
+  <!-- Văn bản tương phản thấp -->
+  <text x="424" y="331" font-size="7" fill="#f44336">⑤ tương phản thấp — khó đọc</text>
+  <rect x="414" y="334" width="276" height="5" fill="#d6d6d6" rx="1"/>
+  <rect x="414" y="343" width="276" height="5" fill="#d6d6d6" rx="1"/>
+  <rect x="414" y="352" width="200" height="5" fill="#d6d6d6" rx="1"/>
+  <!-- Badge ⑤ -->
+  <circle cx="686" cy="345" r="9" fill="#c62828" stroke="white" stroke-width="1.5"/>
+  <text x="686" y="349" font-size="9" fill="white" text-anchor="middle" font-weight="700">5</text>
+
+  <!-- Legend bên phải — nằm trong vùng x=404..700 -->
+  <rect x="404" y="372" width="296" height="80" fill="#ffebee" stroke="#ffcdd2" rx="5"/>
+  <text x="414" y="388" font-size="9" fill="#c62828" font-weight="700">Lỗi phổ biến:</text>
+  <text x="414" y="402" font-size="9" fill="#b71c1c">① Popup che nội dung chính</text>
+  <text x="414" y="415" font-size="9" fill="#b71c1c">② Tiêu đề nhỏ, không nổi bật</text>
+  <text x="414" y="428" font-size="9" fill="#b71c1c">③ Ảnh nhỏ, bố cục 3 cột rối</text>
+  <text x="570" y="402" font-size="9" fill="#b71c1c">④ Quảng cáo giữa bài</text>
+  <text x="570" y="415" font-size="9" fill="#b71c1c">⑤ Tương phản màu thấp</text>
+
+</svg>
