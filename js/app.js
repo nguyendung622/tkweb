@@ -25,7 +25,7 @@
       <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
     </div>
   `;
-  setTimeout(() => el.classList.add('hide'), 10000);
+  setTimeout(() => el.classList.add('hide'), 2000);
 })();
 
 /* ── STATE ── */
@@ -160,6 +160,35 @@ function renderHomePage() {
         <div class="section-header"><h2>Chương trình học</h2></div>
         <div class="lessons-grid">
           ${LESSONS.map(l => renderLessonCard(l)).join('')}
+        </div>
+      </section>
+
+      <!-- TÀI LIỆU BỔ TRỢ -->
+      <section class="syllabus-section" id="resources">
+        <div class="section-header"><h2>Tài liệu bổ trợ</h2></div>
+        <div class="lessons-grid">
+          <div class="lesson-card" onclick="window.location.href='seo_baochi.html'">
+            <span class="status-badge live">Có sẵn</span>
+            <div class="lesson-num" style="font-size:2rem;">🔍</div>
+            <h3>SEO cho Nhà Báo</h3>
+            <p>Hướng dẫn tối ưu hóa công cụ tìm kiếm dành riêng cho sinh viên báo chí — 7 bước On-page SEO áp dụng thực tế, có quiz và checklist.</p>
+            <div class="lesson-tags">
+              <span class="tag">SEO</span>
+              <span class="tag">Báo chí số</span>
+              <span class="tag">Google Sites</span>
+            </div>
+          </div>
+          <div class="lesson-card" onclick="window.location.href='book/index.html'">
+            <span class="status-badge live">Có sẵn</span>
+            <div class="lesson-num" style="font-size:2rem;">📖</div>
+            <h3>Làm báo trên môi trường số</h3>
+            <p>Giáo trình 12 chương: từ Google Sites, Canva, WordPress đến SEO, Analytics và bảo mật — dành cho sinh viên ngành Báo chí & Truyền thông.</p>
+            <div class="lesson-tags">
+              <span class="tag">Giáo trình</span>
+              <span class="tag">12 chương</span>
+              <span class="tag">Thực hành</span>
+            </div>
+          </div>
         </div>
       </section>
 

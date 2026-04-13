@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO cho Nhà Báo — Khoa Báo chí số</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1612;
+  --paper: #f5f0e8;
+  --cream: #ede7d9;
+  --accent: #c8401a;
+  --accent2: #2d6a4f;
+  --muted: #7a7060;
+  --border: #d4c9b5;
+  --white: #fdfaf5;
+  --code-bg: #272320;
+  --nav-w: 260px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ── NAV ── */
+nav {
+  width: var(--nav-w);
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--paper);
+  position: fixed;
+  top: 0; left: 0;
+  overflow-y: auto;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.nav-header {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.nav-course {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.nav-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.nav-menu { padding: 16px 0; flex: 1; }
+.nav-section-label {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 14px 24px 6px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 24px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all .2s;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+}
+.nav-item:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.nav-item.active { color: var(--white); border-left-color: var(--accent); background: rgba(200,64,26,0.12); }
+.nav-num {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.5);
+}
+.nav-item.active .nav-num { background: var(--accent); color: #fff; }
+.nav-progress {
+  padding: 20px 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.progress-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+.progress-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--accent); border-radius: 2px; width: 0%; transition: width .5s; }
+.progress-count { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 6px; text-align: right; }
+
+/* ── MAIN ── */
+main {
+  margin-left: var(--nav-w);
+  flex: 1;
+  max-width: 860px;
+  padding: 0 60px 80px;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-family: 'DM Mono', monospace;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero-desc {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.hero-meta {
+  display: flex;
+  gap: 28px;
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+}
+.hero-meta span::before { content: '— '; }
+
+/* ── SECTION ── */
+.lesson {
+  margin-bottom: 72px;
+  scroll-margin-top: 32px;
+}
+.lesson-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.lesson-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1;
+  flex-shrink: 0;
+  user-select: none;
+}
+.lesson-title-block { flex: 1; }
+.lesson-step {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 4px;
+}
+.lesson-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+/* ── CONTENT BLOCKS ── */
+.theory-block {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+}
+.theory-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+.theory-block p, .theory-block li {
+  font-size: 14px;
+  color: #3d3730;
+  line-height: 1.8;
+}
+.theory-block ul { padding-left: 20px; }
+.theory-block li { margin-bottom: 4px; }
+
+.rule-list { list-style: none; padding: 0; }
+.rule-list li {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cream);
+  font-size: 14px;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+.rule-list li:last-child { border-bottom: none; }
+.rule-ok::before { content: '✓'; color: var(--accent2); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.rule-no::before { content: '✕'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.compare-card {
+  padding: 16px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.compare-bad { background: #fdf0ed; border: 1px solid #e8b5ab; color: #7a2c1e; }
+.compare-good { background: #edf7f2; border: 1px solid #a8d5bc; color: #1e5c3a; }
+.compare-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 6px;
+  opacity: 0.7;
+  font-family: 'DM Mono', monospace;
+}
+
+/* URL display */
+.url-display {
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+.url-domain { color: #8a8070; }
+.url-good { color: #6fcf97; }
+.url-bad { color: #eb5757; text-decoration: line-through; opacity: 0.7; }
+.url-badge {
+  font-size: 10px;
+  padding: 1px 8px;
+  border-radius: 2px;
+  margin-left: 10px;
+  font-family: 'DM Mono', monospace;
+}
+.badge-ok { background: rgba(111,207,151,0.2); color: #6fcf97; }
+.badge-no { background: rgba(235,87,87,0.2); color: #eb5757; }
+
+/* SERP mock */
+.serp-mock {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+}
+.serp-url-line { font-size: 12px; color: var(--accent2); font-family: 'DM Mono', monospace; margin-bottom: 3px; }
+.serp-title-line { font-size: 17px; color: #1a73e8; margin-bottom: 5px; line-height: 1.3; cursor: pointer; }
+.serp-title-line:hover { text-decoration: underline; }
+.serp-desc-line { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.serp-kw { font-weight: 700; color: var(--ink); }
+
+/* Article mock */
+.article-mock {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.art-h1 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
+.art-h2 { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; margin: 16px 0 6px; color: var(--ink); border-left: 3px solid var(--accent); padding-left: 10px; }
+.art-h3 { font-size: 13px; font-weight: 500; margin: 12px 0 4px; color: var(--muted); }
+.art-p { font-size: 13px; color: #3d3730; margin-bottom: 8px; }
+.kw-main { background: rgba(200,64,26,0.12); color: var(--accent); border-radius: 2px; padding: 0 3px; font-weight: 500; }
+.kw-lsi { background: rgba(45,106,79,0.12); color: var(--accent2); border-radius: 2px; padding: 0 3px; }
+
+/* Formula */
+.formula {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 4px;
+  padding: 16px 22px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.formula strong { color: #f2c078; }
+
+/* Heading tag */
+.h-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+  flex-shrink: 0;
+  min-width: 32px;
+  text-align: center;
+}
+.h-tag-1 { background: #dde8f7; color: #1a5ea8; }
+.h-tag-2 { background: #ddf0e7; color: #1e5c3a; }
+.h-tag-3 { background: #fdf3dc; color: #8a5a0a; }
+.h-tag-p { background: var(--cream); color: var(--muted); border: 1px solid var(--border); }
+
+.struct-row { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--cream); align-items: flex-start; }
+.struct-row:last-child { border-bottom: none; }
+.struct-text { flex: 1; }
+.struct-title { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
+.struct-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ── EXERCISES ── */
+.exercise-block {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 22px 26px;
+  margin-bottom: 16px;
+}
+.exercise-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ex-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: 'DM Mono', monospace;
+  font-weight: 400;
+}
+.exercise-block ol { padding-left: 20px; }
+.exercise-block ol li { font-size: 14px; margin-bottom: 8px; line-height: 1.7; }
+.exercise-block input[type=text],
+.exercise-block input[type=number],
+.exercise-block textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  margin-top: 6px;
+  outline: none;
+  transition: border .2s;
+}
+.exercise-block input:focus,
+.exercise-block textarea:focus { border-color: var(--accent); }
+.input-label { font-size: 12px; color: var(--muted); margin-top: 12px; margin-bottom: 2px; }
+.char-bar-wrap { height: 6px; background: var(--border); border-radius: 3px; margin-top: 6px; overflow: hidden; }
+.char-bar-fill { height: 100%; border-radius: 3px; transition: width .3s, background .3s; }
+.char-status { font-size: 11px; color: var(--muted); margin-top: 4px; font-family: 'DM Mono', monospace; }
+.feedback { font-size: 12px; padding: 10px 14px; border-radius: 3px; margin-top: 10px; line-height: 1.6; }
+.feedback-ok { background: #edf7f2; border: 1px solid #a8d5bc; color: #1e5c3a; }
+.feedback-warn { background: #fdf8ed; border: 1px solid #e8d5a0; color: #7a5a00; }
+.feedback-bad { background: #fdf0ed; border: 1px solid #e8b5ab; color: #7a2c1e; }
+
+/* ── CHECKLIST ── */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.check-item:hover { border-color: var(--accent2); }
+.check-item.done { background: #edf7f2; border-color: #a8d5bc; }
+.check-item input { flex-shrink: 0; margin-top: 2px; accent-color: var(--accent2); }
+.check-item label { font-size: 13px; cursor: pointer; line-height: 1.5; }
+.check-item.done label { color: var(--accent2); text-decoration: line-through; opacity: 0.7; }
+.check-summary { margin-top: 14px; font-size: 13px; color: var(--muted); text-align: center; font-family: 'DM Mono', monospace; }
+
+/* ── DENSITY TOOL ── */
+.density-tool { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.density-result-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
+.density-result-fill { height: 100%; border-radius: 4px; transition: width .4s, background .4s; }
+
+/* ── QUIZ ── */
+.quiz-q { margin-bottom: 20px; }
+.quiz-q p { font-size: 14px; font-weight: 500; margin-bottom: 10px; }
+.quiz-options { display: flex; flex-direction: column; gap: 6px; }
+.quiz-opt {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 13px;
+  background: var(--white);
+  transition: all .15s;
+  text-align: left;
+  color: var(--ink);
+}
+.quiz-opt:hover { border-color: var(--accent); background: #fdf0ed; }
+.quiz-opt.correct { background: #edf7f2; border-color: #a8d5bc; color: #1e5c3a; }
+.quiz-opt.wrong { background: #fdf0ed; border-color: #e8b5ab; color: #7a2c1e; }
+.quiz-exp { font-size: 12px; margin-top: 8px; padding: 8px 12px; border-radius: 3px; line-height: 1.6; display: none; }
+.quiz-exp.show { display: block; }
+
+/* ── BTN ── */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all .2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #a53416; }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--ink); }
+.btn-outline:hover { border-color: var(--ink); }
+.btn-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+
+/* ── SECTION DIVIDER ── */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 40px;
+}
+.divider-line { flex: 1; height: 1px; background: var(--border); }
+.divider-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { width: 220px; }
+  main { margin-left: 220px; padding: 0 32px 60px; }
+  .hero h1 { font-size: 38px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .density-tool { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  nav { display: none; }
+  main { margin-left: 0; padding: 0 20px 60px; }
+}
+
+/* ── ANIMATE ── */
+.lesson { opacity: 0; transform: translateY(18px); animation: fadeUp .5s ease forwards; }
+.lesson:nth-child(2) { animation-delay: .1s; }
+.lesson:nth-child(3) { animation-delay: .2s; }
+.lesson:nth-child(4) { animation-delay: .3s; }
+.lesson:nth-child(5) { animation-delay: .4s; }
+.lesson:nth-child(6) { animation-delay: .5s; }
+.lesson:nth-child(7) { animation-delay: .6s; }
+.lesson:nth-child(8) { animation-delay: .7s; }
+@keyframes fadeUp { to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<!-- ════════════ NAV ════════════ -->
+<nav>
+  <div class="nav-header">
+    <div class="nav-course">SEO cho Nhà Báo</div>
+    <div class="nav-sub">Khoa Báo chí số</div>
+  </div>
+  <div class="nav-menu">
+    <div class="nav-section-label">Giới thiệu</div>
+    <a class="nav-item active" onclick="scrollTo('intro')">
+      <span class="nav-num">◆</span> Tổng quan môn học
+    </a>
+    <div class="nav-section-label">Lý thuyết</div>
+    <a class="nav-item" onclick="scrollTo('overview')"><span class="nav-num">§</span> Tổng quan SEO</a>
+    <div class="nav-section-label">7 bước SEO</div>
+    <a class="nav-item" onclick="scrollTo('b1')"><span class="nav-num">1</span> Từ khóa</a>
+    <a class="nav-item" onclick="scrollTo('b2')"><span class="nav-num">2</span> Tiêu đề H1</a>
+    <a class="nav-item" onclick="scrollTo('b3')"><span class="nav-num">3</span> Meta Description</a>
+    <a class="nav-item" onclick="scrollTo('b4')"><span class="nav-num">4</span> Nội dung bài</a>
+    <a class="nav-item" onclick="scrollTo('b5')"><span class="nav-num">5</span> Hình ảnh</a>
+    <a class="nav-item" onclick="scrollTo('b6')"><span class="nav-num">6</span> Liên kết</a>
+    <a class="nav-item" onclick="scrollTo('b7')"><span class="nav-num">7</span> URL</a>
+    <div class="nav-section-label">Ôn tập</div>
+    <a class="nav-item" onclick="scrollTo('tools')"><span class="nav-num">📊</span> Đo lường SEO</a>
+    <a class="nav-item" onclick="scrollTo('quiz')"><span class="nav-num">?</span> Quiz kiểm tra</a>
+    <a class="nav-item" onclick="scrollTo('checklist')"><span class="nav-num">✓</span> Checklist đăng bài</a>
+  </div>
+  <div class="nav-progress">
+    <div class="progress-label">Tiến độ học</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-count" id="progressCount">0 / 8 phần</div>
+  </div>
+</nav>
+
+<!-- ════════════ MAIN ════════════ -->
+<main>
+
+<!-- HERO -->
+<section class="hero" id="intro">
+  <div class="hero-tag">Tài liệu giảng dạy</div>
+  <h1>SEO cho<br><em>Nhà Báo</em></h1>
+  <p class="hero-desc">Hướng dẫn tối ưu hóa công cụ tìm kiếm dành riêng cho sinh viên báo chí — áp dụng thực tế trên Google Sites.</p>
+  <div class="hero-meta">
+    <span>Khoa Báo chí số</span>
+    <span>7 bước cốt lõi</span>
+    <span>Thực hành trực tiếp</span>
+  </div>
+</section>
+
+<!-- ══ TỔNG QUAN LÝ THUYẾT SEO ══ -->
+<section class="lesson" id="overview">
+  <div class="lesson-header">
+    <div class="lesson-num">§</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Lý thuyết nền</div>
+      <h2 class="lesson-title">Tổng quan về SEO</h2>
+    </div>
+  </div>
+
+  <!-- 1. SEO là gì -->
+  <div class="theory-block">
+    <h3>SEO là gì?</h3>
+    <p>
+      <strong>SEO</strong> (Search Engine Optimization — Tối ưu hóa công cụ tìm kiếm) là tập hợp các kỹ thuật giúp bài viết xuất hiện ở vị trí cao hơn trên trang kết quả tìm kiếm (SERP) của Google và các công cụ tương tự — mà <em>không cần trả tiền quảng cáo</em>.
+    </p>
+    <p style="margin-top:10px;">
+      Với nhà báo, SEO không đồng nghĩa với "đánh lừa Google". Mục tiêu thực sự là: viết bài <strong>đúng chủ đề độc giả đang tìm</strong>, trình bày rõ ràng để máy tìm kiếm hiểu được nội dung, và xây dựng uy tín để Google tin tưởng đề xuất bài lên đầu.
+    </p>
+  </div>
+
+  <!-- 2. Tại sao quan trọng -->
+  <div class="theory-block">
+    <h3>Tại sao SEO quan trọng với báo chí?</h3>
+    <ul>
+      <li><strong>Lượng truy cập tự nhiên:</strong> Theo Reuters Institute (2024), hơn 40% lượng truy cập vào các trang tin tức đến từ tìm kiếm — nhiều hơn mạng xã hội trong nhiều thể loại.</li>
+      <li><strong>Tuổi thọ bài viết:</strong> Bài SEO tốt tiếp tục nhận lượt đọc hàng tháng, hàng năm sau khi đăng — khác với bài mạng xã hội chỉ "sống" vài giờ.</li>
+      <li><strong>Độc giả chủ động:</strong> Người tìm kiếm đang chủ động muốn đọc về chủ đề đó — tỷ lệ đọc hết bài cao hơn so với nguồn thụ động.</li>
+      <li><strong>Cạnh tranh tòa soạn:</strong> Hai bài báo cùng chất lượng — bài được tối ưu SEO sẽ nhận gấp nhiều lần lượt đọc hơn bài không được tối ưu.</li>
+    </ul>
+  </div>
+
+  <!-- 3. Google hoạt động thế nào -->
+  <div class="theory-block">
+    <h3>Google hoạt động thế nào? (Crawl → Index → Rank)</h3>
+    <p>Để hiểu SEO, cần hiểu 3 giai đoạn Google xử lý một trang web:</p>
+    <ul style="margin-top:10px;">
+      <li>
+        <strong>① Crawl (Thu thập):</strong> Googlebot — robot tự động của Google — liên tục duyệt qua các trang web theo đường liên kết. Khi bot tìm thấy bài viết mới, nó tải về và đọc nội dung.
+      </li>
+      <li style="margin-top:8px;">
+        <strong>② Index (Lập chỉ mục):</strong> Google phân tích nội dung bài, xác định chủ đề, từ khóa và chất lượng, rồi lưu vào kho dữ liệu khổng lồ (index). Bài chưa được index thì <em>không bao giờ xuất hiện</em> trong kết quả tìm kiếm.
+      </li>
+      <li style="margin-top:8px;">
+        <strong>③ Rank (Xếp hạng):</strong> Khi người dùng tìm kiếm, Google so sánh hàng triệu bài đã được index và xếp hạng dựa trên hơn 200 yếu tố. Bài xuất hiện trang 1 nhận ~90% lượng click; trang 2 trở đi gần như vô hình.
+      </li>
+    </ul>
+  </div>
+
+  <!-- 4. Ba trụ cột -->
+  <div class="theory-block">
+    <h3>Ba trụ cột SEO</h3>
+    <div class="compare-grid" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="compare-card" style="background:#f0f4ff;border:1px solid #b0c4f8;color:#1e3a8a;">
+        <div class="compare-label" style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">On-page SEO</div>
+        <strong>Nội dung &amp; Cấu trúc</strong>
+        <p style="margin-top:6px;font-size:13px;">Từ khóa, tiêu đề, mô tả, nội dung bài, hình ảnh, URL. <em>Nhà báo kiểm soát hoàn toàn.</em></p>
+      </div>
+      <div class="compare-card" style="background:#f0fdf4;border:1px solid #a8d5bc;color:#1e5c3a;">
+        <div class="compare-label" style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">Off-page SEO</div>
+        <strong>Uy tín &amp; Liên kết</strong>
+        <p style="margin-top:6px;font-size:13px;">Backlink từ trang khác, chia sẻ mạng xã hội, thương hiệu tòa soạn. <em>Xây dựng lâu dài.</em></p>
+      </div>
+      <div class="compare-card" style="background:#fff7ed;border:1px solid #e8c99a;color:#7a3b0a;">
+        <div class="compare-label" style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">Technical SEO</div>
+        <strong>Kỹ thuật &amp; Tốc độ</strong>
+        <p style="margin-top:6px;font-size:13px;">Tốc độ tải, mobile-friendly, HTTPS, cấu trúc dữ liệu. <em>Thường do bộ phận kỹ thuật xử lý.</em></p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:4px;">
+      Khóa học này tập trung vào <strong>On-page SEO</strong> — phần nhà báo có thể áp dụng ngay khi viết bài, không cần kiến thức lập trình.
+    </p>
+  </div>
+
+  <!-- 5. E-E-A-T -->
+  <div class="theory-block">
+    <h3>Nguyên tắc E-E-A-T — Google đánh giá chất lượng thế nào?</h3>
+    <p>Google sử dụng khung <strong>E-E-A-T</strong> để đánh giá mức độ tin cậy của nội dung, đặc biệt quan trọng với báo chí:</p>
+    <ul style="margin-top:10px;">
+      <li><strong>Experience (Trải nghiệm):</strong> Tác giả có kinh nghiệm thực tế với chủ đề không? Bài phỏng vấn trực tiếp, chứng kiến tại hiện trường được đánh giá cao hơn bài tổng hợp.</li>
+      <li><strong>Expertise (Chuyên môn):</strong> Tác giả có chuyên môn trong lĩnh vực không? Byline rõ ràng, bio tác giả, trích dẫn chuyên gia.</li>
+      <li><strong>Authoritativeness (Thẩm quyền):</strong> Trang web/tòa soạn có uy tín không? Được trang khác trích dẫn, có chính sách biên tập rõ ràng.</li>
+      <li><strong>Trustworthiness (Độ tin cậy):</strong> Thông tin chính xác, có nguồn, không gây hiểu lầm. Đây là yếu tố quan trọng nhất với Google hiện nay.</li>
+    </ul>
+  </div>
+
+  <!-- 6. Sơ đồ 7 bước -->
+  <div class="theory-block">
+    <h3>Sơ đồ tổng quan: 7 bước SEO On-page</h3>
+    <p style="margin-bottom:14px;">Phần còn lại của tài liệu đi sâu vào từng bước dưới đây — theo đúng thứ tự tối ưu khi viết một bài báo:</p>
+    <ul class="rule-list">
+      <li class="rule-ok"><span><strong>Bước 1 — Từ khóa:</strong> Xác định từ khóa mục tiêu trước khi bắt đầu viết.</span></li>
+      <li class="rule-ok"><span><strong>Bước 2 — Tiêu đề (H1/Title):</strong> Đặt tiêu đề chứa từ khóa, đúng độ dài, hấp dẫn.</span></li>
+      <li class="rule-ok"><span><strong>Bước 3 — Meta Description:</strong> Viết mô tả ngắn gọn hiển thị dưới tiêu đề trên Google.</span></li>
+      <li class="rule-ok"><span><strong>Bước 4 — Nội dung bài:</strong> Cấu trúc đề mục H2/H3, mật độ từ khóa, độ dài hợp lý.</span></li>
+      <li class="rule-ok"><span><strong>Bước 5 — Hình ảnh:</strong> Tên file, alt text, dung lượng ảnh ảnh hưởng tốc độ tải.</span></li>
+      <li class="rule-ok"><span><strong>Bước 6 — Liên kết:</strong> Liên kết nội bộ (internal) và liên kết ngoài (external) uy tín.</span></li>
+      <li class="rule-ok"><span><strong>Bước 7 — URL:</strong> Đường dẫn ngắn gọn, chứa từ khóa, không dấu.</span></li>
+    </ul>
+
+    <figure style="margin-top:24px;text-align:center;">
+      <img src="images/seo_structure_for_journalists.svg"
+           alt="Sơ đồ cấu trúc SEO 7 bước cho nhà báo"
+           style="max-width:360px;width:100%;border-radius:8px;">
+      <figcaption style="font-size:12px;color:var(--muted);margin-top:8px;">
+        Hình 1 — Sơ đồ tổng quan 7 bước SEO On-page cho nhà báo
+      </figcaption>
+    </figure>
+  </div>
+
+</section>
+
+<!-- ══ BÀI 1: TỪ KHÓA ══ -->
+<section class="lesson" id="b1">
+  <div class="lesson-header">
+    <div class="lesson-num">01</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 1 / 7</div>
+      <h2 class="lesson-title">Từ khóa (Keyword)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Từ khóa là gì?</h3>
+    <p>Là cụm từ độc giả gõ vào Google để tìm thông tin. Nhiệm vụ của nhà báo SEO là <strong>đoán đúng</strong> độc giả sẽ gõ gì, rồi dùng đúng từ đó trong bài.</p>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card compare-bad">
+      <div class="compare-label">Nhà báo nghĩ</div>
+      "Xung đột vũ trang leo thang tại Biển Đông"
+    </div>
+    <div class="compare-card compare-good">
+      <div class="compare-label">Độc giả gõ</div>
+      "Biển Đông mới nhất 2025" hoặc "tin Biển Đông hôm nay"
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>3 loại từ khóa cần biết</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>Từ khóa chính</strong> — chủ đề cốt lõi. Đặt trong tiêu đề, đoạn mở, URL. Ví dụ: <em>hội nghị ASEAN 2025</em></div></li>
+      <li class="rule-ok"><div><strong>Từ khóa phụ (LSI)</strong> — từ liên quan xung quanh chủ đề. Rải tự nhiên trong thân bài. Ví dụ: <em>kết quả, tuyên bố, đàm phán</em></div></li>
+      <li class="rule-ok"><div><strong>Từ khóa đuôi dài</strong> — cụm từ dài, cụ thể hơn, ít cạnh tranh. Phù hợp báo địa phương. Ví dụ: <em>lũ lụt Quảng Nam tháng 10 2025</em></div></li>
+    </ul>
+  </div>
+
+  <div class="theory-block">
+    <h3>Quy trình nghiên cứu từ khóa (không cần công cụ trả phí)</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div>Gõ chủ đề vào Google → xem <strong>gợi ý tự động</strong> xuất hiện bên dưới</div></li>
+      <li class="rule-ok"><div>Cuộn xuống cuối → đọc <strong>"Tìm kiếm liên quan"</strong> và <strong>"Mọi người cũng hỏi"</strong></div></li>
+      <li class="rule-ok"><div>Dùng <strong>Google Trends</strong> so sánh 2 từ khóa để chọn cái được tìm nhiều hơn</div></li>
+      <li class="rule-no"><div>Không dùng từ khóa bạn <em>nghĩ</em> là đúng mà không kiểm chứng</div></li>
+    </ul>
+  </div>
+
+  <!-- Google Trends: hướng dẫn chi tiết -->
+  <div class="theory-block">
+    <h3>Hướng dẫn sử dụng Google Trends</h3>
+    <p style="margin-bottom:14px;">Google Trends là công cụ miễn phí của Google cho thấy <strong>mức độ phổ biến của một từ khóa theo thời gian và khu vực địa lý</strong>. Với nhà báo, đây là cách nhanh nhất để biết chủ đề nào đang được công chúng quan tâm — trước khi ngồi viết.</p>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">① Truy cập và cài đặt cơ bản</p>
+    <ul class="rule-list" style="margin-bottom:14px;">
+      <li class="rule-ok"><div>Vào <strong>trends.google.com/trending?geo=VN</strong> — trang "Đang thịnh hành" tại Việt Nam. Đây là bảng radar tin tức của bạn mỗi sáng.</div></li>
+      <li class="rule-ok"><div>Chuyển sang tab <strong>"Khám phá"</strong> để tra cứu từ khóa cụ thể.</div></li>
+      <li class="rule-ok"><div>Cài đặt bộ lọc: <strong>Việt Nam</strong> (thay vì Toàn thế giới), khoảng thời gian <strong>30 ngày qua</strong> hoặc <strong>12 tháng qua</strong> tuỳ mục đích.</div></li>
+      <li class="rule-ok"><div>Chọn danh mục <strong>"Tất cả danh mục"</strong> hoặc thu hẹp về <strong>"Tin tức và chính trị"</strong> nếu làm tin thời sự.</div></li>
+    </ul>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">② So sánh hai từ khóa cùng chủ đề</p>
+    <p style="font-size:13px;color:#3d3730;margin-bottom:8px;">Đây là tính năng mạnh nhất của Google Trends với nhà báo. Thay vì đoán, hãy để dữ liệu quyết định:</p>
+    <ul class="rule-list" style="margin-bottom:14px;">
+      <li class="rule-ok"><div>Nhập từ khóa đầu tiên vào ô tìm kiếm, ví dụ: <em>"lũ lụt miền Trung"</em>.</div></li>
+      <li class="rule-ok"><div>Nhấn <strong>"+ So sánh"</strong> → nhập từ khóa thứ hai: <em>"ngập lụt miền Trung"</em>.</div></li>
+      <li class="rule-ok"><div>Đọc biểu đồ: đường nào cao hơn = từ đó được tìm nhiều hơn → dùng từ đó làm từ khóa chính.</div></li>
+      <li class="rule-ok"><div>Xem <strong>"Khu vực quan tâm"</strong> bên dưới — biết tỉnh nào đang tìm nhiều nhất, hữu ích cho báo địa phương.</div></li>
+    </ul>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">③ Đọc phần "Truy vấn liên quan"</p>
+    <ul class="rule-list" style="margin-bottom:14px;">
+      <li class="rule-ok"><div><strong>Đang tăng (Rising):</strong> Những từ khóa liên quan có lượng tìm kiếm tăng đột biến — đây là tín hiệu chủ đề mới nổi, cơ hội viết bài trước đám đông.</div></li>
+      <li class="rule-ok"><div><strong>Hàng đầu (Top):</strong> Từ khóa liên quan phổ biến nhất theo thời gian — dùng làm từ khóa phụ (LSI) để rải trong bài.</div></li>
+    </ul>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">④ Ứng dụng thực tế cho nhà báo</p>
+    <div class="compare-grid" style="margin-top:0;">
+      <div class="compare-card compare-good">
+        <div class="compare-label">Dùng Google Trends để…</div>
+        <ul style="padding-left:16px;margin-top:6px;font-size:13px;">
+          <li>Chọn từ khóa đúng trước khi viết</li>
+          <li>Phát hiện chủ đề đang nóng để đưa tin nhanh</li>
+          <li>Kiểm tra tính thời sự của chủ đề phóng sự dài kỳ</li>
+          <li>So sánh mức quan tâm giữa hai sự kiện cùng thời điểm</li>
+          <li>Tìm thời điểm trong năm mà chủ đề được tìm nhiều nhất</li>
+        </ul>
+      </div>
+      <div class="compare-card compare-bad">
+        <div class="compare-label">Đừng dùng Google Trends để…</div>
+        <ul style="padding-left:16px;margin-top:6px;font-size:13px;">
+          <li>Biết số lượt tìm kiếm tuyệt đối (chỉ có chỉ số tương đối 0–100)</li>
+          <li>Nghiên cứu từ khóa rất ít người tìm (biểu đồ sẽ trắng)</li>
+          <li>Thay thế phán đoán biên tập — dữ liệu bổ trợ, không quyết định</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bài tập Google Trends -->
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Nghiên cứu từ khóa với Google Trends</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Mở <strong>trends.google.com</strong> trong tab mới và thực hiện theo từng bước:</p>
+    <ol>
+      <li>
+        <strong>Chọn một sự kiện thời sự đang diễn ra</strong> (ví dụ: một phiên họp Quốc hội, đợt thiên tai, sự kiện thể thao…). Ghi lại 3 cách gọi tên khác nhau mà độc giả có thể dùng để tìm sự kiện đó trên Google.
+      </li>
+      <li>
+        <strong>So sánh 3 từ khóa</strong> trên Google Trends: vào "Khám phá" → nhập từ khóa đầu → "+ So sánh" thêm 2 từ còn lại. Đặt bộ lọc: <em>Việt Nam — 30 ngày qua</em>. Ghi lại: từ khóa nào có chỉ số cao nhất?
+      </li>
+      <li>
+        <strong>Đọc "Truy vấn liên quan"</strong> của từ khóa thắng: liệt kê 3 truy vấn trong mục "Đang tăng". Đây sẽ là gợi ý từ khóa phụ hoặc ý tưởng bài viết liên quan.
+      </li>
+      <li>
+        <strong>Kiểm tra tính mùa vụ:</strong> chuyển bộ lọc thời gian sang <em>"5 năm"</em> với từ khóa thắng. Chủ đề này có tăng cao theo mùa không? Rút ra nhận xét về thời điểm tốt nhất để đăng bài.
+      </li>
+      <li>
+        <strong>Viết câu kết luận</strong> (3–5 câu): từ khóa bạn sẽ chọn làm từ khóa chính cho bài báo là gì, lý do dựa trên dữ liệu Google Trends, và bạn sẽ dùng những từ khóa phụ nào từ mục "Truy vấn liên quan".
+      </li>
+    </ol>
+    <div class="feedback feedback-warn" style="margin-top:14px;">
+      💡 <strong>Lưu ý:</strong> Google Trends dùng chỉ số tương đối 0–100, không phải số lượt tìm kiếm tuyệt đối. Con số 100 nghĩa là thời điểm phổ biến nhất trong khoảng thời gian đã chọn — không phải 100 lượt tìm kiếm.
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Tính mật độ từ khóa</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Mật độ lý tưởng: 1–2%. Nhập số liệu bài của bạn:</p>
+    <div class="density-tool">
+      <div>
+        <div class="input-label">Tổng số từ trong bài</div>
+        <input type="number" id="dTotal" placeholder="Ví dụ: 600" oninput="calcDensity()">
+      </div>
+      <div>
+        <div class="input-label">Số lần xuất hiện từ khóa chính</div>
+        <input type="number" id="dKw" placeholder="Ví dụ: 8" oninput="calcDensity()">
+      </div>
+    </div>
+    <div class="density-result-bar"><div class="density-result-fill" id="dBar" style="width:0%"></div></div>
+    <div class="char-status" id="dResult">Nhập số liệu để tính</div>
+  </div>
+</section>
+
+<!-- ══ BÀI 2: TIÊU ĐỀ ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b2">
+  <div class="lesson-header">
+    <div class="lesson-num">02</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 2 / 7</div>
+      <h2 class="lesson-title">Tiêu đề bài (Title / H1)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Nguyên tắc vàng</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div>Đặt <strong>từ khóa chính ở đầu</strong> tiêu đề — Google đọc từ trái sang phải</div></li>
+      <li class="rule-ok"><div>Giữ <strong>50–60 ký tự</strong> — dài hơn sẽ bị cắt và thêm "…" trên Google</div></li>
+      <li class="rule-ok"><div>Mỗi bài chỉ có <strong>1 thẻ H1</strong> duy nhất</div></li>
+      <li class="rule-no"><div>Không viết hoa toàn bộ, không dùng dấu chấm than — trông như spam</div></li>
+      <li class="rule-no"><div>Không lặp từ khóa nhiều lần trong cùng một tiêu đề</div></li>
+    </ul>
+  </div>
+
+  <div class="theory-block">
+    <h3>4 công thức tiêu đề theo thể loại</h3>
+    <div class="formula"><strong>Tin tức thời sự:</strong> [Từ khóa chính] + [Sự kiện] + [Số liệu / thời gian]</div>
+    <div class="formula"><strong>Phóng sự / điều tra:</strong> [Từ khóa chính]: [Góc độ khai thác]</div>
+    <div class="formula"><strong>Phỏng vấn:</strong> [Tên / chức danh nhân vật] + [Phát ngôn chính]</div>
+    <div class="formula"><strong>Giải thích / hướng dẫn:</strong> [Câu hỏi] + [Từ khóa chính]</div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Tiêu đề trông như thế nào trên Google?</h3>
+    <div class="serp-mock">
+      <div class="serp-url-line">sites.google.com/view/baochihue › lu-lut-mien-trung-2025</div>
+      <div class="serp-title-line"><span class="serp-kw">Lũ lụt miền Trung 2025</span>: Quảng Nam sơ tán khẩn cấp 8.000 dân</div>
+      <div class="serp-desc-line">Tính đến sáng 15/10, tỉnh Quảng Nam đã sơ tán hơn 8.000 người dân tại các huyện ven sông Thu Bồn do nước lũ dâng cao...</div>
+    </div>
+    <div class="serp-mock" style="border-color:#e8b5ab">
+      <div class="serp-url-line" style="color:var(--muted)">sites.google.com/view/baochihue › tin-tuc-moi-nhat-hom-nay</div>
+      <div class="serp-title-line" style="color:#999">Tình hình lũ lụt nghiêm trọng tại các tỉnh miền Trung Việt Nam trong đợt mưa kéo dài...</div>
+      <div class="serp-desc-line">Nhiều tỉnh miền Trung đang đối mặt với đợt lũ lịch sử...</div>
+    </div>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">↑ Tiêu đề thứ 2 bị cắt vì quá dài (82 ký tự). Ý nghĩa bị mất.</p>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Kiểm tra độ dài tiêu đề</h3>
+    <div class="input-label">Gõ tiêu đề bài báo của bạn</div>
+    <input type="text" id="titleInput" placeholder="Tiêu đề bài báo..." oninput="checkTitle()">
+    <div class="char-bar-wrap"><div class="char-bar-fill" id="titleBar" style="width:0%"></div></div>
+    <div class="char-status" id="titleStatus">0 / 60 ký tự</div>
+    <div class="input-label">Xem trước trên Google Search</div>
+    <div class="serp-mock" style="margin-top:6px">
+      <div class="serp-url-line">sites.google.com/view/ten-site › ten-trang</div>
+      <div class="serp-title-line" id="titlePreview" style="color:#bbb">Tiêu đề sẽ hiện ở đây...</div>
+      <div class="serp-desc-line">Mô tả bài viết (meta description) sẽ hiện ở đây.</div>
+    </div>
+    <div id="titleFeedback"></div>
+  </div>
+</section>
+
+<!-- ══ BÀI 3: META DESCRIPTION ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b3">
+  <div class="lesson-header">
+    <div class="lesson-num">03</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 3 / 7</div>
+      <h2 class="lesson-title">Mô tả (Meta Description)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Meta description là gì?</h3>
+    <p>Đoạn văn ngắn hiển thị bên dưới tiêu đề trên Google Search. Không trực tiếp tăng thứ hạng, nhưng <strong>tăng tỉ lệ click</strong> — điều này gián tiếp giúp SEO.</p>
+  </div>
+
+  <div class="theory-block">
+    <h3>Nguyên tắc viết meta description</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>150–160 ký tự</strong> — đủ để hiển thị trên Google mà không bị cắt</div></li>
+      <li class="rule-ok"><div>Chứa <strong>từ khóa chính</strong> — Google sẽ in đậm từ khóa trùng với từ người dùng tìm</div></li>
+      <li class="rule-ok"><div>Viết như <strong>"lời mời đọc bài"</strong> — trả lời câu hỏi "bài này có gì cho tôi?"</div></li>
+      <li class="rule-ok"><div>Tóm tắt thông tin quan trọng nhất — <strong>ai, làm gì, ở đâu, khi nào</strong></div></li>
+      <li class="rule-no"><div>Không copy nguyên văn từ bài — cần viết riêng, ngắn gọn hơn</div></li>
+      <li class="rule-no"><div>Không để Google Sites tự tạo — thường lấy 160 ký tự đầu bài, không tối ưu</div></li>
+    </ul>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card compare-bad">
+      <div class="compare-label">Chưa tốt</div>
+      "Bài viết này sẽ cung cấp cho bạn đọc những thông tin mới nhất về tình hình..."
+    </div>
+    <div class="compare-card compare-good">
+      <div class="compare-label">Chuẩn SEO</div>
+      "Lũ lụt miền Trung 2025 khiến 8.000 dân Quảng Nam phải sơ tán. Cập nhật diễn biến và công tác cứu trợ theo giờ."
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Cách thêm meta description trong Google Sites</h3>
+    <p style="font-size:13px;color:var(--muted);line-height:1.9">Google Sites chưa có ô riêng cho meta description. Giải pháp thực tế: đặt đoạn tóm tắt ngắn gọn <strong>ở đầu bài</strong>, ngay sau tiêu đề. Google thường lấy đoạn này để hiển thị.</p>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Viết meta description</h3>
+    <div class="input-label">Gõ tiêu đề bài báo</div>
+    <input type="text" id="metaTitleInput" placeholder="Tiêu đề bài báo..." oninput="checkMeta()">
+    <div class="input-label" style="margin-top:12px;">Viết meta description (mục tiêu: 150–160 ký tự)</div>
+    <textarea id="metaInput" rows="3" placeholder="Tóm tắt bài viết theo kiểu 'lời mời đọc'..." oninput="checkMeta()"></textarea>
+    <div class="char-bar-wrap"><div class="char-bar-fill" id="metaBar" style="width:0%"></div></div>
+    <div class="char-status" id="metaStatus">0 / 160 ký tự</div>
+    <div id="metaFeedback"></div>
+    <div class="input-label" style="margin-top:16px;">Xem trước trên Google Search</div>
+    <div class="serp-mock" style="margin-top:6px">
+      <div class="serp-url-line">sites.google.com/view/ten-site › ten-trang</div>
+      <div class="serp-title-line" id="metaTitlePreview" style="color:#bbb">Tiêu đề sẽ hiện ở đây...</div>
+      <div class="serp-desc-line" id="metaDescPreview" style="color:#bbb">Mô tả sẽ hiện ở đây...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BÀI 4: NỘI DUNG ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b4">
+  <div class="lesson-header">
+    <div class="lesson-num">04</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 4 / 7</div>
+      <h2 class="lesson-title">Nội dung bài viết</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Cấu trúc heading — "mục lục cho Google"</h3>
+    <div style="padding:4px 0">
+      <div class="struct-row">
+        <span class="h-tag h-tag-1">H1</span>
+        <div class="struct-text">
+          <div class="struct-title">Tiêu đề chính — 1 lần duy nhất</div>
+          <div class="struct-desc">Chứa từ khóa chính. Google Sites tự tạo H1 từ tên trang.</div>
+        </div>
+      </div>
+      <div class="struct-row">
+        <span class="h-tag h-tag-2">H2</span>
+        <div class="struct-text">
+          <div class="struct-title">Tiêu đề phần lớn — 2–5 lần</div>
+          <div class="struct-desc">Mỗi ý chính dùng 1 H2. Trong Google Sites: chọn "Tiêu đề".</div>
+        </div>
+      </div>
+      <div class="struct-row">
+        <span class="h-tag h-tag-3">H3</span>
+        <div class="struct-text">
+          <div class="struct-title">Tiêu đề mục con — khi cần chia nhỏ H2</div>
+          <div class="struct-desc">Trong Google Sites: chọn "Phụ đề". Không bắt buộc.</div>
+        </div>
+      </div>
+      <div class="struct-row">
+        <span class="h-tag h-tag-p">P</span>
+        <div class="struct-text">
+          <div class="struct-title">Đoạn văn — 3–5 câu mỗi đoạn</div>
+          <div class="struct-desc">Đoạn đầu tiên quan trọng nhất — đặt từ khóa chính trong 50 từ đầu.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Ví dụ bài chuẩn cấu trúc</h3>
+    <div class="article-mock">
+      <div class="art-h1"><span class="kw-main">Lũ lụt miền Trung 2025</span>: Quảng Nam sơ tán 8.000 dân</div>
+      <div class="art-p">Tính đến sáng 15/10, tỉnh Quảng Nam đã <span class="kw-main">sơ tán</span> hơn 8.000 người dân do <span class="kw-main">lũ lụt miền Trung</span> dâng cao. Đây là đợt <span class="kw-lsi">thiên tai</span> nghiêm trọng nhất trong 10 năm qua.</div>
+      <div class="art-h2">Tình hình <span class="kw-main">lũ lụt</span> tại Quảng Nam</div>
+      <div class="art-p">Mực nước sông Thu Bồn vượt báo động 3. <span class="kw-lsi">Thiệt hại</span> ghi nhận tại 6 huyện, trong đó Đại Lộc và Điện Bàn chịu ảnh hưởng nặng nhất...</div>
+      <div class="art-h2">Công tác <span class="kw-lsi">cứu trợ và ứng phó</span></div>
+      <div class="art-h3">Lực lượng tại chỗ</div>
+      <div class="art-p">Hơn 500 chiến sĩ quân đội phối hợp chính quyền địa phương triển khai <span class="kw-lsi">sơ tán dân</span> đến vùng cao an toàn...</div>
+      <div class="art-h2">Dự báo <span class="kw-main">lũ miền Trung</span> những ngày tới</div>
+      <div class="art-p">Theo TTDBKTTVQG, <span class="kw-lsi">mưa lớn</span> tiếp tục đến ngày 18/10. Người dân các vùng trũng cần tiếp tục đề cao cảnh giác...</div>
+    </div>
+    <div style="display:flex;gap:16px;font-size:12px;color:var(--muted);padding:8px 0">
+      <span><span style="background:rgba(200,64,26,0.12);color:var(--accent);padding:0 4px;border-radius:2px">màu đỏ</span> = từ khóa chính</span>
+      <span><span style="background:rgba(45,106,79,0.12);color:var(--accent2);padding:0 4px;border-radius:2px">màu xanh</span> = từ khóa phụ</span>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Độ dài bài theo thể loại</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>Tin tức thời sự:</strong> 300–500 từ — ưu tiên tốc độ đăng bài</div></li>
+      <li class="rule-ok"><div><strong>Phóng sự, phân tích:</strong> 700–1200 từ — đủ chỗ đặt từ khóa phụ tự nhiên</div></li>
+      <li class="rule-ok"><div><strong>Điều tra, chuyên đề:</strong> 1500+ từ — Google ưu tiên cho truy vấn phức tạp</div></li>
+      <li class="rule-no"><div>Tránh bài dưới 200 từ — Google coi là "thin content", ít được xếp hạng</div></li>
+    </ul>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Phân tích bài viết của bạn</h3>
+    <div class="input-label">Dán nội dung bài vào đây</div>
+    <textarea id="articleInput" rows="7" placeholder="Dán nội dung bài báo..." oninput="analyzeArticle()"></textarea>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:3px;padding:10px 14px">
+        <div style="font-size:11px;color:var(--muted)">Số từ</div>
+        <div style="font-size:22px;font-weight:500;font-family:'DM Mono',monospace" id="wcWords">0</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:3px;padding:10px 14px">
+        <div style="font-size:11px;color:var(--muted)">Số câu</div>
+        <div style="font-size:22px;font-weight:500;font-family:'DM Mono',monospace" id="wcSents">0</div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:3px;padding:10px 14px">
+        <div style="font-size:11px;color:var(--muted)">Từ/câu TB</div>
+        <div style="font-size:22px;font-weight:500;font-family:'DM Mono',monospace" id="wcAvg">0</div>
+      </div>
+    </div>
+    <div class="density-result-bar" style="margin-top:12px"><div class="density-result-fill" id="artBar" style="width:0%"></div></div>
+    <div id="artFeedback" class="char-status">Dán nội dung bài để nhận nhận xét</div>
+  </div>
+</section>
+
+<!-- ══ BÀI 5: HÌNH ẢNH ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b5">
+  <div class="lesson-header">
+    <div class="lesson-num">05</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 5 / 7</div>
+      <h2 class="lesson-title">Hình ảnh (Image SEO)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Tại sao Google quan tâm đến hình ảnh?</h3>
+    <p>Google không "nhìn" được ảnh như người — nó đọc <strong>tên file</strong> và <strong>alt text</strong> để hiểu hình ảnh về chủ đề gì. Tối ưu hình ảnh giúp xuất hiện trong Google Images, tăng lưu lượng truy cập.</p>
+  </div>
+
+  <div class="theory-block">
+    <h3>Hai điều quan trọng nhất</h3>
+    <div class="compare-grid">
+      <div class="compare-card compare-bad">
+        <div class="compare-label">Sai — tên file mặc định</div>
+        <code>IMG_20251015_085432.jpg</code><br>
+        <code>photo (3).jpeg</code><br>
+        <code>DSC00142.png</code>
+      </div>
+      <div class="compare-card compare-good">
+        <div class="compare-label">Đúng — tên file mô tả</div>
+        <code>lu-lut-mien-trung-2025.jpg</code><br>
+        <code>so-tan-quang-nam.jpg</code><br>
+        <code>ho-nghi-asean-ha-noi.jpg</code>
+      </div>
+    </div>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>Tên file:</strong> chữ thường, dấu gạch ngang, có từ khóa, không dấu tiếng Việt</div></li>
+      <li class="rule-ok"><div><strong>Alt text:</strong> mô tả ngắn nội dung ảnh, chứa từ khóa tự nhiên. Trong Google Sites: nhấp chuột phải vào ảnh → "Văn bản thay thế"</div></li>
+      <li class="rule-ok"><div><strong>Kích thước file:</strong> tối ưu dưới 200KB — ảnh nặng làm trang tải chậm, Google phạt tốc độ</div></li>
+      <li class="rule-no"><div>Không để alt text trống — Google bỏ qua ảnh không có alt text</div></li>
+    </ul>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Viết alt text cho ảnh</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Mô tả: ảnh chụp người dân đang sơ tán bằng thuyền trên đường phố ngập lụt tại Quảng Nam, tháng 10/2025.</p>
+    <div class="input-label">Tên file bạn đặt (không dấu, gạch ngang)</div>
+    <input type="text" id="imgName" placeholder="Ví dụ: so-tan-lu-lut-quang-nam.jpg" oninput="checkImgName()">
+    <div id="imgNameFeedback"></div>
+    <div class="input-label" style="margin-top:10px">Alt text bạn viết</div>
+    <input type="text" id="imgAlt" placeholder="Mô tả nội dung ảnh..." oninput="checkAlt()">
+    <div class="char-bar-wrap"><div class="char-bar-fill" id="altBar" style="width:0%"></div></div>
+    <div class="char-status" id="altStatus">0 ký tự — mục tiêu: 50–125 ký tự</div>
+    <div id="altFeedback"></div>
+  </div>
+</section>
+
+<!-- ══ BÀI 6: LIÊN KẾT ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b6">
+  <div class="lesson-header">
+    <div class="lesson-num">06</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 6 / 7</div>
+      <h2 class="lesson-title">Liên kết (Links)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>2 loại liên kết quan trọng</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>Liên kết nội bộ (Internal links)</strong> — dẫn đến bài khác trong cùng Google Sites của bạn. Giúp Google khám phá thêm nội dung, giữ người đọc ở lại lâu hơn.</div></li>
+      <li class="rule-ok"><div><strong>Liên kết ngoài (External links)</strong> — dẫn đến nguồn tin uy tín (báo lớn, cơ quan nhà nước, nghiên cứu khoa học). Tăng độ tin cậy của bài cho Google.</div></li>
+    </ul>
+  </div>
+
+  <div class="theory-block">
+    <h3>Nguyên tắc đặt liên kết</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div>Mỗi bài nên có <strong>ít nhất 1 liên kết nội bộ</strong> đến bài liên quan</div></li>
+      <li class="rule-ok"><div>Anchor text (chữ hiển thị của link) phải <strong>mô tả đúng nội dung</strong> trang đích</div></li>
+      <li class="rule-ok"><div>Dẫn nguồn từ báo có tên tuổi: vnexpress.net, tuoitre.vn, nhandan.vn, vnpt.gov.vn...</div></li>
+      <li class="rule-no"><div>Không dùng anchor text chung chung như "nhấp vào đây", "xem thêm", "tại đây"</div></li>
+      <li class="rule-no"><div>Không link đến trang không liên quan hoặc trang spam</div></li>
+    </ul>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card compare-bad">
+      <div class="compare-label">Anchor text tệ</div>
+      "Để biết thêm về tình hình lũ lụt, <u>nhấp vào đây</u>."
+    </div>
+    <div class="compare-card compare-good">
+      <div class="compare-label">Anchor text tốt</div>
+      "Xem thêm: <u>diễn biến lũ lụt miền Trung tháng 9</u> tại bài trước."
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Lên kế hoạch liên kết</h3>
+    <ol>
+      <li>Lấy bài báo bạn đang viết trên Google Sites</li>
+      <li>Tìm <strong>1 bài cũ</strong> trong cùng site có chủ đề liên quan → đặt liên kết nội bộ</li>
+      <li>Tìm <strong>1 nguồn báo uy tín</strong> xác nhận thông tin quan trọng nhất trong bài → đặt liên kết ngoài</li>
+      <li>Viết anchor text mô tả rõ nội dung, không dùng "tại đây"</li>
+    </ol>
+    <div class="input-label" style="margin-top:14px">Anchor text liên kết nội bộ bạn sẽ dùng</div>
+    <input type="text" id="anchorInput" placeholder="Ví dụ: diễn biến lũ lụt Quảng Nam tháng 9">
+    <div id="anchorFeedback"></div>
+  </div>
+</section>
+
+<!-- ══ BÀI 7: URL ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="b7">
+  <div class="lesson-header">
+    <div class="lesson-num">07</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Bước 7 / 7</div>
+      <h2 class="lesson-title">Đường dẫn (URL)</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>URL trong Google Sites hoạt động thế nào?</h3>
+    <p>Google Sites tự tạo URL từ <strong>tên trang</strong>. Đặt tên trang = đặt URL. Vì vậy cần đặt tên trang ngay từ đầu, thay đổi sau sẽ làm hỏng link đã chia sẻ.</p>
+  </div>
+
+  <div class="theory-block">
+    <h3>Ví dụ URL tốt và URL cần tránh</h3>
+    <div class="url-display">
+      <span class="url-domain">sites.google.com/view/baochihue/</span>
+      <span class="url-good">hoi-nghi-asean-2025</span>
+      <span class="url-badge badge-ok">Tốt</span>
+    </div>
+    <div class="url-display">
+      <span class="url-domain">sites.google.com/view/baochihue/</span>
+      <span class="url-good">lu-lut-mien-trung-so-tan</span>
+      <span class="url-badge badge-ok">Tốt</span>
+    </div>
+    <div class="url-display">
+      <span class="url-domain">sites.google.com/view/baochihue/</span>
+      <span class="url-bad">Bài Báo Mới Nhất Hội Nghị ASEAN!!!</span>
+      <span class="url-badge badge-no">Tránh</span>
+    </div>
+    <div class="url-display">
+      <span class="url-domain">sites.google.com/view/baochihue/</span>
+      <span class="url-bad">page-1234567890</span>
+      <span class="url-badge badge-no">Vô nghĩa</span>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Quy tắc đặt URL</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div>Chữ <strong>thường</strong>, cách nhau bằng <strong>dấu gạch ngang</strong> ( - )</div></li>
+      <li class="rule-ok"><div>Chứa <strong>từ khóa chính</strong> — đặt từ khóa quan trọng lên đầu</div></li>
+      <li class="rule-ok"><div><strong>3–5 từ</strong> là lý tưởng, dưới 60 ký tự</div></li>
+      <li class="rule-ok"><div>Không dấu tiếng Việt — nên chuyển sang không dấu để an toàn</div></li>
+      <li class="rule-no"><div>Không ký tự đặc biệt: ! ? # & % ( ) = dấu cách</div></li>
+      <li class="rule-no"><div>Không để Google Sites tự đặt tên mặc định (<code>page</code>, <code>trang-moi</code>)</div></li>
+    </ul>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Đặt URL cho bài báo</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Công thức: <strong>Tiêu đề rút gọn → bỏ dấu → thay khoảng trắng bằng gạch ngang</strong></p>
+    <div class="input-label">Tiêu đề đầy đủ của bài</div>
+    <input type="text" id="urlTitle" placeholder="Ví dụ: Lũ lụt miền Trung 2025: Quảng Nam sơ tán 8.000 dân" oninput="suggestUrl()">
+    <div class="input-label" style="margin-top:10px">URL bạn sẽ đặt (tên trang trong Google Sites)</div>
+    <input type="text" id="urlInput" placeholder="Ví dụ: lu-lut-mien-trung-2025" oninput="checkUrl()">
+    <div id="urlFeedback"></div>
+  </div>
+</section>
+
+<!-- ══ ĐO LƯỜNG SEO ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Tiếp theo</div><div class="divider-line"></div></div>
+<section class="lesson" id="tools">
+  <div class="lesson-header">
+    <div class="lesson-num">📊</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Sau khi đăng bài</div>
+      <h2 class="lesson-title">Đo lường & Theo dõi SEO</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Tại sao phải đo lường?</h3>
+    <p>Tối ưu SEO mà không theo dõi kết quả giống như viết bài mà không biết ai đọc. Đo lường cho bạn biết <strong>bài nào đang được tìm thấy</strong>, <strong>từ khóa nào đang hoạt động</strong>, và quan trọng hơn — bài nào cần được viết lại.</p>
+  </div>
+
+  <div class="theory-block">
+    <h3>Bộ công cụ đo lường SEO miễn phí</h3>
+    <ul class="rule-list">
+      <li class="rule-ok">
+        <div>
+          <strong>Google Search Console (GSC)</strong> — công cụ quan trọng nhất, hoàn toàn miễn phí.<br>
+          <span style="font-size:13px;color:var(--muted);">Cho biết bài xuất hiện bao nhiêu lần trên Google, từ khóa nào dẫn người dùng đến bài, vị trí xếp hạng trung bình và tỉ lệ click. Kết nối trực tiếp với Google Sites.</span>
+        </div>
+      </li>
+      <li class="rule-ok">
+        <div>
+          <strong>Google Analytics 4 (GA4)</strong> — phân tích hành vi người đọc sau khi vào trang.<br>
+          <span style="font-size:13px;color:var(--muted);">Cho biết bao nhiêu người đọc đến từ tìm kiếm tự nhiên, họ đọc bao lâu, trang nào được đọc nhiều nhất. Tích hợp vào Google Sites qua mã đo lường.</span>
+        </div>
+      </li>
+      <li class="rule-ok">
+        <div>
+          <strong>Google PageSpeed Insights</strong> — kiểm tra tốc độ tải trang.<br>
+          <span style="font-size:13px;color:var(--muted);">Tốc độ tải trang là yếu tố xếp hạng của Google. Điểm dưới 50 (đỏ) cần cải thiện; trên 90 (xanh) là tốt. Dán URL bài vào để kiểm tra.</span>
+        </div>
+      </li>
+      <li class="rule-ok">
+        <div>
+          <strong>Google Trends</strong> — đã học ở Bước 1, cũng dùng để theo dõi xu hướng sau khi đăng bài.<br>
+          <span style="font-size:13px;color:var(--muted);">Xem chủ đề bài còn đang "nóng" không; nếu đang tăng trở lại, đây là lúc cập nhật và chia sẻ lại bài.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="theory-block">
+    <h3>Các chỉ số GSC cần biết</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;">
+      <div style="background:#f0f4ff;border:1px solid #b0c4f8;border-radius:4px;padding:14px;">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">Impressions</div>
+        <div style="font-size:15px;font-weight:700;color:#1e3a8a;margin-bottom:4px;">Số lần hiển thị</div>
+        <div style="font-size:13px;color:#374151;">Bài xuất hiện trong kết quả tìm kiếm bao nhiêu lần — dù người dùng không nhấp vào.</div>
+      </div>
+      <div style="background:#f0fdf4;border:1px solid #a8d5bc;border-radius:4px;padding:14px;">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">Clicks</div>
+        <div style="font-size:15px;font-weight:700;color:#1e5c3a;margin-bottom:4px;">Lượt nhấp</div>
+        <div style="font-size:13px;color:#374151;">Số người thực sự nhấp vào đường dẫn đến bài của bạn.</div>
+      </div>
+      <div style="background:#fff7ed;border:1px solid #e8c99a;border-radius:4px;padding:14px;">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">CTR</div>
+        <div style="font-size:15px;font-weight:700;color:#7a3b0a;margin-bottom:4px;">Tỉ lệ click</div>
+        <div style="font-size:13px;color:#374151;">Clicks ÷ Impressions × 100. CTR thấp = tiêu đề hoặc mô tả chưa hấp dẫn. Mức tốt: 3–5%.</div>
+      </div>
+      <div style="background:#fdf0ff;border:1px solid #d8a8f0;border-radius:4px;padding:14px;">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:6px;">Position</div>
+        <div style="font-size:15px;font-weight:700;color:#5b21b6;margin-bottom:4px;">Vị trí trung bình</div>
+        <div style="font-size:13px;color:#374151;">Bài đứng thứ mấy trên Google. Vị trí 1–3 nhận 60%+ lượng click; vị trí 11+ gần như vô hình.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Kết nối Google Sites với Search Console — từng bước</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px;">Google Sites miễn phí <strong>không cho phép chỉnh sửa thẻ &lt;head&gt;</strong>, nên không dùng được phương thức xác minh bằng thẻ HTML. Cách đúng là xác minh qua <strong>Google Analytics</strong>.</p>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">Bước 1 — Gắn Google Analytics vào Google Sites</p>
+    <ol style="padding-left:20px;margin-top:0;margin-bottom:14px;">
+      <li style="margin-bottom:8px;font-size:14px;line-height:1.7;">
+        Vào <strong>analytics.google.com</strong> → tạo tài khoản và thuộc tính GA4 mới → sao chép <strong>Mã đo lường</strong> (dạng <code>G-XXXXXXXXXX</code>).
+      </li>
+      <li style="margin-bottom:8px;font-size:14px;line-height:1.7;">
+        Mở Google Sites → nhấn biểu tượng bánh răng <strong>⚙ Cài đặt</strong> → chọn <strong>"Analytics"</strong> → dán mã <code>G-XXXXXXXXXX</code> vào → nhấn <strong>OK</strong>.
+      </li>
+      <li style="margin-bottom:0;font-size:14px;line-height:1.7;">
+        Nhấn <strong>Xuất bản</strong> lại trang để mã có hiệu lực.
+      </li>
+    </ol>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">Bước 2 — Thêm tài sản trong Search Console</p>
+    <ol style="padding-left:20px;margin-top:0;margin-bottom:14px;">
+      <li style="margin-bottom:8px;font-size:14px;line-height:1.7;">
+        Vào <strong>search.google.com/search-console</strong> → nhấn <strong>"Thêm tài sản"</strong>.
+      </li>
+      <li style="margin-bottom:8px;font-size:14px;line-height:1.7;">
+        Chọn loại <strong>"Tiền tố URL"</strong> → dán URL Google Sites (dạng <code>sites.google.com/view/ten-site</code>) → nhấn <strong>Tiếp tục</strong>.
+      </li>
+      <li style="margin-bottom:8px;font-size:14px;line-height:1.7;">
+        Ở màn hình xác minh, mở rộng mục <strong>"Các phương thức khác"</strong> → chọn <strong>"Google Analytics"</strong> → nhấn <strong>"Xác minh"</strong>.
+      </li>
+      <li style="margin-bottom:0;font-size:14px;line-height:1.7;">
+        Nếu GA4 đã được gắn đúng ở Bước 1, xác minh sẽ thành công ngay — trạng thái chuyển sang <strong style="color:#2d6a4f;">xanh lá</strong>.
+      </li>
+    </ol>
+
+    <p style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink);">Bước 3 — Gửi Sitemap</p>
+    <ol style="padding-left:20px;margin-top:0;">
+      <li style="margin-bottom:0;font-size:14px;line-height:1.7;">
+        Trong Search Console → menu trái → <strong>"Sơ đồ trang web"</strong> → nhập <code>sitemap.xml</code> vào ô URL → <strong>Gửi</strong>. Google Sites tự tạo sitemap tại <code>sites.google.com/view/ten-site/sitemap.xml</code>.
+      </li>
+    </ol>
+    <div class="feedback feedback-warn" style="margin-top:14px;">
+      ⚠️ Sau khi kết nối, cần <strong>3–7 ngày</strong> để dữ liệu đầu tiên xuất hiện trong báo cáo. Nếu trang mới hoàn toàn, cần 2–4 tuần để Google crawl và index đủ bài.
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <h3>Đọc báo cáo Performance trong GSC</h3>
+    <ul class="rule-list">
+      <li class="rule-ok"><div><strong>Tab "Truy vấn":</strong> Từ khóa nào đang đưa người đọc đến trang bạn. Sắp xếp theo Impressions để thấy tiềm năng — từ khóa nhiều impression nhưng CTR thấp nghĩa là tiêu đề/mô tả cần viết lại.</div></li>
+      <li class="rule-ok"><div><strong>Tab "Trang":</strong> Bài nào đang được tìm thấy nhiều nhất. Bài có impression cao nhưng vị trí 11–20 là ứng cử viên để tối ưu thêm — chỉ cần lên trang 1 là traffic sẽ tăng vọt.</div></li>
+      <li class="rule-ok"><div><strong>"Kiểm tra URL":</strong> Dán URL một bài cụ thể để xem Google đã index chưa, index ngày nào, bản mobile hiển thị thế nào.</div></li>
+      <li class="rule-no"><div>Không so sánh số tuyệt đối giữa các trang có độ tuổi khác nhau — một bài 6 tháng tuổi tất nhiên có nhiều impression hơn bài mới đăng tuần trước.</div></li>
+    </ul>
+  </div>
+
+  <div class="exercise-block">
+    <h3><span class="ex-tag">Bài tập</span> Kết nối Google Sites với Search Console</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Thực hiện ngay với trang Google Sites bạn đã tạo trong môn học:</p>
+    <ol>
+      <li>Tạo tài khoản GA4 tại <strong>analytics.google.com</strong> → sao chép mã đo lường <code>G-XXXXXXXXXX</code>.</li>
+      <li>Trong Google Sites → <strong>⚙ Cài đặt → Analytics</strong> → dán mã GA4 → OK → Xuất bản lại.</li>
+      <li>Vào <strong>search.google.com/search-console</strong> → <strong>"Thêm tài sản"</strong> → Tiền tố URL → dán URL trang.</li>
+      <li>Chọn phương thức xác minh <strong>"Google Analytics"</strong> → nhấn Xác minh → kiểm tra trạng thái xanh.</li>
+      <li>Vào <strong>"Sơ đồ trang web"</strong> → gửi <code>sitemap.xml</code>.</li>
+      <li>Dùng <strong>"Kiểm tra URL"</strong> với một bài đã đăng: đã index chưa? Nếu chưa → nhấn <strong>"Yêu cầu lập chỉ mục"</strong>.</li>
+      <li><strong>Sau 3–7 ngày:</strong> Báo cáo Performance → tab "Truy vấn" → ghi lại 3 từ khóa đang dẫn người đọc đến trang.</li>
+    </ol>
+    <div class="feedback feedback-ok" style="margin-top:14px;">
+      ✓ <strong>Kết quả nộp:</strong> Chụp màn hình Search Console đã xác minh thành công (trạng thái xanh) và màn hình cài đặt Analytics trong Google Sites.
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ QUIZ ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Ôn tập</div><div class="divider-line"></div></div>
+<section class="lesson" id="quiz">
+  <div class="lesson-header">
+    <div class="lesson-num">?</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Ôn tập</div>
+      <h2 class="lesson-title">Quiz kiểm tra</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <div class="quiz-q">
+      <p>1. Mật độ từ khóa lý tưởng trong một bài báo là bao nhiêu?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'1')">Dưới 0.5% — càng ít càng tốt</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,true,'1')">1–2% — đặt tự nhiên, không nhồi nhét</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'1')">5–10% — càng nhiều Google càng chú ý</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'1')">Không cần quan tâm, viết tự nhiên là đủ</button>
+      </div>
+      <div class="quiz-exp feedback-ok" id="exp1">Đúng! 1–2% là mức tối ưu. Bài 500 từ → từ khóa xuất hiện 5–10 lần. Quá nhiều sẽ bị Google phạt vì "keyword stuffing".</div>
+    </div>
+
+    <div class="quiz-q">
+      <p>2. Tiêu đề bài báo nên dài tối đa bao nhiêu ký tự?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'2')">30 ký tự</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'2')">40 ký tự</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,true,'2')">60 ký tự</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'2')">100 ký tự</button>
+      </div>
+      <div class="quiz-exp feedback-ok" id="exp2">Đúng! Google hiển thị tối đa ~60 ký tự. Tiêu đề dài hơn bị cắt và thêm "…", mất ý nghĩa và giảm tỉ lệ click.</div>
+    </div>
+
+    <div class="quiz-q">
+      <p>3. Trong Google Sites, heading H2 được tạo bằng cách nào?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'3')">Bôi đậm (Bold) văn bản</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,true,'3')">Chọn định dạng "Tiêu đề" trong thanh công cụ</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'3')">Tăng cỡ chữ lên 20px</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'3')">Gạch chân văn bản</button>
+      </div>
+      <div class="quiz-exp feedback-ok" id="exp3">Đúng! Phải dùng định dạng "Tiêu đề" (H2) hoặc "Phụ đề" (H3). Bold chỉ là trình bày — Google không đọc bold như heading.</div>
+    </div>
+
+    <div class="quiz-q">
+      <p>4. Anchor text nào dưới đây là chuẩn SEO?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'4')">nhấp vào đây</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'4')">xem thêm</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,true,'4')">diễn biến lũ lụt miền Trung tháng 9</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'4')">tại đây</button>
+      </div>
+      <div class="quiz-exp feedback-ok" id="exp4">Đúng! Anchor text phải mô tả rõ nội dung trang đích. "Nhấp vào đây" không giúp Google hiểu link dẫn đến đâu.</div>
+    </div>
+
+    <div class="quiz-q">
+      <p>5. URL nào dưới đây chuẩn SEO nhất?</p>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'5')">Lũ Lụt Miền Trung 2025</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,true,'5')">lu-lut-mien-trung-2025</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'5')">page-001</button>
+        <button class="quiz-opt" onclick="answerQuiz(this,false,'5')">bài-báo-về-lũ-lụt-nghiêm-trọng-tại-các-tỉnh-miền-trung-việt-nam</button>
+      </div>
+      <div class="quiz-exp feedback-ok" id="exp5">Đúng! URL chuẩn: chữ thường, gạch ngang, chứa từ khóa, ngắn gọn 3–5 từ. Không dấu tiếng Việt, không dấu cách, không ký tự đặc biệt.</div>
+    </div>
+
+    <div style="margin-top:20px;text-align:center">
+      <div style="font-size:24px;font-weight:500;font-family:'Playfair Display',serif" id="quizScore"></div>
+      <button class="btn btn-outline" onclick="resetQuiz()" style="margin-top:12px;font-size:13px">Làm lại quiz</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CHECKLIST ══ -->
+<div class="section-divider"><div class="divider-line"></div><div class="divider-label">Trước khi đăng bài</div><div class="divider-line"></div></div>
+<section class="lesson" id="checklist">
+  <div class="lesson-header">
+    <div class="lesson-num">✓</div>
+    <div class="lesson-title-block">
+      <div class="lesson-step">Checklist</div>
+      <h2 class="lesson-title">8 điểm kiểm tra trước khi đăng</h2>
+    </div>
+  </div>
+
+  <div class="theory-block">
+    <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Tick vào từng ô khi bạn đã hoàn thành. Đăng bài khi đạt đủ 8/8.</p>
+    <div class="checklist-grid" id="checklistGrid"></div>
+    <div class="check-summary" id="checkSummary">0 / 8 hoàn thành</div>
+    <div class="btn-row" style="justify-content:center;margin-top:16px">
+      <button class="btn btn-primary" onclick="resetChecklist()">Làm mới checklist</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ── NAV ACTIVE ──
+function scrollTo(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// Intersection observer for nav highlighting
+const lessons = document.querySelectorAll('.lesson, .hero');
+const navItems = document.querySelectorAll('.nav-item');
+const ids = ['intro','overview','b1','b2','b3','b4','b5','b6','b7','tools','quiz','checklist'];
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      const idx = ids.indexOf(e.target.id);
+      navItems.forEach(n => n.classList.remove('active'));
+      if(idx >= 0 && navItems[idx]) navItems[idx].classList.add('active');
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('#intro,#overview,#b1,#b2,#b3,#b4,#b5,#b6,#b7,#tools,#quiz,#checklist').forEach(el=>el&&obs.observe(el));
+
+// ── PROGRESS ──
+function updateProgress(){
+  const done = document.querySelectorAll('.check-item.done').length;
+  const total = 8;
+  document.getElementById('progressFill').style.width = (done/total*100)+'%';
+  document.getElementById('progressCount').textContent = done + ' / ' + total + ' phần';
+}
+
+// ── DENSITY CALC ──
+function calcDensity(){
+  const t = parseInt(document.getElementById('dTotal').value)||0;
+  const k = parseInt(document.getElementById('dKw').value)||0;
+  const bar = document.getElementById('dBar');
+  const res = document.getElementById('dResult');
+  if(!t||!k){ res.textContent='Nhập số liệu để tính'; bar.style.width='0%'; return; }
+  const p = (k/t*100);
+  bar.style.width = Math.min(p*20,100)+'%';
+  if(p<0.5){bar.style.background='#e8a020';res.textContent=p.toFixed(2)+'% — Quá thấp. Thêm từ khóa tự nhiên hơn.';}
+  else if(p<=2){bar.style.background='#2d6a4f';res.textContent=p.toFixed(2)+'% — Tốt! Đúng mật độ lý tưởng.';}
+  else if(p<=3){bar.style.background='#e8a020';res.textContent=p.toFixed(2)+'% — Hơi cao. Cân nhắc giảm bớt.';}
+  else{bar.style.background='#c8401a';res.textContent=p.toFixed(2)+'% — Quá cao! Nguy cơ bị Google phạt.';}
+}
+
+// ── TITLE CHECK ──
+function checkTitle(){
+  const v = document.getElementById('titleInput').value;
+  const l = v.length;
+  const bar = document.getElementById('titleBar');
+  const status = document.getElementById('titleStatus');
+  const preview = document.getElementById('titlePreview');
+  const fb = document.getElementById('titleFeedback');
+  status.textContent = l + ' / 60 ký tự';
+  const pct = Math.min((l/60)*100,100);
+  bar.style.width = pct+'%';
+  if(!l){ bar.style.background='#ccc'; preview.textContent='Tiêu đề sẽ hiện ở đây...'; preview.style.color='#bbb'; fb.innerHTML=''; return; }
+  preview.style.color='#1a73e8';
+  if(l<30){bar.style.background='#e8a020';preview.textContent=v;fb.innerHTML='<div class="feedback feedback-warn">Tiêu đề quá ngắn — thêm từ khóa hoặc thông tin cụ thể hơn.</div>';}
+  else if(l<=60){bar.style.background='#2d6a4f';preview.textContent=v;fb.innerHTML='<div class="feedback feedback-ok">Tốt! Tiêu đề hiển thị đầy đủ trên Google.</div>';}
+  else if(l<=75){bar.style.background='#e8a020';preview.textContent=v.slice(0,60)+'…';fb.innerHTML='<div class="feedback feedback-warn">Hơi dài — Google sẽ cắt bớt. Nên rút còn 60 ký tự.</div>';}
+  else{bar.style.background='#c8401a';preview.textContent=v.slice(0,60)+'…';fb.innerHTML='<div class="feedback feedback-bad">Quá dài — bị cắt tại ký tự 60. Rút ngắn lại.</div>';}
+}
+
+// ── META CHECK ──
+function checkMeta(){
+  const v = document.getElementById('metaInput').value;
+  const title = document.getElementById('metaTitleInput').value;
+  const l = v.length;
+  document.getElementById('metaStatus').textContent = l + ' / 160 ký tự';
+  const bar = document.getElementById('metaBar');
+  const fb = document.getElementById('metaFeedback');
+  const titlePreview = document.getElementById('metaTitlePreview');
+  const descPreview  = document.getElementById('metaDescPreview');
+
+  // Cập nhật tiêu đề preview
+  if(title){
+    titlePreview.textContent = title.length > 60 ? title.slice(0,60)+'…' : title;
+    titlePreview.style.color = '#1a73e8';
+  } else {
+    titlePreview.textContent = 'Tiêu đề sẽ hiện ở đây...';
+    titlePreview.style.color = '#bbb';
+  }
+
+  // Cập nhật mô tả preview
+  if(!v){
+    bar.style.background='#ccc';
+    fb.innerHTML='';
+    descPreview.textContent = 'Mô tả sẽ hiện ở đây...';
+    descPreview.style.color = '#bbb';
+    return;
+  }
+  descPreview.textContent = l > 160 ? v.slice(0,160)+'…' : v;
+  descPreview.style.color = l > 160 ? '#999' : '#4d5156';
+
+  bar.style.width = Math.min((l/160)*100,100)+'%';
+  if(l<80){bar.style.background='#e8a020';fb.innerHTML='<div class="feedback feedback-warn">Quá ngắn — thêm thông tin hấp dẫn để tăng tỉ lệ click.</div>';}
+  else if(l<=160){bar.style.background='#2d6a4f';fb.innerHTML='<div class="feedback feedback-ok">Tốt! Độ dài phù hợp cho Google hiển thị.</div>';}
+  else{bar.style.background='#c8401a';fb.innerHTML='<div class="feedback feedback-bad">Quá dài — Google sẽ cắt bớt. Rút còn dưới 160 ký tự.</div>';}
+}
+
+// ── ARTICLE ANALYZE ──
+function analyzeArticle(){
+  const text = document.getElementById('articleInput').value.trim();
+  if(!text){ ['wcWords','wcSents','wcAvg'].forEach(id=>document.getElementById(id).textContent='0'); document.getElementById('artFeedback').textContent='Dán nội dung bài để nhận nhận xét'; document.getElementById('artBar').style.width='0%'; return; }
+  const words = text.split(/\s+/).filter(w=>w.length>0).length;
+  const sents = text.split(/[.!?…]+/).filter(s=>s.trim().length>3).length;
+  const avg = sents>0 ? Math.round(words/sents) : 0;
+  document.getElementById('wcWords').textContent = words;
+  document.getElementById('wcSents').textContent = sents;
+  document.getElementById('wcAvg').textContent = avg;
+  const bar = document.getElementById('artBar');
+  bar.style.width = Math.min((words/500)*100,100)+'%';
+  let fb='';
+  if(words<200){bar.style.background='#c8401a';fb='Bài quá ngắn ('+words+' từ). Cần ít nhất 300 từ.';}
+  else if(words<400){bar.style.background='#e8a020';fb='Bài hơi ngắn. Thêm dẫn chứng hoặc bối cảnh để đạt 500+ từ.';}
+  else{bar.style.background='#2d6a4f';fb='Độ dài đạt yêu cầu ('+words+' từ).';}
+  if(avg>25) fb+=' Câu trung bình '+avg+' từ — khá dài, nên chia câu ngắn hơn.';
+  document.getElementById('artFeedback').textContent = fb;
+}
+
+// ── IMG NAME CHECK ──
+function checkImgName(){
+  const v = document.getElementById('imgName').value;
+  const fb = document.getElementById('imgNameFeedback');
+  if(!v){fb.innerHTML='';return;}
+  const hasExt = v.match(/\.(jpg|jpeg|png|webp|gif)$/i);
+  const hasBadChar = /[A-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐẮẶỒỐỤỆ\s!@#$%^&*()+= ]/.test(v.replace(/\.(jpg|jpeg|png|webp|gif)$/i,''));
+  const hasKw = v.length > 8;
+  if(!hasExt) fb.innerHTML='<div class="feedback feedback-warn">Thêm đuôi file: .jpg, .png, v.v.</div>';
+  else if(hasBadChar) fb.innerHTML='<div class="feedback feedback-bad">Tên file có ký tự không hợp lệ — dùng chữ thường, gạch ngang, không dấu tiếng Việt.</div>';
+  else if(!hasKw) fb.innerHTML='<div class="feedback feedback-warn">Tên file quá ngắn — thêm từ khóa mô tả nội dung ảnh.</div>';
+  else fb.innerHTML='<div class="feedback feedback-ok">Tên file tốt!</div>';
+}
+
+function checkAlt(){
+  const v = document.getElementById('imgAlt').value;
+  const l = v.length;
+  document.getElementById('altStatus').textContent = l + ' ký tự — mục tiêu: 50–125 ký tự';
+  const bar = document.getElementById('altBar');
+  bar.style.width = Math.min((l/125)*100,100)+'%';
+  const fb = document.getElementById('altFeedback');
+  if(!l){bar.style.background='#ccc';fb.innerHTML='';return;}
+  if(l<20){bar.style.background='#e8a020';fb.innerHTML='<div class="feedback feedback-warn">Quá ngắn — mô tả cụ thể hơn nội dung ảnh.</div>';}
+  else if(l<=125){bar.style.background='#2d6a4f';fb.innerHTML='<div class="feedback feedback-ok">Tốt! Alt text đủ mô tả.</div>';}
+  else{bar.style.background='#c8401a';fb.innerHTML='<div class="feedback feedback-bad">Quá dài — rút gọn còn dưới 125 ký tự.</div>';}
+}
+
+// ── ANCHOR CHECK ──
+function checkAlt2(){}
+document.getElementById('anchorInput')?.addEventListener('input', function(){
+  const v = this.value;
+  const fb = document.getElementById('anchorFeedback');
+  if(!v){fb.innerHTML='';return;}
+  const bad = ['tại đây','nhấp vào đây','xem thêm','click here','here','read more'].some(b=>v.toLowerCase().includes(b));
+  if(bad) fb.innerHTML='<div class="feedback feedback-bad">Tránh anchor text chung chung — mô tả cụ thể nội dung trang đích hơn.</div>';
+  else if(v.length<10) fb.innerHTML='<div class="feedback feedback-warn">Hơi ngắn — thêm từ khóa mô tả rõ hơn.</div>';
+  else fb.innerHTML='<div class="feedback feedback-ok">Anchor text tốt — mô tả rõ nội dung đích.</div>';
+});
+
+// ── URL SUGGEST ──
+function suggestUrl(){
+  const title = document.getElementById('urlTitle').value;
+  if(!title) return;
+  const slug = title.toLowerCase()
+    .replace(/[àáâãäåæ]/g,'a').replace(/[èéêë]/g,'e').replace(/[ìíîï]/g,'i')
+    .replace(/[òóôõö]/g,'o').replace(/[ùúûü]/g,'u')
+    .replace(/[ăắặằẳẵ]/g,'a').replace(/[âấậầẩẫ]/g,'a')
+    .replace(/[đ]/g,'d').replace(/[ệếềểễ]/g,'e').replace(/[ịỉĩ]/g,'i')
+    .replace(/[ọốồổỗộợớờởỡ]/g,'o').replace(/[ụứừửữ]/g,'u').replace(/[ỳỷỹỵ]/g,'y')
+    .replace(/[^\w\s-]/g,'').replace(/\s+/g,'-').replace(/-+/g,'-').trim().slice(0,60);
+  document.getElementById('urlInput').value = slug;
+  checkUrl();
+}
+
+function checkUrl(){
+  const v = document.getElementById('urlInput').value;
+  const fb = document.getElementById('urlFeedback');
+  if(!v){fb.innerHTML='';return;}
+  const hasCaps = /[A-Z]/.test(v);
+  const hasSpace = /\s/.test(v);
+  const hasSpecial = /[!@#$%^&*()+={}\[\]|\\:;"'<>,.?\/]/.test(v);
+  const tooLong = v.length > 60;
+  const tooShort = v.length < 5;
+  if(hasCaps||hasSpace||hasSpecial) fb.innerHTML='<div class="feedback feedback-bad">URL có ký tự không hợp lệ. Dùng chữ thường, gạch ngang, không ký tự đặc biệt.</div>';
+  else if(tooLong) fb.innerHTML='<div class="feedback feedback-warn">URL hơi dài ('+v.length+' ký tự). Nên rút còn dưới 60 ký tự.</div>';
+  else if(tooShort) fb.innerHTML='<div class="feedback feedback-warn">URL quá ngắn — thêm từ khóa chính.</div>';
+  else fb.innerHTML='<div class="feedback feedback-ok">URL chuẩn SEO!</div>';
+}
+
+// ── QUIZ ──
+const quizAnswered = {};
+function answerQuiz(btn, correct, qid){
+  if(quizAnswered[qid]) return;
+  quizAnswered[qid] = true;
+  const opts = btn.closest('.quiz-options').querySelectorAll('.quiz-opt');
+  opts.forEach(o => o.disabled = true);
+  btn.classList.add(correct ? 'correct' : 'wrong');
+  if(!correct){
+    opts.forEach(o=>{ if(o.onclick && o.onclick.toString().includes('true')) o.classList.add('correct'); });
+  }
+  const exp = document.getElementById('exp'+qid);
+  if(exp) exp.classList.add('show');
+  updateQuizScore();
+}
+function updateQuizScore(){
+  const total = 5;
+  const done = Object.keys(quizAnswered).length;
+  if(done===total){
+    const correct = Object.values(quizAnswered).filter(v=>v===true).length; // re-count from DOM
+    const corrects = document.querySelectorAll('.quiz-opt.correct:not(.wrong)').length;
+    const score = document.querySelectorAll('.quiz-opt.correct').length - document.querySelectorAll('.quiz-opt.wrong').length;
+    // count correct answers
+    let c=0;
+    [1,2,3,4,5].forEach(i=>{
+      const q = document.querySelectorAll('.quiz-q')[i-1];
+      if(q && q.querySelector('.quiz-opt.correct')) c++;
+    });
+    document.getElementById('quizScore').textContent = 'Kết quả: ' + c + ' / 5 câu đúng';
+  }
+}
+function resetQuiz(){
+  Object.keys(quizAnswered).forEach(k=>delete quizAnswered[k]);
+  document.querySelectorAll('.quiz-opt').forEach(o=>{o.classList.remove('correct','wrong');o.disabled=false;});
+  document.querySelectorAll('.quiz-exp').forEach(e=>e.classList.remove('show'));
+  document.getElementById('quizScore').textContent='';
+}
+
+// ── CHECKLIST ──
+const checkItems = [
+  'Từ khóa chính trong đoạn đầu tiên (50 từ đầu)',
+  'Tiêu đề dưới 60 ký tự, có từ khóa chính',
+  'Meta description 150–160 ký tự, hấp dẫn',
+  'Bài có ít nhất 2 heading H2 chia đoạn',
+  'Mỗi đoạn văn không quá 100 từ',
+  'Hình ảnh có tên file và alt text mô tả',
+  'Ít nhất 1 liên kết nội bộ đến bài liên quan',
+  'URL trang ngắn gọn, chứa từ khóa chính',
+];
+function buildChecklist(){
+  const grid = document.getElementById('checklistGrid');
+  grid.innerHTML = checkItems.map((item,i)=>`
+    <div class="check-item" id="ci${i}" onclick="toggleCheck(${i})">
+      <input type="checkbox" id="chk${i}" onclick="event.stopPropagation();toggleCheck(${i})">
+      <label for="chk${i}">${item}</label>
+    </div>
+  `).join('');
+  updateCheckSummary();
+}
+function toggleCheck(i){
+  const item = document.getElementById('ci'+i);
+  const chk = document.getElementById('chk'+i);
+  chk.checked = !chk.checked;
+  item.classList.toggle('done', chk.checked);
+  updateCheckSummary();
+  updateProgress();
+}
+function updateCheckSummary(){
+  const done = document.querySelectorAll('.check-item.done').length;
+  document.getElementById('checkSummary').textContent = done + ' / 8 hoàn thành' + (done===8?' — Sẵn sàng đăng bài!':'');
+}
+function resetChecklist(){
+  document.querySelectorAll('.check-item').forEach(el=>el.classList.remove('done'));
+  document.querySelectorAll('.check-item input').forEach(el=>el.checked=false);
+  updateCheckSummary();
+  updateProgress();
+}
+buildChecklist();
+</script>
+</body>
+</html>
