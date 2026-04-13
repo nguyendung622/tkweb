@@ -25,7 +25,7 @@
       <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
     </div>
   `;
-  setTimeout(() => el.classList.add('hide'), 2000);
+  setTimeout(() => el.classList.add('hide'), 5000);
 })();
 
 /* ── STATE ── */
