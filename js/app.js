@@ -68,6 +68,25 @@ function renderNav() {
   const syllabusLink = `<a onclick="scrollToSection('syllabus')">Chương trình</a>`;
   const aboutLink    = `<a onclick="scrollToSection('about')">Giới thiệu</a>`;
   const studentsLink = `<a data-page="students" onclick="goStudents()">Kết quả</a>`;
+  const resourcesDropdown = `
+    <div class="nav-dropdown" id="nav-dropdown-resources">
+      <button class="nav-dropdown-trigger"
+        onclick="toggleResourcesDropdown(event)" aria-haspopup="true" aria-expanded="false">
+        Tài liệu
+        <svg class="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="dropdown-menu" id="dropdown-menu-resources" role="menu">
+        <a class="dropdown-item" href="seo_baochi.html">
+          <span class="dropdown-num">🔍</span>
+          <span class="dropdown-title">SEO cho Nhà Báo</span>
+        </a>
+        <a class="dropdown-item" href="book/index.html">
+          <span class="dropdown-num">📖</span>
+          <span class="dropdown-title">Làm báo trên môi trường số</span>
+        </a>
+      </div>
+    </div>`;
 
   const dropdownItems = liveLessons.map(l => `
     <a class="dropdown-item" data-lesson="${l.id}" onclick="goLesson(${l.id})">
@@ -91,7 +110,7 @@ function renderNav() {
       </div>
     </div>`;
 
-  nav.innerHTML = homeLink + syllabusLink + lessonsDropdown + studentsLink + aboutLink;
+  nav.innerHTML = homeLink + syllabusLink + lessonsDropdown + resourcesDropdown + studentsLink + aboutLink;
   updateNavActive();
 }
 
@@ -614,4 +633,20 @@ function closeDropdown() {
   if (btn)  btn.setAttribute('aria-expanded', 'false');
 }
 
-document.addEventListener('click', closeDropdown);
+function toggleResourcesDropdown(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('dropdown-menu-resources');
+  const open = menu.classList.toggle('open');
+  e.currentTarget.setAttribute('aria-expanded', open);
+  // Đóng dropdown kia nếu đang mở
+  closeDropdown();
+}
+
+function closeResourcesDropdown() {
+  const menu = document.getElementById('dropdown-menu-resources');
+  const btn  = document.querySelector('#nav-dropdown-resources .nav-dropdown-trigger');
+  if (menu) menu.classList.remove('open');
+  if (btn)  btn.setAttribute('aria-expanded', 'false');
+}
+
+document.addEventListener('click', () => { closeDropdown(); closeResourcesDropdown(); });
